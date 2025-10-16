@@ -1,0 +1,310 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_sale_custom_destockinfo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240703\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-28 07:42+0000\n"
+"PO-Revision-Date: 2024-08-28 07:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_item
+msgid "Size"
+msgstr "Taille"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.portal_my_details_fields_inherit
+msgid "Please enter your details to access the store."
+msgstr "Veuillez renseigner vos informations afin d'accéder à la boutique."
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Condition"
+msgstr "Grade"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b>Graphic processor</b>"
+msgstr "<b>Processeur graphique</b>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b>Manufacturer</b>"
+msgstr "<b>Marque</b>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b>Operating system</b>"
+msgstr "<b>Système d'exploitation</b>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b>Other feature</b>"
+msgstr "<b>Autres caractéristique</b>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b>Processor</b>"
+msgstr "<b>Processeur</b>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Feature"
+msgstr "Caractéristique"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Network"
+msgstr "Réseau"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Network"
+msgstr "Réseau"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Number of display"
+msgstr "Nombre d'affichage"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Number of port"
+msgstr "Nombre de port"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Video input"
+msgstr "Sortie vidéo"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Video input"
+msgstr "Entrée vidéo"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Video output"
+msgstr "Sortie vidéo"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Video output"
+msgstr "Sortie vidéo"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_item
+msgid ""
+"<i class=\"fa fa-check-circle text-primary me-2\"/>\n"
+"                        Processor"
+msgstr "<i class=\"fa fa-check-circle text-primary me-2\"/>Processeur"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_item
+msgid ""
+"<i class=\"fa fa-check-circle text-primary me-2\"/>\n"
+"                        Graphic"
+msgstr "<i class=\"fa fa-check-circle text-primary me-2\"/>Graphique"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_item
+msgid ""
+"<i class=\"fa fa-check-circle text-primary me-2\"/>\n"
+"                        Screen size"
+msgstr "<i class=\"fa fa-check-circle text-primary me-2\"/>Taille d'écran"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Graphic Processor"
+msgstr "Processeur graphique"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Graphic card"
+msgstr "Carte graphique"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Hard drive capacity (Go)"
+msgstr "Capacité de stockage"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product_wishlist_inherit
+msgid ""
+"<span class=\"fw-bold text-primary\">\n"
+"                        Contact us : ͏ + 33 (0) 4 76 95 94 61\n"
+"                    </span>"
+msgstr ""
+"<span class=\"fw-bold text-primary\">\n"
+"                        Contactez-nous : ͏ + 33 (0) 4 76 95 94 61\n"
+"                    </span>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product_wishlist_inherit
+msgid "Submit"
+msgstr "Envoyer"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_item
+msgid "Size"
+msgstr "Taille"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Storage type"
+msgstr "Type de stockage"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Storage capacity"
+msgstr "Capacité de stockage"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Multifunction"
+msgstr "Multifonction"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Adjustable stand"
+msgstr "Pied ajustable"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Hard drive type"
+msgstr "Type de stockage"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Manufacturer"
+msgstr "Marque"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Operating system"
+msgstr "Système d'exploitation"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Optical drive"
+msgstr "Lecteur optique"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Processor"
+msgstr "Processeur"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Processor"
+msgstr "Processeur"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Screen quality"
+msgstr "Résolution"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b class=\"my-auto\">Screen quality</b>"
+msgstr "<b class=\"my-auto\">Résolution</b>"
+
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Screen size"
+msgstr "Taille d'écran"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Screen size (inch)"
+msgstr "Taille d'écran (pouces)"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Color"
+msgstr "Couleur"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+msgid "Dual Sim"
+msgstr "Double Sim"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Flow"
+msgstr "Débit"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b class=\"my-auto\">Screen size (inch)</b>"
+msgstr "<b class=\"my-auto\">Taille d'écran (pouces)</b>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_item
+msgid ""
+"<i class=\"fa fa-check-circle text-primary me-2\"/>\n"
+"                        Screen quality"
+msgstr  ""
+"<i class=\"fa fa-check-circle text-primary me-2\"/>\n"
+"                        Résolution"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b class=\"my-auto\">Hard drive capacity (Go)</b>"
+msgstr "<b class=\"my-auto\">Capacité de stockage (Go)</b>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.o_wsale_offcanvas
+msgid "<b class=\"my-auto\">Memory capacity</b>"
+msgstr "<b class=\"my-auto\">Capacité mémoire</b>"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_item
+msgid ""
+"<i class=\"fa fa-check-circle text-primary me-2\"/>\n"
+"                        Memory"
+msgstr ""
+"<i class=\"fa fa-check-circle text-primary me-2\"/>\n"
+"                        Mémoire"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_attributes
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.products_item
+msgid "Memory"
+msgstr "Mémoire"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.product
+msgid "Specific informations"
+msgstr "Informations spécifiques"

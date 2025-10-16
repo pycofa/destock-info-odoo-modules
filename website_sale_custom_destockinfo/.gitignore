@@ -1,0 +1,36 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Odoo
+*.log
+.sass-cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+*.bak
+*~
+views/banner/client-generator.ts
+views/banner/dynamic-icon-mapping.ts
+views/banner/generator-placeholder.ts
+views/banner/generator.ts
+views/banner/lucide-icon-renderer.ts
+views/banner/README.md
+views/banner/shared-banner-renderer.ts
+static/src/img/grade.png
+static/src/img/card.png
+static/src/img/card2.png
+# static/src/img/card3.png

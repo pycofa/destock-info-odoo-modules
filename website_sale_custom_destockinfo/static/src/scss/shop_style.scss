@@ -1,0 +1,39 @@
+.category_card {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.image_categ {
+  transition: transform 1s ease-in-out;
+}
+
+.category_card:hover > .image_categ {
+  transform: scale(1.1);
+}
+
+.o_wsale_apply_grid, .o_wsale_apply_list {
+  display: none !important;
+}
+
+/* Largeur de la scrollbar */
+.categ_header::-webkit-scrollbar {
+    width: 10px; /* Pour une scrollbar verticale */
+    height: 5px; /* Pour une scrollbar horizontale */
+}
+
+/* Track (fond de la scrollbar) */
+.categ_header::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Barre de défilement (le curseur) */
+.categ_header::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Changement de couleur au survol */
+.categ_header::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

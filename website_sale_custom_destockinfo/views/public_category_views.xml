@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_public_category_form_view_inherit" model="ir.ui.view">
+        <field name="name">product.public.category.form.inherit</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                <field name="icon_image_1920" widget='image' class="oe_avatar" options='{"preview_image": "icon_image_1920"}'/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

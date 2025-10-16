@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_template_portal,product.template,product.model_product_template,base.group_portal,1,0,0,0
+access_website_stock_warehouse_portal,website.stock.warehouse stock,stock.model_stock_warehouse,base.group_portal,1,0,0,0
+access_website_stock_location_portal,website.stock.location stock,stock.model_stock_location,base.group_portal,1,0,0,0
+access_website_stock_quant_portal,website.stock.quant stock,stock.model_stock_quant,base.group_portal,1,0,0,0
+access_website_stock_move_portal,website.stock.move stock,stock.model_stock_move,base.group_portal,1,0,0,0
+access_website_uom_uom_portal,website.uom.uom stock,product.model_uom_uom,base.group_portal,1,0,0,0
+access_product_attribute_value_group_portal,product.attribute value,product.model_product_attribute_value,base.group_portal,1,0,0,0
+access_product_attribute_sale_group_portal,product.attribute group_portal,product.model_product_attribute,base.group_portal,1,0,0,0

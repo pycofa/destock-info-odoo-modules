@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="products_item" inherit_id="website_sale.products_item">
+        <xpath expr="//form" position="attributes">
+            <attribute name="class" add="overflow-hidden" separator=" "/>
+        </xpath>
+
+        <xpath expr="//t[@t-set='product_href']" position="before">
+            <xpath expr="//t[@t-set='bg_color']" position="move"/>
+            <xpath expr="//t[@t-set='bg_class']" position="move"/>
+            <xpath expr="//t[@t-set='text_color']" position="move"/>
+            <xpath expr="//span[@t-attf-class='o_ribbon o_not_editable #{bg_class}']" position="move"/>
+        </xpath>
+
+        <xpath expr="//h6[hasclass('o_wsale_products_item_title')]/a" position="attributes">
+            <attribute name="class" remove="text-primary" separator=" "/>
+            <attribute name="class" add="product-title-banner-style" separator=" "/>
+        </xpath>
+
+        <!--            Display the prices of the product template    -->
+        <xpath expr="//div[hasclass('product_price')]/.." position="before">
+
+            <!-- Compter les variantes disponibles -->
+            <t t-set="available_variants" t-value="[v for v in product.product_variant_ids if v.qty_available > 0]"/>
+            <t t-set="variant_count" t-value="len(available_variants)"/>
+            
+            <div t-attf-class="col-12 mt-1 mb-1 price-container-{{ variant_count }} price-container-responsive">
+                <div class="row h-100">
+                    <div style="padding-left: 0 !important; padding-right: 0 !important;" class="col-12 h-100">
+                        <div class="row h-100">
+                            <!-- Grille 2x2 avec flexbox order -->
+                            <t t-set="variants_sorted" t-value="list(available_variants)"/>
+                            
+                            <!-- Cellule 1: Haut gauche (order 1) -->
+                            <div class="col-6 col-lg-12 col-xl-6 price-grid-cell d-flex align-items-stretch" style="order: 1;">
+                                <t t-if="variant_count >= 4">
+                                    <t t-set="product" t-value="variants_sorted[3]"/>
+                                    <t t-set="price_list_item" t-value="product.get_price_list_item()"/>
+                                    <div class="price_block_card position-relative w-100">
+                                        <t t-if="request.env['ir.config_parameter'].sudo().get_param('website_sale_only_available_attributes.group_ecommerce_show_qty_available')">
+                                            <span class="position-absolute top-0 end-0 badge rounded-circle bg-dark text-light fw-bold" style="font-size: 10px; padding: 4px 8px;">
+                                                <t t-out="product.qty_available"/>
+                                            </span>
+                                        </t>
+                                        
+                                        <!-- Grade/Condition au-dessus -->
+                                        <div class="text-start">
+                                            <span class="grade-badge">
+                                                <t t-if="product.product_condition_id.name != 'Neuf'">
+                                                    <span class="grade-prefix">Grade</span>
+                                                </t>
+                                                <span t-out="product.product_condition_id.name"/>
+                                            </span>
+                                        </div>
+                                        
+                                        <!-- Container des prix -->
+                                        <div>
+                                            <!-- Prix principal ou barré -->
+                                            <div t-attf-class="price-display {{ 'price-striked' if price_list_item else '' }}">
+                                                <span class="price-value">
+                                                    <t t-esc="product.sale_price" t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                                </span>
+                                                <span class="price-ht">HT</span>
+                                            </div>
+
+                                            <!-- Prix promotionnel si applicable -->
+                                            <div class="price-display" t-if="price_list_item">
+                                                <span class="price-value">
+                                                    <t t-esc="price_list_item.price" t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                                </span>
+                                                <span class="price-ht">HT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                            
+                            <!-- Cellule 2: Haut droite (order 2) -->
+                            <div class="col-6 col-lg-12 col-xl-6 price-grid-cell d-flex align-items-stretch" style="order: 2;">
+                                <t t-if="variant_count >= 3">
+                                    <t t-set="product" t-value="variants_sorted[2]"/>
+                                    <t t-set="price_list_item" t-value="product.get_price_list_item()"/>
+                                    <div class="price_block_card position-relative w-100">
+                                        <t t-if="request.env['ir.config_parameter'].sudo().get_param('website_sale_only_available_attributes.group_ecommerce_show_qty_available')">
+                                            <span class="position-absolute top-0 end-0 badge rounded-circle bg-dark text-light fw-bold" style="font-size: 10px; padding: 4px 8px;">
+                                                <t t-out="product.qty_available"/>
+                                            </span>
+                                        </t>
+                                        
+                                        <!-- Grade/Condition au-dessus -->
+                                        <div class="text-start">
+                                            <span class="grade-badge">
+                                                <t t-if="product.product_condition_id.name != 'Neuf'">
+                                                    <span class="grade-prefix">Grade</span>
+                                                </t>
+                                                <span t-out="product.product_condition_id.name"/>
+                                            </span>
+                                        </div>
+                                        
+                                        <!-- Container des prix -->
+                                        <div>
+                                            <!-- Prix principal ou barré -->
+                                            <div t-attf-class="price-display {{ 'price-striked' if price_list_item else '' }}">
+                                                <span class="price-value">
+                                                    <t t-esc="product.sale_price" t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                                </span>
+                                                <span class="price-ht">HT</span>
+                                            </div>
+
+                                            <!-- Prix promotionnel si applicable -->
+                                            <div class="price-display" t-if="price_list_item">
+                                                <span class="price-value">
+                                                    <t t-esc="price_list_item.price" t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                                </span>
+                                                <span class="price-ht">HT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                            
+                            <!-- Cellule 3: Bas gauche (order 3) -->
+                            <div class="col-6 col-lg-12 col-xl-6 price-grid-cell d-flex align-items-stretch" style="order: 3;">
+                                <t t-if="variant_count >= 2">
+                                    <t t-set="product" t-value="variants_sorted[1]"/>
+                                    <t t-set="price_list_item" t-value="product.get_price_list_item()"/>
+                                    <div class="price_block_card position-relative w-100">
+                                        <t t-if="request.env['ir.config_parameter'].sudo().get_param('website_sale_only_available_attributes.group_ecommerce_show_qty_available')">
+                                            <span class="position-absolute top-0 end-0 badge rounded-circle bg-dark text-light fw-bold" style="font-size: 10px; padding: 4px 8px;">
+                                                <t t-out="product.qty_available"/>
+                                            </span>
+                                        </t>
+                                        
+                                        <!-- Grade/Condition au-dessus -->
+                                        <div class="text-start">
+                                            <span class="grade-badge">
+                                                <t t-if="product.product_condition_id.name != 'Neuf'">
+                                                    <span class="grade-prefix">Grade</span>
+                                                </t>
+                                                <span t-out="product.product_condition_id.name"/>
+                                            </span>
+                                        </div>
+                                        
+                                        <!-- Container des prix -->
+                                        <div>
+                                            <!-- Prix principal ou barré -->
+                                            <div t-attf-class="price-display {{ 'price-striked' if price_list_item else '' }}">
+                                                <span class="price-value">
+                                                    <t t-esc="product.sale_price" t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                                </span>
+                                                <span class="price-ht">HT</span>
+                                            </div>
+
+                                            <!-- Prix promotionnel si applicable -->
+                                            <div class="price-display" t-if="price_list_item">
+                                                <span class="price-value">
+                                                    <t t-esc="price_list_item.price" t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                                </span>
+                                                <span class="price-ht">HT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                            
+                            <!-- Cellule 4: Bas droite (order 4) - Toujours remplie si au moins 1 prix -->
+                            <div class="col-6 col-lg-12 col-xl-6 price-grid-cell d-flex align-items-stretch" style="order: 4;">
+                                <t t-if="variant_count >= 1">
+                                    <t t-set="product" t-value="variants_sorted[0]"/>
+                                    <t t-set="price_list_item" t-value="product.get_price_list_item()"/>
+                                    <div class="price_block_card position-relative w-100">
+                                        <t t-if="request.env['ir.config_parameter'].sudo().get_param('website_sale_only_available_attributes.group_ecommerce_show_qty_available')">
+                                            <span class="position-absolute top-0 end-0 badge rounded-circle bg-dark text-light fw-bold" style="font-size: 10px; padding: 4px 8px;">
+                                                <t t-out="product.qty_available"/>
+                                            </span>
+                                        </t>
+                                        
+                                        <!-- Grade/Condition au-dessus -->
+                                        <div class="text-start">
+                                            <span class="grade-badge">
+                                                <t t-if="product.product_condition_id.name != 'Neuf'">
+                                                    <span class="grade-prefix">Grade</span>
+                                                </t>
+                                                <span t-out="product.product_condition_id.name"/>
+                                            </span>
+                                        </div>
+                                        
+                                        <!-- Container des prix -->
+                                        <div>
+                                            <!-- Prix principal ou barré -->
+                                            <div t-attf-class="price-display {{ 'price-striked' if price_list_item else '' }}">
+                                                <span class="price-value">
+                                                    <t t-esc="product.sale_price" t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                                </span>
+                                                <span class="price-ht">HT</span>
+                                            </div>
+
+                                            <!-- Prix promotionnel si applicable -->
+                                            <div class="price-display" t-if="price_list_item">
+                                                <span class="price-value">
+                                                    <t t-esc="price_list_item.price" t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                                </span>
+                                                <span class="price-ht">HT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[hasclass('product_price')]/.." position="attributes">
+            <attribute name="class" add="d-none" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('product_price')]/span" position="attributes">
+            <attribute name="t-attf-class" add="text-primary fs-3 fw-bold" separator=" "/>
+        </xpath>
+        <xpath expr="//div[hasclass('product_price')]" position="attributes">
+            <attribute name="class">d-flex</attribute>
+        </xpath>
+
+        <!--    Product image on the left, characteristics on the right    -->
+        <xpath expr="//a[@t-att-href='product_href']" position="before">
+            <div class="row d-flex justify-content-around">
+                <div class="col-xl-7 col-lg-12 col-7 mt-3">
+                    <!--   Some place to put the product image    -->
+                </div>
+                
+                <div class="col-xl-5 col-lg-12 col-5 d-flex align-items-center ps-0 justify-content-center pe-3 mt-3"
+                     t-if="product.processor_id or product.ram_capacity_id or product.hard_drive_type_id or product.operating_system_id
+                        or product.screen_size_id">
+                    <div class="row d-flex align-items-center justify-content-center" style="gap: 6px;">
+                        <div class="feature_block screen_block pe-0" t-if="product.screen_size_id">
+                            <img src="/website_sale_custom_destockinfo/static/src/img/characteristic-icons/size.png" class="feature_icon me-1"/>
+                            <span class="feature_value" t-out="product.screen_size_id.name"/>
+                        </div>
+                        <div class="feature_block cpu_block pe-0" t-if="product.processor_id">
+                            <img src="/website_sale_custom_destockinfo/static/src/img/characteristic-icons/cpu.png" class="feature_icon me-1"/>
+                            <span class="feature_value" t-out="product.processor_id.name"/>
+                        </div>
+                        <div class="feature_block ram_block pe-0" t-if="product.ram_capacity_id">
+                            <img src="/website_sale_custom_destockinfo/static/src/img/characteristic-icons/ram.png" class="feature_icon me-1"/>
+                            <span class="feature_value" t-out="product.ram_capacity_id.name"/>
+                        </div>
+                        <div class="feature_block hard_drive_type_block pe-0" t-if="product.hard_drive_type_id">
+                            <img src="/website_sale_custom_destockinfo/static/src/img/characteristic-icons/storage.png" class="feature_icon me-1"/>
+                            <span class="feature_value">
+                                <t t-out="product.hard_drive_capacity_id.name"/>
+                                <t t-if="product.hard_drive_type_id.name" t-out="product.hard_drive_type_id.name"/>
+                            </span>
+                        </div>
+                        <div class="feature_block os_block pe-0" t-if="product.operating_system_id">
+                            <img src="/website_sale_custom_destockinfo/static/src/img/characteristic-icons/os.png" class="feature_icon me-1"/>
+                            <span class="feature_value" t-out="product.operating_system_id.name"/>
+                        </div>
+                        <div class="feature_block qual_block pe-0"
+                             t-if="product.screen_quality_id and product.product_pattern in ['screen']">
+                            <img src="/website_sale_custom_destockinfo/static/src/img/characteristic-icons/resolution.png" class="feature_icon me-1"/>
+                            <span class="feature_value" t-out="product.screen_quality_id.name"/>
+                        </div>
+                        <t t-foreach="product.video_input_ids" t-as="vi">
+                            <div class="feature_block video_input_block pe-0"
+                                 t-if="vi and product.product_pattern in ['screen']">
+                                <t t-set="icon_name" t-value="'vga.png'"/>
+                                <t t-if="'HDMI' in vi.name.upper()" t-set="icon_name" t-value="'hdmi.png'"/>
+                                <t t-if="'DP' in vi.name.upper() or 'DISPLAYPORT' in vi.name.upper()" t-set="icon_name" t-value="'dp.png'"/>
+                                <t t-if="'DVI' in vi.name.upper()" t-set="icon_name" t-value="'input-dvi.png'"/>
+                                <t t-if="'VGA' in vi.name.upper()" t-set="icon_name" t-value="'vga.png'"/>
+                                <t t-if="'USB-C' in vi.name.upper() or 'USBC' in vi.name.upper() or 'TYPE-C' in vi.name.upper()" t-set="icon_name" t-value="'usb-c.png'"/>
+                                <img t-attf-src="/website_sale_custom_destockinfo/static/src/img/characteristic-icons/#{icon_name}" class="feature_icon me-1"/>
+                                <span class="feature_value" t-out="vi.name"/>
+                            </div>
+                        </t>
+
+                    </div>
+                </div>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[hasclass('oe_product_image')]//div//div[hasclass('col-xl-7')]" position="inside">
+            <xpath expr="//a[@t-att-href='product_href']" position="move"/>
+        </xpath>
+        
+        <!-- Move product title to the bottom -->
+        <xpath expr="//div[hasclass('o_wsale_product_information')]" position="after">
+            <div class="col-12">
+                <xpath expr="//div[hasclass('o_wsale_product_information_text')]" position="move"/>
+            </div>
+        </xpath>
+
+
+        <xpath expr="//div[hasclass('o_wsale_product_information')]" position="attributes">
+            <attribute name="class" add="justify-content-end" separator=" "/>
+        </xpath>
+
+        <xpath expr="//span[@t-field='image_holder.image_1920']" position="attributes">
+            <attribute name="t-options">
+                {
+                'widget': 'image',
+                'itemprop': 'image',
+                'class': 'w-100 position-absolute',
+                'style': 'width:100%; height:100%; object-fit: contain; max-height: 200px;'
+                }
+            </attribute>
+        </xpath>
+
+        <xpath expr="//a[hasclass('oe_product_image_link')]" position="attributes">
+            <attribute name="class" remove="h-100" separator=" "/>
+            <attribute name="class" remove="d-block" separator=" "/>
+            <attribute name="class" add="d-flex" separator=" "/>
+            <attribute name="style">height: 200px; align-items: center; justify-content: center;</attribute>
+        </xpath>
+
+        <xpath expr="//h6[hasclass('o_wsale_products_item_title')]" position="attributes">
+            <attribute name="class" remove="pt-1" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_wsale_product_information_text')]" position="attributes">
+            <attribute name="class" remove="text-center" separator=" "/>
+            <attribute name="class" add="text-start" separator=" "/>
+        </xpath>
+
+    </template>
+
+</odoo>

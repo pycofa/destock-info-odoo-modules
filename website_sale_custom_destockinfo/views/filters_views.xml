@@ -1,0 +1,1432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================ MOBILE VERSION ================ -->
+
+    <template id="o_wsale_offcanvas" inherit_id="website_sale.o_wsale_offcanvas">
+
+        <!--  Clear filter button -->
+        <xpath expr="//div[hasclass('offcanvas-body')]//a/.." position="replace">
+            <a t-if="attrib_values or filters or tags"
+               t-att-href="'/shop/category/' + slug(category) if category else '/shop'"
+               t-attf-class="btn btn-{{navClass}} d-flex align-items-center py-1 mb-2">
+                <small class="mx-auto">
+                    <b>Clear Filters</b>
+                </small>
+                <i class="oi oi-close"/>
+            </a>
+        </xpath>
+
+<!--            Conditions    -->
+        <xpath expr="//div[hasclass('list-group-item')]" position="attributes">
+            <attribute name="t-attf-class">{{'d-none' if False in [] else ''}}</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('list-group-item')]" position="attributes">
+            <attribute name="t-if">
+                v.name in available_attributes
+            </attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('list-group-item')]//div//label" position="replace">
+            <label class="form-check-label fw-normal" t-att-for="'%s-%s' % (a.id,v.id)" t-field="v.name"/>
+        </xpath>
+
+        <!--    IT filters    -->
+        <xpath expr="//form//t" position="after">
+
+            <t t-if="manufacturers">
+                <div t-attf-class="accordion-item border-top-0 {{(_status == 'active') and 'order-1' or 'order-2'}}">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_manu_header">
+                        <button t-attf-class="o_wsale_offcanvas_title accordion-button rounded-0 {{ not manufacturers_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_manu"
+                                t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_manu">
+                            <b>Manufacturer</b>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_manu"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or manufacturers_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_manu_header">
+
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="manufacturers" t-as="manufacturer" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="ma"
+                                           class="form-check-input"
+                                           t-att-id="'m_%s' % (manufacturer.id)"
+                                           t-att-value="'m_%s' % (manufacturer.id)"
+                                           t-att-checked="'checked' if manufacturer.id in manufacturers_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2"
+                                           t-att-for="'m_%s' % (manufacturer.id)" t-field="manufacturer.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="hard_drive_type_filter_visible and hdts">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_hdt_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not hdts_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_hdt"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_hdt">
+                            <p class="my-auto fw-bold">Hard drive type</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_hdt"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or hdts_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_hdt_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="hdts" t-as="hdt" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="hdt"
+                                           class="form-check-input"
+                                           t-att-id="'hdt_%s' % (hdt.id)"
+                                           t-att-value="'hdt_%s' % (hdt.id)"
+                                           t-att-checked="'checked' if hdt.id in hdts_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'hdt_%s' % (hdt.id)"
+                                           t-field="hdt.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="hard_drive_capacity_filter_visible and hdcs">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_hdc_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not hdcs_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_hdc"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_hdc">
+                            <b class="my-auto">Hard drive capacity (Go)</b>
+                        </button>
+                    </h2>
+
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_hdc"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or hdcs_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_hdc_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="hdcs" t-as="hdc" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="hdc"
+                                           class="form-check-input"
+                                           t-att-id="'hdc_%s' % (hdc.id)"
+                                           t-att-value="'hdc_%s' % (hdc.id)"
+                                           t-att-checked="'checked' if hdc.id in hdcs_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2"
+                                           t-att-for="'hdc_%s' % (hdc.id)" t-field="hdc.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="ram_filter_visible and rams">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_ram_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not rams_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_ram"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_ram">
+                            <b class="my-auto">Memory capacity</b>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_ram"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or rams_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_ram_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="rams" t-as="ram" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="ram"
+                                           class="form-check-input"
+                                           t-att-id="'ram_%s' % (ram.id)"
+                                           t-att-value="'ram_%s' % (ram.id)"
+                                           t-att-checked="'checked' if ram.id in rams_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2"
+                                           t-att-for="'ram_%s' % (ram.id)" t-field="ram.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="screen_size_filter_visible and sss">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_ss_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not sss_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_ss"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_ss">
+                            <b class="my-auto">Screen size (inch)</b>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_ss"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or sss_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_ss_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="sss" t-as="ss" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="ss"
+                                           class="form-check-input"
+                                           t-att-id="'ss_%s' % (ss.id)"
+                                           t-att-value="'ss_%s' % (ss.id)"
+                                           t-att-checked="'checked' if ss.id in sss_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'ss_%s' % (ss.id)"
+                                           t-field="ss.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="screen_quality_filter_visible and sqs">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_sq_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not sqs_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_sq"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_sq">
+                            <b class="my-auto">Screen quality</b>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_sq"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or sqs_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_sq_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="sqs" t-as="sq" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="sq"
+                                           class="form-check-input"
+                                           t-att-id="'sq_%s' % (sq.id)"
+                                           t-att-value="'sq_%s' % (sq.id)"
+                                           t-att-checked="'checked' if sq.id in sqs_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'sq_%s' % (sq.id)"
+                                           t-field="sq.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="processor_filter_visible and prs">
+                <div t-attf-class="accordion-item border-top-0 {{(_status == 'active') and 'order-1' or 'order-2'}}">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_prs_header">
+                        <button t-attf-class="o_wsale_offcanvas_title accordion-button rounded-0 {{ not prs_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_prs"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_prs">
+                            <b>Processor</b>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_prs"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or prs_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_prs_header">
+
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="prs" t-as="pr" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="pr"
+                                           class="form-check-input"
+                                           t-att-id="'pr_%s' % (pr.id)"
+                                           t-att-value="'pr_%s' % (pr.id)"
+                                           t-att-checked="'checked' if pr.id in prs_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'pr_%s' % (pr.id)"
+                                           t-field="pr.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="graphic_card_filter_visible and gprs">
+                <div t-attf-class="accordion-item border-top-0 {{(_status == 'active') and 'order-1' or 'order-2'}}">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_gprs_header">
+                        <button t-attf-class="o_wsale_offcanvas_title accordion-button rounded-0 {{ not gprs_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_gprs"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_gprs">
+                            <b>Graphic processor</b>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_gprs"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or gprs_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_gprs_header">
+
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="gprs" t-as="gprs" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="gprs"
+                                           class="form-check-input"
+                                           t-att-id="'gprs_%s' % (gprs.id)"
+                                           t-att-value="'gprs_%s' % (gprs.id)"
+                                           t-att-checked="'checked' if gprs.id in gprs_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'gprs_%s' % (gprs.id)"
+                                           t-field="gprs.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="operating_system_filter_visible and oss">
+                <div t-attf-class="accordion-item border-top-0 {{(_status == 'active') and 'order-1' or 'order-2'}}">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_oss_header">
+                        <button t-attf-class="o_wsale_offcanvas_title accordion-button rounded-0 {{ not oss_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_oss"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_oss">
+                            <b>Operating system</b>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_oss"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or oss_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_oss_header">
+
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="oss" t-as="os" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="os"
+                                           class="form-check-input"
+                                           t-att-id="'os_%s' % (os.id)"
+                                           t-att-value="'os_%s' % (os.id)"
+                                           t-att-checked="'checked' if os.id in oss_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'os_%s' % (os.id)"
+                                           t-field="os.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="video_output_filter_visible and vos">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_vo_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not vos_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_vo"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_vo">
+                            <p class="my-auto">Video output</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_vo"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or vos_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_vo_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="vos" t-as="vo" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="vo"
+                                           class="form-check-input"
+                                           t-att-id="'vo_%s' % (vo.id)"
+                                           t-att-value="'vo_%s' % (vo.id)"
+                                           t-att-checked="'checked' if vo.id in vos_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'vo_%s' % (vo.id)"
+                                           t-field="vo.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="video_input_filter_visible and vis">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_vi_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not vis_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_vi"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_vi">
+                            <p class="my-auto">Video input</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_vi"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or vis_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_vi_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="vis" t-as="vi" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="vi"
+                                           class="form-check-input"
+                                           t-att-id="'vi_%s' % (vi.id)"
+                                           t-att-value="'vi_%s' % (vi.id)"
+                                           t-att-checked="'checked' if vi.id in vis_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'vi_%s' % (vi.id)"
+                                           t-field="vi.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="networks_filter_visible and nws">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_nw_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not nws_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_nw"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_nw">
+                            <p class="my-auto">Network</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_nws"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or nws_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_nw_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="nws" t-as="nw" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="nw"
+                                           class="form-check-input"
+                                           t-att-id="'nw_%s' % (nw.id)"
+                                           t-att-value="'nw_%s' % (nw.id)"
+                                           t-att-checked="'checked' if nw.id in nws_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'nw_%s' % (nw.id)"
+                                           t-field="nw.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="number_of_ports_filter_visible and nps">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_np_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not nps_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_nps"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_nps">
+                            <p class="my-auto">Number of ports</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_nps"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or nps_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_np_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="nps" t-as="np" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="np"
+                                           class="form-check-input"
+                                           t-att-id="'np_%s' % (np)"
+                                           t-att-value="'np_%s' % (np)"
+                                           t-att-checked="'checked' if np in nps_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'np_%s' % (np)">
+                                        <t t-out="np"/>
+                                    </label>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="number_of_displays_filter_visible and nds">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_nd_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not nds_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_nds"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_nds">
+                            <p class="my-auto">Number of displays</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_nds"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or nds_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_nd_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="nds" t-as="nd" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="nd"
+                                           class="form-check-input"
+                                           t-att-id="'nd_%s' % (nd)"
+                                           t-att-value="'nd_%s' % (nd)"
+                                           t-att-checked="'checked' if nd in nds_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'nd_%s' % (nd)">
+                                        <t t-out="nd"/>
+                                    </label>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="available_bluetooth or available_optical_drive or available_adjustable_stand or
+                available_is_poe or available_is_dual_sim or available_is_usb_c or available_is_videopro_interactive
+                or available_is_printer_multifunction or available_is_printer_color or available_is_tactile">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_feats_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not bluetooth_selected
+                        and not optical_drive_selected and not is_poe_selected and not is_dual_sim_selected
+                        and not is_usb_c_selected and not is_videopro_interactive_selected and not is_printer_multifunction_selected
+                         and not available_is_printer_color and not is_tactile_selected
+                         and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_feats"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_feats">
+                            <b class="my-auto">Feature</b>
+                        </button>
+                    </h2>
+                    <div t-attf-id="o_wsale_offcanvas_attribute_feats"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or ( bluetooth_selected
+                              or optical_drive_selected or is_poe_selected or is_dual_sim_selected
+                              or is_usb_c_selected or is_videopro_interactive_selected or is_printer_multifunction_selected
+                              or is_printer_color_selected
+                              )) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_feats_header">
+                        <div class="accordion-body pt-0">
+                            <t t-if="available_bluetooth">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="blt"
+                                           class="form-check-input"
+                                           t-att-id="'blt_on'"
+                                           t-att-value="'blt_on'"
+                                           t-att-checked="'checked' if bluetooth_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'blt_on'">Bluetooth
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_optical_drive">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="od"
+                                           class="form-check-input"
+                                           t-att-id="'od_on'"
+                                           t-att-value="'od_on'"
+                                           t-att-checked="'checked' if optical_drive_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'od_on'">Optical drive
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_poe">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="poe"
+                                           class="form-check-input"
+                                           t-att-id="'poe_on'"
+                                           t-att-value="'poe_on'"
+                                           t-att-checked="'checked' if is_poe_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'poe_on'">POE
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_dual_sim">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="dual"
+                                           class="form-check-input"
+                                           t-att-id="'dual_on'"
+                                           t-att-value="'dual_on'"
+                                           t-att-checked="'checked' if is_dual_sim_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'dual_on'">Dual Sim
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_usb_c">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="usbc"
+                                           class="form-check-input"
+                                           t-att-id="'usbc_on'"
+                                           t-att-value="'usbc_on'"
+                                           t-att-checked="'checked' if is_usb_c_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'usbc_on'">USB-C
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_videopro_interactive">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="inter"
+                                           class="form-check-input"
+                                           t-att-id="'inter_on'"
+                                           t-att-value="'inter_on'"
+                                           t-att-checked="'checked' if is_videopro_interactive_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'inter_on'">Interactive
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_printer_multifunction">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="multi"
+                                           class="form-check-input"
+                                           t-att-id="'multi_on'"
+                                           t-att-value="'multi_on'"
+                                           t-att-checked="'checked' if is_printer_multifunction_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'multi_on'">Multifunction
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_printer_color">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="color"
+                                           class="form-check-input"
+                                           t-att-id="'color_on'"
+                                           t-att-value="'color_on'"
+                                           t-att-checked="'checked' if is_printer_color_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'color_on'">Color
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_adjustable_stand">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="od"
+                                           class="form-check-input"
+                                           t-att-id="'od_on'"
+                                           t-att-value="'od_on'"
+                                           t-att-checked="'checked' if adjustable_stand_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'od_on'">Adjustable stand
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_tactile">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="tact"
+                                           class="form-check-input"
+                                           t-att-id="'tact_on'"
+                                           t-att-value="'tact_on'"
+                                           t-att-checked="'checked' if is_tactile_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'tact_on'">Tactile
+                                    </label>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+        </xpath>
+
+    </template>
+
+    <!-- ================ DESKTOP VERSION ================ -->
+    <template id="products_attributes" inherit_id="website_sale.products_attributes">
+
+        <xpath expr="//t[@t-foreach='a.value_ids']//div" position="attributes">
+            <attribute name="t-if">
+                v.name in available_attributes
+            </attribute>
+        </xpath>
+
+        <xpath expr="//t[@t-foreach='attributes']//t[@t-cache='a,attrib_set']" position="attributes">
+            <attribute name="t-cache"/>
+        </xpath>
+
+        <!--    Conditions    -->
+        <xpath expr="//form[hasclass('js_attributes')]//label[hasclass('form-check-label')]" position="replace">
+            <label class="form-check-label fw-normal" t-att-for="'%s-%s' % (a.id,v.id)" t-field="v.name"/>
+        </xpath>
+
+        <xpath expr="//form[hasclass('js_attributes')]//div[hasclass('accordion-item')]//h6" position="replace">
+            <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_condi_header">
+                <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0
+                {{ not conditions_selected and 'collapsed'}}"
+                        type="button"
+                        t-att-data-status="_status"
+                        data-bs-toggle="collapse"
+                        t-attf-data-bs-target="#o_wsale_offcanvas_attribute_condi"
+                        t-att-aria-expanded="_status == 'active' and 'False' or 'True'"
+                        t-attf-aria-controls="o_wsale_offcanvas_attribute_condi">
+                    <p class="my-auto">Condition</p>
+                </button>
+            </h2>
+
+            <div t-attf-id="o_wsale_offcanvas_attribute_condi"
+                 t-attf-class="accordion-collapse collapse  {{ (_status == 'active' or conditions_selected) and 'show'}}"
+                 t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                 t-attf-aria-labelledby="o_wsale_offcanvas_attribute_condi_header">
+                <div class="accordion-body accordion-body-condi pt-0">
+                </div>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[hasclass('accordion-body-condi')]" position="inside">
+            <xpath expr="//div[hasclass('flex-column')]/.." position="move"/>
+        </xpath>
+
+        <!-- Add our filters to Clear filters -->
+        <xpath expr="//form//a" position="replace">
+            <a t-if="attrib_values or filters or tags"
+               t-att-href="'/shop/category/' + slug(category) if category else '/shop'"
+               t-attf-class="btn btn-{{navClass}} d-flex align-items-center py-1 mb-2">
+                <small class="mx-auto">
+                    <b>Clear Filters</b>
+                </small>
+                <i class="oi oi-close"/>
+            </a>
+        </xpath>
+
+        <!--    IT filters    -->
+        <xpath expr="//form" position="attributes">
+            <attribute name="class" add="border-end" separator=" "/>
+        </xpath>
+
+        <xpath expr="//form//t" position="after">
+            <t t-if="manufacturers">
+                <div t-attf-class="accordion-item mb-0 border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_manu_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0
+                        {{ not manufacturers_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_manu"
+                                t-att-aria-expanded="_status == 'active' and 'False' or 'True'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_manu">
+                            <p class="my-auto">Manufacturer</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_manu"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or manufacturers_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_manu_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="manufacturers" t-as="manufacturer" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="ma"
+                                           class="form-check-input"
+                                           t-att-id="'m_%s' % (manufacturer.id)"
+                                           t-att-value="'m_%s' % (manufacturer.id)"
+                                           t-att-checked="'checked' if manufacturer.id in manufacturers_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2"
+                                           t-att-for="'m_%s' % (manufacturer.id)" t-field="manufacturer.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="screen_size_filter_visible and sss">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_ss_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not sss_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_ss"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_ss">
+                            <p class="my-auto">Screen size (inch)</p>
+                        </button>
+                    </h2>
+
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_ss"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or sss_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_ss_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="sss" t-as="ss" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="ss"
+                                           class="form-check-input"
+                                           t-att-id="'ss_%s' % (ss.id)"
+                                           t-att-value="'ss_%s' % (ss.id)"
+                                           t-att-checked="'checked' if ss.id in sss_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'ss_%s' % (ss.id)"
+                                           t-field="ss.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="screen_quality_filter_visible and sqs">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_sq_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not sqs_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_sq"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_sq">
+                            <p class="my-auto">Screen quality</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_sq"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or sqs_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_sq_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="sqs" t-as="sq" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="sq"
+                                           class="form-check-input"
+                                           t-att-id="'sq_%s' % (sq.id)"
+                                           t-att-value="'sq_%s' % (sq.id)"
+                                           t-att-checked="'checked' if sq.id in sqs_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'sq_%s' % (sq.id)"
+                                           t-field="sq.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="hard_drive_type_filter_visible and hdts">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_hdt_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not hdts_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_hdt"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_hdt">
+                            <p class="my-auto">Hard drive type</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_hdt"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or hdts_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_hdt_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="hdts" t-as="hdt" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="hdt"
+                                           class="form-check-input"
+                                           t-att-id="'hdt_%s' % (hdt.id)"
+                                           t-att-value="'hdt_%s' % (hdt.id)"
+                                           t-att-checked="'checked' if hdt.id in hdts_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'hdt_%s' % (hdt.id)"
+                                           t-field="hdt.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="hard_drive_capacity_filter_visible and hdcs">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_hdc_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not hdcs_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_hdc"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_hdc">
+                            <p class="my-auto">Hard drive capacity (Go)</p>
+                        </button>
+                    </h2>
+
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_hdc"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or hdcs_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_hdc_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="hdcs" t-as="hdc" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="hdc"
+                                           class="form-check-input"
+                                           t-att-id="'hdc_%s' % (hdc.id)"
+                                           t-att-value="'hdc_%s' % (hdc.id)"
+                                           t-att-checked="'checked' if hdc.id in hdcs_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2"
+                                           t-att-for="'hdc_%s' % (hdc.id)" t-field="hdc.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="ram_filter_visible and rams">
+                <div t-attf-class="accordion-item mb-0 border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_ram_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not rams_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_ram"
+                                t-att-aria-expanded="_status == 'active' and 'False' or 'True'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_ram">
+                            <p class="my-auto">Memory capacity</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_ram"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or rams_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_ram_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="rams" t-as="ram" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="ram"
+                                           class="form-check-input"
+                                           t-att-id="'ram_%s' % (ram.id)"
+                                           t-att-value="'ram_%s' % (ram.id)"
+                                           t-att-checked="'checked' if ram.id in rams_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2"
+                                           t-att-for="'ram_%s' % (ram.id)" t-field="ram.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="processor_filter_visible and prs">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_prc_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not prs_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_prc"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_prc">
+                            <p class="my-auto">Processor</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_prc"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or prs_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_prc_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="prs" t-as="pr" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="pr"
+                                           class="form-check-input"
+                                           t-att-id="'pr_%s' % (pr.id)"
+                                           t-att-value="'pr_%s' % (pr.id)"
+                                           t-att-checked="'checked' if pr.id in prs_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'pr_%s' % (pr.id)"
+                                           t-field="pr.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="graphic_card_filter_visible and gprs">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_gprs_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not gprs_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_gprs"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_gprs">
+                            <p class="my-auto">Graphic Processor</p>
+                        </button>
+                    </h2>
+                    <div t-attf-id="o_wsale_offcanvas_attribute_gprs"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or gprs_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_gprs_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="gprs" t-as="gpr" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="gpr"
+                                           class="form-check-input"
+                                           t-att-id="'gpr_%s' % (gpr.id)"
+                                           t-att-value="'gpr_%s' % (gpr.id)"
+                                           t-att-checked="'checked' if gpr.id in gprs_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'gpr_%s' % (gpr.id)"
+                                           t-field="gpr.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="operating_system_filter_visible and oss">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_os_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not oss_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_os"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_os">
+                            <p class="my-auto">Operating system</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_os"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or oss_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_os_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="oss" t-as="os" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="os"
+                                           class="form-check-input"
+                                           t-att-id="'os_%s' % (os.id)"
+                                           t-att-value="'os_%s' % (os.id)"
+                                           t-att-checked="'checked' if os.id in oss_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'os_%s' % (os.id)"
+                                           t-field="os.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="number_of_ports_filter_visible and nps">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_np_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not nps_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_nps"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_nps">
+                            <p class="my-auto">Number of port</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_nps"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or nps_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_np_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="nps" t-as="np" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="np"
+                                           class="form-check-input"
+                                           t-att-id="'np_%s' % (np)"
+                                           t-att-value="'np_%s' % (np)"
+                                           t-att-checked="'checked' if np in nps_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'np_%s' % (np)">
+                                        <t t-out="np"/>
+                                    </label>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="number_of_displays_filter_visible and nds">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_nd_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not nds_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_nds"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_nds">
+                            <p class="my-auto">Number of display</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_nds"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or nds_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_nd_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="nds" t-as="nd" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="nd"
+                                           class="form-check-input"
+                                           t-att-id="'nd_%s' % (nd)"
+                                           t-att-value="'nd_%s' % (nd)"
+                                           t-att-checked="'checked' if nd in nds_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'nd_%s' % (nd)">
+                                        <t t-out="nd"/>
+                                    </label>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="video_output_filter_visible and vos">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_vo_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not vos_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_vos"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_vos">
+                            <p class="my-auto">Video output</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_vos"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or vos_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_vo_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="vos" t-as="vo" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="vo"
+                                           class="form-check-input"
+                                           t-att-id="'vo_%s' % (vo.id)"
+                                           t-att-value="'vo_%s' % (vo.id)"
+                                           t-att-checked="'checked' if vo.id in vos_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'vo_%s' % (vo.id)"
+                                           t-field="vo.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="video_input_filter_visible and vis">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_vi_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not vis_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_vis"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_vis">
+                            <p class="my-auto">Video input</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_vis"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or vis_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_vi_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="vis" t-as="vi" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="vi"
+                                           class="form-check-input"
+                                           t-att-id="'vi_%s' % (vi.id)"
+                                           t-att-value="'vi_%s' % (vi.id)"
+                                           t-att-checked="'checked' if vi.id in vis_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'vi_%s' % (vi.id)"
+                                           t-field="vi.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="networks_filter_visible and nws">
+                <div t-attf-class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_nw_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not nws_selected and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_nw"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_nw">
+                            <p class="my-auto">Network</p>
+                        </button>
+                    </h2>
+
+                    <div t-attf-id="o_wsale_offcanvas_attribute_nw"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or nws_selected) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_nw_header">
+                        <div class="accordion-body pt-0">
+                            <t t-foreach="nws" t-as="nw" class="list-group-item border-0 ps-0 pb-0">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="nw"
+                                           class="form-check-input"
+                                           t-att-id="'nw_%s' % (nw.id)"
+                                           t-att-value="'nw_%s' % (nw.id)"
+                                           t-att-checked="'checked' if nw.id in nws_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'nw_%s' % (nw.id)"
+                                           t-field="nw.name"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <t t-if="available_bluetooth or available_optical_drive or available_adjustable_stand or
+                available_is_poe or available_is_dual_sim or available_is_usb_c or available_is_videopro_interactive
+                or available_is_printer_multifunction or available_is_printer_color or available_is_tactile">
+                <div t-attf-class="mb-3 accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header mb-0" t-attf-id="o_wsale_offcanvas_attribute_feats_header">
+                        <button t-attf-class="shadow-none o_wsale_offcanvas_title accordion-button rounded-0 {{ not bluetooth_selected
+                        and not optical_drive_selected and not is_poe_selected and not is_dual_sim_selected
+                        and not is_usb_c_selected and not is_videopro_interactive_selected and not is_printer_multifunction_selected
+                         and not available_is_printer_color and not is_tactile_selected
+                         and 'collapsed'}}"
+                                type="button"
+                                t-att-data-status="_status"
+                                data-bs-toggle="collapse"
+                                t-attf-data-bs-target="#o_wsale_offcanvas_attribute_feats"
+                                t-att-aria-expanded="_status == 'active' and 'True' or 'False'"
+                                t-attf-aria-controls="o_wsale_offcanvas_attribute_feats">
+                            <p class="my-auto">Feature</p>
+                        </button>
+                    </h2>
+                    <div t-attf-id="o_wsale_offcanvas_attribute_feats"
+                         t-attf-class="accordion-collapse collapse {{ (_status == 'active' or ( bluetooth_selected
+                              or optical_drive_selected or is_poe_selected or is_dual_sim_selected
+                              or is_usb_c_selected or is_videopro_interactive_selected or is_printer_multifunction_selected
+                              or is_printer_color_selected or is_tactile_selected
+                              )) and 'show'}}"
+                         t-att-aria-expanded="(_status == 'active') and 'True' or 'False'"
+                         t-attf-aria-labelledby="o_wsale_offcanvas_attribute_feats_header">
+                        <div class="accordion-body pt-0">
+                            <t t-if="available_bluetooth">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="blt"
+                                           class="form-check-input"
+                                           t-att-id="'blt_on'"
+                                           t-att-value="'blt_on'"
+                                           t-att-checked="'checked' if bluetooth_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'blt_on'">Bluetooth
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_optical_drive">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="od"
+                                           class="form-check-input"
+                                           t-att-id="'od_on'"
+                                           t-att-value="'od_on'"
+                                           t-att-checked="'checked' if optical_drive_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'od_on'">Optical drive
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_poe">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="poe"
+                                           class="form-check-input"
+                                           t-att-id="'poe_on'"
+                                           t-att-value="'poe_on'"
+                                           t-att-checked="'checked' if is_poe_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'poe_on'">POE
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_dual_sim">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="dual"
+                                           class="form-check-input"
+                                           t-att-id="'dual_on'"
+                                           t-att-value="'dual_on'"
+                                           t-att-checked="'checked' if is_dual_sim_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'dual_on'">Dual Sim
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_usb_c">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="usbc"
+                                           class="form-check-input"
+                                           t-att-id="'usbc_on'"
+                                           t-att-value="'usbc_on'"
+                                           t-att-checked="'checked' if is_usb_c_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'usbc_on'">USB-C
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_videopro_interactive">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="inter"
+                                           class="form-check-input"
+                                           t-att-id="'inter_on'"
+                                           t-att-value="'inter_on'"
+                                           t-att-checked="'checked' if is_videopro_interactive_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'inter_on'">Interactive
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_printer_multifunction">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="multi"
+                                           class="form-check-input"
+                                           t-att-id="'multi_on'"
+                                           t-att-value="'multi_on'"
+                                           t-att-checked="'checked' if is_printer_multifunction_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'multi_on'">Multifunction
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_printer_color">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="color"
+                                           class="form-check-input"
+                                           t-att-id="'color_on'"
+                                           t-att-value="'color_on'"
+                                           t-att-checked="'checked' if is_printer_color_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'color_on'">Color
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_adjustable_stand">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="od"
+                                           class="form-check-input"
+                                           t-att-id="'od_on'"
+                                           t-att-value="'od_on'"
+                                           t-att-checked="'checked' if adjustable_stand_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'od_on'">Adjustable stand
+                                    </label>
+                                </div>
+                            </t>
+                            <t t-if="available_is_tactile">
+                                <div class="form-check d-flex mb-1 align-items-center">
+                                    <input type="checkbox"
+                                           name="tact"
+                                           class="form-check-input"
+                                           t-att-id="'tact_on'"
+                                           t-att-value="'tact_on'"
+                                           t-att-checked="'checked' if is_tactile_selected else None"/>
+                                    <label class="form-check-label fw-normal ms-2" t-att-for="'tact_on'">Tactile
+                                    </label>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+
+    </template>
+
+</odoo>

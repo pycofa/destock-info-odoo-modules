@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_my_details_fields_inherit" inherit_id="portal.portal_my_details_fields">
+        <xpath expr="//label[@for='vat']" position="after">
+            <span class="fst-italic">(optional)</span>
+        </xpath>
+        <xpath expr="//div" position="before">
+            <t t-if="infos_missing">
+                <div class="alert alert-warning">Please enter your details to access the store.</div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,512 @@
+// Couleur pour les boutons des catégories
+.o_wsale_filmstip li .btn span {
+color: #8CFFB2 !important;
+}
+
+.o_wsale_filmstip li .btn {
+    background-color: #0F00A2 !important;
+}
+
+// Couleur bouton barre de recherche et dropdown
+.products_header .oe_search_button,
+.products_header .oe_search_button:hover,
+.products_header .oe_search_button:focus,
+.products_header .oe_search_button:active,
+.products_header .dropdown-toggle {
+    background-color: #0F00A2 !important;
+    color: #8CFFB2 !important;
+    // border-radius: 6px;
+}
+
+// Radius bouton barre de recherche
+.products_header .oe_search_button,
+.products_header .oe_search_button:hover,
+.products_header .oe_search_button:focus,
+.products_header .oe_search_button:active {
+    border-radius: 0px 6px 6px 0px !important;
+}
+
+.o_wsale_product_grid_wrapper {
+    overflow: hidden!important;
+
+    .o_ribbon {
+        z-index: 1;
+    }
+}
+
+.feature_block{
+    text-align: center;
+    min-width: 80px;
+    
+    // Style moderne avec icône (override pour les blocks avec icône)
+    &:has(i), &:has(.feature_icon) {
+        display: inline-flex;
+        align-items: center;
+        text-align: left;
+        min-width: auto;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        
+        .feature_icon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+        }
+        
+        .feature_value {
+            font-weight: 600;
+            color: #333;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+    }
+
+    dt{
+        background-color: #e5e7eb;
+        color:#111;
+        text-transform: uppercase;
+        font-size: 14px;
+        border-left: 2px solid #ffffff;
+
+    }
+
+    dd {
+        font-weight: bold;
+        color:#FFF;
+        border-radius: 0 0 10px 0;
+        padding: 0 10px;
+        border-bottom: 2px solid #252525;
+        border-left: 2px solid #ffffff;
+    }
+
+    .dt_card {
+        font-size: 10px;
+        padding: 0;
+    }
+
+    .dd_card {
+        font-size: 13px;
+        padding: 0;
+    }
+
+    .dd_card_bottom {
+        font-size: 13px;
+        padding: 2px 5px;
+    }
+
+}
+
+.os_block {
+    dd { background-color: #77B3E1; }
+}
+
+.cpu_block {
+    dd {
+      background-color: #bf5da7;
+    }
+}
+
+.ram_block {
+    dd { background-color: #AAD94A; }
+}
+
+.screen_block {
+    dd { background-color: #ff951f; }
+}
+
+.hard_drive_type_block {
+    dd { background-color: #4a88d9; }
+}
+
+.graphic_block {
+    dd { background-color: #49951e; }
+}
+
+.qual_block {
+    dd { background-color: #c13750; }
+}
+
+// Nouveau block pour les connectiques vidéo
+.video_input_block {
+    dd { background-color: #6c757d; }
+}
+
+.infos {
+    dt, dd {
+        font-size: 16px;
+    }
+}
+
+.card_product {
+  border-radius: 10px;
+}
+
+.infos-card {
+    list-style-type: disc !important;
+    font-size: 14px;
+}
+
+.price_block {
+    font-size: 16px;
+    min-width: 150px;
+}
+
+.price_block_card {
+    font-size: 15px;
+    width: 100%;
+
+  .badge-colored {
+    min-width: 40px;
+    height: 22px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // Style pour le grade inspiré de grade.png
+  .grade-badge {
+    background-color: #0F00A2 !important;
+    color: #8CFFB2 !important;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    display: inline-flex; // Changé de flex à inline-flex pour la largeur auto
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    margin-bottom: 2px;
+    width: auto; // Changé de 100% à auto
+    
+    .grade-prefix {
+      margin-right: 3px;
+    }
+  }
+  
+  // Nouveau style pour les prix inspiré de price.png et banner
+  .price-display {
+    display: inline-flex; // Changé de flex à inline-flex
+    align-items: center;
+    background-color: #8CFFB2;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 3px 0;
+    height: 36px;
+    border: 3px solid #8CFFB2;
+    width: 100%; // Prendre toute la largeur disponible
+    max-width: 100%; // Limiter à la largeur du container
+    
+    .price-value {
+      background-color: #FFFFFF;
+      color: #0F00A2;
+      font-weight: 700;
+      font-size: 14px; // Réduit de 16px à 14px
+      padding: 5px 8px; // Réduit le padding horizontal
+      border-radius: 3px 0 0 3px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-family: "Noto Sans", Arial, sans-serif;
+      flex: 1; // Prendre l'espace disponible
+      justify-content: center;
+      min-width: 0; // Permet le rétrécissement du contenu
+      white-space: nowrap;
+    }
+    
+    .price-ht {
+      background-color: #8CFFB2;
+      color: #0F00A2;
+      font-weight: 700;
+      font-size: 12px; // Réduit de 13px à 12px
+      padding: 5px 8px; // Réduit le padding horizontal
+      text-transform: uppercase;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-family: "Noto Sans", Arial, sans-serif;
+      white-space: nowrap;
+      flex-shrink: 0; // Empêche le HT de rétrécir
+    }
+  }
+  
+  // Style pour prix barré
+  .price-display.price-striked {
+    opacity: 0.8;
+    
+    .price-value {
+      text-decoration: line-through;
+      color: #666;
+    }
+  }
+}
+
+// Container principal pour uniformiser la hauteur
+[class*="price-container-"] {
+  min-height: 120px; // Hauteur pour la grille 2x2
+  
+  // S'assurer que la grille utilise toute la largeur disponible
+  .row {
+    margin: 0;
+    
+    // Ajuster les colonnes de la grille
+    .col-6 {
+      padding: 0 4px; // Réduire le padding entre colonnes
+      display: flex;
+      align-items: stretch;
+      
+      // S'assurer que les cellules vides prennent leur place
+      &:empty {
+        min-height: 60px; // Hauteur minimale pour les cellules vides
+      }
+    }
+  }
+  
+  // Aligner le contenu des cellules
+  .price_block_card {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    justify-content: end;
+  }
+}
+
+// Styles responsive pour le container de prix
+.price-container-responsive {
+  // Pour les écrans larges (> 1200px) - grille 2x2
+  @media (min-width: 1201px) {
+    height: 140px;
+  }
+  
+  // Pour les écrans moyens (992px à 1200px) - colonnes empilées, pas de hauteur fixe
+  @media (min-width: 992px) and (max-width: 1200px) {
+    height: auto !important;
+  }
+  
+  // Pour les écrans < 992px - grille 2x2 avec hauteur fixe
+  @media (max-width: 991px) {
+    height: 140px;
+  }
+}
+
+// Jamais de padding pour les price-grid-cell
+.price-grid-cell {
+  padding: 0 !important;
+}
+
+// Styles communs pour tous les containers de prix
+.price_block_card {
+  padding: 0.25rem !important; // Réduit de 0.5rem à 0.25rem
+  text-align: center;
+  overflow: hidden; // Évite le débordement
+  
+  // Badge de quantité toujours visible mais discret
+  .position-absolute.badge {
+    font-size: 9px !important;
+    padding: 2px 6px !important;
+    opacity: 0.8;
+  }
+  
+  // Grade/badge aligné à gauche avec même espacement
+  .grade-badge {
+    margin-bottom: 4px !important;
+    margin-right: auto !important; // Force l'alignement à gauche
+  }
+}
+
+// Pour 4+ variantes, style encore plus compact
+.price-container-4,
+.price-container-5,
+.price-container-6 {
+  .price_block_card {
+    padding: 0.125rem !important;
+    
+    .grade-badge {
+      font-size: 9px !important;
+      height: 16px !important;
+      padding: 1px 4px !important;
+      
+      .grade-prefix {
+        display: none; // Masquer "Grade" pour économiser l'espace
+      }
+    }
+    
+    .price-display {
+      height: 24px !important;
+      border: 2px solid #8CFFB2 !important;
+      
+      .price-value {
+        font-size: 11px !important;
+        padding: 2px 6px !important;
+      }
+      
+      .price-ht {
+        font-size: 10px !important;
+        padding: 2px 6px !important;
+      }
+    }
+  }
+}
+
+.second-text {
+  font-size: 14px;
+}
+
+// Style du titre inspiré des bannières
+.product-title-banner-style {
+  font-family: "Noto Sans", Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #0F00A2 !important;
+  text-decoration: none !important;
+  display: block;
+  line-height: 1.2;
+  text-align: left !important;
+  
+  &:hover {
+    color: #0F00A2 !important;
+    text-decoration: none !important;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 1400px) {
+    .oe_product {
+      width: 100% !important;
+    }
+}
+
+input[type="search"] {
+  color: #0a0a0a !important;
+  border: 1px solid #9c9c9c !important;
+  border-radius: 6px;
+}
+
+// Styles for single product page price blocks
+.price_block {
+  .grade-badge {
+    // Same style as in product cards
+    background-color: #0F00A2 !important;
+    color: #8CFFB2 !important;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    margin-bottom: 4px;
+    width: 100%;
+    
+    .grade-prefix {
+      margin-right: 3px;
+    }
+  }
+  
+  .price-display {
+    // Same style as in product cards
+    display: flex;
+    align-items: center;
+    background-color: #8CFFB2;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 3px 0;
+    height: 36px;
+    border: 3px solid #8CFFB2;
+    width: 100%;
+    
+    .price-value {
+      background-color: #FFFFFF;
+      color: #0F00A2;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 5px 8px;
+      border-radius: 3px 0 0 3px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-family: "Noto Sans", Arial, sans-serif;
+      flex: 1;
+      justify-content: center;
+      min-width: 0;
+      white-space: nowrap;
+    }
+    
+    .price-ht {
+      background-color: #8CFFB2;
+      color: #0F00A2;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 5px 8px;
+      text-transform: uppercase;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-family: "Noto Sans", Arial, sans-serif;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+  
+  // Style for striked price
+  .price-display.price-striked {
+    opacity: 0.8;
+    height: 28px; // Smaller height for striked price
+    
+    .price-value {
+      text-decoration: line-through;
+      color: #666;
+      font-size: 12px;
+    }
+    
+    .price-ht {
+      font-size: 10px;
+    }
+  }
+}
+
+// Responsive layout for characteristics section
+@media (min-width: 992px) and (max-width: 1199px) {
+  // Stack the image and characteristics vertically only in this range
+  .row.d-flex.justify-content-around {
+    .col-xl-5.col-lg-12.col-5 {
+      // Center the characteristics section when stacked
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      margin-top: 10px !important;
+      
+      // Center the content
+      .row {
+        justify-content: center !important;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// For smaller screens (<992px), keep the side-by-side layout but adjust the feature blocks
+@media (max-width: 991px) {
+  .row.d-flex.justify-content-around {
+    .col-5 {
+      // Adjust feature blocks for smaller screens
+      .feature_block {
+        margin-right: 5px !important;
+        margin-bottom: 3px !important;
+        
+        .feature_icon {
+          width: 14px !important;
+          height: 14px !important;
+        }
+        
+        .feature_value {
+          font-size: 11px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="my_shop_link" name="Link to frontend shop" inherit_id="portal.user_dropdown">
+        <xpath expr="//*[@id='o_backend_user_dropdown_link']" position="after">
+            <a href="/shop" role="menuitem" class="dropdown-item ps-3">
+                <i class="fa fa-shopping-bag me-1 small text-primary"/> Shop
+            </a>
+            <a href="/my/home" role="menuitem" class="dropdown-item ps-3">
+                <i class="fa fa-fw fa-id-card-o me-1 small text-primary"/> My Account
+            </a>
+        </xpath>
+    </template>
+</odoo>

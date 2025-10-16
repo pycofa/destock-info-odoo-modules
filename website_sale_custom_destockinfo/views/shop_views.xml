@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="products" inherit_id="website_sale.products">
+
+        <xpath expr="//div[@id='oe_structure_website_sale_products_1']" position="after">
+            <t t-if="not home">
+                <t t-set='editor_msg'>Drag building blocks here to customize the header for "<t t-esc='category.name'/>"
+                    category.
+                </t>
+
+                <div class="container d-flex justify-content-center flex-row ">
+                    <div class="row flex-nowrap d-flex overflow-x-scroll categ_header">
+                        <t t-foreach="categories" t-as="c">
+                            <div class="mt-2 px-3 d-flex  justify-content-center" style="width: 150px;">
+                                <a class="d-flex flex-column p-0 justify-content-center align-items-center"
+                                   style="cursor:pointer;"
+                                   t-att-data-link-href="keep('/shop/category/' + slug(c))">
+
+                                    <div class="mb-2" t-attf-style="width: 40px; height: 40px;
+                                 background-size: cover; background-repeat: no-repeat;
+                                 background-image:url('data:image/png;base64,#{c.icon_image_1920}')"
+                                    >
+                                    </div>
+
+                                    <p class="fw-bold text-center" t-esc="c.name"/>
+                                </a>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+
+                <div class="mb16" id="category_header_top" t-att-data-editor-message="editor_msg"
+                     t-field="category.website_description"/>
+            </t>
+
+            <t t-if="home" t-call="website_sale_custom_destockinfo.categories_home_shop"/>
+        </xpath>
+
+        <xpath expr="//div[@id='category_header']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('oe_website_sale')]" position="attributes">
+            <attribute name="t-if">not home</attribute>
+        </xpath>
+        <xpath expr="//div[@id='oe_structure_website_sale_products_2']" position="attributes">
+            <attribute name="t-if">not home</attribute>
+        </xpath>
+
+        <xpath expr="//div[contains(@t-attf-class, 'o_wsale_product_grid_wrapper')]" position="attributes">
+            <attribute name="t-attf-class" add="m-1 px-3 card_product border-bottom shadow" separator=" "/>
+        </xpath>
+
+        <xpath expr="//t[@t-set='navClass']" position="replace">
+            <t t-set="navClass" t-valuef="primary"/>
+        </xpath>
+
+    </template>
+
+    <template id="filmstrip_categories" inherit_id="website_sale.filmstrip_categories">
+
+        <xpath expr="//li//div" position="attributes">
+            <attribute name="t-attf-class" add="text-white rounded-1 p-0" separator=" "/>
+            <attribute name="style" add="text-wrap: nowrap;" separator=" "/>
+        </xpath>
+
+        <xpath expr="//ul/.." position="attributes">
+            <attribute name="t-attf-class" add="mb-4" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_wsale_filmstip_container')]" position="attributes">
+            <attribute name="class" remove="overflow-hidden" separator=" "/>
+            <attribute name="class" add="overflow-auto" separator=" "/>
+        </xpath>
+
+    </template>
+
+</odoo>

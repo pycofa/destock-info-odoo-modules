@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="variants" inherit_id="website_sale.variants">
+        <xpath expr="//ul/t/li" position="attributes">
+            <attribute name="t-attf-class">variant_attribute</attribute>
+        </xpath>
+    </template>
+
+    <!--  Prices at the image's bottom  -->
+    <template id="carousel_product_indicators" inherit_id="website_sale.carousel_product_indicators">
+        <xpath expr="//div" position="after">
+            <div class="row col-12 mt-5 d-flex align-items-top justify-content-center">
+                <t t-foreach="product.product_variant_ids" t-as="product" class="d-flex border-0 ps-0 pb-0">
+                    <t t-if="product.qty_available > 0">
+                        <div class="price_block d-flex flex-column border border-primary position-relative
+                            col-3 pt-2 pb-2 me-1 mt-1 rounded-1">
+                            <t t-if="request.env['ir.config_parameter'].sudo().get_param('website_sale_only_available_attributes.group_ecommerce_show_qty_available')">
+                                <span class="col-2 p-2 m-1 position-absolute top-0 end-0 badge rounded-circle bg-dark text-light fw-bold">
+                                    <t t-out="int(product.qty_available)"/>
+                                </span>
+                            </t>
+                            <!-- Grade Badge -->
+                            <div class="grade-badge mb-2" t-if="product.product_condition_id">
+                                <span class="grade-prefix">Grade</span>
+                                <span t-out="product.product_condition_id.name"/>
+                            </div>
+                            
+                            <!-- Price Display -->
+                            <t t-set="price_list_item" t-value="product.get_price_list_item()"/>
+                            
+                            <!-- Regular Price -->
+                            <div class="price-display" t-if="not price_list_item">
+                                <span class="price-value" t-out="product.sale_price"
+                                    t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                <span class="price-ht">HT</span>
+                            </div>
+                            
+                            <!-- Promo Price -->
+                            <div t-if="price_list_item">
+                                <!-- Original Price Striked -->
+                                <div class="price-display price-striked mb-1">
+                                    <span class="price-value" t-out="product.sale_price"
+                                        t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                    <span class="price-ht">HT</span>
+                                </div>
+                                <!-- Promo Price -->
+                                <div class="price-display">
+                                    <span class="price-value" t-out="price_list_item.price"
+                                        t-options='{"widget": "monetary", "display_currency": website.currency_id}'/>
+                                    <span class="price-ht">HT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="product" inherit_id="website_sale.product">
+
+        <xpath expr="//h1[@t-field='product.name']" position="attributes">
+            <attribute name="class" add="fs-2" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="after">
+            <div class="row col-12 d-flex justify-content-between">
+                <!--      Features description      -->
+                <div class="col-12 col-xl-12 mt-3 mb-4">
+                    <div class="infos col-12 col-md-12">
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.processor_id">
+                            <dt>Processor</dt>
+                            <div class="d-flex">
+                                <dd class="me-2 mb-0" t-out="product.processor_id.generation_id.model_id.name"/>
+                                <dd class="m-0" t-out="product.processor_id.name"/>
+                            </div>
+                        </dl>
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.ram_capacity_id">
+                            <dt>Memory</dt>
+                            <dd class="m-0" t-out="product.ram_capacity_id.name"/>
+                        </dl>
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.hard_drive_capacity_id">
+                            <dt>Storage type</dt>
+                            <dd class="m-0" t-out="product.hard_drive_type_id.name"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.hard_drive_capacity_id">
+                            <dt>Storage capacity</dt>
+                            <dd class="m-0" t-out="product.hard_drive_capacity_id.name"/>
+                        </dl>
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.graphic_card_id">
+                            <dt>Graphic card</dt>
+                            <dd class="m-0" t-out="product.graphic_card_id.name"/>
+                        </dl>
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.operating_system_id">
+                            <dt>Operating system</dt>
+                            <dd class="m-0" t-out="product.operating_system_id.name"/>
+                        </dl>
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.network_ids">
+                            <dt>Network</dt>
+                            <t t-foreach="product.network_ids" t-as="network_id" class="d-flex border-0 ps-0 pb-0">
+                                <dd class="m-0" t-out="network_id.name"/>
+                            </t>
+                        </dl>
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.video_output_ids">
+                            <dt>Video output</dt>
+                            <t t-foreach="product.video_output_ids" t-as="video_output_id"
+                               class="d-flex border-0 ps-0 pb-0">
+                                <dd class="m-0" t-out="video_output_id.name"/>
+                            </t>
+                        </dl>
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.video_input_ids">
+                            <dt>Video input</dt>
+                            <t t-foreach="product.video_input_ids" t-as="video_input_id"
+                               class="d-flex border-0 ps-0 pb-0">
+                                <dd class="m-0" t-out="video_input_id.name"/>
+                            </t>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.focal">
+                            <dt>Focal</dt>
+                            <dd class="m-0" t-out="product.focal"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.number_of_displays">
+                            <dt>Number of displays</dt>
+                            <dd class="m-0" t-out="product.number_of_displays"/>
+                        </dl>
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.flow">
+                            <dt>Flow</dt>
+                            <dd class="m-0" t-out="product.flow"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.screen_format">
+                            <dt>Format</dt>
+                            <dd class="m-0" t-out="product.screen_format"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.format">
+                            <dt>Format</dt>
+                            <dd class="m-0" t-out="product.format"/>
+                        </dl>
+                    </div>
+
+                    <div class="infos col-12">
+
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.number_of_ports">
+                            <dt>Number of ports</dt>
+                            <dd class="m-0" t-out="product.number_of_ports"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.is_poe">
+                            <dt>POE</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.screen_quality_id">
+                            <dt>Screen quality</dt>
+                            <dd class="m-0" t-out="product.screen_quality_id.name"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.is_dual_sim">
+                            <dt>Dual Sim</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.is_videopro_interactive">
+                            <dt>Interactive</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.is_printer_multifunction">
+                            <dt>Multifunction</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.is_printer_color">
+                            <dt>Color</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.is_usb_c">
+                            <dt>USB-C</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.is_tactile">
+                            <dt>Tactile</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.has_adjustable_stand">
+                            <dt>Adjustable stand</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.has_webcam">
+                            <dt>Webcam</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.has_optical_drive">
+                            <dt>Optical drive</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.has_bluetooth">
+                            <dt>Bluetooth</dt>
+                            <i class="fa fa-check text-success me-2"/>
+                        </dl>
+                        <dl class="mb-0 d-flex align-items-center w-100 justify-content-between border-bottom py-2"
+                            t-if="product.specific_informations">
+                            <dt>Specific informations</dt>
+                            <dd class="m-0" t-out="product.specific_informations"/>
+                        </dl>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </xpath>
+
+    </template>
+</odoo>
