@@ -27,3 +27,4 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+website_sale_custom_destockinfo/venv/
