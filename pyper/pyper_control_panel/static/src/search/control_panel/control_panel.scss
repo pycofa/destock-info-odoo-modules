@@ -1,0 +1,21 @@
+.o_control_panel {
+    .o_control_panel_breadcrumbs {
+        min-width: auto;
+    }
+
+    .o_control_panel_actions {
+        width: 100% !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .o_control_panel_actions {
+            min-width: auto;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .o_control_panel_actions {
+            min-width: auto;
+        }
+    }
+}

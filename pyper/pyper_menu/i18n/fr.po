@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper_menu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20241205\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-06 13:37+0000\n"
+"PO-Revision-Date: 2024-12-06 13:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__ir_action_id
+msgid "Action"
+msgstr ""
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__category_id
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__category_action_id
+msgid "Category action"
+msgstr "Action de la catégorie"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__category_font_icon
+msgid "Category font icon"
+msgstr "Font icon de la catégorie"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__category_font_icon_color
+msgid "Category font icon color"
+msgstr "Couleur Font icon de la catégorie"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__category_sequence
+msgid "Category sequence"
+msgstr "Séquence de la catégorie"
+
+#. module: pyper_menu
+#: model:ir.model,name:pyper_menu.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__display_counter
+msgid "Display counter"
+msgstr "Afficher le compteur"
+
+#. module: pyper_menu
+#: model_terms:ir.ui.view,arch_db:pyper_menu.res_config_settings_view_form
+msgid "Display the web icon of menu items"
+msgstr "Afficher l’icône Web des éléments de menu"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_actions_server__font_icon
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_cron__font_icon
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__font_icon
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__font_icon
+msgid "Font icon"
+msgstr ""
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_actions_server__font_icon_color
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_cron__font_icon_color
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__font_icon_color
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__font_icon_color
+msgid "Font icon color"
+msgstr "Couleur Font icon"
+
+#. module: pyper_menu
+#: model:ir.ui.menu.category,name:pyper_menu.menu_category_global
+msgid "Global"
+msgstr ""
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__id
+msgid "ID"
+msgstr ""
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__write_uid
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__write_date
+msgid "Last Updated on"
+msgstr "Dernière modification le"
+
+#. module: pyper_menu
+#: model:ir.ui.menu.category,name:pyper_menu.menu_category_manager
+msgid "Manager"
+msgstr ""
+
+#. module: pyper_menu
+#: model:ir.model,name:pyper_menu.model_ir_ui_menu
+#: model_terms:ir.ui.view,arch_db:pyper_menu.res_config_settings_view_form
+msgid "Menu"
+msgstr ""
+
+#. module: pyper_menu
+#: model:ir.actions.act_window,name:pyper_menu.action_ir_ui_menu_categories
+#: model:ir.ui.menu,name:pyper_menu.menu_settings_menu_categories
+msgid "Menu categories"
+msgstr "Catégories du menu"
+
+#. module: pyper_menu
+#: model:ir.model,name:pyper_menu.model_ir_ui_menu_category
+msgid "Menu category"
+msgstr "Catégorie du menu"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu__position
+msgid "Position"
+msgstr ""
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_res_config_settings__menu_prefer_web_icon
+msgid "Prefer web icons of menu items?"
+msgstr "Préférer les icônes Web des éléments de menu ?"
+
+#. module: pyper_menu
+#: model:ir.model.fields,field_description:pyper_menu.field_ir_ui_menu_category__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: pyper_menu
+#: model:ir.model,name:pyper_menu.model_ir_actions_server
+msgid "Server Action"
+msgstr "Action de serveur"
+
+#. module: pyper_menu
+#: model:ir.model.fields.selection,name:pyper_menu.selection__ir_ui_menu__position__system_tray
+msgid "System Tray"
+msgstr ""
+
+#. module: pyper_menu
+#: model:ir.ui.menu.category,name:pyper_menu.menu_category_website
+msgid "Website"
+msgstr ""

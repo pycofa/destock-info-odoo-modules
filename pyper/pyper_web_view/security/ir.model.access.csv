@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ir_views_group_user,ir.views group_user,model_ir_views,base.group_user,1,1,1,1
+access_ir_views_field_group_user,ir.views.field group_user,model_ir_views_field,base.group_user,1,1,1,1
+access_ir_views_group_by_group_user,ir.views.group_by group_user,model_ir_views_group_by,base.group_user,1,1,1,1
+access_ir_views_order_by_group_user,ir.views.order_by group_user,model_ir_views_order_by,base.group_user,1,1,1,1
+access_ir_model_group_user,ir.model group_user,base.model_ir_model,base.group_user,1,0,0,0
+access_ir_model_fields_group_user,ir.model.fields group_user,base.model_ir_model_fields,base.group_user,1,0,0,0
+access_ir_model_fields_selection_group_user,ir.model.fields.selection group_user,base.model_ir_model_fields_selection,base.group_user,1,0,0,0
+access_ir_model_inherit_group_user,ir.model.inherit group_user,base.model_ir_model_inherit,base.group_user,1,0,0,0
+access_ir_model_constraint_group_user,ir.model.constraint group_user,base.model_ir_model_constraint,base.group_user,1,0,0,0
+access_ir_model_relation_group_user,ir.model.relation group_user,base.model_ir_model_relation,base.group_user,1,0,0,0

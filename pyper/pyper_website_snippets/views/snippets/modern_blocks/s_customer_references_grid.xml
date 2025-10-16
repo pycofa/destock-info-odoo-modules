@@ -1,0 +1,172 @@
+<odoo>
+    <template id="customer_references_grid" name="Customer references grid">
+        <!-- TEXT SECTION -->
+        <section
+            class="pt48  o_cc o_cc2"
+            data-snippet="s_customer_references_grid_text"
+            data-name="Customer references grid (text)"
+        >
+            <div class="container">
+                <div 
+                    class="row justify-content-center p-3 o_animate o_anim_fade_in o_anim_from_top"
+                    style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                >           
+                    <div class="d-flex flex-column align-items-center text-center col-12 col-md-10 col-lg-8">
+                        <h2 class="">
+                            They trust us
+                        </h2>
+                        <p class="text-muted">
+                            We are privileged to work with a distinguished group of clients who rely on us for our expertise and dedication. Our collaborations are driven by a shared vision of success and a commitment to delivering outstanding value.
+                        </p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 mt-4 mb-2">
+                            <a class="btn btn-primary" href="#">Explore projects</a>
+                            <a class="btn btn-secondary" href="#">Get in touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- GRID SECTION -->
+        <section
+            class="pt24 pb96  o_cc o_cc2"
+            data-snippet="s_customer_references_grid_grid"
+            data-name="Customer references grid (grid)"
+        >
+            <div class="container col-12 col-md-10 col-lg-8 o_cc o_cc1 py-2 py-md-4 px-2 px-md-5" style="overflow: hidden;">
+                <div 
+                    class="row o_animate o_anim_fade_in o_anim_from_bottom"
+                    style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                >
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_1.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_2.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_3.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_4.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_5.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_6.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_1.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_2.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_3.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_4.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_5.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_6.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_1.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_2.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_3.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_4.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_5.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_6.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_1.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 p-0">
+                        <div class="d-flex align-items-center justify-content-center h-100 ">
+                            <img class="img-fluid" src="/website/static/src/img/snippets_demo/s_mega_menu_menus_logos_default_logo_2.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_customer_references_grid">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.customer_references_grid"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_customer_references_grid.svg">
+                <keywords>image, grid, reference, customer</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

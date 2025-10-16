@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme_drawer.DrawerToggler" t-inherit="pyper_drawer.DrawerToggler" t-inherit-mode="extension">
+        <xpath expr="//t[@t-slot='icon_menu']/i" position="attributes">
+            <attribute name="class" separator=" " remove="fa fa-bars" add="ph-light ph-text-align-left"/>
+        </xpath>
+
+        <xpath expr="//button" position="attributes">
+            <attribute name="class" separator=" " add="mx-0 px-0 fs-1"/>
+        </xpath>
+    </t>
+</templates>

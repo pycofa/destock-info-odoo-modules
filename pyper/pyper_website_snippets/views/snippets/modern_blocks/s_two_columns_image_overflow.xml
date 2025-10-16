@@ -1,0 +1,54 @@
+<odoo>
+    <template id="two_columns_image_overflow" name="Two columns image overflow">
+        <section
+            class="s_text_image  o_cc o_cc3 pt0 pb64"
+            data-snippet="s_text_image"
+            data-name="Two columns image overflow"
+            style="background-image: none;"
+        >
+            <div class="container">
+                <div class="row ">
+                    <div
+                        class="col-12 col-md-12 p-3 o_anim_fade_in o_animate o_anim_from_bottom  pt0 col-lg-5 o_visible"
+                        style="animation-delay: 0s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <img src="/pyper_website_snippets/static/img/s_text_image_default_image_square.jpg"
+                             class="img img-fluid mx-auto o_we_image_cropped overflowed_image"
+                             alt=""
+                             loading="eager"
+                             data-mimetype="image/jpeg"
+                        />
+                    </div>
+
+                    <div
+                        class="col-12 col-md-12 p-3 o_anim_fade_in o_animate o_anim_from_bottom  pt88 col-lg-7 o_visible"
+                        style="animation-delay: 0.2s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                    >
+                        <h2 class="">Enhance Your Business Efficiency</h2>
+                        <p class="">Our comprehensive suite of tools is designed to streamline
+                            your business operations and
+                            increase productivity.
+                        </p>
+                        <p class="">With intuitive interfaces and robust features, our solutions
+                            cater to businesses of all
+                            sizes.
+                        </p>
+                        <p class="container text-start mt-4">
+                            <a href="/contactus" class="btn btn-primary ">Contact us</a>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_two_columns_image_overflow">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.two_columns_image_overflow"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_two_column_overflow.svg">
+                <keywords>image, overflow, title</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

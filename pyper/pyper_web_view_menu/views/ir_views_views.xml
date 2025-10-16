@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_ir_views_simple_form" model="ir.ui.view">
+        <field name="name">ir.views.simple.form.inherit</field>
+        <field name="model">ir.views</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="pyper_web_view.view_ir_views_simple_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/field[@name='ir_action_id']" position="after">
+                <field name="bookmarked" invisible="True"/>
+            </xpath>
+
+            <xpath expr="//form//group[@name='advanced_mode_global']//field[@name='limit']" position="before">
+                <field name="display_counter"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

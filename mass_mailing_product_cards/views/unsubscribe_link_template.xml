@@ -1,0 +1,8 @@
+<odoo>
+    <template id="theme_training_template_inherit" inherit_id="mass_mailing_themes.theme_training_template">
+        <xpath expr="//div[hasclass('o_mail_footer_links')]" position="attributes">
+            <attribute name="class" add="col-lg" separator=" "/>
+            <attribute name="class" remove="o_mail_footer_links" separator=" "/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,92 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper_web_view_menu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20241022\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 21:41+0000\n"
+"PO-Revision-Date: 2024-10-25 23:42+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pyper_web_view_menu
+#: model:ir.model.fields,help:pyper_web_view_menu.field_ir_views__display_counter
+msgid "Allow to display a counter on menu item when view is bookmarked"
+msgstr "Permet d’afficher un compteur sur l’élément de menu lorsque la vue est mise en favoris"
+
+#. module: pyper_web_view_menu
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view_menu/static/src/webclient/control_panel/views_switcher.xml:0
+#: code:addons/pyper_web_view_menu/static/src/webclient/control_panel/views_switcher.xml:0
+#, python-format
+msgid "Bookmark view"
+msgstr "Ajouter la vue aux favoris"
+
+#. module: pyper_web_view_menu
+#: model:ir.model.fields,field_description:pyper_web_view_menu.field_ir_views__bookmarked
+msgid "Bookmarked"
+msgstr "Ajoutée aux favoris"
+
+#. module: pyper_web_view_menu
+#: model:ir.model.fields,field_description:pyper_web_view_menu.field_ir_views__display_counter
+msgid "Display counter"
+msgstr "Afficher un compteur"
+
+#. module: pyper_web_view_menu
+#: model:ir.model,name:pyper_web_view_menu.model_ir_ui_menu
+msgid "Menu"
+msgstr ""
+
+#. module: pyper_web_view_menu
+#: model:ir.model.fields,field_description:pyper_web_view_menu.field_ir_views__menu_ids
+msgid "Menu item"
+msgstr "Élément de menu"
+
+#. module: pyper_web_view_menu
+#: model:ir.ui.menu.category,name:pyper_web_view_menu.menu_category_my_views
+msgid "My views"
+msgstr "Mes vues"
+
+#. module: pyper_web_view_menu
+#: model:ir.model.fields,field_description:pyper_web_view_menu.field_ir_ui_menu__view_id
+msgid "Saved view"
+msgstr "Vue enregistrée"
+
+#. module: pyper_web_view_menu
+#: model:ir.model,name:pyper_web_view_menu.model_ir_views
+msgid "Saved views"
+msgstr "Vues enregistrées"
+
+#. module: pyper_web_view_menu
+#: model:ir.actions.act_window,name:pyper_web_view_menu.action_settings_menu_category_my_views
+msgid "Settings my views"
+msgstr "Configurer Mes vues"
+
+#. module: pyper_web_view_menu
+#: model:ir.actions.act_window,name:pyper_web_view_menu.action_settings_menu_category_shared_views
+msgid "Settings shared views"
+msgstr "Configurer Vues partagées"
+
+#. module: pyper_web_view_menu
+#: model:ir.ui.menu.category,name:pyper_web_view_menu.menu_category_shared_views
+msgid "Shared views"
+msgstr "Vues partagées"
+
+#. module: pyper_web_view_menu
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view_menu/static/src/webclient/control_panel/views_switcher.xml:0
+#: code:addons/pyper_web_view_menu/static/src/webclient/control_panel/views_switcher.xml:0
+#, python-format
+msgid "Unbookmark view"
+msgstr "Retirer la vue des favoris"
+
+#. module: pyper_web_view_menu
+#: model:ir.model.fields,field_description:pyper_web_view_menu.field_ir_ui_menu__user_id
+msgid "User"
+msgstr "Utilisateur"

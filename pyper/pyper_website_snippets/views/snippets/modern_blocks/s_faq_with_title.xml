@@ -1,0 +1,94 @@
+<odoo>
+    <template id="faq_with_title" name="FAQ with title">
+        <section
+            class="s_faq_collapse s_faq_with_title pb48 pt48  o_cc o_cc1"
+            data-snippet="s_faq_with_title"
+            data-name="FAQ with title"
+        >
+            <div class="container">
+                <div class="d-flex align-items-center flex-column">    
+                    <div class="col-12 col-lg-8 text-center py-3">
+                        <div 
+                            class="o_animate o_anim_fade_in o_anim_from_top"
+                            style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                         >
+                            <p class="h6 text-primary">Frequently Asked Questions</p>
+                            <div class="row justify-content-center">
+                                <h1>
+                                    Optimize time and enhance customer experience
+                                </h1>
+                            </div>
+                        </div>
+                        <div 
+                            class="o_animate o_anim_fade_in o_anim_from_bottom"
+                            style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                         >
+                            <p class="h4 text-muted mt-">Do not underestimate this powerful key feature</p>
+                            <div class="d-flex align-items-center justify-content-center gap-2  py-3">
+                                <a class="btn btn-primary" href="#">See best practices</a>
+                                <a class="btn btn-secondary" href="#">Getting started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="myCollapse" class="col-12 col-lg-10 accordion flex-column" role="tablist">
+                        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+                        <!-- Faq item 1 -->
+                        <div class="card o_cc o_cc2 border-0 mb-1" data-name="FAQ Item" role="presentation">
+                            <a href="#" t-attf-data-bs-target="#myCollapseTab{{uniq}}_1" role="tab" t-attf-aria-controls="myCollapseTab{{uniq}}_1" data-bs-toggle="collapse" aria-expanded="true" class="card-header">How can I use this snippet ?</a>
+                            <div t-attf-id="myCollapseTab{{uniq}}_1" class="collapse show" data-bs-parent="#myCollapse" role="tabpanel">
+                                <div class="p-3">
+                                    <p class="card-text">Go into edit mode and select the 'Customize' panel. Choose this block, 'FAQ With Title' should be written at the top of the pannel. Then, click the 'Add Item' button to create a new topic.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faq item 2-->
+                        <div class="card o_cc o_cc2 border-0 mb-1" data-name="FAQ Item" role="presentation">
+                            <a href="#" t-attf-data-bs-target="#myCollapseTab{{uniq}}_2" role="tab" t-attf-aria-controls="myCollapseTab{{uniq}}_2" data-bs-toggle="collapse" aria-expanded="false" class="collapsed card-header">What are the benefits of using this feature?</a>
+                            <div t-attf-id="myCollapseTab{{uniq}}_2" class="collapse" data-bs-parent="#myCollapse" role="tabpanel">
+                                <div class="p-3">
+                                    <p class="card-text">This feature can significantly improve your workflow by automating repetitive tasks and reducing manual errors. It also enhances collaboration and ensures data consistency across your team.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faq item 3-->
+                        <div class="card o_cc o_cc2 border-0 mb-1" data-name="FAQ Item" role="presentation">
+                            <a href="#" t-attf-data-bs-target="#myCollapseTab{{uniq}}_3" role="tab" t-attf-aria-controls="myCollapseTab{{uniq}}_3" data-bs-toggle="collapse" aria-expanded="false" class="collapsed card-header">What kind of support do you offer?</a>
+                            <div t-attf-id="myCollapseTab{{uniq}}_2" class="collapse" data-bs-parent="#myCollapse" role="tabpanel">
+                                <div class="p-3">
+                                    <p class="card-text">We provide 24/7 customer support through email, live chat, and phone. Our dedicated support team is always ready to help you with any questions or issues you may have.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faq item 4-->
+                        <div class="card o_cc o_cc2 border-0 mb-1" data-name="FAQ Item" role="presentation">
+                            <a href="#" t-attf-data-bs-target="#myCollapseTab{{uniq}}_4" role="tab" t-attf-aria-controls="myCollapseTab{{uniq}}_4" data-bs-toggle="collapse" aria-expanded="false" class="collapsed card-header">How can I get started with this feature?</a>
+                            <div t-attf-id="myCollapseTab{{uniq}}_2" class="collapse" data-bs-parent="#myCollapse" role="tabpanel">
+                                <div class="p-3">
+                                    <p class="card-text">Getting started is easy. Simply sign up for an account on our website, and you'll receive a welcome email with instructions on how to set up and start using the feature.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Faq item 5-->
+                        <div class="card o_cc o_cc2 border-0 mb-1" data-name="FAQ Item" role="presentation">
+                            <a href="#" t-attf-data-bs-target="#myCollapseTab{{uniq}}_5" role="tab" t-attf-aria-controls="myCollapseTab{{uniq}}_5" data-bs-toggle="collapse" aria-expanded="false" class="collapsed card-header">What are the system requirements?</a>
+                            <div t-attf-id="myCollapseTab{{uniq}}_2" class="collapse" data-bs-parent="#myCollapse" role="tabpanel">
+                                <div class="p-3">
+                                    <p class="card-text">This feature is compatible with most modern operating systems and browsers. For detailed system requirements, please refer to our technical specifications page.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_faq_with_title">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.faq_with_title"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_faq_with_title.svg">
+                <keywords>faq, title, accordion</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

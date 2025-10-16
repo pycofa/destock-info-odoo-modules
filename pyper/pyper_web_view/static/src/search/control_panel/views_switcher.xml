@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pyper_web_view.ViewsSwitcher">
+        <div class="o-views-switcher" t-if="displaySwitcher">
+            <Dropdown
+                class="'o-views-switcher--dropdown'"
+                togglerClass="'btn btn-outline-secondary'"
+                showCaret="false"
+                beforeOpen.bind="onDropdownOpen"
+            >
+                <t t-set-slot="toggler">
+                    <i t-att-class="'o-views-switcher--dropdown-icon me-2 ' + togglerIcon" t-att-title="togglerLabel" t-if="togglerIcon"/>
+                    <span t-out="togglerLabel"/>
+
+                    <i class="fa fa-caret-down ms-2"/>
+                </t>
+
+                <t t-foreach="categorizedViews" t-as="category" t-key="category.value">
+                    <div class="dropdown-header d-flex align-items-center justify-content-between"
+                         t-if="category.name and category.views.length > 0"
+                    >
+                        <span class="flex-grow-1" t-out="category.name"/>
+
+                        <span class="o_icon_right ms-3 text-secondary">
+                            <i
+                                class="ms-2 text-muted fa fa-cog"
+                                title="Configure views"
+                                t-on-click.stop="() => this.configureViews(category.value)"
+                            />
+                        </span>
+                    </div>
+
+                    <DropdownItem
+                        t-foreach="category.views" t-as="view" t-key="view.id"
+                        onSelected="() => this.selectView(view)"
+                        class="'o-views-switcher--dropdown-item'"
+                    >
+                        <span class="d-flex p-0 align-items-center justify-content-between o-views-switcher-dropdown-item-content">
+                            <span class="flex-grow-1 text-truncate">
+                                <t t-out="view.name"/>
+                            </span>
+
+                            <span class="o_icon_right d-flex align-items-center gap-2 ms-5">
+                                <i
+                                    class="text-muted fa fa-edit"
+                                    title="Edit view"
+                                    t-on-click.stop="() => this.editView(view.id)"
+                                />
+
+                                <i
+                                    class="text-muted fa fa-trash-o"
+                                    title="Delete view"
+                                    t-on-click.stop="() => this.openConfirmationDialog(view.id)"
+                                />
+                            </span>
+                        </span>
+                    </DropdownItem>
+                </t>
+
+                <hr class="dropdown-divider"/>
+
+                <DropdownItem onSelected.bind="createView">
+                    <i
+                        class="me-2 fa fa-plus-circle"
+                        t-att-title="createLabel"
+                    />
+                    <span t-out="createLabel"/>
+                </DropdownItem>
+            </Dropdown>
+        </div>
+    </t>
+</templates>

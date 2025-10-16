@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 82 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#Dégradé_sans_nom);
+      }
+
+      .cls-10 {
+        mask: url(#mask);
+      }
+
+      .cls-11 {
+        mask: url(#mask-2-3);
+      }
+
+      .cls-3 {
+        fill: url(#Dégradé_sans_nom_2);
+      }
+
+      .cls-4, .cls-9 {
+        fill: #000;
+      }
+
+      .cls-5 {
+        fill: #79d1f2;
+      }
+
+      .cls-12 {
+        opacity: .5;
+      }
+
+      .cls-6 {
+        fill: #f3ec60;
+      }
+
+      .cls-7 {
+        fill-opacity: .8;
+      }
+
+      .cls-7, .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-7, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-13 {
+        mask: url(#mask-1);
+      }
+    </style>
+    <mask id="mask" x="0" y="0" width="82" height="60" maskUnits="userSpaceOnUse">
+      <g id="mask-2">
+        <rect id="path-1-2" data-name="path-1" class="cls-8" width="82" height="60"/>
+      </g>
+    </mask>
+    <mask id="mask-1" x="0" y="0" width="95" height="82" maskUnits="userSpaceOnUse">
+      <g id="mask-2-2" data-name="mask-2">
+        <rect id="path-1-3" data-name="path-1" class="cls-8" width="82" height="60"/>
+      </g>
+    </mask>
+    <linearGradient id="Dégradé_sans_nom" data-name="Dégradé sans nom" x1="-1371" y1="908.7" x2="-1371.3" y2="908.9" gradientTransform="translate(72738 36413) scale(53 -40)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#008374"/>
+      <stop offset="1" stop-color="#006a59"/>
+    </linearGradient>
+    <mask id="mask-2-3" data-name="mask-2" x="-33" y="0" width="115" height="99" maskUnits="userSpaceOnUse">
+      <g id="mask-2-4" data-name="mask-2">
+        <rect id="path-1-4" data-name="path-1" class="cls-8" width="82" height="60"/>
+      </g>
+    </mask>
+    <linearGradient id="Dégradé_sans_nom_2" data-name="Dégradé sans nom 2" x1="-1383.4" y1="917" x2="-1383.8" y2="916.9" gradientTransform="translate(141165 58750) scale(102 -64)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00aa89"/>
+      <stop offset="1" stop-color="#009989"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" width="82" height="60"/>
+  <g class="cls-12">
+    <rect id="path-1" class="cls-5" width="82" height="60"/>
+    <g class="cls-10">
+      <circle class="cls-6" cx="65.5" cy="11.5" r="7.5"/>
+    </g>
+    <g class="cls-13">
+      <ellipse class="cls-2" cx="68.5" cy="62" rx="26.5" ry="20"/>
+    </g>
+    <g class="cls-11">
+      <ellipse class="cls-3" cx="18" cy="67" rx="51" ry="32"/>
+    </g>
+  </g>
+  <rect id="path-5" class="cls-4" x="22.9" y="21.5" width="36.3" height="2"/>
+  <g>
+    <rect class="cls-4" x="34.7" y="31" width="12" height="1"/>
+    <rect class="cls-4" x="32.1" y="28" width="17" height="1"/>
+  </g>
+  <g>
+    <path id="path-9" class="cls-9" d="M46.6,36.6v4.7h-11.7v-4.7h11.7Z"/>
+    <path id="path-9-2" data-name="path-9" class="cls-7" d="M46.6,36.6v4.7h-11.7v-4.7h11.7Z"/>
+  </g>
+</svg>

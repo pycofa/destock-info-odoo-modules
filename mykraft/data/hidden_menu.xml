@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <function model="ir.ui.menu" name="write">
+        <value eval="[ref('mail.menu_root_discuss')]"/>
+        <value eval="{'groups_id': [(6, 0, [ref('website_kapsule.group_hidden')])]}"/>
+    </function>
+
+</odoo>

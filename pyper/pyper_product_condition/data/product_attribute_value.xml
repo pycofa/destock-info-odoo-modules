@@ -1,0 +1,78 @@
+<odoo>
+    <record id="product_attribute_value_new" model="product.attribute.value">
+        <field name="name">New</field>
+        <field name="sequence">1</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_new"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_a" model="product.attribute.value">
+        <field name="name">A</field>
+        <field name="sequence">2</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_a"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_a_minus" model="product.attribute.value">
+        <field name="name">A-</field>
+        <field name="sequence">3</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_a_minus"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_b_plus" model="product.attribute.value">
+        <field name="name">B+</field>
+        <field name="sequence">4</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_b_plus"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_b" model="product.attribute.value">
+        <field name="name">B</field>
+        <field name="sequence">5</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_b"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_c" model="product.attribute.value">
+        <field name="name">C</field>
+        <field name="sequence">6</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_c"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_d" model="product.attribute.value">
+        <field name="name">D</field>
+        <field name="sequence">7</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_d"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_e" model="product.attribute.value">
+        <field name="name">E</field>
+        <field name="sequence">8</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_e"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_f" model="product.attribute.value">
+        <field name="name">F</field>
+        <field name="sequence">9</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_f"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_to_audit" model="product.attribute.value">
+        <field name="name">To audit</field>
+        <field name="sequence">10</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_to_audit"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+
+    <record id="product_attribute_value_not_working" model="product.attribute.value">
+        <field name="name">KO</field>
+        <field name="sequence">11</field>
+        <field name="product_condition_id" ref="pyper_product_condition.product_condition_not_working"/>
+        <field name="attribute_id" ref="pyper_product_condition.product_attribute_condition"/>
+    </record>
+</odoo>

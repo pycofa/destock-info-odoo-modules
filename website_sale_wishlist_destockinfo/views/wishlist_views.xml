@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Wish List Butotn -->
+    <template id="template_header_default" inherit_id="destockinfo_website.template_header_default">
+
+        <xpath expr="//t[@t-call='destockinfo_website.placeholder_header_text_element']" position="before">
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_link_class"
+                   t-value="'o_navlink_background_hover btn position-relative rounded-circle border-0 p-1 text-reset'"/>
+                <t t-set="_badge_class"
+                   t-value="'position-absolute top-0 end-0 mt-n1 me-n1 rounded-pill'"/>
+            </t>
+        </xpath>
+
+    </template>
+
+    <!--    Move "add to wishlist" button at the top of the card   -->
+    <template id="products_add_to_cart_inherit" inherit_id="website_sale.products_item">
+
+        <xpath expr="//div[hasclass('oe_product_image')]" position="after">
+            <xpath expr="//div[hasclass('o_wsale_product_btn')]" position="move"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_wsale_product_btn')]" position="attributes">
+            <attribute name="class" add="position-absolute start-0 top-0 mt-2" separator=" "/>
+        </xpath>
+
+    </template>
+
+    <template id="product_wishlist_inherit" inherit_id="website_sale_wishlist.product_wishlist">
+
+        <!--  Hide add to card in the Wishlist page if "add to card" feature is disabled -->
+        <xpath expr="//table//body//t[@t-foreach='wishes']//tr//td[hasclass('td-wish-btn')]" position="attributes">
+            <attribute name="t-if">
+                request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')
+            </attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('checkbox')]" position="attributes">
+            <attribute name="t-if">
+                request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')
+            </attribute>
+        </xpath>
+
+        <!--    Style on wishlist page and add quotation form    -->
+        <xpath expr="//section[hasclass('wishlist-section')]" position="attributes">
+            <attribute name="class" remove="container" separator=" "/>
+            <attribute name="class" add="col-12 col-md-8" separator=" "/>
+            <attribute name="class" add="pe-3" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('container')]" position="attributes">
+            <attribute name="class" add="d-flex px-0" separator=" "/>
+        </xpath>
+
+        <xpath expr="//img[hasclass('img')]" position="attributes">
+            <attribute name="class" remove="img-fluid" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('container')]" position="inside">
+            <section class="col-12 col-md-4">
+                <div class="border border-2 rounded-1 border-primary bg-body p-2 mb-3 mt-4">
+                    <span class="fw-bold text-primary">
+                        Contact us : ͏ + 33 (0) 4 76 95 94 61
+                    </span>
+                    <div id="collapse-form" class="s_website_form p-3 border-0 p-2"
+                         aria-labelledby="quotation-form">
+                        <div class="">
+                            <form action="/website/form/" method="post" enctype="multipart/form-data"
+                                  class="o_mark_required" data-mark="*" data-pre-fill="true"
+                                  data-model_name="website.sale.quotation"
+                                  data-success-mode="redirect" data-success-page="/contactus-thank-you">
+                                <div class="s_website_form_rows row s_col_no_bgcolor">
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_dnone">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input hidden="True" class="form-control s_website_form_input"
+                                                       name="email_to"
+                                                       t-att-value="request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.config_parameter')"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_dnone">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input hidden="True" class="form-control s_website_form_input"
+                                                       name="from_wishlist" t-att-value="1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                         data-type="char">
+                                        <div class="row s_col_no_resize">
+                                            <div class="col-sm">
+                                                <input class="bg-light form-control s_website_form_input" type="text"
+                                                       name="name"
+                                                       placeholder="Name" required="1" data-fill-with="name"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="tel">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input class="bg-light form-control s_website_form_input" type="tel"
+                                                       name="phone"
+                                                       placeholder="Phone" data-fill-with="phone"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_model_required"
+                                         data-type="email">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input class="bg-light form-control s_website_form_input" type="email"
+                                                       placeholder="E-mail" name="email_from" required="1"
+                                                       data-fill-with="email"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_model_required"
+                                         data-type="char">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input class="bg-light form-control s_website_form_input" type="text"
+                                                       placeholder="Subject" name="subject" required="1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                         data-type="text">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <textarea class="bg-light form-control s_website_form_input"
+                                                          name="content"
+                                                          placeholder="Content" required="1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-0 py-2 col-12 s_website_form_submit" data-name="Submit Button">
+                                        <div style="width: 200px;" class="s_website_form_label"/>
+                                        <a href="#" role="button" class="btn btn-primary s_website_form_send">Submit</a>
+                                        <span id="s_website_form_result"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </xpath>
+
+        <xpath expr="//td[hasclass('o_wish_price')]" position="attributes">
+            <attribute name="class" add="d-none" separator=" "/>
+        </xpath>
+
+            <xpath expr="//td[hasclass('text-start')]/strong/a/t" position="attributes">
+                <attribute name="t-out">
+                    wish.product_id.name
+                </attribute>
+        </xpath>
+
+    </template>
+
+</odoo>

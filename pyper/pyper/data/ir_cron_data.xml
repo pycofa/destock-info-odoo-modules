@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="autovacuum_job" model="ir.cron">
+        <field name="name">Pyper: Cleanup filestore</field>
+        <field name="model_id" ref="base.model_ir_attachment"/>
+        <field name="state">code</field>
+        <field name="code">model._run_cleanup_filestore()</field>
+        <field name='interval_number'>1</field>
+        <field name='interval_type'>days</field>
+        <field name="numbercall">-1</field>
+        <field name="priority">3</field>
+        <field name="nextcall" eval="(DateTime.now().replace(hour=3, minute=0) + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')" />
+    </record>
+</odoo>

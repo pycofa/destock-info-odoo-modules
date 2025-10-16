@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme_mail.Chatter" t-inherit="mail.Chatter" t-inherit-mode="extension">
+        <!-- Change style of follow button -->
+        <xpath expr="//button[hasclass('o-mail-Chatter-follow')]" position="attributes">
+            <attribute name="class" separator=" " remove="btn-link"/>
+        </xpath>
+    </t>
+</templates>

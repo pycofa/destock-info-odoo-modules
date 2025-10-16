@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_template_form" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="pyper_product_condition.view_product_template_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='show_variant_standard_price']" position="before">
+                <div
+                    class="d-flex align-items-center fw-bold mt-1"
+                    name="show_variant_sale_price"
+                    groups="pyper_product_condition_price.group_product_show_custom_sale_price"
+                >
+                    <i class="fa fa-shopping-cart me-1" title="Sale price"/>
+                    <field
+                        name="sale_price"
+                        class="variant_price"
+                        widget="monetary"
+                    />
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

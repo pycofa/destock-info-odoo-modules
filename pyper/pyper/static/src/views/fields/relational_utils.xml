@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<t t-name="pyper.AvatarMany2XAutocomplete">
+    <span class="o_image_many2x_autocomplete o_avatar d-flex align-items-center">
+        <img t-if="option.value" class="rounded me-1"
+             t-attf-src="/web/image/{{option.resModel}}/{{option.value}}/image_128" />
+        <t t-out="option.label" />
+    </span>
+</t>
+
+</templates>

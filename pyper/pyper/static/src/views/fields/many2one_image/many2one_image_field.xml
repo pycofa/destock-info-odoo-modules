@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="pyper.Many2OneImageField">
+        <div class="d-flex align-items-center gap-1" t-att-data-tooltip="props.record.data[props.name][1]">
+            <span class="o_avatar o_m2o_image">
+                <span t-if="props.record.data[props.name] === false and !props.readonly" class="o_avatar_empty o_m2o_image_empty"></span>
+
+                <img t-if="props.record.data[props.name] !== false"
+                     t-attf-src="/web/image/{{relation}}/{{props.record.data[props.name][0]}}/image_128"
+                     class="rounded"
+                />
+            </span>
+
+            <Many2OneField t-props="many2OneProps"/>
+        </div>
+    </t>
+
+    <t t-name="pyper.KanbanMany2OneImageField" t-inherit="pyper.Many2OneImageField" t-inherit-mode="primary">
+        <xpath expr="//span[hasclass('o_m2o_image')]" position="attributes">
+            <attribute name="class" separator=" " add="d-flex"/>
+        </xpath>
+
+        <xpath expr="//span[hasclass('o_m2o_image_empty')]" position="replace">
+            <t t-if="props.record.data[props.name] === false and props.isEditable">
+                <a t-on-click.stop.prevent="openPopover" tabIndex="-1" href="#" title="Assign"
+                   aria-label="Assign" class="o_quick_assign fa fa-camera btn-link d-flex align-items-center text-dark" role="button"/>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

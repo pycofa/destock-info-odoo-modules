@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_inherit_view" model="ir.ui.view">
+        <field name="name">res.config.settings.inherit.view</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="Shop management" name="shop_management" logo="website_sale_disable_cart/static/src/img/cart.png">
+                    <block title="Add to cart management" name="add_to_cart_management">
+                        <setting
+                            help="This parameter activates the e-commerce site's add-to-cart functionality."
+                            title="Allow add to cart"
+                            id="ecommerce_show_add_to_cart">
+                            <field name="ecommerce_show_add_to_cart"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

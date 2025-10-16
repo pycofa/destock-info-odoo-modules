@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website_sale_quotation.model_website_sale_quotation" model="ir.model">
+        <field name="website_form_key">website_sale_quotation</field>
+        <field name="website_form_access">True</field>
+        <field name="website_form_label">Create sale quotation</field>
+    </record>
+
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>website.sale.quotation</value>
+        <value eval="[
+        'subject',
+        'name',
+        'phone',
+        'email_from',
+        'content',
+        'product_ids',
+        ]"/>
+    </function>
+
+</odoo>

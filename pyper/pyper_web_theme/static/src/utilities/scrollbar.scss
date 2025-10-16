@@ -1,0 +1,44 @@
+// Scrollbar
+* {
+    scrollbar-width: $scrollbar-width;
+}
+
+::-webkit-scrollbar {
+    width: $scrollbar-size;
+    height: $scrollbar-size;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: $scrollbar-radius;
+    background-color: transparent;
+}
+
+* {
+    scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+
+    &:hover {
+        scrollbar-color: $scrollbar-thumb-hover-color $scrollbar-track-hover-color;
+    }
+}
+
+::-webkit-scrollbar-track {
+    background-color: $scrollbar-track-color;
+}
+
+:hover::-webkit-scrollbar-track {
+    background-color: $scrollbar-track-hover-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-color;
+}
+
+:hover::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-hover-color;
+}
+
+::-webkit-scrollbar-thumb:hover,
+:hover::-webkit-scrollbar-thumb:hover {
+    background-color: $scrollbar-thumb-hover-thumb-hover-color;
+}

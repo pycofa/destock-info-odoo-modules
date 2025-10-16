@@ -1,0 +1,113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_buyback_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-06 12:28+0000\n"
+"PO-Revision-Date: 2024-11-06 12:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_buyback_request
+#: model:ir.model,name:website_buyback_request.model_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.res_config_settings_inherit_view
+msgid "Buyback request"
+msgstr "Demande de rachat"
+
+#. module: website_buyback_request
+#: model:ir.model.fields,field_description:website_buyback_request.field_buyback_request__attached_file
+msgid "Attached File"
+msgstr "Pièce jointe"
+
+#. module: website_buyback_request
+#: model:ir.actions.act_window,name:website_buyback_request.action_buyback_request
+#: model:ir.ui.menu,name:website_buyback_request.menu_buyback_request_root
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.view_buyback_request_form
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.view_buyback_request_tree
+msgid "Buyback Requests"
+msgstr "Demandes de rachat"
+
+#. module: website_buyback_request
+#: model:ir.model.fields,field_description:website_buyback_request.field_buyback_request__contact_name
+msgid "Contact Name"
+msgstr "Nom du contact"
+
+#. module: website_buyback_request
+#: model:ir.model.fields,field_description:website_buyback_request.field_buyback_request__content
+msgid "Content"
+msgstr "Contenu"
+
+#. module: website_buyback_request
+#: model:ir.model.fields,field_description:website_buyback_request.field_buyback_request__email
+msgid "Email Address"
+msgstr "Adresse mail"
+
+#. module: website_buyback_request
+#: model:ir.model.fields,field_description:website_buyback_request.field_buyback_request__phone
+msgid "Phone Number"
+msgstr "Téléphone"
+
+#. module: website_buyback_request
+#: model:ir.model.fields,field_description:website_buyback_request.field_buyback_request__name
+msgid "Subject"
+msgstr "Sujet"
+
+#. module: website_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.res_config_settings_inherit_view
+msgid ""
+"Enter 'email cc' for buyback request. If you want to enter several email,"
+"                                 please separate by comma."
+msgstr "Saisissez « email cc » pour le formulaire de demande de rachat. Si vous souhaitez saisir plusieurs adresses électroniques, séparez-les par une virgule."
+
+#. module: website_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.res_config_settings_inherit_view
+msgid "Enter 'email to' for buyback request."
+msgstr "Saisissez « email to » pour le formulaire de demande de rachat"
+
+#. module: website_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.buyback_form
+msgid "Name*"
+msgstr "Nom*"
+
+#. module: website_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.buyback_form
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: website_buyback_request
+#: model:ir.model.fields,field_description:website_buyback_request.field_buyback_request__phone
+msgid "Phone Number"
+msgstr "Téléphone"
+
+#. module: website_buyback_request
+#: model:ir.model.fields,field_description:website_buyback_request.field_buyback_request__subject
+msgid "Subject"
+msgstr "Sujet"
+
+#. module: website_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.buyback_form
+msgid "Subject*"
+msgstr "Sujet*"
+
+#. module: website_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.buyback_form
+msgid "Submit"
+msgstr "Envoyer"
+
+#. module: website_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.buyback_form
+msgid "Content*"
+msgstr "Contenu*"
+
+#. module: website_buyback_request
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.view_buyback_request_form
+#: model_terms:ir.ui.view,arch_db:website_buyback_request.view_buyback_request_tree
+msgid "Contact name"
+msgstr "Nom du contact"

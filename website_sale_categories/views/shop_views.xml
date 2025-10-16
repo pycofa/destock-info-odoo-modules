@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--    Categories filters  (at the top) -->
+    <template id="filmstrip_categories" inherit_id="website_sale.filmstrip_categories">
+        <xpath expr="//li[@t-foreach='entries']" position="attributes">
+             <attribute name="t-attf-class">
+                {{'pe-3' if not c_last else ''}} {{'d-none' if not c.categ_filter_visible_in_shop or (not c.product_tmpl_ids and not c.child_id.product_tmpl_ids) else 'd-flex'}}
+             </attribute>
+        </xpath>
+
+    </template>
+
+</odoo>

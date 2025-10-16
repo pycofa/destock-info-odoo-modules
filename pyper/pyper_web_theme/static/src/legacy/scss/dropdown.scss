@@ -1,0 +1,10 @@
+// = Extra dropdown customizations
+// ----------------------------------------------------------------------------
+.o_web_client.o_touch_device {
+
+    .dropdown-item > *:first-child {
+        &:before {
+            padding-top: 7.5px;
+        }
+    }
+}

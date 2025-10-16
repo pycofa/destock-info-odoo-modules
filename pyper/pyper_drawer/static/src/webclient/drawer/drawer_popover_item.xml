@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pyper_drawer.DrawerPopoverItem">
+        <div t-att-class="classes">
+            <t t-call="pyper_drawer.DrawerMenuItem.Content">
+                <t t-set="withIcon" t-value="props.displayIcon"/>
+                <t t-set="iconData" t-value="props.iconData"/>
+                <t t-set="fontIcon" t-value="props.fontIcon"/>
+                <t t-set="fontIconColor" t-value="props.fontIconColor"/>
+                <t t-set="preferWebIcon" t-value="props.preferWebIcon"/>
+                <t t-set="label" t-value="props.label"/>
+                <t t-set="showLabel" t-value="true"/>
+            </t>
+        </div>
+    </t>
+
+</templates>

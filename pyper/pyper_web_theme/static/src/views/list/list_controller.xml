@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme.KanbanView" t-inherit="web.KanbanView" t-inherit-mode="extension">
+        <!-- Override button of Kanban -->
+        <xpath expr="//button[hasclass('o-kanban-button-new')]" position="replace">
+            <button type="button" class="btn btn-primary o-kanban-button-new" accesskey="c" t-on-click="() => this.createRecord()" data-bounce-button="">
+                <i class="fa fa-plus"/>
+            </button>
+        </xpath>
+    </t>
+</templates>

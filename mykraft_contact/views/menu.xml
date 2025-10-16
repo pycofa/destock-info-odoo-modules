@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record model="ir.ui.menu" id="contacts.menu_contacts">
+        <field name="parent_id"></field>
+        <field name="sequence">3</field>
+        <field name="font_icon">ph ph-users</field>
+    </record>
+
+    <record model="ir.ui.menu" id="mass_mailing.mass_mailing_menu_root">
+        <field name="parent_id"></field>
+        <field name="sequence">4</field>
+        <field name="font_icon">ph ph-paper-plane-tilt</field>
+    </record>
+</odoo>

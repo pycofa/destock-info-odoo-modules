@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pyper_web_view_menu.ViewsSwitcher" t-inherit="pyper_web_view.ViewsSwitcher" t-inherit-mode="extension">
+        <xpath expr="//*[hasclass('o-views-switcher-dropdown-item-content')]//span[hasclass('o_icon_right')]//i" position="before">
+            <i
+                t-if="view.bookmarked"
+                class="fa fa-heart"
+                title="Unbookmark view"
+                t-on-click.stop="() => this.unbookmarkView(view)"
+            />
+
+            <i
+                t-else=""
+                class="text-muted fa fa-heart-o"
+                title="Bookmark view"
+                t-on-click.stop="() => this.bookmarkView(view)"
+            />
+        </xpath>
+    </t>
+</templates>

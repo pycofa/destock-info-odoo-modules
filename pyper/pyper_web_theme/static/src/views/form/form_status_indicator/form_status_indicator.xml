@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="pyper_web_theme.FormStatusIndicator" t-inherit="web.FormStatusIndicator" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_form_status_indicator')]//button[hasclass('o_form_button_save')]" position="attributes">
+            <attribute name="class" separator=" " remove="btn-light px-1 py-0 lh-sm" add="btn-panel-left text-nowrap btn rounded-0"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_form_status_indicator')]//button[hasclass('o_form_button_save')]/i" position="attributes">
+            <attribute name="class" separator=" " remove="fa fa-cloud-upload fa-fw" add="ph ph-floppy-disk-back"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_form_status_indicator')]//button[hasclass('o_form_button_cancel')]" position="attributes">
+            <attribute name="class" separator=" " remove="btn-light px-1 py-0 lh-sm" add="btn-panel btn-panel-left btn-panel-white text-nowrap rounded-0"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_form_status_indicator')]//button[hasclass('o_form_button_cancel')]/i" position="attributes">
+            <attribute name="class" separator=" " remove="fa fa-undo fa-fw" add="ph ph-arrow-counter-clockwise"/>
+        </xpath>
+    </t>
+
+</templates>

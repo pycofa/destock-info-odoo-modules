@@ -1,0 +1,89 @@
+<odoo>
+    <record id="product_condition_new" model="product.condition">
+        <field name="name">New</field>
+        <field name="description">New</field>
+        <field name="sequence">1</field>
+        <field name="condition_type">new</field>
+        <field name="color">#10a1ea</field>
+    </record>
+
+    <record id="product_condition_a" model="product.condition">
+        <field name="name">A</field>
+        <field name="description">Barely new</field>
+        <field name="sequence">2</field>
+        <field name="condition_type">used</field>
+        <field name="color">#3adf5b</field>
+    </record>
+
+    <record id="product_condition_a_minus" model="product.condition">
+        <field name="name">A-</field>
+        <field name="description">Excellent state</field>
+        <field name="sequence">3</field>
+        <field name="condition_type">used</field>
+        <field name="color">#3adf5b</field>
+    </record>
+
+    <record id="product_condition_b_plus" model="product.condition">
+        <field name="name">B+</field>
+        <field name="description">Good state</field>
+        <field name="sequence">4</field>
+        <field name="condition_type">used</field>
+        <field name="color">#56d26f</field>
+    </record>
+
+    <record id="product_condition_b" model="product.condition">
+        <field name="name">B</field>
+        <field name="description">Correct state</field>
+        <field name="sequence">5</field>
+        <field name="condition_type">used</field>
+        <field name="color">#56d26f</field>
+    </record>
+
+    <record id="product_condition_c" model="product.condition">
+        <field name="name">C</field>
+        <field name="description">Very Used</field>
+        <field name="sequence">6</field>
+        <field name="condition_type">used</field>
+        <field name="color">#87f25a</field>
+    </record>
+
+    <record id="product_condition_d" model="product.condition">
+        <field name="name">D</field>
+        <field name="description">Used</field>
+        <field name="sequence">7</field>
+        <field name="condition_type">used</field>
+        <field name="color">#f1f41a</field>
+    </record>
+
+    <record id="product_condition_e" model="product.condition">
+        <field name="name">E</field>
+        <field name="description">Very Used</field>
+        <field name="sequence">8</field>
+        <field name="condition_type">used</field>
+        <field name="color">#f2b32c</field>
+    </record>
+
+    <record id="product_condition_f" model="product.condition">
+        <field name="name">F</field>
+        <field name="description">Deprecated</field>
+        <field name="sequence">9</field>
+        <field name="condition_type">to_define</field>
+        <field name="color">#f2b32c</field>
+    </record>
+
+    <record id="product_condition_to_audit" model="product.condition">
+        <field name="name">To audit</field>
+        <field name="description">To audit</field>
+        <field name="sequence">10</field>
+        <field name="condition_type">to_define</field>
+        <field name="color">#b0b0b0</field>
+    </record>
+
+    <record id="product_condition_not_working" model="product.condition">
+        <field name="name">KO</field>
+        <field name="description">Not working</field>
+        <field name="sequence">11</field>
+        <field name="condition_type">not_working</field>
+        <field name="color">#ec1313</field>
+    </record>
+</odoo>

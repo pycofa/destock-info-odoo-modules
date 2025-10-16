@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xml:space="preserve">
+    <t t-name="pyper_website_menu.EditMenuDialog" t-inherit="website.EditMenuDialog" t-inherit-mode="extension">
+        <xpath expr="//WebsiteDialog/div[hasclass('mt32')]" position="inside">
+            <br/>
+            <a href="#" t-on-click="() => this.addStructuredMenu()">
+                <i class="fa fa-plus-circle"/> Add Structured Menu Item
+            </a>
+        </xpath>
+    </t>
+
+    <t t-name="pyper_website_menu.MenuRow" t-inherit="website.MenuRow" t-inherit-mode="extension">
+        <xpath expr="//li" position="attributes">
+            <attribute name="t-att-data-is-structured-menu">props.menu.fields['is_structured_menu'] ? 'true' : undefined</attribute>
+        </xpath>
+
+        <xpath expr="//span[hasclass('form-control')]//span[hasclass('badge')]" position="after">
+            <span t-if="props.menu.fields['is_structured_menu']" class="badge text-bg-primary">Structured Menu</span>
+        </xpath>
+    </t>
+
+    <t t-name="pyper_website_menu.MenuDialog" t-inherit="website.MenuDialog" t-inherit-mode="extension">
+        <xpath expr="//div[@t-if='!props.isMegaMenu']" position="attributes">
+            <attribute name="t-if">!props.isMegaMenu and !props.isStructuredMenu</attribute>
+        </xpath>
+
+        <xpath expr="//WebsiteDialog" position="inside">
+            <div t-if="props.parentIsStructuredMenu" class="mb-3 row">
+                <label class="col-form-label col-md-3">
+                    Description
+                </label>
+                <div class="col-md-9">
+                    <input id="description_input" t-ref="description-input" type="text" t-model="description.input.value" class="form-control" t-att-class="{ 'is-invalid': description.input.hasError }"/>
+                </div>
+            </div>
+
+            <div t-if="props.parentIsStructuredMenu" class="mb-3 row">
+                <label class="col-form-label col-md-3">
+                    Font icon
+                </label>
+                <div class="col-md-9">
+                    <input id="font_icon_input" t-ref="font-icon-input" type="text" t-model="fontIcon.input.value" class="form-control" t-att-class="{ 'is-invalid': fontIcon.input.hasError }"/>
+                </div>
+            </div>
+
+            <div t-if="props.parentIsStructuredMenu" class="mb-3 row">
+                <label class="col-form-label col-md-3">
+                    Font icon color
+                </label>
+                <div class="col-md-9">
+                    <input id="font_icon_color_input" t-ref="font-icon-color-input" type="text" t-model="fontIconColor.input.value" class="form-control" t-att-class="{ 'is-invalid': fontIconColor.input.hasError }"/>
+                </div>
+            </div>
+
+            <div t-if="props.isStructuredMenu" class="mb-3 row">
+                <label class="col-form-label col-md-3">
+                    Number of columns
+                </label>
+                <div class="col-md-9">
+                    <input id="structured_menu_columns_input" t-ref="structured-menu-columns-input" type="number" t-model="structuredMenuColumns.input.value" class="form-control" t-att-class="{ 'is-invalid': structuredMenuColumns.input.hasError }"/>
+                    <small class="form-text">Use value '0' to use default value of theme</small>
+                </div>
+            </div>
+
+            <div t-if="props.isStructuredMenu" class="mb-3 row">
+                <label class="col-form-label col-md-3">
+                    Use obfuscator?
+                </label>
+                <div class="col-md-9">
+                    <div class="form-check">
+                        <input id="structured_menu_obfuscator_input" t-ref="structured-menu-obfuscator-input" type="checkbox" t-model="structuredMenuObfuscator.input.value" class="form-check-input" t-att-class="{ 'is-invalid': structuredMenuObfuscator.input.hasError }"/>
+                    </div>
+                    <small class="form-text">Display a obfuscator layout under the displayed structured menu</small>
+                </div>
+            </div>
+        </xpath>
+    </t>
+</template>

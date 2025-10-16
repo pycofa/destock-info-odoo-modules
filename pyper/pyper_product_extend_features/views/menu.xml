@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="product_by_pattern_menu"
+        name="Product by types"
+        sequence="2"
+        parent="pyper_product_catalog.product_catalog_root"
+    />
+
+    <menuitem
+        id="product_features_menu"
+        name="Features"
+        sequence="3"
+        parent="pyper_product_catalog.product_catalog_root"
+    />
+
+</odoo>

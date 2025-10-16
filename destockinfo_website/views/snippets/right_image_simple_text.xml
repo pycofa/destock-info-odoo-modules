@@ -1,0 +1,40 @@
+<odoo>
+    <template id="right_image_simple_text" name="Right image simple text">
+        <section class="s_text_image pt104 pb104 o_colored_level o_cc o_cc2" data-snippet="s_text_image"
+                 data-name="Texte - Image" style="background-image: none;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="pt16 pb16 o_colored_level col-lg-8 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <p class="lead">Bendr, un logiciel conçu en France</p>
+                        <h2>Un logiciel qui grandit en même temps que vos besoins pour ne pas s’écarter de l’essentiel</h2>
+                        <p>Développé en France, Bendr a une feuille de route de
+                            développement de proximité avec ses utilisateurs afin d’entendre et appliquer les retours en
+                            matière d’idée et de recommandation.
+                        </p>
+                        <p style="margin-bottom: 0px;">Vous aussi, participez au programme de développement du logiciel
+                            en étant impliqué dans les tests, et profitez avant tout le monde de fonctionnalité Beta !
+                        </p>
+
+                        <div class="d-flex align-items-center gap-2 mt-4">
+                            <a href="#" class="btn btn-primary">Demande de démonstration</a>
+                        </div>
+                    </div>
+                    <div class="pt16 pb16 o_colored_level col-lg-4 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.3s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <img src="destockinfo_website/static/img/snippets/notch_vector.svg" alt="Bendr, ERP pour les TPE et PME"
+                             class="img img-fluid mx-auto o_we_custom_image" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="right_image_simple_text_menu" inherit_id="website.snippets" name="Hero section">
+        <xpath expr="//div[@id='snippet_destockinfo']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="destockinfo_website.right_image_simple_text"
+               t-thumbnail="/destockinfo_website/static/img/snippets/snippet_thumb/s_text_image.svg"/>
+        </xpath>
+    </template>
+
+</odoo>

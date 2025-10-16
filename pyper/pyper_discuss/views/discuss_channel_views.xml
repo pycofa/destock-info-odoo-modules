@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Remove  context key `default_active_id` = 'mail.box_inbox' to load first discuss sidebar item -->
+    <record id="mail.action_discuss" model="ir.actions.client">
+        <field name="params" eval="&quot;{}&quot;"/>
+    </record>
+</odoo>

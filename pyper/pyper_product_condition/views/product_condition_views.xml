@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_condition_tree" model="ir.ui.view">
+        <field name="name">product.condition.tree</field>
+        <field name="model">product.condition</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="True" editable="top">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="condition_type"/>
+                <field name="color" widget="color"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_product_condition" model="ir.actions.act_window">
+        <field name="name">Product conditions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.condition</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

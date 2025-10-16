@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pyper_menu.MenuBreadcrumb">
+        <div class="breadcrumb o-menu-breadcrumb" t-if="mounted">
+            <t t-foreach="activeBreadcrumbMenus" t-as="menu" t-key="menu.id">
+                <MenuBreadcrumbItem
+                    label="menu.name"
+                    active="isActiveMenu(menu.id)"
+                />
+            </t>
+        </div>
+    </t>
+</templates>

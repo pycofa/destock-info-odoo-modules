@@ -1,0 +1,208 @@
+.o_structured_menu {
+    width: 100%;
+    padding: 0;
+    margin-top: 0 !important;
+    border-radius: 0;
+    background-clip: unset;
+    background-color: $pyper-structured-menu-bg;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $pyper-structured-menu-border-color;
+    max-height: 90vh !important;
+}
+
+.o_structured_menu--content {
+    --o-structured-menu-gap: #{$pyper-structured-menu-gap};
+    --o-structured-menu-columns: #{$pyper-structured-menu-columns};
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--o-structured-menu-gap);
+    padding: $pyper-structured-menu-padding;
+    justify-content: $pyper-structured-menu-justify-content;
+}
+
+.o_structured_menu--item {
+    display: flex;
+    flex-direction: row;
+    gap: $pyper-structured-menu-content-item-gap;
+    width: calc((100% / var(--o-structured-menu-columns)) - var(--o-structured-menu-gap) + (var(--o-structured-menu-gap) / var(--o-structured-menu-columns)));
+    min-height: $pyper-structured-menu-content-item-min-height;
+    border-radius: $pyper-structured-menu-content-item-border-radius;
+    padding: $pyper-structured-menu-content-item-padding;
+    background-color: $pyper-structured-menu-content-bg;
+    color: $pyper-structured-menu-content-color;
+
+    &:hover,
+    &:focus {
+        color: $pyper-structured-menu-content-hover-color;
+        background-color: $pyper-structured-menu-content-hover-bg;
+        text-decoration: none;
+    }
+
+    &:active,
+    &.active {
+        color: $pyper-structured-menu-content-active-color;
+        background-color: $pyper-structured-menu-content-active-bg;
+
+        &:hover,
+        &:focus {
+            color: $pyper-structured-menu-content-active-hover-color;
+            background-color: $pyper-structured-menu-content-active-hover-bg;
+        }
+    }
+}
+
+.o_structured_menu--item-icon {
+    padding: $pyper-structured-menu-content-item-icon-padding;
+    width: $pyper-structured-menu-content-item-icon-size;
+    text-align: center;
+
+    i {
+        font-size: $pyper-structured-menu-content-item-icon-size;
+    }
+}
+
+.o_structured_menu--item-text {
+    padding: $pyper-structured-menu-content-item-text-padding;
+}
+
+.o_structured_menu--item-name,
+.o_structured_menu--item-desc {
+    display: block;
+}
+
+.o_structured_menu--item-name {
+    font-size: $pyper-structured-menu-content-item-name-font-size;
+}
+
+.o_structured_menu--item-desc {
+    font-size: $pyper-structured-menu-content-item-desc-font-size;
+}
+
+.o_structured_menu--obfuscator {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: -100vh; // Allow to display obfuscator when navbar is affixed and content is scrolled
+    left: 0;
+    right: 0;
+    z-index: $pyper-structured-menu-obfuscator-zindex;
+    background-color: $pyper-structured-menu-obfuscator-bg;
+
+    .o_structured_menu.show + & {
+        display: block;
+    }
+}
+
+// Override overlay header navbar when structured menu is opened
+#wrapwrap.o_header_overlay {
+    > header:not(.o_header_affixed):not(.o_top_menu_collapse_shown):not(.o_header_sidebar) {
+        > .navbar {
+            &.o_colored_level {
+                &.o_structured_menu--navbar {
+                    background-color: $pyper-structured-menu-bg !important;
+                    border-color: $pyper-structured-menu-bg !important;
+                }
+            }
+        }
+    }
+}
+
+// Override navbar style
+.navbar-light {
+    a.o_structured_menu--item {
+        color: $pyper-structured-menu-content-color !important;
+
+        &:hover,
+        &:focus {
+            color: $pyper-structured-menu-content-hover-color;
+        }
+
+        &:active,
+        &.active {
+            color: $pyper-structured-menu-content-active-color;
+
+            &:hover,
+            &:focus {
+                color: $pyper-structured-menu-content-active-hover-color;
+            }
+        }
+    }
+}
+
+// Override navbar extra menu style
+.o_extra_menu_items {
+    .o_structured_menu--content {
+        --o-structured-menu-gap: #{$pyper-structured-menu-gap--extra};
+        --o-structured-menu-columns: 1;
+
+        &.container,
+        &.container-fluid {
+            padding-top: 0;
+        }
+    }
+
+    .o_structured_menu--item {
+        min-height: auto;
+        padding: $pyper-structured-menu-content-item-padding--extra;
+        gap: $pyper-structured-menu-content-item-gap--extra;
+    }
+
+    .o_structured_menu--item-icon {
+        padding: $pyper-structured-menu-content-item-icon-padding--extra;
+        width: $pyper-structured-menu-content-item-icon-size--extra;
+
+        i {
+            font-size: $pyper-structured-menu-content-item-icon-size--extra;
+        }
+    }
+
+    .o_structured_menu--item-name {
+        font-size: $pyper-structured-menu-content-item-name-font-size--extra;
+    }
+
+    .o_structured_menu--item-desc {
+        font-size: $pyper-structured-menu-content-item-desc-font-size--extra;
+    }
+}
+
+// Override navbar mobile style
+.o_navbar_mobile {
+    .dropdown-menu[data-bs-popper],
+    .o_dropdown_menu[data-bs-popper] {
+        &.o_structured_menu {
+            top: auto;
+        }
+    }
+
+    .o_structured_menu--content {
+        --o-structured-menu-gap: #{$pyper-structured-menu-gap--mobile};
+        --o-structured-menu-columns: 1;
+
+        &.container,
+        &.container-fluid {
+            padding-top: 0;
+        }
+    }
+
+    .o_structured_menu--item {
+        min-height: auto;
+        padding: $pyper-structured-menu-content-item-padding--mobile;
+    }
+
+    .o_structured_menu--item-icon {
+        padding: $pyper-structured-menu-content-item-icon-padding--mobile;
+        width: $pyper-structured-menu-content-item-icon-size--mobile;
+
+        i {
+            font-size: $pyper-structured-menu-content-item-icon-size--mobile;
+        }
+    }
+
+    .o_structured_menu--item-name {
+        font-size: $pyper-structured-menu-content-item-name-font-size--mobile;
+    }
+
+    .o_structured_menu--item-desc {
+        font-size: $pyper-structured-menu-content-item-desc-font-size--mobile;
+    }
+}

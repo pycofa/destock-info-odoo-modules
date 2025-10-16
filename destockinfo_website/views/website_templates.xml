@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- "Default" template -->
+    <template id="destockinfo_website.template_header_default" inherit_id="website.template_header_default"
+              name="Template Header Default" active="True">
+
+        <xpath expr="//t[@t-call='website.navbar']" position="replace">
+            <t t-call="website.navbar">
+                <t t-set="_navbar_classes" t-valuef="d-none d-lg-block"/>
+
+                <div class="container">
+                    <div class="top_nav_container d-flex align-items-center justify-content-end w-100">
+                        <!-- Text element -->
+                        <t t-call="destockinfo_website.placeholder_header_text_element"/>
+                        <!-- Social -->
+                        <t t-call="website.placeholder_header_social_links"/>
+                        <!-- Language Selector -->
+                        <t t-call="website.placeholder_header_language_selector">
+                            <t t-set="_btn_class" t-valuef="btn-outline-secondary border-0"/>
+                            <t t-set="_txt_class" t-valuef="small"/>
+                            <t t-set="_dropdown_menu_class" t-valuef="dropdown-menu-end"/>
+                        </t>
+                    </div>
+                </div>
+
+                <div id="o_main_nav" class="o_main_nav container">
+                    <!-- Brand -->
+                    <a data-name="Navbar Logo" href="/" t-attf-class="navbar-brand logo me-4">
+                        <img
+                                src="/destockinfo_website/static/img/logo-destockinfo-white.svg"
+                                alt="Destockinfo"
+                                loading="lazy"
+                                style="max-width:140px"
+                                class="logo-destock-info-white"
+                        />
+
+                        <img
+                                src="/destockinfo_website/static/img/logo-destockinfo-black.svg"
+                                alt="Destockinfo"
+                                loading="lazy"
+                                style="max-width:140px"
+                                class="logo-destock-info-dark"
+                        />
+                    </a>
+
+                    <div class="flex-grow-1 d-flex justify-content-between">
+                        <!-- Navbar -->
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-valuef="align-items-center"/>
+
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-valuef="nav-item"/>
+                                    <t t-set="link_class" t-valuef="nav-link"/>
+                                </t>
+                            </t>
+                        </t>
+                        <!-- Extra elements -->
+                        <ul class="navbar-nav align-items-center gap-2 flex-shrink-0 justify-content-end ps-3">
+                            <!-- Search Bar -->
+                            <t t-call="website.placeholder_header_search_box">
+                                <t t-set="_layout" t-valuef="modal"/>
+                                <t t-set="_input_classes" t-valuef="border border-end-0 p-3"/>
+                                <t t-set="_submit_classes" t-valuef="border border-start-0 px-4 bg-o-color-4"/>
+                                <t t-set="_button_classes" t-valuef="o_navlink_background text-reset"/>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_link_class" t-valuef="btn btn-outline-secondary"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="destockinfo_website.user_dropdown">
+                                <t t-set="_user_name" t-value="True"/>
+                                <t t-set="_item_class" t-valuef="dropdown"/>
+                                <t t-set="_user_name_class" t-valuef="small"/>
+                                <t t-set="_dropdown_menu_class" t-valuef="dropdown-menu-end"/>
+                            </t>
+                            <!-- Call To Action -->
+                            <t t-call="destockinfo_website.header_call_to_action"/>
+                        </ul>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+
+        <xpath expr="//div[@id='o_main_nav']" position="attributes">
+            <attribute name="class" separator=" " add="d-flex align-items-center"/>
+        </xpath>
+
+        <xpath expr="//t[@t-set='_navbar_classes']" position="replace">
+            <t t-set="_navbar_classes" t-valuef="d-none d-lg-block p-4"/>
+        </xpath>
+    </template>
+
+    <!-- Footer templates -->
+    <template id="destockinfo_website.footer_custom" inherit_id="website.footer_custom" name="Default" active="True">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+                <section class="s_text_block pt104 pb104" data-snippet="s_text_block" data-name="Text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 pt24 pb24">
+                                <img
+                                        class="mb-5"
+                                        src="/destockinfo_website/static/img/logo-destockinfo-white.svg"
+                                        alt="Destockinfo"
+                                        loading="lazy"
+                                        style="max-width:240px"
+                                />
+                                <p>Améliorez la gestion de vos équipements informatiques en entreprise avec les services
+                                    proposés par Destock Info, spécialiste depuis 2008.
+                                </p>
+                                <a href="mailto:contact@destock-info.com" class="fs-2 text-white">
+                                    contact@destock-info.com
+                                </a>
+                            </div>
+                            <div class="col-lg-8 pt24 pb24">
+                                <div class="w-100 d-flex justify-content-end">
+                                    <a href="/contact" class="btn btn-secondary">
+                                        <i class="fa fa-envelope-o me-2"/>
+                                        Contactez nous
+                                    </a>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-xs-6 col-md-3 offset-md-6">
+                                        <ul class="list-unstyled text-end">
+                                            <li class="mb-2">
+                                                <a href="/">Tarif des licences</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="#">Foire aux questions</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="#">Mentions légales</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3">
+                                        <ul class="list-unstyled text-end">
+                                            <li class="mb-2">
+                                                <a href="/">Fonctionnalités</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="#">Actualités</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="#">Conditions générales</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card mt-5">
+                                    <p>Inscrivez-vous à notre newsletter et recevez nos offres et actualités</p>
+                                    <div class="s_newsletter_subscribe_form s_newsletter_list js_subscribe"
+                                         data-vxml="001" data-list-id="1" data-name="Newsletter"
+                                         data-snippet="s_newsletter_subscribe_form">
+                                        <div class="input-group">
+                                            <input type="email" name="email" class="js_subscribe_value form-control"
+                                                   placeholder="votre adresse e-mail..."/>
+                                            <a role="button" href="#"
+                                               class="btn btn-primary js_subscribe_btn o_submit o_default_snippet_text">
+                                                S'inscrire
+                                            </a>
+                                            <a role="button" href="#"
+                                               class="btn btn-primary js_subscribed_btn d-none o_submit o_default_snippet_text"
+                                               disabled="disabled">Vous êtes inscrit
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <p class="text-muted text-center small">Copyright © Krafter SAS 2024 - Toute reproduction
+                                même partielle de ce site est interdite
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="destockinfo_website.header_call_to_action" inherit_id="website.header_call_to_action" active="True">
+        <xpath expr="//div[hasclass('container')]" position="attributes">
+            <attribute name="class" remove="container" separator=" "/>
+        </xpath>
+
+        <xpath expr="//a[hasclass('oe_unremovable')]" position="replace">
+            <a href="/formulaire-rachat-materiel-informatique" class="oe_unremovable btn btn-primary btn_cta">
+                Faire reprendre mon matériel
+            </a>
+        </xpath>
+    </template>
+
+    <template id="destockinfo_website.user_dropdown" inherit_id="portal.user_dropdown" active="True">
+        <xpath expr="." position="replace">
+            <t t-nocache="Each user is different regardless of the page visited."
+               t-nocache-_avatar="_avatar"
+               t-nocache-_icon="_icon"
+               t-nocache-_icon_class="_icon_class"
+               t-nocache-_icon_wrap_class="_icon_wrap_class"
+               t-nocache-_no_caret="_no_caret"
+               t-nocache-_user_name="_user_name"
+               t-nocache-_user_name_class="_user_name_class"
+               t-nocache-_item_class="_item_class"
+               t-nocache-_link_class="_link_class"
+               t-nocache-_dropdown_menu_class="_dropdown_menu_class">
+                <t t-set="is_connected" t-value="not user_id._is_public()"/>
+                <li t-if="is_connected" t-attf-class="#{_item_class} o_no_autohide_item">
+                    <a
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            t-attf-class="#{'' if _no_caret else 'dropdown-toggle'} btn text-reset o_navlink_background"
+                    >
+                        <i class="fa fa-user-circle me-2"/>
+                        Customer portal
+                    </a>
+                    <div t-attf-class="dropdown-menu js_usermenu #{_dropdown_menu_class}" role="menu">
+                        <a groups="base.group_user" href="/web" role="menuitem" class="dropdown-item ps-3"
+                           id="o_backend_user_dropdown_link">
+                            <i class="fa fa-fw fa-th me-1 small text-primary"/>
+                            Apps
+                        </a>
+                        <div id="o_logout_divider" class="dropdown-divider"/>
+                        <a t-attf-href="/web/session/logout?redirect=/" role="menuitem" id="o_logout"
+                           class="dropdown-item ps-3">
+                            <i class="fa fa-fw fa-sign-out me-1 small text-primary"/>
+                            Logout
+                        </a>
+                    </div>
+                </li>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="destockinfo_website.user_sign_in" name="User Sign In" inherit_id="portal.user_sign_in">
+        <xpath expr="." position="replace">
+            <li t-nocache="Profile session and user group can change unrelated to parent caches."
+                t-nocache-_item_class="_item_class"
+                t-nocache-_link_class="_link_class"
+                groups="base.group_public" t-attf-class="#{_item_class} o_no_autohide_item">
+                <a t-attf-href="/web/login" class="oe_unremovable btn text-reset o_navlink_background">
+                    Login / Signup
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="pyper_structured_menu" inherit_id="pyper_website_menu.pyper_structured_menu">
+        <xpath expr="//section" position="replace">
+            <section class="container-fluid d-flex overflow-hidden align-items-start"
+                     t-att-style="'--o-structured-menu-columns: ' + str(submenu.structured_menu_columns) + ';' if submenu.structured_menu_columns != 0 else ''">
+                <div class="px-4 pt-3 o-structured-menu-submenu-title">
+                    <p class="h3 flex-grow-1 text-white text-uppercase" t-esc="submenu.name"/>
+                </div>
+
+                <div class="container o_structured_menu--content pt-0 me-lg-0">
+                    <t t-foreach="submenu.child_id" t-as="submenu">
+                        <a t-att-href="submenu._clean_url()"
+                           t-attf-class="o_structured_menu--item #{submenu._is_active() and 'active'}"
+                           role="menuitem"
+                           t-ignore="true"
+                           t-att-target="'_blank' if submenu.new_window else None"
+                        >
+                            <div class="o_structured_menu--item-icon" t-if="submenu.font_icon">
+                                <i t-att-class="submenu.font_icon"
+                                   t-att-style="'color: ' + (submenu.font_icon_color or 'inherit') + ';'"/>
+                            </div>
+
+                            <div class="o_structured_menu--item-text">
+                                <span class="o_structured_menu--item-name" t-field="submenu.name"/>
+                                <span class="o_structured_menu--item-desc" t-field="submenu.description"
+                                      t-if="submenu.description"/>
+                            </div>
+                        </a>
+                    </t>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+    <template
+            id="destockinfo_website.placeholder_header_text_element"
+            name="Header Text element"
+            active="True"
+    >
+        <div t-attf-class="#{_item_class}">
+            <div t-attf-class="s_text_block #{_div_class} d-flex align-items-center gap-1" data-name="Text">
+                <a href="tel:+ 33 (0) 4 76 95 94 61" class="nav-link o_nav-link_secondary">
+                    <small>
+                        <i class="fa fa-1x fa-fw fa-phone me-1"/>&#847; <!-- Empty character needed to be able to delete the icon. -->
+                        <span class="o_force_ltr">+ 33 (0) 4 76 95 94 61</span>
+                    </small>
+                </a>
+                <a href="mailto:contact@destock-info.com" class="nav-link o_nav-link_secondary">
+                    <small>
+                        <i class="fa fa-1x fa-fw fa-envelope me-1"/>
+                        contact@destock-info.com
+                    </small>
+                </a>
+            </div>
+        </div>
+    </template>
+
+
+</odoo>

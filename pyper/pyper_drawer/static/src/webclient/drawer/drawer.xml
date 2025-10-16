@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pyper_drawer.Drawer">
+        <div t-if="isDraggable" class="o_drawer--swiper" t-on-touchstart="_onTouchStartDrag" t-on-touchmove="_onTouchMoveDrag" t-on-touchend="_onTouchEndDrag" t-ref="swiper"/>
+
+        <DrawerSubPanel/>
+
+        <div t-att-class="classes" t-att-style="styles" t-on-touchstart="_onTouchStartDrag" t-on-touchmove="_onTouchMoveDrag" t-on-touchend="_onTouchEndDrag" t-ref="root">
+            <div class="o_drawer--closer btn"
+                 tabindex="0"
+                 aria-expanded="false"
+                 t-if="isMounted and settings.closeAction and !isMinified"
+                 t-on-click="close"
+            >
+                <i class="fa fa-fw fa-caret-square-o-left"/>
+            </div>
+
+            <t t-slot="header" t-if="isMounted and displayHeader"/>
+
+            <t t-call="pyper_drawer.Drawer.Header" t-if="isMounted and displayHeader"/>
+
+            <t t-call="pyper_drawer.Drawer.SubHeader" t-if="isMounted"/>
+
+            <!-- Top Action -->
+            <div class="o_drawer--quick-actions" t-if="isMounted and displayQuickActions">
+                <t t-call="pyper_drawer.Drawer.QuickActions" t-if="isMounted">
+                    <t t-set="menus" t-value="Object.values(quickActionSections)"/>
+                </t>
+            </div>
+
+            <t t-call="pyper_drawer.Drawer.TopAction" t-if="isMounted"/>
+
+            <!-- Current App Sections -->
+            <t t-call="pyper_drawer.Drawer.Menu" t-if="isMounted">
+                <t t-set="categories" t-value="mainCategoryAppSections"/>
+            </t>
+
+            <!-- Bottom Action -->
+            <t t-call="pyper_drawer.Drawer.BottomAction" t-if="isMounted and isMounted"/>
+
+            <div class="o_drawer--footer" t-if="isMounted and displayFooter">
+                <t t-call="pyper_drawer.Drawer.FooterMenu">
+                    <t t-set="menus" t-value="Object.values(footerAppSections)"/>
+                </t>
+            </div>
+
+            <t t-call="pyper_drawer.Drawer.Footer" t-if="isMounted and displayFooter"/>
+
+            <t t-slot="footer" t-if="isMounted and displayFooter"/>
+        </div>
+
+        <div class="o_drawer--obfuscator" t-on-click="close"/>
+    </t>
+
+    <t t-name="pyper_drawer.Drawer.Header">
+        <div class="o_drawer_app_logo">
+            <div class="o_drawer_app_logo_badge">
+                <img t-att-src="headerBadgeUrl"
+                     class="pyper-badge"
+                />
+            </div>
+
+            <div class="o_drawer_app_logo_full" t-if="!isMinified">
+                <span class="pyper-app-name" t-out="appName"></span>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="pyper_drawer.Drawer.SubHeader" />
+
+    <t t-name="pyper_drawer.Drawer.TopAction" />
+
+    <t t-name="pyper_drawer.Drawer.BottomAction" />
+
+    <t t-name="pyper_drawer.Drawer.Menu">
+        <t t-set="section_index" t-value="0" />
+
+        <div class="o_drawer--menu"
+             t-ref="appSubMenus"
+             role="menu"
+        >
+            <t t-foreach="categories" t-as="category" t-key="category.value">
+                <p class="o_drawer--category" t-if="displayCategoryName and (category.label or category.actionID)">
+                    <span class="o_drawer--category-label" t-out="category.label"/>
+
+                    <span class="o_drawer--category-action"
+                          t-if="category.actionID"
+                          t-att-style="'color: ' + (category.fontIconColor || 'inherit') + ';'"
+                          t-on-click="() => this.onClickCategoryAction(category)"
+                    >
+                        <i t-if="category.fontIcon" t-att-class="category.fontIcon"/>
+
+                        <i t-else="" class="o_drawer--category-action_empty fa fa-cog"/>
+                    </span>
+                </p>
+
+                <hr t-elif="displayCategorySection" class="o_drawer--category-section"/>
+
+                <t t-foreach="category.menus" t-as="menu" t-key="menu.id">
+                    <t t-if="section_index lt Math.min(10, currentAppSections.length)">
+                        <t t-set="section_index" t-value="section_index + 1" />
+                        <t t-set="hotkey" t-value="'shift+' + (section_index % 10).toString()" />
+                    </t>
+                    <t t-else="">
+                        <t t-set="hotkey" t-value="undefined" />
+                    </t>
+
+                    <DrawerMenuItem
+                        menuXmlid="menu.xmlid"
+                        menuId="menu.id"
+                        menuAction="menu.actionID || undefined"
+                        className="menu.className || undefined"
+                        hotkey="hotkey"
+                        childrenDepth="mainStartChildrenDepth"
+                        children="menu.childrenTree"
+                        withIcon="settings.showRootApp"
+                        iconData="menu.webIconData"
+                        fontIcon="menu.fontIcon"
+                        fontIconColor="menu.fontIconColor"
+                        preferWebIcon="settings.preferWebIcon"
+                        emojiIcon="menu.emojiIcon"
+                        label="menu.name"
+                    />
+                </t>
+            </t>
+        </div>
+    </t>
+
+    <t t-name="pyper_drawer.Drawer.QuickActions">
+        <DrawerMenuItem
+            t-if="isMinified"
+            menuXmlid="mainQuickAction.xmlid"
+            menuId="mainQuickAction.id"
+            menuAction="mainQuickAction.actionID || undefined"
+            className="mainQuickAction.className || undefined"
+            childrenDepth="0"
+            children="mainQuickAction.childrenTree"
+            withIcon="settings.showRootApp"
+            iconData="mainQuickAction.webIconData"
+            fontIcon="mainQuickAction.fontIcon"
+            fontIconColor="mainQuickAction.fontIconColor"
+            preferWebIcon="settings.preferWebIcon"
+            emojiIcon="mainQuickAction.emojiIcon"
+            label="mainQuickAction.name"
+        />
+
+        <div class="o_drawer--quick-actions-content" t-else="">
+            <div class="btn-group btn-quick-action-group">
+                <button
+                    type="button"
+                    class="btn btn-quick-action"
+                    t-on-click="() => this.onClickQuickAction(mainQuickAction)"
+                >
+                    <i class="ph ph-note-pencil"/>
+                    <div class="d-flex flex-column">
+                        <p t-out="mainQuickAction.name"/>
+                        <p class="btn-quick-action-subtitle">Quick action</p>
+                    </div>
+                </button>
+
+                <button
+                    type="button"
+                    class="btn dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    t-if="secondaryQuickActions.length > 0"
+                >
+                    <span class="visually-hidden">
+                        Toggle Dropdown
+                    </span>
+                </button>
+
+                <ul class="dropdown-menu" t-if="secondaryQuickActions.length > 0">
+                    <t t-foreach="secondaryQuickActions" t-as="menu" t-key="menu.id">
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="#"
+                                t-out="menu.name"
+                                t-on-click="() => this.onClickQuickAction(menu)"
+                            />
+                        </li>
+                    </t>
+                </ul>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="pyper_drawer.Drawer.FooterMenu">
+        <t t-set="section_index" t-value="0" />
+
+        <t t-foreach="menus" t-as="menu" t-key="menu.id">
+            <t t-if="section_index lt Math.min(10, menus.length)">
+                <t t-set="section_index" t-value="section_index + 1" />
+                <t t-set="hotkey" t-value="'alt+shift+' + (section_index % 10).toString()" />
+            </t>
+            <t t-else="">
+                <t t-set="hotkey" t-value="undefined" />
+            </t>
+
+            <DrawerMenuItem
+                menuXmlid="menu.xmlid"
+                menuId="menu.id"
+                menuAction="menu.actionID || undefined"
+                className="menu.className || undefined"
+                hotkey="hotkey"
+                childrenDepth="0"
+                children="menu.childrenTree"
+                withIcon="settings.showRootApp"
+                iconData="menu.webIconData"
+                fontIcon="menu.fontIcon"
+                fontIconColor="menu.fontIconColor"
+                preferWebIcon="settings.preferWebIcon"
+                emojiIcon="menu.emojiIcon"
+                label="menu.name"
+            />
+        </t>
+    </t>
+
+    <t t-name="pyper_drawer.Drawer.Footer" />
+
+</templates>

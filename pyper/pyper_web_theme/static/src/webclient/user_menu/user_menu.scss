@@ -1,0 +1,5 @@
+.o_user_menu .dropdown-toggle {
+    .o_user_avatar {
+        height: calc(var(--o-navbar-height) - (#{$o-navbar-padding-v * 2}));
+    }
+}

@@ -1,0 +1,98 @@
+<odoo>
+    <!--RIGHT VARIANT -->
+    <template id="top_banner_overflow_image_right" name="Top banner overflow image (right)">
+        <section
+            class="o_cc o_cc1 pt96 pb96"
+            data-snippet="s_top_banner_overflow_image_right"
+            data-name="Top banner overflow image (right)"
+        >
+            <div class="container-fluid p-0" style="overflow-x:hidden; ">
+                <div class="row align-items-center justify-content-between ">
+                    <div class="col-12 col-md-6">
+                        <div class="row align-items-center justify-content-center justify-content-md-start text-center text-md-start p-0">
+                            <div class="col-0 col-md-2" style="max-width:200px;"/>
+                            <div class="col-12 col-md-10 d-flex flex-column  align-items-center align-items-md-start p-5 " style="max-width:600px;">
+                                <p 
+                                    class="h2 mb-0  text-secondary o_animate o_anim_fade_in o_anim_from_right"
+                                    style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                                >
+                                    Catch an eye
+                                </p>
+                                <h1 class="mt-0 mb-3 ">Sometimes, picking up a nice picture is the best way!</h1>
+                                <p class="h6 fw-normal">
+                                    Choosing the right image can make all the difference in your project. Whether you're designing a website, creating a presentation, or simply sharing a story, a well-chosen picture can capture attention, convey emotion, and enhance the overall message.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                    <a class="btn btn-primary" href="#">Get started</a>
+                                    <a class="btn btn-secondary" href="#">Try left</a>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div 
+                        class="col-12 col-md-6 p-0 o_animate o_anim_fade_in o_anim_from_right"
+                        style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                    >         
+                        <img src="/website/static/src/img/snippets_demo/s_picture.jpg" class="k-img-sm-fluid"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <!--LEFT VARIANT -->
+    <template id="top_banner_overflow_image_left" name="Top banner overflow image (left)">
+        <section
+            class="o_cc o_cc1 pt96 pb96"
+            data-snippet="s_top_banner_overflow_image_left"
+            data-name="Top banner overflow image (left)"
+        >
+            <div class="container-fluid p-0" style="overflow-x:hidden; ">
+                <div class="row align-items-center justify-content-between ">
+                    <div 
+                        class="col-sm-12 col-md-6 p-0 o_animate o_anim_fade_in o_anim_from_left order-2 order-md-1"
+                        style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s; overflow:hidden; "
+                    >         
+                        <img src="/website/static/src/img/snippets_demo/s_picture.jpg" class="k-img-sm-fluid k-img-left-fix"/>
+                    </div>
+                    <div class="col-sm-12 col-md-6 order-1 order-md-2">
+                        <div class="row align-items-center justify-content-center justify-content-md-start text-center text-md-end p-0">
+                            <div class="col-sm-12 col-md-10 d-flex flex-column  align-items-center align-items-md-end pb-5 ps-3 ps-md-5 pe-3 pe-lg-5" style="max-width:600px;">
+                                <p 
+                                    class="h2 mb-0  text-muted o_animate o_anim_fade_in o_anim_from_left"
+                                    style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                                >
+                                    Catch an eye
+                                </p>
+                                <h1 class="mt-0 mb-3 ">Sometimes, picking up a nice picture is the best way!</h1>
+                                <p class="h6 fw-normal">
+                                    Choosing the right image can make all the difference in your project. Whether you're designing a website, creating a presentation, or simply sharing a story, a well-chosen picture can capture attention, convey emotion, and enhance the overall message.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                    <a class="btn btn-primary" href="#">Get started</a>
+                                    <a class="btn btn-secondary" href="#">Try right</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-2" style="max-width:200px;"/>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections"  id="custom_krafter_snippet_sections_top_banner_overflow_image_variations">
+        <xpath expr="//div[@id='snippet_top_blocks']/div[hasclass('o_panel_body')]" position="inside">
+
+            <t t-snippet="pyper_website_snippets.top_banner_overflow_image_right"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_top_banner_overflow_image_right.svg">
+                <keywords>top, banner, image, overflow, right</keywords>
+            </t>
+    
+            <t t-snippet="pyper_website_snippets.top_banner_overflow_image_left"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_top_banner_overflow_image_left.svg">
+                <keywords>top, banner, image, overflow, left</keywords>
+            </t>   
+
+        </xpath>
+    </template>
+</odoo>

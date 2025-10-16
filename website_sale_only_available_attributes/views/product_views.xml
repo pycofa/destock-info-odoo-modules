@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="variants" inherit_id="website_sale.variants">
+        <xpath expr="//ul/t/li" position="attributes">
+            <attribute name="t-attf-class">variant_attribute</attribute>
+        </xpath>
+
+        <xpath expr="//label[hasclass('o_variant_pills_input_value')]//span" position="replace">
+            <span t-field="ptav.product_attribute_value_id.description"/>
+        </xpath>
+
+        <xpath expr="//label[hasclass('o_variant_pills_input_value')]/.." position="after">
+            <t t-if="ptav.ptav_product_variant_ids.qty_available > 0"/>
+        </xpath>
+
+        <xpath expr="//label[hasclass('o_variant_pills_input_value')]" position="attributes">
+            <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <xpath expr="//label[hasclass('o_variant_pills_input_value')]" position="inside">
+            <t t-if="request.env['ir.config_parameter'].sudo().get_param('website_sale_only_available_attributes.group_ecommerce_show_qty_available')">
+                <span class="p-2 position-absolute translate-middle badge rounded-pill bg-secondary text-light"
+                >
+                    <t t-out="int(ptav.ptav_product_variant_ids.qty_available)"/>
+                </span>
+            </t>
+        </xpath>
+
+        <xpath expr="//t[@t-if='ptav.ptav_product_variant_ids.qty_available > 0']" position="inside">
+            <xpath expr="//label[hasclass('o_variant_pills_input_value')]/.." position="move"/>
+        </xpath>
+    </template>
+
+</odoo>

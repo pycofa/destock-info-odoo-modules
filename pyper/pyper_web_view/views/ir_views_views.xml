@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_ir_views_simple_tree" model="ir.ui.view">
+        <field name="name">ir.views.simple.tree</field>
+        <field name="model">ir.views</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="res_model_name" column_invisible="True"/>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="category" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ir_views_tree" model="ir.ui.view">
+        <field name="name">ir.views.tree</field>
+        <field name="model">ir.views</field>
+        <field name="type">tree</field>
+        <field name="inherit_id" ref="view_ir_views_simple_tree"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='category']" position="before">
+                <field name="res_model_id" optional="show" options="{'no_create': True, 'no_edit': True}"/>
+                <field name="view_mode" optional="show"/>
+            </xpath>
+
+            <xpath expr="//tree/field[@name='category']" position="attributes">
+                <attribute name="optional">show</attribute>
+            </xpath>
+
+            <xpath expr="//tree/field[@name='category']" position="after">
+                <field name="user_id" optional="hide" options="{'no_create': True, 'no_edit': True}"/>
+                <field name="res_field_ids" optional="hide" widget="many2many_tags" options="{'no_create': True, 'no_edit': True}"/>
+                <field name="res_group_by_ids" optional="hide" widget="many2many_tags" options="{'no_create': True, 'no_edit': True}"/>
+                <field name="domain" optional="hide" widget="domain" options="{'model': 'res_model_name', 'in_dialog': True}"/>
+                <field name="limit" optional="hide"/>
+                <field name="group_ids" optional="hide" widget="many2many_tags" options="{'no_create': True, 'no_edit': True}"/>
+                <field name="context" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_ir_views_simple_form" model="ir.ui.view">
+        <field name="name">ir.views.simple.form</field>
+        <field name="model">ir.views</field>
+        <field name="type">form</field>
+        <field name="priority" eval="10"/>
+        <field name="arch" type="xml">
+            <form string="View">
+                <field name="res_model_name" invisible="True"/>
+                <field name="display_page_fields" invisible="True"/>
+                <field name="res_model_id" invisible="True" force_save="1"/>
+                <field name="category" invisible="True" force_save="1"/>
+                <field name="limit" invisible="True" force_save="1"/>
+                <field name="domain" invisible="True" force_save="1"/>
+                <field name="user_id" invisible="True" force_save="1"/>
+                <field name="group_ids" invisible="True" force_save="1"/>
+                <field name="context" invisible="True" force_save="1"/>
+                <field name="ir_action_id" invisible="True" force_save="1"/>
+
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <field
+                            class="fw-bold mb-4 h1"
+                            name="name"
+                            placeholder="Name of your saved view"
+                        />
+                    </div>
+
+                    <group name="config">
+                        <div name="config_mode">
+                            <field name="view_mode" widget="selection_badge"/>
+                        </div>
+
+                        <group name="config_view">
+                            <field name="expert_mode" widget="boolean_toggle" options="{'autosave': False}"/>
+
+                            <field name="shared" widget="boolean_toggle" options="{'autosave': False}"/>
+
+                            <field name="group_ids"
+                                           widget="many2many_tags"
+                                           options="{'no_create': True, 'no_edit': True}"
+                                           groups="base.group_no_one"
+                                           invisible="not expert_mode or not shared"
+                                    />
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page name="page_domain" string="Filters">
+                            <field name="domain" widget="domain" options="{'model': 'res_model_name', 'in_dialog': False}"/>
+                        </page>
+
+                        <page name="page_res_field_ids" string="Columns" invisible="not display_page_fields">
+                            <field name="res_field_ids" class="px-3">
+                                <tree editable="bottom" multi_edit="True">
+                                    <field name="field_id_domain" column_invisible="True"/>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="field_id" domain="field_id_domain" options="{'no_create': True, 'no_edit': True}"/>
+                                    <field name="label"/>
+                                    <field name="optional" placeholder="Always show"/>
+                                    <field name="width" column_invisible="not parent.expert_mode" force_save="1"/>
+                                    <field name="widget" column_invisible="not parent.expert_mode" force_save="1"/>
+                                    <field name="options" column_invisible="not parent.expert_mode" force_save="1" widget="char"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="page_res_group_by_ids" string="Groups by">
+                            <field name="res_group_by_ids" class="px-3">
+                                <tree editable="bottom" multi_edit="True">
+                                    <field name="field_id_domain" column_invisible="True"/>
+                                    <field name="available_grouping_type" column_invisible="True"/>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="field_id" domain="field_id_domain" options="{'no_create': True, 'no_edit': True}"/>
+                                    <field name="grouping_type" invisible="not available_grouping_type" required="available_grouping_type"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="page_res_order_by_ids" string="Orders by">
+                            <field name="res_order_by_ids" class="px-3">
+                                <tree editable="bottom" multi_edit="True">
+                                    <field name="field_id_domain" column_invisible="True"/>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="field_id" domain="field_id_domain" options="{'no_create': True, 'no_edit': True}"/>
+                                    <field name="sort"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="page_config" string="Configuration">
+                            <group>
+                                <group name="advanced_mode_tree" string="List settings" invisible="view_mode != 'tree'">
+                                    <field name="editable"/>
+                                    <field name="multi_edit"/>
+                                    <field name="expand"/>
+                                    <field name="no_export"/>
+                                    <field name="no_duplicate"/>
+                                    <field name="no_open_form_view" invisible="not expert_mode" force_save="1"/>
+                                </group>
+
+                                <group name="advanced_mode_kanban" string="Kanban settings" invisible="view_mode != 'kanban'" groups="base.group_no_one">
+                                    <field name="no_group_create"/>
+                                    <field name="no_quick_create"/>
+                                    <field name="no_records_draggable"/>
+                                </group>
+
+                                <group name="advanced_mode_global" string="Common settings">
+                                    <field name="limit"/>
+                                    <field name="no_create"/>
+                                    <field name="no_edit"/>
+                                    <field name="no_delete"/>
+                                    <field name="no_import"/>
+                                    <field name="sample" invisible="not expert_mode" force_save="1"/>
+                                    <field name="classes" invisible="not expert_mode" force_save="1"/>
+                                    <field name="js_class" invisible="not expert_mode" force_save="1"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ir_views_form" model="ir.ui.view">
+        <field name="name">ir.views.form</field>
+        <field name="model">ir.views</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="view_ir_views_simple_form"/>
+        <field name="mode">primary</field>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='config_view']/field[@name='expert_mode']" position="before">
+                <field name="res_model_id" options="{'no_create': True, 'no_edit': True}"/>
+            </xpath>
+
+            <xpath expr="//page[@name='page_config']" position="after">
+                <page name="page_technical" string="Technical">
+                    <group>
+                        <group name="info" string="Technical information" groups="base.group_no_one">
+                            <field name="context"/>
+                            <field name="main_ir_action_id" groups="base.group_no_one"/>
+                            <field name="ir_action_id" groups="base.group_no_one"/>
+                            <field name="ir_view_id" groups="base.group_no_one"/>
+                        </group>
+
+                        <group name="security" string="Security">
+                            <field name="user_id" options="{'no_create': True, 'no_edit': True}"/>
+                            <field name="system" readonly="True" groups="base.group_no_one"/>
+                        </group>
+                    </group>
+                </page>
+
+                <page name="arch" string="Architecture" groups="base.group_no_one">
+                    <group>
+                        <field name="arch" widget="code" string=""/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_ir_views" model="ir.actions.act_window">
+        <field name="name">Saved views</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ir.views</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+               eval="[
+                   Command.clear(),
+                   Command.create({'view_mode': 'tree', 'view_id': ref('view_ir_views_tree')}),
+                   Command.create({'view_mode': 'form', 'view_id': ref('view_ir_views_form')}),
+               ]"
+        />
+        <field name="context">{'default_shared': True}</field>
+    </record>
+</odoo>

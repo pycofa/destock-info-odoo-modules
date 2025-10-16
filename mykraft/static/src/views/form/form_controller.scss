@@ -1,0 +1,18 @@
+.o_form_view {
+    // Sheet
+    .o_form_sheet {
+        @include media-breakpoint-up(xxl, $o-extra-grid-breakpoints) {
+            --formView-sheet-padding-y: var(--formView-sheet-padding-y-xxl, 16px);
+            --formView-sheet-padding-x: var(--formView-sheet-padding-x-xxl, 16px);
+        }
+    }
+
+    .o_inner_group {
+        gap: 4px $o-horizontal-padding;
+    }
+
+    .o_form_statusbar {
+        padding: 0 16px 0 0;
+        margin-top: 0;
+    }
+}

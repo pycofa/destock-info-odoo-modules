@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 82 60" style="enable-background:new 0 0 82 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;fill-opacity:0.78;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;fill-opacity:0.348;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#79D1F2;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#F3EC60;}
+	.st6{filter:url(#Adobe_OpacityMaskFilter);}
+	
+		.st7{mask:url(#mask-2_00000014603608823877965250000004938890755575577003_);fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+</style>
+<g>
+	<g>
+		
+			<rect id="path-5_00000042018537258113743360000012973220856030366862_" x="31.4" y="36.3" class="st0" width="22.2" height="1.9"/>
+	</g>
+	<g>
+		
+			<rect id="path-5_00000101809160443840956370000011147558507046496690_" x="31.4" y="36.3" class="st1" width="22.2" height="1.9"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path id="path-7_00000062154098944415143150000010025342287952217509_" class="st0" d="M75.6,29.1v1.2H31.9v-1.2H75.6z M67.9,25.4
+			v1.2h-36v-1.2H67.9z M75.6,21.7v1.2H31.9v-1.2H75.6z"/>
+	</g>
+	<g>
+		<path id="path-7_00000038403849094049921330000016758287864275910800_" class="st2" d="M75.6,29.1v1.2H31.9v-1.2H75.6z M67.9,25.4
+			v1.2h-36v-1.2H67.9z M75.6,21.7v1.2H31.9v-1.2H75.6z"/>
+	</g>
+</g>
+<g transform="translate(29)">
+	<rect x="-25" y="19.4" class="st3" width="24" height="19"/>
+	<g transform="translate(.462 .442)">
+		<g>
+			
+				<rect id="path-1_00000101090926776044421710000012121937786567652758_" x="-25" y="19.4" class="st4" width="23.1" height="18.1"/>
+		</g>
+		<ellipse class="st5" cx="-7.2" cy="24.1" rx="3.5" ry="3.3"/>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-42.1" y="29.1" width="34.6" height="20.8">
+				<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+			</filter>
+		</defs>
+		
+			<mask maskUnits="userSpaceOnUse" x="-42.1" y="29.1" width="34.6" height="20.8" id="mask-2_00000014603608823877965250000004938890755575577003_">
+			<g class="st6">
+				
+					<rect id="path-1_00000072963200749922186660000011265107757100377994_" x="-25" y="19.4" class="st3" width="23.1" height="18.1"/>
+			</g>
+		</mask>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0.7834" y1="-1.414" x2="0.3983" y2="-1.3087" gradientTransform="matrix(34.616 0 0 20.768 -38.5558 66.7209)">
+			<stop  offset="0" style="stop-color:#00AA89"/>
+			<stop  offset="1" style="stop-color:#009989"/>
+		</linearGradient>
+		<ellipse class="st7" cx="-24.8" cy="39.5" rx="17.3" ry="10.4"/>
+	</g>
+	<path class="st3" d="M-1,19.4v19h-24v-19C-25,19.4-1,19.4-1,19.4z M-2,20.4h-22v17h22C-2,37.4-2,20.4-2,20.4z"/>
+</g>
+</svg>

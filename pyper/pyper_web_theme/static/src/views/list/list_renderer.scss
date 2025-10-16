@@ -1,0 +1,46 @@
+// Override @web/views/list/list_renderer.scss
+//--------------------------------------------
+
+.o_list_renderer {
+    --ListRenderer-thead-padding-y: #{map-get($spacers, 3)};
+
+    .o_list_table {
+        thead {
+            th {
+                padding-top: $table-cell-padding-y;
+            }
+        }
+
+        tbody > tr > td:not(.o_list_record_selector) {
+            vertical-align: middle;
+
+            .o_field_priority .fa,
+            .o_field_list_activity .fa {
+                line-height: inherit;
+            }
+
+            &.o_list_text {
+                word-wrap: inherit;
+                word-break: break-word;
+            }
+        }
+
+        tbody > tr.o_group_header {
+            .o_group_buttons {
+                > button {
+                    @include o-hover-text-color($o-brand-primary, darken($o-brand-primary, 20%));
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .o_data_row.o_selected_row > .o_data_cell.o_required_modifier:not(.o_readonly_modifier) {
+        border-bottom: 1px solid $o-input-border-required;
+    }
+
+    .o_data_row.o_selected_row > .o_data_cell.o_invalid_cell:not(.o_readonly_modifier) {
+        border-bottom: 1px solid $danger;
+    }
+}

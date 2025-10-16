@@ -1,0 +1,63 @@
+<odoo>
+    <template id="top_banner_title_with_foreground_image" name="Top banner title with foreground image">
+        <section
+            class="s_top_banner_title_with_foreground_image py96 o_cc o_cc1"
+            data-snippet="s_top_banner_title_with_foreground_image"
+            data-name="Top banner title with foreground image"
+        >
+            <div class="container-fluid  o_cc o_cc2" style="overflow-y:visible; ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 d-flex flex-column align-items-start justify-content-center p-5">
+                            <p
+                                class="h6 text-primary m-0 o_anim_fade_in o_animate o_anim_from_left"
+                                style="animation-delay: 0.1s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                            >Image impact</p>
+                            <h1 
+                                class="mt-0 mb-3 o_anim_fade_in o_animate o_anim_from_left"
+                                style="animation-delay: 0.3s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                            >Enhancing page design</h1>
+                            <p class="h5 text-muted">
+                                By strategically placing an image across a title, you can create a captivating and engaging first impression for your visitors. This technique not only adds depth and dimension to your layout but also helps to convey the theme of your content effectively.
+                            </p>
+                            <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                                <a class="btn btn-primary" href="#">Get started</a>
+                                <a class="btn btn-secondary" href="#">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8 p-0">
+                            <img 
+                                class="foreground_img"
+                                src="/website/static/src/img/snippets_demo/s_parallax.jpg"
+                            />
+                        </div>
+                    </div>          
+                </div>  
+            </div> 
+            <div class="container-fluid below_foreground_img" style="">
+                <div class="container">
+                    <div class="row d-flex align-items-baseline">
+                        <div class="col-12 col-lg-4 p-5">
+                            <h2 
+                                class="o_anim_fade_in o_animate o_anim_from_bottom"
+                                style="animation-delay: 0.4s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                            >Minimalism</h2>
+                        </div>
+                        <div class="col-12 col-lg-8 ps-5 ps-lg-0 pt-lg-5 pb-lg-5">
+                            <p>In web design, less is often more. A prominently displayed image can be a powerful feature! This approach can create a striking visual impact, drawing the viewer's attention and enhancing the overall aesthetic appeal of the page. Try to keep the design simple and let the image speak for itself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections"  id="custom_krafter_snippet_sections_top_banner_title_with_foreground_image">
+        <xpath expr="//div[@id='snippet_top_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.top_banner_title_with_foreground_image"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_top_banner_title_with_foreground_image.svg">
+                <keywords>image, overflow, text, title, foreground</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

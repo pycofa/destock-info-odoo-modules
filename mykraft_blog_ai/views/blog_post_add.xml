@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="blog_post_view_form_add" model="ir.ui.view">
+        <field name="name">blog.post.view.ai.form.add</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.blog_post_view_form_add"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="write_with_ai"/>
+                <field name="ai_prompt" invisible="not write_with_ai"
+                       placeholder="Give information to AI in this field to improve content."/>
+                <div class="alert alert-info" role="alert" colspan="2" invisible="not write_with_ai">Make sure that the AI descripton field is completed in blog
+                    information to maximize coherence between blog posts.</div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

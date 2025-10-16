@@ -1,0 +1,73 @@
+<odoo>
+    <template id="containerized_kpis" name="Containerized KPIs">
+        <section
+            class="s_text_image  o_cc o_cc1 pt112 pb112"
+            data-snippet="s_text_image"
+            data-name="Containerized KPIs"
+            style="background-image: none;"
+        >
+            <div class="container">
+                <div class="row ">
+                    <h2 class="text-center">Enhance Your Business Efficiency</h2>
+                    <p class="text-center">Our company is dedicated to delivering top-notch
+                        solutions that drive your business forward. With a team of experienced professionals, we pride
+                        ourselves on our ability to innovate and adapt to the ever-changing market.
+                    </p>
+                    <p class=" text-center">Our commitment to
+                        excellence is reflected in the numerous awards we’ve won and the thousands of satisfied clients
+                        we’ve served. We are available 24/7 to ensure that your needs are met, providing unparalleled
+                        customer support and service.
+                    </p>
+
+                    <p class="container text-center mt-4">
+                        <a href="/contactus" class="btn btn-primary">Contact us</a>
+                    </p>
+
+                    <div class="p-4 mt-5  pt56 o_cc o_cc3 pb56">
+                        <div class="row">
+                            <div
+                                class="col-12 col-md-4 mb-4 d-flex align-items-center o_anim_fade_in o_animate o_anim_from_bottom"
+                                style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                            >
+                                <i class="fa fa-users me-3 rounded-circle fa-2x bg-o-color-1"/>
+                                <div class="d-flex flex-column">
+                                    <h3 class="fs-2 mb-1 d-block">5,000+</h3>
+                                    <p class="mb-0">Satisfied clients</p>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-md-4 mb-4 d-flex align-items-center o_anim_fade_in o_animate o_anim_from_bottom"
+                                style="animation-delay: 0.2s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                            >
+                                <i class="fa fa-trophy me-3 rounded-circle fa-2x bg-o-color-1"/>
+                                <div class="d-flex flex-column">
+                                    <h3 class="fs-2 mb-0 d-block">150</h3>
+                                    <p class="mb-0">Awards Won</p>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-md-4 mb-4 d-flex align-items-center o_anim_fade_in o_animate o_anim_from_bottom"
+                                style="animation-delay: 0.4s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                            >
+                                <i class="fa fa-clock-o me-3 rounded-circle fa-2x bg-o-color-1"/>
+                                <div class="d-flex flex-column">
+                                    <h3 class="fs-2 mb-1 d-block">24/7</h3>
+                                    <p class="mb-0">Customer Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_containerized_kpis">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.containerized_kpis"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_containerized_kpis.svg">
+                <keywords>kpi, text, title, number</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,244 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper_product_condition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-19 14:29+0000\n"
+"PO-Revision-Date: 2024-06-19 16:31+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. module: pyper_product_condition
+#: model_terms:ir.ui.view,arch_db:pyper_product_condition.view_product_template_form
+msgid "<i class=\"fa fa-line-chart me-1\" title=\"Cost\"/>"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:ir.model,name:pyper_product_condition.model_product_attribute_value
+msgid "Attribute Value"
+msgstr "Valeur de l'attribut"
+
+#. module: pyper_product_condition
+#: model:product.condition,description:pyper_product_condition.product_condition_a
+msgid "Barely new"
+msgstr "Presque neuf"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_product__product_condition_id
+#: model:product.attribute,name:pyper_product_condition.product_attribute_condition
+msgid "Condition"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:product.condition,description:pyper_product_condition.product_condition_a_minus
+msgid "Excellent state"
+msgstr "Très bon état"
+
+#. module: pyper_product_condition
+#: model:product.condition,description:pyper_product_condition.product_condition_b_plus
+msgid "Good state"
+msgstr "Bon état"
+
+
+#. module: pyper_product_condition
+#: model:ir.model,name:pyper_product_condition.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_attribute_value__description
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__description
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_product__product_condition_description
+msgid "Description"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model_terms:ir.ui.view,arch_db:pyper_product_condition.res_config_settings_inherit_view
+msgid "Display on product page variant list price"
+msgstr "Afficher sur la page produit le prix de la liste des variants"
+
+#. module: pyper_product_condition
+#: model_terms:ir.ui.view,arch_db:pyper_product_condition.res_config_settings_inherit_view
+msgid "Display on product page variant standard price"
+msgstr "Afficher sur la page produit le coût des variants"
+
+#. module: pyper_product_condition
+#: model_terms:ir.ui.view,arch_db:pyper_product_condition.res_config_settings_inherit_view
+msgid "Display variant list price"
+msgstr "Afficher le prix de la liste des variants"
+
+#. module: pyper_product_condition
+#: model_terms:ir.ui.view,arch_db:pyper_product_condition.res_config_settings_inherit_view
+msgid "Display variant standard price"
+msgstr "Afficher le coût des variants"
+
+#. module: pyper_product_condition
+#: model:product.condition,description:pyper_product_condition.product_condition_b
+msgid "Excellent state"
+msgstr "Excellent état"
+
+#. module: pyper_product_condition
+#: model:product.condition,description:pyper_product_condition.product_condition_c
+msgid "Good state"
+msgstr "Bon état"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__id
+msgid "ID"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:product.condition,name:pyper_product_condition.product_condition_not_working
+msgid "KO"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields.selection,name:pyper_product_condition.selection__product_condition__condition_type__new
+#: model:product.attribute.value,name:pyper_product_condition.product_attribute_value_new
+#: model:product.condition,description:pyper_product_condition.product_condition_new
+#: model:product.condition,name:pyper_product_condition.product_condition_new
+msgid "New"
+msgstr "Neuf"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields.selection,name:pyper_product_condition.selection__product_condition__condition_type__not_working
+#: model:product.condition,description:pyper_product_condition.product_condition_not_working
+msgid "Not working"
+msgstr "Non fonctionnel"
+
+#. module: pyper_product_condition
+#: model:ir.model,name:pyper_product_condition.model_product_template
+msgid "Product"
+msgstr "Produit"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_attribute_value__product_condition_id
+#: model_terms:ir.ui.view,arch_db:pyper_product_condition.res_config_settings_inherit_view
+msgid "Product Condition"
+msgstr "Gestion des conditions"
+
+#. module: pyper_product_condition
+#: model:ir.model,name:pyper_product_condition.model_product_product
+msgid "Product Variant"
+msgstr "Variante de produit"
+
+#. module: pyper_product_condition
+#: model:ir.actions.act_window,name:pyper_product_condition.action_product_condition
+#: model:ir.ui.menu,name:pyper_product_condition.product_condition_menu
+msgid "Product conditions"
+msgstr "Conditions de produit"
+
+#. module: pyper_product_condition
+#: model_terms:ir.ui.view,arch_db:pyper_product_condition.res_config_settings_inherit_view
+msgid "Product management"
+msgstr "Gestion des produits"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: pyper_product_condition
+#: model:res.groups,name:pyper_product_condition.group_product_show_variant_list_price
+msgid "Show product variant list price"
+msgstr "Afficher les prix de la liste de prix sur les variants"
+
+#. module: pyper_product_condition
+#: model:res.groups,name:pyper_product_condition.group_product_show_variant_standard_price
+msgid "Show product variant standard price"
+msgstr "Afficher le coût des variants"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_res_config_settings__group_product_show_variant_list_price
+msgid "Show variant list price"
+msgstr "Afficher les prix de la liste de prix sur les variants"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_res_config_settings__group_product_show_variant_standard_price
+msgid "Show variant standard price"
+msgstr "Afficher le coût des variants"
+
+#. module: pyper_product_condition
+#: model:product.attribute.value,name:pyper_product_condition.product_attribute_value_to_audit
+#: model:product.condition,description:pyper_product_condition.product_condition_to_audit
+#: model:product.condition,name:pyper_product_condition.product_condition_to_audit
+msgid "To audit"
+msgstr "À auditer"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields.selection,name:pyper_product_condition.selection__product_condition__condition_type__to_define
+msgid "To define"
+msgstr "A définir"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_product__count_child_ids
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_template__count_child_ids
+msgid "Total child ids"
+msgstr "Total produits liés"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_attribute_value__condition_type
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_condition__condition_type
+msgid "Type"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:ir.model.fields.selection,name:pyper_product_condition.selection__product_condition__condition_type__used
+#: model:product.condition,description:pyper_product_condition.product_condition_d
+msgid "Used"
+msgstr "Occasion"
+
+#. module: pyper_product_condition
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_product__child_ids
+#: model:ir.model.fields,field_description:pyper_product_condition.field_product_template__child_ids
+msgid "Variants"
+msgstr ""
+
+#. module: pyper_product_condition
+#: model:product.condition,description:pyper_product_condition.product_condition_e
+msgid "Very Used"
+msgstr "Très usé"

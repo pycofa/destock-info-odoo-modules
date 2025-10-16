@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website_menus_form_view" model="ir.ui.view">
+        <field name="name">website.menu.form.inherit</field>
+        <field name="model">website.menu</field>
+        <field name="inherit_id" ref="website.website_menus_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//field[@name='is_mega_menu']" position="after">
+                <field name="is_structured_menu"/>
+                <field name="parent_is_structured_menu" invisible="True"/>
+            </xpath>
+
+            <xpath expr="//form//group//field[@name='name']" position="after">
+                <field name="structured_menu_columns" invisible="parent_is_structured_menu"/>
+                <field name="structured_menu_obfuscator" invisible="parent_is_structured_menu"/>
+                <field name="description" invisible="not parent_is_structured_menu"/>
+                <field name="font_icon" invisible="not parent_is_structured_menu"/>
+                <field name="font_icon_color" widget="color" invisible="not parent_is_structured_menu"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="menu_tree" model="ir.ui.view">
+        <field name="name">website.menu.tree.inherit</field>
+        <field name="model">website.menu</field>
+        <field name="inherit_id" ref="website.menu_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree//field[@name='is_mega_menu']" position="after">
+                <field name="is_structured_menu"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,45 @@
+<odoo>
+    <template id="top_banner_1" name="Top banner 1">
+        <section
+            class="pb0  pt72 pb72"
+            data-scroll-background-ratio="1"
+            data-snippet="s_cover"
+            style="background-image: none;"
+            data-name="Top banner (1)"
+        >
+
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-12 col-lg-10 o_anim_fade_in o_animate o_anim_from_left "
+                        style="--wanim-intensity: 20; animation-duration: 0.4s;">
+                        <p class="text-primary fs-3 ">Welcome to our world</p>
+                        <h1 class="">Transform Your Business with Innovative Solutions</h1>
+
+                        <p class="lead ">At our company, we specialize in providing cutting-edge
+                            solutions that are tailored to meet the unique needs of your business. Our team of experts
+                            works tirelessly to stay ahead of industry trends, ensuring that you have access to the
+                            latest and most effective tools available. We believe in building strong, lasting
+                            relationships with our clients, which is why we offer 24/7 customer support to assist you
+                            whenever you need it.
+                        </p>
+                        <div class="d-flex align-items-center gap-2">
+                            <a href="/contactus" class="btn btn-primary mt-4">Contact us</a>
+                            <a href="/" class="btn btn-outline-primary mt-4">More information</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections"  id="custom_krafter_snippet_sections_top_banner_1">
+        <xpath expr="//div[@id='snippet_top_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.top_banner_1"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_top_banner_1.svg">
+                <keywords>kpi, text, title, number</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_open_icecat_wizard" model="ir.actions.act_window">
+            <field name="name">Import product with EAN/UPC</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">icecat.form</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <menuitem
+            id="icecat_import_menu"
+            name="Import product with EAN/UPC"
+            sequence="10"
+            parent="pyper_product_catalog.product_import_root"
+            action="pyper_icecat_connector.action_open_icecat_wizard"
+        />
+
+    </data>
+</odoo>

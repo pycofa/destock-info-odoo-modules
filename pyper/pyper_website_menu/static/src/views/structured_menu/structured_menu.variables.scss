@@ -1,0 +1,49 @@
+$pyper-structured-menu-columns: 4 !default;
+$pyper-structured-menu-padding: 32px !default;
+$pyper-structured-menu-gap: 16px !default;
+$pyper-structured-menu-justify-content: flex-start !default;
+$pyper-structured-menu-bg: $o-navbar-background !default;
+$pyper-structured-menu-border-color: $o-border-color !default;
+
+$pyper-structured-menu-content-color: $nav-link-color !default;
+$pyper-structured-menu-content-bg: transparent !default;
+$pyper-structured-menu-content-hover-color: inherit !default;
+$pyper-structured-menu-content-hover-bg: $o-gray-100 !default;
+$pyper-structured-menu-content-active-color: inherit !default;
+$pyper-structured-menu-content-active-bg: $o-gray-200 !default;
+$pyper-structured-menu-content-active-hover-color: inherit !default;
+$pyper-structured-menu-content-active-hover-bg: $o-gray-300 !default;
+
+$pyper-structured-menu-content-item-min-height: auto !default;
+$pyper-structured-menu-content-item-padding: 26px !default;
+$pyper-structured-menu-content-item-gap: 1em !default;
+$pyper-structured-menu-content-item-border-radius: 0 !default;
+
+$pyper-structured-menu-content-item-icon-padding: 0 !default;
+$pyper-structured-menu-content-item-icon-size: 32px !default;
+
+$pyper-structured-menu-content-item-text-padding: 0 !default;
+
+$pyper-structured-menu-content-item-name-font-size: 1rem !default;
+$pyper-structured-menu-content-item-desc-font-size: 0.85rem !default;
+
+// Obfuscator
+$pyper-structured-menu-obfuscator-zindex: -1 !default;
+$pyper-structured-menu-obfuscator-bg: rgba($o-navbar-background, 0.9) !default;
+
+// Extra style
+$pyper-structured-menu-gap--extra: $pyper-structured-menu-gap * 0.5 !default;
+$pyper-structured-menu-content-item-padding--extra: $pyper-structured-menu-content-item-padding * 0.33 !default;
+$pyper-structured-menu-content-item-gap--extra: $pyper-structured-menu-content-item-gap * 0.8 !default;
+$pyper-structured-menu-content-item-icon-padding--extra: $pyper-structured-menu-content-item-icon-padding * 0.7 !default;
+$pyper-structured-menu-content-item-icon-size--extra: $pyper-structured-menu-content-item-icon-size * 0.7 !default;
+$pyper-structured-menu-content-item-name-font-size--extra: $pyper-structured-menu-content-item-name-font-size * 0.8 !default;
+$pyper-structured-menu-content-item-desc-font-size--extra: $pyper-structured-menu-content-item-desc-font-size * 0.7 !default;
+
+// Mobile style
+$pyper-structured-menu-gap--mobile: $pyper-structured-menu-gap * 0.5 !default;
+$pyper-structured-menu-content-item-padding--mobile: $pyper-structured-menu-content-item-padding * 0.5 !default;
+$pyper-structured-menu-content-item-icon-padding--mobile: $pyper-structured-menu-content-item-icon-padding * 0,8 !default;
+$pyper-structured-menu-content-item-icon-size--mobile: $pyper-structured-menu-content-item-icon-size * 0,8 !default;
+$pyper-structured-menu-content-item-name-font-size--mobile: $pyper-structured-menu-content-item-name-font-size * 0.8 !default;
+$pyper-structured-menu-content-item-desc-font-size--mobile: $pyper-structured-menu-content-item-desc-font-size * 0.7 !default;

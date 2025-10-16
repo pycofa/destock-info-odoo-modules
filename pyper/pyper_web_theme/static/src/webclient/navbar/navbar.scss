@@ -1,0 +1,167 @@
+// Fix navbar apps menu color
+.o_main_navbar {
+    align-items: center;
+
+    .o_navbar_logo,
+    > img:first-child {
+        margin-left: $o-horizontal-padding;
+    }
+
+    > .dropdown-item,
+    > .dropdown > .dropdown-toggle,
+    > .o_menu_sections > .dropdown-item,
+    > .o_menu_sections > .dropdown > .dropdown-toggle {
+        height: $o-navbar-entry-height;
+    }
+
+    .o_menu_sections {
+        > .dropdown,
+        > .dropdown-item {
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        > .dropdown {
+            &.o_nav_entry--active {
+                > .dropdown-toggle {
+                    color: $o-navbar-entry-color--active;
+                    background-color: $o-navbar-entry-bg--active;
+                    font-weight: $o-navbar-entry-font-weight--active;
+                }
+            }
+        }
+
+        > .dropdown-item {
+            &.o_nav_entry--active {
+                color: $o-navbar-entry-color--active;
+                background-color: $o-navbar-entry-bg--active;
+                font-weight: $o-navbar-entry-font-weight--active;
+            }
+        }
+    }
+
+    // Keep same style of the Discuss system tray buttons
+    .o_user_menu,
+    .o_debug_manager {
+        margin-top: - $o-navbar-padding-v; // cancel navbar padding
+        margin-bottom: - $o-navbar-padding-v; // cancel navbar padding
+
+        display: flex !important;
+        align-items: center;
+        padding: 0;
+    }
+
+    .o_menu_systray {
+        align-items: center;
+
+        + .o_menu_systray {
+            margin-left: $o-navbar-system-tray-entry-margin-h !important;
+        }
+
+        > .dropdown:empty {
+            // Hide empty dropdown to avoid double margin between 2 items
+            display: none;
+        }
+
+        .dropdown-toggle {
+            margin: 0;
+            border: none;
+            min-width: $o-navbar-entry-width;
+            height: $o-navbar-entry-height;
+
+            &:hover,
+            &:focus,
+            &.focus {
+                color: $o-navbar-system-tray-entry-color--hover !important;
+                background-color: $o-navbar-system-tray-entry-bg--hover;
+            }
+        }
+
+        > .dropdown-item,
+        .dropdown-toggle {
+            padding: $o-navbar-system-tray-entry-padding;
+        }
+
+        .o_switch_company_menu {
+            .dropdown-toggle {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        > .dropdown,
+        > .dropdown-item {
+            margin-left: $o-navbar-system-tray-entry-margin-h;
+            margin-right: $o-navbar-system-tray-entry-margin-h;
+            border-radius: $o-navbar-system-tray-entry-border-radius;
+            color: var(--NavBar-entry-color, #{$o-navbar-entry-color});
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active,
+            &:active {
+                &:before {
+                    content: '';
+                }
+
+                &,
+                .dropdown-toggle {
+                    color: $o-navbar-system-tray-entry-color--active;
+                    background-color: $o-navbar-system-tray-entry-bg--active;
+                }
+            }
+
+            &:hover,
+            &:focus,
+            &.show {
+                &,
+                .dropdown-toggle {
+                    color: $o-navbar-system-tray-entry-color--hover;
+                    background-color: $o-navbar-system-tray-entry-bg--hover;
+                }
+            }
+        }
+
+        .o_user_menu {
+            &.dropdown {
+                &:last-child {
+                    margin-right: #{$o-horizontal-padding};
+                }
+            }
+
+            .dropdown-toggle {
+                padding-left: 0;
+                padding-right: 0;
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active,
+                &[aria-expanded="true"]{
+                    .o_user_avatar {
+                        &.rounded-pill {
+                            border-radius: $o-navbar-system-tray-entry-border-radius !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        > .dropdown,
+        > .dropdown > .dropdown-toggle,
+        > .dropdown-item {
+            > .badge {
+                position: absolute;
+                top: $o-navbar-badge-top;
+                right: -$o-navbar-badge-padding;
+            }
+        }
+    }
+}

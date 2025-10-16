@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="pyper.Many2OneFieldBadge" t-inherit="web.Many2OneField" t-inherit-mode="primary">
+        <xpath expr="//t[@t-if='props.readonly']/t[@t-if='!props.canOpen']/span" position="attributes">
+            <attribute name="t-att-class">badgeClasses</attribute>
+            <attribute name="class" add="o_tag position-relative d-inline-flex align-items-center user-select-none mw-100 o_badge badge rounded-pill lh-1" separator=" "/>
+            <attribute name="t-att-style">badgeStyles</attribute>
+        </xpath>
+
+        <xpath expr="//t[@t-if='props.readonly']/t[@t-if='!props.canOpen']/span/span[1]" position="before">
+            <i t-if="value[3] and !props.noIcon" t-att-class="iconClasses"/>
+        </xpath>
+
+        <xpath expr="//t[@t-if='props.readonly']/t[@t-else]/a" position="attributes">
+            <attribute name="t-att-class">badgeClasses</attribute>
+            <attribute name="class" add="o_tag position-relative d-inline-flex align-items-center user-select-none mw-100 o_badge badge rounded-pill lh-1" separator=" "/>
+            <attribute name="t-att-style">badgeStyles</attribute>
+        </xpath>
+
+        <xpath expr="//t[@t-if='props.readonly']/t[@t-else]/a/span[1]" position="before">
+            <i t-if="value[3] and !props.noIcon" t-att-class="iconClasses"/>
+        </xpath>
+
+        <xpath expr="//t[@t-else]/div[hasclass('o_field_many2one_selection')]" position="attributes">
+            <attribute name="t-att-class">badgeClasses</attribute>
+            <attribute name="class" add="o_tag position-relative d-inline-flex align-items-center user-select-none mw-100 o_badge badge rounded-pill lh-1" separator=" "/>
+            <attribute name="t-att-style">badgeStyles</attribute>
+        </xpath>
+
+        <xpath expr="//t[@t-else]/div[hasclass('o_field_many2one_selection')]/Many2XAutocomplete" position="before">
+            <i t-if="value[3] and !props.noIcon" t-att-class="iconClasses"/>
+        </xpath>
+    </t>
+</templates>

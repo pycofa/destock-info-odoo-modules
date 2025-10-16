@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_condition_group_user,product_condition group_user,model_product_condition,base.group_user,1,1,1,1
+access_product_condition_group_portal,product_condition group_portal,model_product_condition,base.group_portal,1,0,0,0

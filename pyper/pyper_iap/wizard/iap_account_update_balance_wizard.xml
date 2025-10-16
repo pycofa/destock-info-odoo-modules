@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_iap_account_update_balance_wizard" model="ir.ui.view">
+        <field name="name">iap.account.update_balance.wizard.form</field>
+        <field name="model">iap.account.update_balance.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <label for="add_balance"/>
+                        <div class="d-flex flex-row">
+                            <field name="add_balance"/>
+                            <field name="unit_name" nolabel="1"/>
+                        </div>
+                    </group>
+                </group>
+
+                <footer>
+                    <button
+                        name="action_update_balance"
+                        type="object"
+                        string="Update"
+                        class="btn-primary"
+                        data-hotkey="shift+u"
+                    />
+
+                    <button
+                        string="Cancel"
+                        class="btn-secondary"
+                        data-hotkey="z"
+                        special="cancel"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

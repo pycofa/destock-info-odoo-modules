@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="iap_account_view_form" model="ir.ui.view">
+        <field name="model">iap.account</field>
+        <field name="inherit_id" ref="iap.iap_account_view_form" />
+        <field name="arch" type="xml">
+            <group name="account" position="before">
+                <group string="Info" name="info">
+                    <field name="provider" />
+                    <field
+                        name="company_ids"
+                        widget="many2many_tags"
+                        domain="[('id', 'in', allowed_company_ids)]"
+                        position="move"
+                        invisible="provider == 'odoo'"
+                    />
+                </group>
+            </group>
+
+            <group name="account" position="attributes">
+                <attribute name="invisible">provider != 'odoo'</attribute>
+            </group>
+
+            <group name="account" position="after">
+                <field name="provider_balance_enable" invisible="True"/>
+                <field name="provider_balance" invisible="True" force_save="True"/>
+
+                <group string="Provider balance" name="provider_balance" invisible="not provider_balance_enable">
+                    <group>
+                        <field name="provider_balance_enabled" string="Balance enabled"/>
+                    </group>
+
+                    <group class="d-flex flex-column" invisible="not provider_balance_enabled">
+                        <group class="d-flex">
+                            <button name="action_update_balance" type="object" string="Update balance" class="oe_highlight"/>
+                        </group>
+
+                        <group>
+                            <field name="balance" class="oe-inline"/>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

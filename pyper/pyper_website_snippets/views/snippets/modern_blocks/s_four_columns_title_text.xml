@@ -1,0 +1,65 @@
+<odoo>
+    <template id="four_columns_title_text" name="Title and columns">
+        <section
+            class="s_text_image  pt104 pb112 o_cc o_cc1"
+            data-snippet="s_text_image"
+            data-name="Texte - Image"
+        >
+            <div class="container">
+                <div class="text-start mb-4">
+                    <p class="text-o-color-1 fs-3 mb-1">Discover our full range of services</p>
+                    <h2>Out team is expert to offer you a premium service based on your specific needs.</h2>
+                </div>
+
+                <div class="row align-items-stretch">
+                    <div class="col-12 col-md-6 col-lg-3 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" o_cc o_cc3 p-5 h-100">
+                            <span class="fa fa-cogs fa-2x mb-3"/>
+                            <h3 class="fs-3 ">Custom Solutions</h3>
+                            <p class="mb-0">Tailored software solutions for your business needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.2s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" o_cc o_cc3 p-5 h-100">
+                            <span class="fa fa-cloud fa-2x mb-3"/>
+                            <h3 class="fs-3 ">Cloud Integration</h3>
+                            <p class="mb-0">Seamless integration with cloud services</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.4s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" o_cc o_cc3 p-5 h-100">
+                            <span class="fa fa-lock fa-2x mb-3"/>
+                            <h3 class="fs-3 ">Security</h3>
+                            <p class="mb-0">Top-notch security to protect your data.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.6s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" o_cc o_cc3 p-5 h-100">
+                            <span class="fa fa-support fa-2x mb-3"/>
+                            <h3 class="fs-3 ">24/7 Support</h3>
+                            <p class="mb-0">Round-the-clock support to keep your business running smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="container text-start mt-4">
+                    <a href="/contactus" class="btn btn-primary">Contact us</a>
+                </p>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_four_columns_title_text">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.four_columns_title_text"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_four_columns_grid.svg">
+                <keywords>columns, title</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

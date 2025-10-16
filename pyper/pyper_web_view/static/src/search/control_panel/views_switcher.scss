@@ -1,0 +1,42 @@
+.o-views-switcher {
+    height: 100%;
+
+    .o-views-switcher--dropdown {
+        &.dropdown {
+            height: 100%;
+
+            .dropdown-toggle {
+                height: 100%;
+
+                &.btn {
+                    display: flex;
+                    align-items: center;
+
+                    > span {
+                        text-align: start;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+
+                        @each $breakpoint, $width in $o-views-switcher-width-breakpoints {
+                            @include media-breakpoint-up($breakpoint) {
+                                width: $width;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .o-views-switcher--dropdown-icon {
+        display: none;
+
+        @include media-breakpoint-up(xxl) {
+            display: inherit;
+        }
+    }
+
+    .o-dropdown--menu {
+        min-width: $o-views-switcher-menu-min-width;
+    }
+}

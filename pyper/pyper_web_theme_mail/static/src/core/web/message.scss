@@ -1,0 +1,63 @@
+// Mail Message
+// ------------
+
+// Tracking Value
+.o-mail-Message-tracking {
+    list-style: $o-mail-message-tracking-list-style;
+
+    .o-mail-Message-trackingOld {
+        font-weight: $o-mail-message-tracking-old-font-weight;
+    }
+
+    .o-mail-Message-trackingNew {
+        font-weight: $o-mail-message-tracking-new-font-weight;
+    }
+}
+
+// Message Header
+.o-mail-Message-header {
+    min-height: $o-mail-Avatar-size;
+}
+
+.o-mail-Message-author {
+    strong {
+        font-weight: normal;
+    }
+}
+
+// Message Type
+.o-mail-Message-type {
+    display: flex;
+    align-items: center;
+    min-height: $o-mail-Avatar-size;
+}
+
+// Message Bubble
+.o-mail-Message-bubble {
+    // Not self authored message
+    &.border-info {
+        border-color: $o-mail-message-bubble-not-self-authored-border-color !important;
+    }
+
+    &.bg-info-light {
+        background-color: $o-mail-message-bubble-not-self-authored-bg !important;
+    }
+
+    // Self authored message
+    &.border-success {
+        border-color: $o-mail-message-bubble-self-authored-border-color !important;
+    }
+
+    &.bg-success-light {
+        background-color: $o-mail-message-bubble-self-authored-bg !important;
+    }
+
+    // Highlighted from mention
+    &.border-warning {
+        border-color: $o-mail-message-bubble-highlighted-from-mention-border-color !important;
+    }
+
+    &.bg-warning-light {
+        background-color: $o-mail-message-bubble-highlighted-from-mention-bg !important;
+    }
+}

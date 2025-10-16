@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_product_container" name="Product Container">
+        <div class="s_mail_product_container o_mail_snippet_general pt16 pb16 mx-auto">
+            <div class="container o_mail_snippet_general s_product_container s_product_container_md s_product_container_info">
+                <div class="row">
+                    <div class="col col_placeholder" style="height: 50px; border: 1px solid;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="s_product_container_options" inherit_id="mass_mailing.snippet_options">
+        <!-- Keep those options in separate xpath for options order -->
+        <xpath expr="//div[@id='so_width']" position="after">
+            <div data-selector=".s_mail_product_container .s_product_container">
+                <we-select string="Size">
+                    <we-button data-select-class="s_product_container_sm">Small</we-button>
+                    <we-button data-select-class="s_product_container_md">Medium</we-button>
+                    <we-button data-select-class="s_product_container_lg">Large</we-button>
+                </we-select>
+                <we-colorpicker string="Background Color" data-name="product_container_colorpicker_opt"
+                                data-select-style="true"
+                                data-css-property="background-color"
+                                data-color-prefix="product_container-"/>
+            </div>
+            <div data-selector=".s_mail_product_container .s_product_container">
+                <t t-call="mass_mailing.snippet_options_border_widgets">
+                    <t t-set="so_rounded_no_dependencies" t-value="True"/>
+                </t>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Assets -->
+    <record id="mass_mailing_product_cards.s_product_container_001_scss" model="ir.asset">
+        <field name="name">Product Container 001 SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">mass_mailing_product_cards/static/src/snippets/s_product_container/000.scss</field>
+    </record>
+
+
+</odoo>

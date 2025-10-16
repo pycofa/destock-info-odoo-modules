@@ -1,0 +1,68 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper_web_theme
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-09 14:40+0000\n"
+"PO-Revision-Date: 2024-12-09 15:41+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: pyper_web_theme
+#: model:ir.model,name:pyper_web_theme.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: pyper_web_theme
+#: model:ir.model.fields,field_description:pyper_web_theme.field_ir_actions_server__icon
+#: model:ir.model.fields,field_description:pyper_web_theme.field_ir_cron__icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: pyper_web_theme
+#: model:ir.actions.act_window,name:pyper_web_theme.action_open_contact_form
+msgid "Open Contact Form"
+msgstr ""
+
+#. module: pyper_web_theme
+#: model_terms:ir.ui.view,arch_db:pyper_web_theme.res_config_settings_view_form
+msgid "Progressive Web App"
+msgstr ""
+
+#. module: pyper_web_theme
+#: model_terms:ir.ui.view,arch_db:pyper_web_theme.res_config_settings_view_form
+msgid "Pyper"
+msgstr ""
+
+#. module: pyper_web_theme
+#: model_terms:ir.ui.view,arch_db:pyper_web_theme.view_res_partner_form
+msgid "See contact profile"
+msgstr "Voir le profil de contact"
+
+#. module: pyper_web_theme
+#: model_terms:ir.ui.view,arch_db:pyper_web_theme.view_res_partner_form
+msgid "See profile"
+msgstr "Voir le profil"
+
+#. module: pyper_web_theme
+#: model:ir.model,name:pyper_web_theme.model_ir_actions_server
+msgid "Server Action"
+msgstr "Action de serveur"
+
+#. module: pyper_web_theme
+#: model_terms:ir.ui.view,arch_db:pyper_web_theme.res_config_settings_view_form
+msgid ""
+"This name will be used for the application when Pyper is installed through "
+"the browser."
+msgstr ""
+"Ce nom sera utilisé pour l’application lorsque Pyper sera installé via le "
+"navigateur."

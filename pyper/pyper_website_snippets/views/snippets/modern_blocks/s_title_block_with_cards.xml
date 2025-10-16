@@ -1,0 +1,126 @@
+<odoo>
+    <template id="title_block_with_cards" name="Title block with cards">
+        <section
+            class="pt48 pb48 o_cc o_cc2"
+            data-snippet="s_title_block_with_cards"
+            data-name="Title block with cards"
+        >
+        
+            <div class="container">
+
+                <!-- Title Block -->
+                <div class="row justify-content-center p-3">            
+                    <div class="d-flex flex-column align-items-center text-center col-sm-12 col-md-10 col-lg-8 gap-3 py-2">
+                        <h2 
+                            class="o_animate o_anim_fade_in o_anim_from_top"
+                            style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                        >
+                            Professional services tailored to your needs
+                        </h2>
+                        <p 
+                            class="text-muted o_animate o_anim_fade_in o_anim_from_bottom"
+                            style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                        >
+                            We believe in delivering personalized solutions that cater to your specific requirements. Our professional services are designed to help you overcome challenges and achieve your business objectives with ease.
+                        </p>
+                        <div 
+                            class="d-flex align-items-center justify-content-center gap-2 my-3 o_animate o_anim_fade_in o_anim_from_bottom"
+                            style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                        >
+                            <a class="btn btn-primary" href="#">Free trial</a>
+                            <a class="btn btn-secondary" href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Cards Container -->
+                <div class="container">
+
+                    <div 
+                        class="row justify-content-around p-0 p-md-3 mb-0 mb-md-3 o_animate o_anim_fade_in o_anim_from_bottom"
+                        style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                        data-name="Card Block Row"
+                    >
+                        <!-- Cards Block col-6-->
+                        <div class=" col-12 col-md-6 d-flex flex-column align-items-center o_cc o_cc3 gap-3 mb-0 mb-md-5 py-4 p-3" style="border-radius:20px !important;" data-name="Card Block Item">
+                            <div class="" style="min-height: 280px;height: 30vh;max-height: 600px;width:95%;">
+                                <img src="/website/static/src/img/website_dashboard_visit_demo_dark_mode.png" class="" style="width: 100%;height: 100%;object-fit: cover;"/>
+                            </div>
+                            <div class="d-flex flex-column text-nowrap" style="overflow:hidden;width: 95%;">
+                                <p class="text-muted text-uppercase">Efficiency</p>
+                                <h3 class="">Streamlined Workflow Solutions</h3>
+                                <div class="d-flex flex-column col-xs-10 col-sm-12" style="" data-name="Card Block Text Line">
+                                    <p class="m-0">Automated task management</p>
+                                    <p class="m-0">Real-time collaboration tools</p>
+                                    <p class="m-0">Customizable workflows</p>
+                                    <p class="m-0">Enhanced productivity</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cards Block col-5-->
+                        <div class=" gap-3 col-12 col-md-5 d-flex flex-column align-items-center o_cc o_cc1 mb-0 mb-md-5 py-4 p-3" style="border-radius:20px !important;" data-name="Card Block Item">
+                            <div class="" style="min-height: 280px;height: 30vh;max-height: 600px;width:95%;">
+                                <img src="/website/static/src/img/snippets_demo/s_picture.jpg" class="" style="width: 100%;height: 100%;object-fit: cover;"/>
+                            </div>
+                            <div class=" d-flex flex-column text-nowrap" style="overflow:hidden;width: 95%;">
+                                <p class="text-muted text-uppercase">Security</p>
+                                <h3 class="">Data Protection Services</h3>
+                                <div class="d-flex flex-column col-12" style="" data-name="Card Block Text Line">
+                                    <p class="m-0">End-to-end encryption</p>
+                                    <p class="m-0">Intrusion detection and prevention</p>
+                                    <p class="m-0">Regular security audits</p>
+                                    <p class="m-0">Compliance with data protection regulations</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cards Block col-5-->
+                        <div class="gap-3 col-12 col-md-5 d-flex flex-column align-items-center o_cc o_cc1 mb-0 mb-md-5 py-4 p-3" style="border-radius:20px !important;" data-name="Card Block Item">
+                            <div class="" style="min-height: 280px;height: 30vh;max-height: 600px;width:95%;">
+                                <img src="/website/static/src/img/snippets_demo/s_parallax.jpg" class="" style="width: 100%;height: 100%;object-fit: cover;"/>
+                            </div>
+                            <div class=" d-flex flex-column text-nowrap" style="overflow:hidden;width: 95%;">
+                                <p class="text-muted text-uppercase">Innovation</p>
+                                <h3 class="">Cutting-Edge Solutions</h3>
+                                <div class="d-flex flex-column col-12" style="" data-name="Card Block Text Line">
+                                    <p class="m-0">AI-powered analytics</p>
+                                    <p class="m-0">Machine learning algorithms</p>
+                                    <p class="m-0">Virtual and augmented reality applications</p>
+                                    <p class="m-0">Internet of Things (IoT) integration</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cards Block col-6-->
+                        <div class=" col-12 col-md-6 d-flex flex-column align-items-center o_cc o_cc3 gap-3 mb-0 mb-md-5 py-4 p-3" style="border-radius:20px !important;" data-name="Card Block Item">
+                            <div class="" style="min-height: 280px;height: 30vh;max-height: 600px;width:95%;">
+                                <img src="/website/static/src/img/snippets_demo/s_quotes_carousel_0.jpg" class="" style="width: 100%;height: 100%;object-fit: cover;"/>
+                            </div>
+                            <div class="d-flex flex-column text-nowrap" style="overflow:hidden;width: 95%;">
+                                <p class="text-muted text-uppercase">Customer Support</p>
+                                <h3 class="">Dedicated Maintenance Services</h3>
+                                <div class="d-flex flex-column col-xs-10 col-sm-12" style="" data-name="Card Block Text Line">
+                                    <p class="m-0">24/7 technical support</p>
+                                    <p class="m-0">Regular maintenance and updates</p>
+                                    <p class="m-0">Priority support for critical issues</p>
+                                    <p class="m-0">Knowledge base and user guides</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_title_block_with_cards">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.title_block_with_cards"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_title_block_with_cards.svg">
+                <keywords>card, app, title, block</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

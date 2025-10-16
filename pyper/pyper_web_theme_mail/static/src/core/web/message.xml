@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme_mail.Message" t-inherit="mail.Message" t-inherit-mode="extension">
+        <!-- Message -->
+        <xpath expr="//img[hasclass('o-mail-Message-avatar')]" position="attributes">
+            <attribute name="class" separator=" " remove="rounded" add="rounded-pill"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Message-header')]" position="attributes">
+            <attribute name="class" separator=" " remove="align-items-baseline" add="align-items-center"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Message-header')]/span[hasclass('o-mail-Message-author')]" position="before">
+            <t t-set="mailMessageTypeIcon" t-value="message.mail_activity_type_icon"/>
+            <t t-set="mailMessageTypeName" t-value="message.mail_activity_type_name"/>
+
+            <t t-if="!mailMessageTypeName and message.is_note">
+                <t t-if="message.type === 'notification'">
+                    <t t-set="mailMessageTypeIcon" t-value="'fa-dot-circle-o'"/>
+                    <t t-set="mailMessageTypeName">Notification</t>
+                </t>
+
+                <t t-else="">
+                    <t t-set="mailMessageTypeIcon" t-value="'fa-sticky-note'"/>
+                    <t t-set="mailMessageTypeName">Note</t>
+                </t>
+            </t>
+
+            <t t-if="(message.trackingValues || []).length > 0">
+                <t t-set="mailMessageTypeIcon" t-value="'fa-history'"/>
+                <t t-set="mailMessageTypeName">History</t>
+            </t>
+
+            <t t-set="displayMessageType" t-value="mailMessageTypeIcon or mailMessageTypeName" />
+
+            <span class="o-mail-Message-type badge bg-secondary" t-if="displayMessageType">
+                <span class="o-mail-Message-type-icon me-1" t-if="mailMessageTypeIcon">
+                    <i class="fa" t-attf-class="{{ mailMessageTypeIcon }}"/>
+                </span>
+
+                <span class="o-mail-Message-type-name" t-if="mailMessageTypeName" t-out="mailMessageTypeName"/>
+            </span>
+
+            <span class="mx-1" t-if="displayMessageType">by</span>
+        </xpath>
+
+        <!-- Message is Persistent From Another Thread -->
+        <xpath expr="//small[@t-if='isPersistentMessageFromAnotherThread']" position="attributes">
+            <attribute name="class" separator=" " remove="ms-1" add="d-block my-2"/>
+        </xpath>
+
+        <!-- Tracking values -->
+        <xpath expr="//li[hasclass('o-mail-Message-tracking')]/span[hasclass('o-mail-Message-trackingOld')]" position="before">
+            <xpath expr="//li[hasclass('o-mail-Message-tracking')]/span[hasclass('o-mail-Message-trackingField')]" position="move"/>
+        </xpath>
+
+        <xpath expr="//li[hasclass('o-mail-Message-tracking')]/span[hasclass('o-mail-Message-trackingField')]" position="replace">
+            <span class="o-mail-Message-trackingField me-1"><t t-out="trackingValue.changedField"/> :</span>
+        </xpath>
+
+        <xpath expr="//li[hasclass('o-mail-Message-tracking')]/span[hasclass('o-mail-Message-trackingOld')]" position="attributes">
+            <attribute name="class" separator=" " remove="text-muted fw-bold"/>
+        </xpath>
+
+        <xpath expr="//li[hasclass('o-mail-Message-tracking')]/span[hasclass('o-mail-Message-trackingNew')]" position="attributes">
+            <attribute name="class" separator=" " remove="text-info fw-bold"/>
+        </xpath>
+    </t>
+</templates>

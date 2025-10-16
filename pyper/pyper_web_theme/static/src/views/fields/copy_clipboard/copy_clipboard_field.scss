@@ -1,0 +1,9 @@
+.o_clipboard_button {
+    &.o_btn_char_copy,
+    &.o_btn_text_copy,
+    &.o_btn_binary_copy {
+        span:last-child {
+            display: none !important;
+        }
+    }
+}

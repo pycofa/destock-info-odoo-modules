@@ -1,0 +1,108 @@
+<odoo>
+    <template id="grid_block_title_text" name="Grid block title text">
+        <section
+            class="s_text_image  pt112 pb112 o_cc o_cc1"
+            data-snippet="s_text_image"
+            data-name="Texte - Image"
+        >
+            <div class="container">
+                <div class="text-start mb-4">
+                    <p class="text-o-color-1 fs-3 mb-1">Our features</p>
+                    <h2>Discover what we offer.</h2>
+                </div>
+
+                <div class="row align-items-stretch">
+                    <div class="col-12 col-md-6 col-lg-4 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" h-100">
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="fa fa-lightbulb-o me-2 rounded-circle bg-o-color-1"/>
+                                <h3 class="fs-3 display-3  mb-0">Innovation for all your process
+                                </h3>
+                            </div>
+                            <p class="mb-0">We bring innovative solutions to the table. Our approach helps you stay
+                                ahead of the competition..
+                            </p>
+                            <a href="#" class="text-primary d-block mt-4">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.2s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" h-100">
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="fa fa-users me-2 rounded-circle bg-o-color-1"/>
+                                <h3 class="fs-3 display-3  mb-0">Team Collaboration</h3>
+                            </div>
+                            <p class="mb-0">Enhance team collaboration with our tools. Improve communication and
+                                efficiency.
+                            </p>
+                            <a href="#" class="text-primary d-block mt-4">Explore</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.4s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" h-100">
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="fa fa-signal me-2 rounded-circle bg-o-color-1"/>
+                                <h3 class="fs-3 display-3  mb-0">Performance Tracking</h3>
+                            </div>
+                            <p class="mb-0">Track your performance in real-time. Get detailed analytics to make informed
+                                decisions.
+                            </p>
+                            <a href="#" class="text-primary d-block mt-4">View details</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" h-100">
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="fa fa-mobile me-2 rounded-circle bg-o-color-1"/>
+                                <h3 class="fs-3 display-3  mb-0">Mobile access</h3>
+                            </div>
+                            <p class="mb-0">Access your data from anywhere. Our mobile-friendly platform keeps you
+                                connected
+                            </p>
+                            <a href="#" class="text-primary d-block mt-4">Find out more</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.2s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" h-100">
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="fa fa-cogs me-2 rounded-circle bg-o-color-1"/>
+                                <h3 class="fs-3 display-3  mb-0">Customization</h3>
+                            </div>
+                            <p class="mb-0">Customize solutions to fit your needs. Tailored features to match your
+                                workflow.
+                            </p>
+                            <a href="#" class="text-primary d-block mt-4">Customize now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.4s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class=" h-100">
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="fa fa-cloud me-2 rounded-circle bg-o-color-1"/>
+                                <h3 class="fs-3 display-3  mb-0">Cloud services</h3>
+                            </div>
+                            <p class="mb-0">TLeverage the power of the cloud. Reliable and scalable solutions for your
+                                business.
+                            </p>
+                            <a href="#" class="text-primary d-block mt-4">Get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_grid_block_title_text">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.grid_block_title_text"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_grid_block_title_text.svg">
+                <keywords>grid, text, title</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

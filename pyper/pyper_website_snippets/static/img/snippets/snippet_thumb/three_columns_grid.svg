@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 82 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom_3);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #000;
+      }
+
+      .cls-3 {
+        fill-opacity: .8;
+      }
+
+      .cls-3, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-4, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-5 {
+        fill-opacity: .3;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_3" data-name="Dégradé sans nom 3" x1="-400.4" y1="582.7" x2="-399.4" y2="582.8" gradientTransform="translate(6840 -2866) scale(17 5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00a09d"/>
+      <stop offset="1" stop-color="#00e2ff"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect id="path-5" class="cls-2" x="29.2" y="10.8" width="25.8" height="2"/>
+    <rect id="path-5-2" data-name="path-5" class="cls-3" x="29.2" y="10.8" width="25.8" height="2"/>
+  </g>
+  <g>
+    <rect id="path-5-3" data-name="path-5" class="cls-2" x="18.9" y="15" width="48" height="2"/>
+    <rect id="path-5-4" data-name="path-5" class="cls-3" x="18.9" y="15" width="48" height="2"/>
+  </g>
+  <g>
+    <rect id="path-5-5" data-name="path-5" class="cls-2" x="3" y="23.4" width="23.3" height="2"/>
+    <rect id="path-5-6" data-name="path-5" class="cls-3" x="3" y="23.4" width="23.3" height="2"/>
+  </g>
+  <g>
+    <path id="path-7" class="cls-4" d="M24.3,35.9v1H3.2v-1h21ZM20.6,32.9v1H3.2v-1h17.3ZM24.3,29.9v1H3.2v-1h21Z"/>
+    <path id="path-7-2" data-name="path-7" class="cls-5" d="M24.3,35.9v1H3.2v-1h21ZM20.6,32.9v1H3.2v-1h17.3ZM24.3,29.9v1H3.2v-1h21Z"/>
+  </g>
+  <g>
+    <rect id="path-5-7" data-name="path-5" class="cls-2" x="29.4" y="23.4" width="23.3" height="2"/>
+    <rect id="path-5-8" data-name="path-5" class="cls-3" x="29.4" y="23.4" width="23.3" height="2"/>
+  </g>
+  <g>
+    <path id="path-7-3" data-name="path-7" class="cls-4" d="M50.6,35.9v1h-21v-1h21ZM46.9,32.9v1h-17.3v-1h17.3ZM50.6,29.9v1h-21v-1h21Z"/>
+    <path id="path-7-4" data-name="path-7" class="cls-5" d="M50.6,35.9v1h-21v-1h21ZM46.9,32.9v1h-17.3v-1h17.3ZM50.6,29.9v1h-21v-1h21Z"/>
+  </g>
+  <g>
+    <rect id="path-5-9" data-name="path-5" class="cls-2" x="55.4" y="23.4" width="23.3" height="2"/>
+    <rect id="path-5-10" data-name="path-5" class="cls-3" x="55.4" y="23.4" width="23.3" height="2"/>
+  </g>
+  <g>
+    <path id="path-7-5" data-name="path-7" class="cls-4" d="M76.7,35.9v1h-21v-1h21ZM73,32.9v1h-17.3v-1h17.3ZM76.7,29.9v1h-21v-1h21Z"/>
+    <path id="path-7-6" data-name="path-7" class="cls-5" d="M76.7,35.9v1h-21v-1h21ZM73,32.9v1h-17.3v-1h17.3ZM76.7,29.9v1h-21v-1h21Z"/>
+  </g>
+  <rect class="cls-1" x="32.9" y="45.4" width="17" height="5"/>
+</svg>

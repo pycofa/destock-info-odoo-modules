@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 82 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-opacity: .3;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: url(#Dégradé_sans_nom_7);
+      }
+
+      .cls-2 {
+        fill: #1d1d1b;
+      }
+
+      .cls-6 {
+        fill: url(#Dégradé_sans_nom_7-2);
+      }
+
+      .cls-4 {
+        fill-opacity: .8;
+      }
+
+      .cls-7 {
+        fill: url(#Dégradé_sans_nom_5-4);
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12 {
+        isolation: isolate;
+        opacity: .4;
+      }
+
+      .cls-8 {
+        fill: url(#Dégradé_sans_nom_5-2);
+      }
+
+      .cls-9 {
+        fill: url(#Dégradé_sans_nom_5-3);
+      }
+
+      .cls-10 {
+        fill: url(#Dégradé_sans_nom_5-6);
+      }
+
+      .cls-11 {
+        fill: url(#Dégradé_sans_nom_5-5);
+      }
+
+      .cls-12 {
+        fill: url(#Dégradé_sans_nom_5);
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_7" data-name="Dégradé sans nom 7" x1="-1263.6" y1="-109.3" x2="-1263" y2="-109.4" gradientTransform="translate(21528 -520) scale(17 -5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00a09d"/>
+      <stop offset="1" stop-color="#00e2ff"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_7-2" data-name="Dégradé sans nom 7" x1="-1263" y1="-109.3" x2="-1262.4" y2="-109.4" xlink:href="#Dégradé_sans_nom_7"/>
+    <linearGradient id="Dégradé_sans_nom_5" data-name="Dégradé sans nom 5" x1="-4942.3" y1="-176.7" x2="-4941.6" y2="-176.4" gradientTransform="translate(148272 3019) scale(30 17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00e2ff"/>
+      <stop offset="1" stop-color="#00a09d"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_5-2" data-name="Dégradé sans nom 5" x1="-4941.6" y1="-176.7" x2="-4940.9" y2="-176.4" xlink:href="#Dégradé_sans_nom_5"/>
+    <linearGradient id="Dégradé_sans_nom_5-3" data-name="Dégradé sans nom 5" y1="-175.4" y2="-175.2" xlink:href="#Dégradé_sans_nom_5"/>
+    <linearGradient id="Dégradé_sans_nom_5-4" data-name="Dégradé sans nom 5" x1="-4941.6" y1="-175.4" x2="-4940.9" y2="-175.2" xlink:href="#Dégradé_sans_nom_5"/>
+    <linearGradient id="Dégradé_sans_nom_5-5" data-name="Dégradé sans nom 5" x1="-4942.3" y1="-174.2" x2="-4941.6" y2="-174" xlink:href="#Dégradé_sans_nom_5"/>
+    <linearGradient id="Dégradé_sans_nom_5-6" data-name="Dégradé sans nom 5" x1="-4941.6" y1="-174.2" x2="-4940.9" y2="-174" xlink:href="#Dégradé_sans_nom_5"/>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Calque_1">
+      <g>
+        <rect id="path-5" x="47.8" y="8.7" width="25" height="2"/>
+        <rect id="path-5-2" class="cls-4" x="47.8" y="8.7" width="25" height="2"/>
+      </g>
+      <g>
+        <path id="path-7" class="cls-3" d="M70.8,20.7v1h-23v-1h23ZM66.8,17.7v1h-19v-1h19ZM70.8,14.7v1h-23v-1h23Z"/>
+        <path id="path-7-2" class="cls-1" d="M70.8,20.7v1h-23v-1h23ZM66.8,17.7v1h-19v-1h19ZM70.8,14.7v1h-23v-1h23Z"/>
+      </g>
+      <rect class="cls-5" x="47.8" y="24.3" width="8.5" height="5"/>
+      <rect class="cls-6" x="57.8" y="24.3" width="8.5" height="5"/>
+      <rect class="cls-12" x="5.1" y="8.7" width="16.5" height="18.1"/>
+      <rect class="cls-8" x="25.4" y="8.7" width="16.5" height="18.1"/>
+      <rect class="cls-9" x="5.1" y="30" width="16.5" height="18.1"/>
+      <rect class="cls-7" x="25.4" y="30" width="16.5" height="18.1"/>
+      <rect class="cls-11" x="5.1" y="51" width="16.5" height="18.1"/>
+      <rect class="cls-10" x="25.4" y="51" width="16.5" height="18.1"/>
+      <g>
+        <path id="path-7-2" data-name="path-7" class="cls-3" d="M18.2,22.9v.5H6.7v-.5h11.5ZM16.2,21.4v.5H6.7v-.5h9.5ZM18.2,19.9v.5H6.7v-.5h11.5Z"/>
+        <path id="path-7-2-2" data-name="path-7-2" class="cls-1" d="M18.2,22.9v.5H6.7v-.5h11.5ZM16.2,21.4v.5H6.7v-.5h9.5ZM18.2,19.9v.5H6.7v-.5h11.5Z"/>
+      </g>
+      <g>
+        <path id="path-7-3" data-name="path-7" class="cls-3" d="M38.6,23.2v.5h-11.5v-.5h11.5ZM36.6,21.7v.5h-9.5v-.5h9.5ZM38.6,20.2v.5h-11.5v-.5h11.5Z"/>
+        <path id="path-7-2-3" data-name="path-7-2" class="cls-1" d="M38.6,23.2v.5h-11.5v-.5h11.5ZM36.6,21.7v.5h-9.5v-.5h9.5ZM38.6,20.2v.5h-11.5v-.5h11.5Z"/>
+      </g>
+      <g>
+        <path id="path-7-4" data-name="path-7" class="cls-3" d="M18.2,44.3v.5H6.7v-.5h11.5ZM16.2,42.8v.5H6.7v-.5h9.5ZM18.2,41.3v.5H6.7v-.5h11.5Z"/>
+        <path id="path-7-2-4" data-name="path-7-2" class="cls-1" d="M18.2,44.3v.5H6.7v-.5h11.5ZM16.2,42.8v.5H6.7v-.5h9.5ZM18.2,41.3v.5H6.7v-.5h11.5Z"/>
+      </g>
+      <g>
+        <path id="path-7-5" data-name="path-7" class="cls-3" d="M38.7,44.3v.5h-11.5v-.5h11.5ZM36.7,42.8v.5h-9.5v-.5h9.5ZM38.7,41.3v.5h-11.5v-.5h11.5Z"/>
+        <path id="path-7-2-5" data-name="path-7-2" class="cls-1" d="M38.7,44.3v.5h-11.5v-.5h11.5ZM36.7,42.8v.5h-9.5v-.5h9.5ZM38.7,41.3v.5h-11.5v-.5h11.5Z"/>
+      </g>
+      <g>
+        <polygon class="cls-2" points="7.5 10.4 7.7 11 8.4 11 7.9 11.4 8 12 7.5 11.6 7 12 7.2 11.4 6.7 11 7.3 11 7.5 10.4"/>
+        <polygon class="cls-2" points="10 10.4 10.2 11 10.8 11 10.3 11.4 10.5 12 10 11.6 9.5 12 9.7 11.4 9.2 11 9.8 11 10 10.4"/>
+        <polygon class="cls-2" points="12.4 10.4 12.6 11 13.3 11 12.8 11.4 13 12 12.4 11.6 11.9 12 12.1 11.4 11.6 11 12.3 11 12.4 10.4"/>
+      </g>
+      <g>
+        <polygon class="cls-2" points="27.9 10.4 28.1 11 28.8 11 28.3 11.4 28.5 12 27.9 11.6 27.4 12 27.6 11.4 27.1 11 27.7 11 27.9 10.4"/>
+        <polygon class="cls-2" points="30.4 10.4 30.6 11 31.2 11 30.7 11.4 30.9 12 30.4 11.6 29.9 12 30.1 11.4 29.6 11 30.2 11 30.4 10.4"/>
+        <polygon class="cls-2" points="32.9 10.4 33.1 11 33.7 11 33.2 11.4 33.4 12 32.9 11.6 32.3 12 32.5 11.4 32 11 32.7 11 32.9 10.4"/>
+        <polygon class="cls-2" points="35.3 10.4 35.5 11 36.2 11 35.7 11.4 35.9 12 35.3 11.6 34.8 12 35 11.4 34.5 11 35.1 11 35.3 10.4"/>
+      </g>
+      <g>
+        <polygon class="cls-2" points="7.5 32 7.7 32.6 8.3 32.6 7.8 33 8 33.6 7.5 33.3 6.9 33.6 7.1 33 6.6 32.6 7.3 32.6 7.5 32"/>
+        <polygon class="cls-2" points="9.9 32 10.1 32.6 10.7 32.6 10.2 33 10.4 33.6 9.9 33.3 9.4 33.6 9.6 33 9.1 32.6 9.7 32.6 9.9 32"/>
+        <polygon class="cls-2" points="12.4 32 12.6 32.6 13.2 32.6 12.7 33 12.9 33.6 12.4 33.3 11.9 33.6 12.1 33 11.5 32.6 12.2 32.6 12.4 32"/>
+        <polygon class="cls-2" points="14.9 32 15.1 32.6 15.7 32.6 15.2 33 15.4 33.6 14.9 33.3 14.3 33.6 14.5 33 14 32.6 14.7 32.6 14.9 32"/>
+      </g>
+      <g>
+        <polygon class="cls-2" points="28.1 32.1 28.3 32.7 28.9 32.7 28.4 33.1 28.6 33.7 28.1 33.3 27.6 33.7 27.8 33.1 27.2 32.7 27.9 32.7 28.1 32.1"/>
+        <polygon class="cls-2" points="30.5 32.1 30.7 32.7 31.4 32.7 30.8 33.1 31 33.7 30.5 33.3 30 33.7 30.2 33.1 29.7 32.7 30.3 32.7 30.5 32.1"/>
+        <polygon class="cls-2" points="33 32.1 33.2 32.7 33.8 32.7 33.3 33.1 33.5 33.7 33 33.3 32.5 33.7 32.7 33.1 32.2 32.7 32.8 32.7 33 32.1"/>
+      </g>
+      <g>
+        <polygon class="cls-2" points="7.8 52.8 8 53.4 8.6 53.4 8.1 53.8 8.3 54.4 7.8 54.1 7.2 54.4 7.4 53.8 6.9 53.4 7.6 53.4 7.8 52.8"/>
+        <polygon class="cls-2" points="10.2 52.8 10.4 53.4 11.1 53.4 10.5 53.8 10.7 54.4 10.2 54.1 9.7 54.4 9.9 53.8 9.4 53.4 10 53.4 10.2 52.8"/>
+      </g>
+      <g>
+        <polygon class="cls-2" points="28.2 52.9 28.4 53.5 29 53.5 28.5 53.9 28.7 54.5 28.2 54.1 27.6 54.5 27.8 53.9 27.3 53.5 28 53.5 28.2 52.9"/>
+        <polygon class="cls-2" points="30.6 52.9 30.8 53.5 31.4 53.5 30.9 53.9 31.1 54.5 30.6 54.1 30.1 54.5 30.3 53.9 29.8 53.5 30.4 53.5 30.6 52.9"/>
+        <polygon class="cls-2" points="33.1 52.9 33.3 53.5 33.9 53.5 33.4 53.9 33.6 54.5 33.1 54.1 32.6 54.5 32.8 53.9 32.2 53.5 32.9 53.5 33.1 52.9"/>
+        <polygon class="cls-2" points="35.6 52.9 35.8 53.5 36.4 53.5 35.9 53.9 36.1 54.5 35.6 54.1 35 54.5 35.2 53.9 34.7 53.5 35.4 53.5 35.6 52.9"/>
+      </g>
+    </g>
+  </g>
+</svg>

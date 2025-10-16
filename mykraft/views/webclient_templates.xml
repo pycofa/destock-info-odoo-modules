@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="layout" inherit_id="pyper.layout">
+        <xpath expr="//head/title" position="attributes">
+            <attribute name="t-esc">title or 'myKraft'</attribute>
+        </xpath>
+
+        <xpath expr="//head/link[@type='image/x-icon']" position="attributes">
+            <attribute name="t-att-href">x_icon or 'mykraft/static/description/favicon.svg'</attribute>
+        </xpath>
+    </template>
+
+    <template id="webclient_bootstrap" inherit_id="pyper.webclient_bootstrap">
+        <xpath expr="//meta[@name='theme-color']" position="attributes">
+            <attribute name="content">#FFF</attribute>
+        </xpath>
+
+        <xpath expr="//link[@rel='apple-touch-icon']" position="attributes">
+            <attribute name="href">/mykraft/static/img/badge-512x512.svg</attribute>
+        </xpath>
+    </template>
+
+    <template id="login_layout" inherit_id="web.login_layout">
+
+        <xpath expr="//t[@t-set='body_classname']" position="replace">
+            <t t-set="body_classname" t-value="'bg-white'"/>
+        </xpath>
+
+        <xpath expr="//div[1]/div[1]/div[1]/div[1]" position="attributes">
+            <attribute name="t-attf-class" add="{{'text-center'}}" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[1]/div[1]/div[1]/div[1]/img" position="attributes">
+            <attribute name="t-attf-src">/mykraft/static/img/logo-destockinfo-black.svg</attribute>
+            <attribute name="style">width:40px</attribute>
+        </xpath>
+
+        <xpath expr="//div[1]/div[1]/div[1]/div[1]" position="attributes">
+            <attribute name="t-attf-class" remove="border-bottom text-center pb-3" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[1]" position="attributes">
+            <attribute name="class">container-fluid h-100 d-flex align-items-center</attribute>
+        </xpath>
+
+        <xpath expr="//div[1]/div[1]" position="attributes">
+            <attribute name="t-attf-class">col-12</attribute>
+            <attribute name="style">max-width:100%</attribute>
+        </xpath>
+
+        <xpath expr="//div[1]/div[1]/div[1]" position="attributes">
+            <attribute name="class">fadeInDownLight card mx-auto bg-transparent border-0</attribute>
+            <attribute name="style">max-width:400px</attribute>
+        </xpath>
+
+        <xpath expr="//div[1]/div[1]/div[1]/div[1]" position="after">
+            <p class="text-center fs-2 mb-4" style="font-weight: 500">Welcome back on myKraft</p>
+        </xpath>
+
+        <xpath expr="//div[1]/div[1]/div[1]/div[2]" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+    </template>
+
+    <template id="login" inherit_id="web.login">
+        <xpath expr="//p[hasclass('alert-danger')]" position="attributes">
+            <attribute name="class" add="text-center rounded fadeInDownLight" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('field-login')]/label" position="attributes">
+            <attribute name="style">font-size:0.925rem;font-weight:500</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('field-login')]/input" position="attributes">
+             <attribute name="t-attf-class" add="form-control px-3" separator=" "/>
+            <attribute name="style">border:1px solid #E3E3E3 !important;font-size:0.925rem</attribute>
+            <attribute name="placeholder">Write your e-mail address</attribute>
+        </xpath>
+
+        <xpath expr="//form[hasclass('oe_login_form')]/div[3]/label" position="attributes">
+            <attribute name="style">font-size:0.925rem;font-weight:500</attribute>
+        </xpath>
+
+        <xpath expr="//form[hasclass('oe_login_form')]/div[3]/input" position="attributes">
+            <attribute name="t-attf-class" add="form-control px-3" separator=" "/>
+            <attribute name="style">border:1px solid #E3E3E3 !important;font-size:0.925rem</attribute>
+            <attribute name="placeholder">Write your password</attribute>
+        </xpath>
+
+        <xpath expr="//form[hasclass('oe_login_form')]/div[4]/button" position="replace">
+            <button type="submit" class="btn btn-primary mb-3 text-white">Login</button>
+        </xpath>
+    </template>
+
+</odoo>

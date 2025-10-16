@@ -1,0 +1,34 @@
+// Override Button Box
+// -------------------
+
+.o-form-buttonbox {
+    %-stat-button-value {
+        color: $o-brand-primary;
+    }
+
+    .oe_stat_button {
+        background-color: $o-white;
+
+        .o_button_icon {
+            color: $o-brand-primary;
+        }
+
+        .o_stat_info,
+        > span,
+        .o_field_statinfo {
+            .o_stat_value {
+                @extend %-stat-button-value;
+            }
+        }
+
+        &.btn-outline-secondary:active {
+            z-index: inherit;
+        }
+    }
+
+    .oe_stat_button.dropdown {
+        .o_dropdown_more {
+            width: 150px;
+        }
+    }
+}

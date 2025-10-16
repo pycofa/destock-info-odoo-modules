@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_video_input_tree" model="ir.ui.view">
+        <field name="name">product.video.input.tree</field>
+        <field name="model">product.video.input</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1" editable="top">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_product_video_input" model="ir.actions.act_window">
+        <field name="name">Video Inputs</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.video.input</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+</odoo>

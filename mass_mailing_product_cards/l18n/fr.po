@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mass_mailing_product_cards
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-06 08:03+0000\n"
+"PO-Revision-Date: 2024-11-06 08:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mass_mailing_product_cards
+#. odoo-python
+#: code:addons/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#: code:addons/user/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#, python-format
+msgid "%s has been imported."
+msgstr "%s a été importé."
+
+#. module: mass_mailing_product_cards
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.view_product_mailing_form
+msgid "Add"
+msgstr "Ajouter"
+
+#. module: mass_mailing_product_cards
+#: model:ir.actions.act_window,name:mass_mailing_product_cards.action_add_product_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.view_product_mailing_form
+msgid "Add Product"
+msgstr "Ajouter le produit"
+
+#. module: mass_mailing_product_cards
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.view_mail_mass_mailing_form_inherit
+msgid "Add a product"
+msgstr "Ajouter un produit"
+
+#. module: mass_mailing_product_cards
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.s_product_container_options
+msgid "Background Color"
+msgstr "Couleur du fond"
+
+#. module: mass_mailing_product_cards
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.view_product_mailing_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: mass_mailing_product_cards
+#: model:ir.model.fields,field_description:mass_mailing_product_cards.field_product_mailing_wizard__column_size
+msgid "Column Size"
+msgstr "Taille de la colonne"
+
+#. module: mass_mailing_product_cards
+#: model:ir.model.fields.selection,name:mass_mailing_product_cards.selection__product_mailing_wizard__column_size__large
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.s_product_container_options
+msgid "Large"
+msgstr "Grand"
+
+#. module: mass_mailing_product_cards
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.s_product_container_options
+msgid "Medium"
+msgstr "Moyen"
+
+#. module: mass_mailing_product_cards
+#. odoo-python
+#: code:addons/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#: code:addons/user/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#, python-format
+msgid "Please, add a template first."
+msgstr "Veuillez d'abord ajouter un template."
+
+#. module: mass_mailing_product_cards
+#. odoo-python
+#: code:addons/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#: code:addons/user/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#, python-format
+msgid ""
+"Please, add the snippet called \"Product Container\" in your E-mail "
+"template."
+msgstr "Veuillez ajouter le snippet \"Product Container\" dans le template."
+
+#. module: mass_mailing_product_cards
+#: model:ir.model.fields,field_description:mass_mailing_product_cards.field_product_mailing_wizard__product_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: mass_mailing_product_cards
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.email_designer_snippets
+msgid "Product Container"
+msgstr "Conteneur Produit"
+
+#. module: mass_mailing_product_cards
+#. odoo-python
+#: code:addons/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#: code:addons/user/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#, python-format
+msgid "Product imported"
+msgstr "Produit importé"
+
+#. module: mass_mailing_product_cards
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.s_product_container_options
+msgid "Size"
+msgstr "Taille"
+
+#. module: mass_mailing_product_cards
+#: model:ir.model.fields.selection,name:mass_mailing_product_cards.selection__product_mailing_wizard__column_size__small
+#: model_terms:ir.ui.view,arch_db:mass_mailing_product_cards.s_product_container_options
+msgid "Small"
+msgstr "Petit"
+
+#. module: mass_mailing_product_cards
+#. odoo-python
+#: code:addons/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#: code:addons/user/mass_mailing_product_cards/wizard/product_mailing_wizard.py:0
+#, python-format
+msgid "This product must have been deleted."
+msgstr "Le produit a été supprimé"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.my_shop_link
+msgid "<i class=\"fa fa-fw fa-id-card-o me-1 small text-primary\"/> My Account"
+msgstr "<i class=\"fa fa-fw fa-id-card-o me-1 small text-primary\"/> Mon compte"
+
+#. module: website_sale_custom_destockinfo
+#: model_terms:ir.ui.view,arch_db:website_sale_custom_destockinfo.my_shop_link
+msgid "<i class=\"fa fa-shopping-bag me-1 small text-primary\"/> Shop"
+msgstr "<i class=\"fa fa-shopping-bag me-1 small text-primary\"/> Boutique"

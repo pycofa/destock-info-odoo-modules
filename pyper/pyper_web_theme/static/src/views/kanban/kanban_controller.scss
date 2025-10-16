@@ -1,0 +1,33 @@
+.o_kanban_renderer {
+    .o_kanban_record {
+        margin-bottom: $o-kanban-record-margin-bottom;
+
+        > div:not(.o_dropdown_kanban) {
+            border-radius: $o-kanban-border-radius;
+        }
+    }
+
+    .o_kanban_quick_create {
+        border-radius: $o-kanban-border-radius;
+    }
+
+    .oe_kanban_card {
+        overflow-x: auto;
+    }
+
+    .o_column_quick_create {
+        .o_kanban_quick_create {
+            input {
+                &, &:focus, &:hover {
+                    background: transparent;
+                    border-bottom: 1px solid map-get($grays, '600');
+                }
+            }
+
+            .input-group-append,
+            .input-group-prepend {
+                border-left: 10px solid map-get($grays, '200');
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="pyper.CharImageField" t-inherit="web.CharField" t-inherit-mode="primary">
+        <xpath expr="//t[@t-if='props.readonly']" position="before">
+            <div class="o_field_char_image-content">
+                <img t-attf-src="/web/image/{{props.record.resModel}}/{{props.record.resId}}/image_128"
+                     class="img img-fluid"
+                     t-att-width="props.imageWidth"
+                     t-att-height="props.imageHeight"
+                />
+            </div>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_field_char_image-content')]/img" position="after">
+            <xpath expr="//t[@t-if='props.readonly']" position="move"/>
+            <xpath expr="//t[@t-else='']" position="move"/>
+        </xpath>
+    </t>
+
+</templates>

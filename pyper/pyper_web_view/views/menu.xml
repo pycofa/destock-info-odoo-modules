@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_settings_views"
+        parent="base.next_id_2"
+        sequence="2"
+        action="action_ir_views"
+    />
+</odoo>

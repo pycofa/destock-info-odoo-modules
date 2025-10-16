@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_attribute_view_form" model="ir.ui.view">
+        <field name="name">product.attribute.view.form.inherit</field>
+        <field name="model">product.attribute</field>
+        <field name="inherit_id" ref="product.product_attribute_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//field[@name='value_ids']//tree//field[@name='condition_type']" position="after">
+                <field name="pav_visible_shop"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

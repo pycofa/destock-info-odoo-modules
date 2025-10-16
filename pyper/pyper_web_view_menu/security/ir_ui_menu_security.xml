@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="rule_ir_ui_menu_system" model="ir.rule">
+        <field name="name">Global menus rule for saved views</field>
+        <field name="model_id" ref="base.model_ir_ui_menu"/>
+        <field name="domain_force">[('view_id', '=', False), ('user_id','=', False)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="groups" eval="[Command.link(ref('base.group_user'))]"/>
+    </record>
+
+    <record id="rule_ir_ui_menu_user" model="ir.rule">
+        <field name="name">User menus rule for saved views</field>
+        <field name="model_id" ref="base.model_ir_ui_menu"/>
+        <field name="domain_force">[('view_id', '!=', False), ('user_id','=', user.id)]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_user'))]"/>
+    </record>
+
+    <record id="rule_ir_ui_menu_manager" model="ir.rule">
+        <field name="name">Manager menus rule for saved views</field>
+        <field name="model_id" ref="base.model_ir_ui_menu"/>
+        <field name="domain_force">[('view_id', '!=', False), ('user_id','=', False)]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_system'))]"/>
+    </record>
+</odoo>

@@ -1,0 +1,17 @@
+// Chatter Activities
+// ------------------
+
+.o-mail-Activity-type {
+    display: flex;
+    align-items: center;
+    min-height: $o-mail-Avatar-size;
+}
+
+.o-mail-Activity-sidebar {
+    margin-right: $o-mail-Message-sidebarWidth - $o-mail-Avatar-size;
+}
+
+.o-mail-Activity-header {
+    padding: 0 !important;
+    flex-grow: 1;
+}

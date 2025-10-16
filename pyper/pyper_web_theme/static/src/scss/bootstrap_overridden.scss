@@ -1,0 +1,109 @@
+// Color system
+$light: #f8fafc !default;
+$dark: #18181b !default;
+$warning: rgb(251, 146, 60) !default;
+$danger: #b91c1c !default;
+
+
+// Options
+$enable-shadows: true !default;
+
+// Typography
+$h1-font-size: $o-font-size-base * 2.4 !default;
+$h2-font-size: $o-font-size-base * 1.5 !default;
+$h3-font-size: $o-font-size-base * 1.3 !default;
+$h4-font-size: $o-font-size-base * 1.2 !default;
+$h5-font-size: $o-font-size-base * 1.1 !default;
+
+// Form
+$input-border-color: $o-gray-200 !default;
+
+$input-box-shadow: 0 !default;
+
+$input-line-height: 2 !default;
+
+$input-focus-bg: $o-white !default;
+$input-focus-box-shadow: 0 !default;
+$input-focus-border-color: mix($o-action, $o-gray-200) !default;
+
+$form-check-input-checked-color: $o-white !default;
+$form-check-input-checked-border-color: $o-brand-primary !default;
+$form-check-input-checked-bg-color: $o-brand-primary !default;
+$form-check-input-border-radius: 4px !default;
+$form-check-input-width: 1.3em !default;
+$form-check-input-width: 1.3em !default;
+
+$form-select-focus-box-shadow: 0 !default;
+
+$form-range-track-box-shadow: 0 !default;
+
+$custom-checkbox-indicator-border-radius: 1px !default; // Just a slight smoothing.
+
+// Table
+$table-cell-padding-y-sm: 0.3em !default;
+$table-cell-vertical-align: middle !default;
+
+$table-active-bg-factor: .1 !default;
+$table-active-bg: rgba($o-brand-primary, $table-active-bg-factor) !default;
+$table-striped-bg-factor: 0 !default;
+
+$table-hover-bg-factor: .075 !default;
+$table-hover-bg: rgba($o-brand-primary, $table-hover-bg-factor) !default;
+
+// Component
+$component-active-color: $o-brand-primary !default;
+$component-active-bg: mix($o-brand-primary, $o-white, 10%) !default;
+
+// Nav
+$nav-tabs-border-radius: 0 !default;
+$nav-tabs-link-active-color: $o-main-headings-color !default;
+$nav-tabs-link-active-bg: transparent !default;
+
+$nav-pills-border-radius: 0 !default;
+
+$nav-link-color: $o-main-text-color !default;
+
+// Card
+$card-border-radius: 0 !default;
+$accordion-border-radius: 0 !default;
+
+// Toast
+$toast-border-radius: 0 !default;
+
+// Badge
+$badge-border-radius: $o-border-radius !default;
+$badge-font-weight: normal !default;
+
+// Progress
+$progress-border-radius: 0 !default;
+$progress-box-shadow: 0 !default;
+
+// List group
+$list-group-border-radius: 0 !default;
+$list-group-active-color: $o-action !default;
+$list-group-active-bg: $component-active-bg !default;
+$list-group-active-border-color: $o-action !default;
+
+// Image thumbnail
+$thumbnail-border-radius: 0 !default;
+$thumbnail-box-shadow: 0 !default;
+
+// Button
+$btn-transition: none !default;
+$input-btn-line-height: $input-line-height !default;
+$btn-padding-x: 16px !default;
+
+$btn-box-shadow: 0 !default;
+$btn-active-box-shadow: 0 !default;
+$btn-focus-box-shadow: 0 !default;
+
+// Dropdown
+$dropdown-box-shadow: 0 .3rem 1rem rgba(#000, .1) !default;
+
+// Alert
+$alert-border-width: 0 !default;
+$alert-border-radius: 0 !default;
+
+// Breadcrumb
+$breadcrumb-active-color: $o-main-text-color !default;
+$breadcrumb-divider-color: $o-main-color-muted !default;

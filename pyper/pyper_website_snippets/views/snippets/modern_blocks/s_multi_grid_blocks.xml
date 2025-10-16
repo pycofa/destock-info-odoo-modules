@@ -1,0 +1,117 @@
+<odoo>
+    <template id="multi_grid_blocks" name="Multi grid blocks">
+        <section
+            class="py96 o_cc o_cc3"
+            data-snippet="s_multi_grid_blocks"
+            data-name="Multi grid blocks"
+        >
+            <div class="container py-5" style="overflow:hidden">
+                <div class="row">
+                    <!-- LEFT SIDE -->
+                    <div class="d-flex flex-column justify-content-between col-12 col-lg-8 o_cc o_cc5 px-0" data-name="Left side">
+                        <!-- LEFT SIDE (TOP) -->
+                        <div class="d-flex flex-column align-items-center px-5 px-lg-0 pt-5" data-name="Title block">
+                            <div class="d-flex flex-column">
+                                <div class="row text-nowrap text-warning">
+                                    <h1 
+                                        class="col-3 display-1-fs text-primary  o_anim_fade_in o_animate o_anim_from_left"
+                                        style="--wanim-intensity: 20;animation-delay: 0.2s; animation-duration: 0.4s; z-index: 1;"
+                                    >Craft a page</h1>
+                                </div>
+        
+                                <div class="row text-nowrap" style="margin-top: -2rem;">
+                                    <div class="spacer col-sm-1 col-lg-3"></div>
+                                    <h1 
+                                        class="col-3 display-1-fs pt-2 pt-md-0 ms-5 ms-sm-0 o_anim_fade_in o_animate o_anim_from_left"
+                                        style="--wanim-intensity: 20;animation-delay: 0.4s; animation-duration: 0.4s; z-index: 1;"
+                                    >that captivates</h1>
+                                </div>
+        
+                                <div class="row text-nowrap" style="margin-top: -2rem;">
+                                    <div class="spacer col-sm-1 col-lg-3"></div>
+                                    <div class="spacer col-sm-1 col-lg-3"></div>
+                                    <h1 
+                                        class="col-3 display-1-fs pt-2 pt-md-0 ms-5 ms-sm-0 ps-5 ps-sm-0 o_anim_fade_in o_animate o_anim_from_left"
+                                        style="--wanim-intensity: 20;animation-delay: 0.6s; animation-duration: 0.4s; z-index: 1;"
+                                    >and shine bright</h1>
+                                </div>
+                            </div>  
+                            <div class="d-flex col-12 justify-content-center justify-content-lg-start ps-0 ps-lg-5 gap-3 my-3">
+                                <a class="btn btn-primary" href="#">Quick start</a>
+                                <a class="btn btn-secondary" href="#">Read more</a>
+                            </div>
+                        </div>
+                        <!-- LEFT SIDE (BOTTOM) -->
+                        <div class="row" style="min-height:200px;">
+                            <!-- item #1 -->
+                            <div class="col-12 col-lg-6 p-0">
+                                <img src="/website/static/src/img/backgrounds/panama-sky.jpg" class="" style="width:100%; height:100%; object-fit: cover;"/>
+                            </div>
+                            <!-- item #2 -->
+                            <div class="col-6 col-lg-3 d-flex flex-column o_cc o_cc1 py-3 ps-5 ps-lg-3 pe-3">
+                                <p class="">MINDSET</p>
+                                <p>
+                                    This grid block allow you to make your content stand out, drawing attention to key areas and making the page more aesthetically pleasing.
+                                </p>
+                                <div class="d-flex my-3" >
+                                    <a class="btn btn-primary" href="#">Let's design it!</a>
+                                </div>
+                            </div>
+                            <!-- item #3 -->
+                            <div class="col-6 col-lg-3 p-0">
+                                <img src="/website/static/src/img/backgrounds/la.jpg" class="" style="width:100%; height:100%; object-fit: cover;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RIGHT SIDE -->
+                    <div class="col-12 col-lg-4 p-5 o_cc o_cc1 px-0 py-0" style="overflow:hidden;">
+                        <div class="d-flex flex-column h-100">
+                            <!-- RIGHT SIDE (TOP) -->
+                            <div class="row" data-name="Right side">
+                                <div class="" style="height:75%; width:100%;min-height: 500px;">
+                                     <img src="/website/static/src/img/snippets_demo/s_parallax.jpg" class="" style="width:100%; height:100%; object-fit: cover;"/>
+                                </div>
+                            </div>
+                            <!-- RIGHT SIDE (BOTTOM) -->
+                            <div class="row flex-grow-1" style="">
+                                <!-- item #1 -->
+                                <div class="col-6 d-flex flex-column justify-content-between o_cc o_cc1 py-3 ps-5 pe-4">
+                                    <div>
+                                        <p class="h2">3,5M</p>
+                                        <p>
+                                            Highlight your most impactful statistic here
+                                        </p>
+                                    </div>
+                                    <div class="d-flex mt-2" >
+                                        <a class="btn btn-primary" href="#">see more</a>
+                                    </div>
+                                </div>
+                                <!-- item #2 -->
+                                <div class="col-6 d-flex flex-column justify-content-between o_cc o_cc4 py-3 ps-3 pe-4">
+                                    <div>
+                                        <p class="h2">2.3x</p>
+                                        <p>
+                                            Inspire confidence with your performance 
+                                        </p>
+                                    </div>
+                                    <div class="d-flex mt-2" >
+                                        <a class="btn btn-primary" href="#">see more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_multi_grid_blocks">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.multi_grid_blocks"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_multi_grid_blocks.svg">
+                <keywords>grid, title, text, image, kpi</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

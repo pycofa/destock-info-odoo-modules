@@ -1,0 +1,70 @@
+<odoo>
+    <template id="row_banner_with_kpis" name="Row banner with kpis">
+        <section 
+            class="o_cc o_cc1 pt48 pb48" 
+            data-snippet="s_row_banner_with_kpis"
+            data-name="Row Banner with kpis" 
+        >
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-6 col-lg-2 order-2 order-lg-1 mt-4 gap-2">
+                        <div 
+                            class="d-flex flex-column align-items-center o_anim_fade_in o_animate o_anim_from_left"
+                            style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;"    
+                        >
+                            <span class="fs-2">18.0.0</span>
+                            <p class="fs-6 text-muted">last LTS</p>
+                            <hr class="col-4 border-1 border-bottom"/>
+                        </div>
+                        <div 
+                            class="o_anim_fade_in o_animate o_anim_from_top"
+                            style="animation-delay: 0.4s; animation-duration: 0.6s; --wanim-intensity: 20;"    
+                        >
+                            <span class="fs-2">60+</span>
+                            <p class="fs-6 text-muted">new features</p>
+                        </div>
+                    </div>
+                    <div 
+                        class="col-12 col-lg-8 order-1 order-lg-2 mt-2  o_anim_fade_in o_animate o_anim_from_top"
+                        style="animation-delay: 0.0s; animation-duration: 1.0s; --wanim-intensity: 20;"
+                    >
+                        <div class="d-flex flex-column align-items-center gap-2 py-4">
+                            <p class="fs-6 text-muted">Incorporate the best UX/UI practices into your website to enhance your business and your image</p>
+                            <h1>Create an outstanding content by highlighting few key figures</h1>
+                            <div class="d-flex align-items-center justify-content-center gap-2 py-4">
+                                <a class="btn btn-primary " href="#">Easily custom</a>
+                                <a class="btn btn-secondary " href="#">my design</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2 order-3 order-lg-3 mt-4 gap-2">
+                        <div 
+                            class="d-flex flex-column align-items-center  o_anim_fade_in o_animate o_anim_from_right"
+                            style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;"    
+                        >
+                            <span class="fs-2">3.5M</span>
+                            <p class="fs-6 text-muted">positives comments</p>
+                            <hr class="col-4 border-1 border-bottom"/>
+                        </div>
+                        <div 
+                            class="o_anim_fade_in o_animate o_anim_from_top"
+                            style="animation-delay: 0.4s; animation-duration: 0.6s; --wanim-intensity: 20;"    
+                        >
+                            <span class="fs-2">87%</span>
+                            <p class="fs-6 text-muted">increased performances</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_row_banner_with_kpis">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.row_banner_with_kpis"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_row_banner_with_kpis.svg">
+                <keywords>kpi, text, title, number</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

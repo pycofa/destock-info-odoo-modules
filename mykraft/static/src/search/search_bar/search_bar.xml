@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="SearchBar.Facets" t-inherit="web.SearchBar.Facets" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_facet_values')]" position="attributes">
+            <attribute name="class" remove="rounded-end-2" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_searchview_facet_label')]" position="attributes">
+            <attribute name="class" remove="rounded-start-2" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_searchview_facet')]" position="attributes">
+            <attribute name="class" remove="bg-200 align-items-stretch" separator=" " add="bg-100 overflow-hidden align-items-center"/>
+        </xpath>
+    </t>
+
+</templates>

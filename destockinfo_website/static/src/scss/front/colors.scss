@@ -1,0 +1,20 @@
+$o-color-palettes: map-merge($o-color-palettes,
+   (
+      'Destockinfo': (
+         'o-color-1':#255aef,
+         'o-color-2':$o-gray-800,
+         'o-color-3':$o-gray-100,
+         'o-color-4':$o-white,
+         'o-color-5':$o-gray-800,
+         'o-color-6':$o-gray-800,
+      ),
+   )
+);
+
+$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'Destockinfo');
+
+$o-website-values-palettes: (
+   (
+      'color-palettes-name': 'Destockinfo',
+   ),
+);

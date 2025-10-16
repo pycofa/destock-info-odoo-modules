@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record model="ir.ui.menu" id="website.menu_website_preview">
+        <field name="parent_id"></field>
+        <field name="sequence">0</field>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+        <field name="font_icon">ph ph-browser</field>
+    </record>
+
+    <record model="ir.ui.menu" id="website.menu_website_pages_list">
+        <field name="parent_id"></field>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+        <field name="sequence">1</field>
+        <field name="font_icon">ph ph-files</field>
+    </record>
+
+    <record model="ir.ui.menu" id="website.menu_reporting">
+        <field name="parent_id"></field>
+        <field name="sequence">3</field>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+        <field name="font_icon">ph ph-chart-line</field>
+    </record>
+
+    <record model="ir.ui.menu" id="website.menu_website_menu_list">
+        <field name="parent_id"></field>
+        <field name="parent_id" ref="website.menu_website_configuration"/>
+        <field name="sequence">8</field>
+        <field name="font_icon">ph ph-rows</field>
+    </record>
+
+    <record model="ir.ui.menu" id="website.menu_website_global_configuration">
+        <field name="parent_id"></field>
+        <field name="sequence">1000</field>
+        <field name="font_icon">ph ph-gear-fine</field>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+    </record>
+
+    <record model="ir.ui.menu" id="website.menu_website_rewrite">
+        <field name="parent_id" ref="website.menu_website_configuration"/>
+        <field name="sequence">9</field>
+        <field name="font_icon">ph ph-compass</field>
+    </record>
+
+    <record model="ir.ui.menu" id="utm.menu_link_tracker_root">
+        <field name="sequence">1001</field>
+        <field name="parent_id" ref="website.menu_website_configuration"/>
+        <field name="font_icon">ph ph-link-simple-horizontal</field>
+    </record>
+
+    <record model="ir.ui.menu" id="mail.menu_root_discuss">
+        <field name="font_icon">ph ph-tray</field>
+        <field name="name">Inbox</field>
+        <field name="position">drawer_footer</field>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+
+    </record>
+
+    <record model="ir.ui.menu" id="base.menu_administration">
+        <field name="font_icon">ph ph-sliders</field>
+        <field name="position">drawer_footer</field>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+
+    </record>
+
+    <record model="ir.ui.menu" id="website.menu_website_configuration">
+        <field name="font_icon">ph ph-globe</field>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+
+    </record>
+
+    <record model="ir.ui.menu" id="base.menu_management">
+        <field name="font_icon">ph ph-app-window</field>
+        <field name="position">drawer_footer</field>
+        <field name="groups_id" eval="[ref('base.group_no_one')]"/>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+
+    </record>
+
+    <record model="ir.ui.menu" id="account.menu_finance">
+        <field name="groups_id" eval="[ref('base.group_no_one')]"/>
+        <field name="category_id" ref="pyper_menu.menu_category_global"/>
+    </record>
+
+    <record model="ir.ui.menu" id="spreadsheet_dashboard.spreadsheet_dashboard_menu_root">
+        <field name="groups_id" eval="[ref('base.group_no_one')]"/>
+        <field name="category_id" ref="pyper_menu.menu_category_global"/>
+
+    </record>
+
+    <record model="ir.ui.menu" id="stock.menu_stock_root">
+        <field name="groups_id" eval="[ref('base.group_no_one')]"/>
+        <field name="category_id" ref="pyper_menu.menu_category_global"/>
+    </record>
+
+    <record model="ir.ui.menu" id="contacts.menu_contacts">
+        <field name="category_id" ref="pyper_menu.menu_category_global"/>
+    </record>
+
+    <record model="ir.ui.menu" id="website.menu_website_websites_list">
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+    </record>
+
+    <record id="mass_mailing.mass_mailing_menu_root" model="ir.ui.menu">
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+    </record>
+</odoo>

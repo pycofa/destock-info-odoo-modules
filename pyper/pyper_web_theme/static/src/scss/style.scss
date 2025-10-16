@@ -1,0 +1,99 @@
+.btn.o_searchview_facet_label {
+    line-height: $input-line-height * 0.9;
+}
+
+.fw-bold > input,
+.fw-bold textarea {
+    font-weight:600
+}
+
+.w-33 {
+    width: 33%;
+}
+
+.w-67 {
+    width: 67%;
+}
+
+hr {
+    background-color:$border-color;
+    opacity: 1;
+}
+
+small,
+.small {
+    font-size: 0.70rem;
+}
+
+.task_list [name="is_completed"] {
+    width: 1px;
+}
+
+
+//== Badges
+.badge {
+    &.text-bg-default,
+    &.bg-light,
+    &.text-bg-light,
+    &.bg-default,
+    &.text-primary {
+        outline: medium none;
+    }
+}
+
+.toggle-panel {
+    border-radius:0.25rem;
+
+    &.active{
+        background-color: $o-brand-primary;
+        color:$o-white;
+    }
+}
+
+.nav-bar-icon {
+    font-size: $o-navbar-entry-icon-font-size;
+
+    > span,
+    > i {
+        width: $o-navbar-entry-icon-font-size;
+        height: $o-navbar-entry-icon-font-size;
+    }
+}
+
+.o_field_partner_quick_link {
+    margin-bottom: 0 !important;
+}
+
+.btn-quick {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 400;
+    position: relative;
+
+    i {
+        font-size: 1.3125rem;
+        margin-bottom: 0.1rem;
+    }
+}
+
+.btn-quick-counter {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    border-radius: 100%;
+    background-color: #374151;
+    color:#fff;
+}
+
+i.btn-quick-counter {
+    font-size: 0.5rem !important;
+}

@@ -1,0 +1,73 @@
+.o_partner_sheet {
+    .o_form_sheet {
+        padding: 0;
+
+        div[name='name'] {
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeInBottomLight;
+            animation-name: fadeInBottomLight;
+        }
+    }
+
+    .doc-title {
+        margin-bottom: 0;
+
+        .o_field_widget {
+            margin-bottom: 0;
+        }
+    }
+
+    .o_form_statusbar {
+        padding-top: 16px !important;
+    }
+
+    .col-info {
+        label {
+            display: block;
+            text-transform: uppercase;
+            color: $text-muted;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .o_field_widget {
+            width: 100%;
+        }
+    }
+
+    .o-mail-Chatter {
+        border-left: medium none !important;
+    }
+
+    .o-mail-Chatter-top {
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+        padding-top: 1.5rem !important;
+    }
+
+    .o-mail-Thread {
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+
+        .o-mail-Message {
+            padding-left: 0 !important;
+        }
+    }
+
+    .o_list_renderer, .o_notebook_headers {
+        margin: 0 !important;
+
+        .nav {
+            padding: 0 32px;
+        }
+    }
+
+    .o_group.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

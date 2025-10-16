@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- base structure override of product in order to allow new template-->
+    <record id="product.product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.pyper.common.form</field>
+        <field name="model">product.template</field>
+        <field name="mode">primary</field>
+        <field name="priority">15</field>
+        <field name="arch" type="xml">
+            <form string="Product" class="o_product">
+                <sheet name="product_form">
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button"
+                                name="open_pricelist_rules"
+                                icon="fa-list-ul"
+                                groups="product.group_product_pricelist"
+                                type="object">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="pricelist_item_count"/>
+                                </span>
+                                <span class="o_stat_text" invisible="pricelist_item_count == 1">
+                                    Extra Prices
+                                </span>
+                                <span class="o_stat_text" invisible="pricelist_item_count != 1">
+                                    Extra Price
+                                </span>
+                            </div>
+                        </button>
+
+                        <button class="oe_stat_button"
+                                name="action_open_documents"
+                                type="object"
+                                icon="fa-file-text-o">
+                            <field string="Documents" name="product_document_count" widget="statinfo"/>
+                        </button>
+                    </div>
+
+                    <div class="row mh-100 m-0">
+                        <div
+                                class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-2 bg-white col-info border-end mh-100 p-0"
+                        >
+                            <div class="text-center pt-4">
+                                <field name="image_1920" class="product_image" widget="image"
+                                       options="{'preview_image': 'image_512'}"/>
+                            </div>
+
+                            <div class="text-center pt-4 px-4" invisible="not product_manufacturer_logo">
+                                <field name="product_manufacturer_logo" class="product_image" widget="image"
+                                       options="{'preview_image': 'product_manufacturer_logo'}"/>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 col-xl-10 bg-white m-0 p-0">
+                            <header>
+                                <button string="Print Labels" type="object" name="action_open_label_layout"
+                                        invisible="detailed_type not in ['consu', 'product', 'combo']"/>
+                            </header>
+
+                            <div class="py-4 px-5">
+                                <div class="doc-title oe_title mb-4">
+                                    <label for="name" string="Product Name"/>
+                                    <h1>
+                                        <div class="d-flex">
+                                            <field name="priority" invisible="True"/>
+                                            <field class="text-break" name="name" options="{'line_breaks': False}"
+                                                   widget="text" placeholder="e.g. Cheese Burger"/>
+                                        </div>
+                                    </h1>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="description_sale"/>
+                                    <field colspan="2" name="description_sale" nolabel="1"
+                                           placeholder="This note is added to sales orders and invoices."/>
+                                </div>
+
+                                <field name='product_variant_count' invisible='1'/>
+                                <field name='is_product_variant' invisible='1'/>
+                                <field name='attribute_line_ids' invisible='1'/>
+                                <field name="type" invisible="1"/>
+                                <field name="company_id" invisible="1"/>
+
+                                <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
+                                        invisible="active"/>
+                                <field name="id" invisible="True"/>
+                                <div name="options">
+                                    <span class="d-inline-block">
+                                        <field name="sale_ok"/>
+                                        <label for="sale_ok"/>
+                                    </span>
+                                    <span class="d-inline-block">
+                                        <field name="purchase_ok"/>
+                                        <label for="purchase_ok"/>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <notebook>
+                                <page string="General Information" name="general_information">
+                                    <group class="py-4 pb-0 px-5">
+                                        <group name="group_general">
+                                            <field name="active" invisible="1"/>
+                                            <field name="categ_id" string="Product Category"/>
+                                            <field name="detailed_type"/>
+                                            <field name="product_tooltip" string="" class="fst-italic text-muted"
+                                                   invisible="type == 'service' and not sale_ok"/>
+                                            <field name="uom_id" groups="uom.group_uom" options="{'no_create': True}"/>
+                                            <field name="uom_po_id" groups="uom.group_uom"
+                                                   options="{'no_create': True}"/>
+                                        </group>
+                                        <group name="group_standard_price">
+                                            <label for="list_price"/>
+                                            <div name="pricing" class="o_row">
+                                                <field name="list_price" class="oe_inline" widget='monetary'
+                                                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                                            </div>
+                                            <label for="standard_price"
+                                                   invisible="product_variant_count &gt; 1 and not is_product_variant"/>
+                                            <div name="standard_price_uom"
+                                                 invisible="product_variant_count &gt; 1 and not is_product_variant">
+                                                <field name="standard_price" class="oe_inline" widget='monetary'
+                                                       options="{'currency_field': 'cost_currency_id', 'field_digits': True}"/>
+                                                <span groups="uom.group_uom">per
+                                                    <field name="uom_name" class="oe_inline"/>
+                                                </span>
+                                            </div>
+                                            <field name="product_tag_ids" widget="many2many_tags"
+                                                   context="{'product_template_id': id}"/>
+                                            <button name="%(product.product_tag_action)d" icon="oi-arrow-right"
+                                                    type="action"
+                                                    class="btn-link ps-0" colspan="2" string="Configure tags"/>
+                                            <field name="company_id" groups="base.group_multi_company"
+                                                   options="{'no_create': True}"/>
+                                            <field name="currency_id" invisible="1"/>
+                                            <field name="cost_currency_id" invisible="1"/>
+                                            <field name="product_variant_id" invisible="1"/>
+                                        </group>
+                                    </group>
+                                    <group string="Internal Notes" class="px-5 pb-4">
+                                        <field colspan="2" name="description" nolabel="1"
+                                               placeholder="This note is only for internal purposes."/>
+                                    </group>
+                                </page>
+                                <page string="Sales" name="sales" invisible="1 or not sale_ok">
+                                    <group name="sale" class="py-4 px-5">
+                                        <group string="Upsell &amp; Cross-Sell" name="upsell" invisible="1"/>
+                                    </group>
+                                    <group class="py-4 px-5">
+                                        <group string="Sales Description" name="description">
+
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Purchase" name="purchase" invisible="1 or not purchase_ok">
+                                    <group name="purchase" class="py-4 px-5">
+                                        <group string="Vendor Bills" name="bill"/>
+                                    </group>
+                                </page>
+                                <page string="Inventory" name="inventory" groups="product.group_stock_packaging"
+                                      invisible="type == 'service'">
+                                    <group name="inventory" class="py-4 px-5">
+                                        <group name="group_lots_and_weight" string="Logistics"
+                                               invisible="type not in ['product', 'consu']">
+                                            <label for="weight"
+                                                   invisible="product_variant_count &gt; 1 and not is_product_variant"/>
+                                            <div class="o_row" name="weight"
+                                                 invisible="product_variant_count &gt; 1 and not is_product_variant">
+                                                <field name="weight" class="oe_inline"/>
+                                                <field name="weight_uom_name"/>
+                                            </div>
+                                            <label for="volume"
+                                                   invisible="product_variant_count &gt; 1 and not is_product_variant"/>
+                                            <div class="o_row" name="volume"
+                                                 invisible="product_variant_count &gt; 1 and not is_product_variant">
+                                                <field name="volume" string="Volume" class="oe_inline"/>
+                                                <field name="volume_uom_name"/>
+                                            </div>
+                                        </group>
+                                    </group>
+                                    <group name="packaging" string="Packaging"
+                                           colspan="4"
+                                           invisible="(type not in ['product', 'consu'] or product_variant_count &gt; 1) and not is_product_variant"
+                                           groups="product.group_stock_packaging"
+                                           class="py-4 px-5"
+                                    >
+                                        <field colspan="2" name="packaging_ids" nolabel="1"
+                                               context="{'tree_view_ref':'product.product_packaging_tree_view2', 'default_company_id': company_id}"/>
+                                    </group>
+                                    <group class="py-4 px-5">
+                                        <group name="technical_information" string="Technical data">
+                                            <field name="ean_upc"/>
+                                            <field name="gtin"/>
+                                        </group>
+                                    </group>
+                                </page>
+                            </notebook>
+
+                            <div class="o_form_sheet">
+                                <div class="oe_chatter">
+                                    <field name="message_follower_ids"/>
+                                    <field name="activity_ids"/>
+                                    <field name="message_ids"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="product_template_manufacturer_action" model="ir.ui.view">
+        <field name="name">product.manufacturer.inherit.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='detailed_type']" position="before">
+                <field name="product_manufacturer_id" invisible="detailed_type == 'service'"/>
+                <field name="part_number_code" invisible="detailed_type == 'service'"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_action" model="ir.actions.act_window">
+        <field name="name">Products</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="product.product_template_search_view"/>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('product.product_template_tree_view')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('product.product_template_only_form_view')}),
+        ]"/>
+        <field name="context">{
+            'default_sale_ok': True,
+            'default_purchase_ok': True,
+            }
+        </field>
+    </record>
+
+</odoo>

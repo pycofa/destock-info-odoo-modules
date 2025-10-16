@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+    <div t-name='res_config_edition' t-inherit="web.res_config_edition" t-inherit-mode="extension">
+        <xpath expr="//Setting" position="before">
+            <Setting addLabel="false">
+                <div class="user-heading">
+                    <div class="h3 px-0">
+                        <div>
+                            <span id="pyper-edition-title">Pyper</span>
+                            <span class="ms-1" t-out="serverVersion"/>
+                        </div>
+
+                        <div class="mt-1">
+                            <span>Made with love by Krafter</span>
+                            <span class="mx-1">•</span>
+                            <span>Built over</span>
+                            <a target="_blank" href="https://github.com/odoo/odoo" class="ms-1" style="text-decoration: underline;">Odoo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tab-content">
+                        <div role="tabpanel" id="pyper_settings" class="tab-pane active text-muted o_web_settings_compact_subtitle">
+                            <small>Copyright © <a target="_blank" href="https://krafter.io" style="text-decoration: underline;">Krafter SAS</a> <span id="pyper_license">Krafter Proprietary License</span></small>
+                        </div>
+                    </div>
+                </div>
+            </Setting>
+        </xpath>
+    </div>
+</template>

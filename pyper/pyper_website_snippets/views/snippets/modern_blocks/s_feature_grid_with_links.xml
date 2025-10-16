@@ -1,0 +1,154 @@
+<odoo>
+    <template id="feature_grid_with_links" name="Feature grid with links">
+        <section
+            class="s_feature_grid_with_links py-5 o_cc o_cc1"
+            data-snippet="s_feature_grid_with_links"
+            data-name="Feature grid with links"
+        >
+            <div class="container-fluid"  style="max-width:1296px;">
+                <!-- Title Header -->
+                <div class="row px-2">
+                    <div class="col-12 col-lg-10 d-flex flex-column align-items-start" data-name="Title Box">
+                        <h3 
+                            class="mt-0 mb-3 o_anim_fade_in o_animate o_anim_from_left"
+                            style="--wanim-intensity: 20;animation-delay: 0.0s; animation-duration: 0.4s;"
+                        >Featuring</h3>
+                        <p class="h6 fw-normal">
+                            This is a feature grid snippet. Each feature box can be used as a link. Easily edit the overall Feature item link by selecting its text. Focus on few main words to write the text.
+                        </p>
+                        <div class="d-flex align-items-center justify-content-center gap-2 my-3">
+                            <a class="btn btn-primary" href="#">Get started</a>
+                            <a class="btn btn-secondary" href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Blocks -->
+                <div class="row">
+
+                    <!-- Feature Column #1-->
+                    <div 
+                        class="col-12 col-md-6 pe-4 ps-4 pt-2 o_anim_fade_in o_animate o_anim_from_bottom"
+                        style="--wanim-intensity: 20;animation-delay: 0.0s; animation-duration: 0.4s;" 
+                        data-name="Feature Box"
+                    >
+                        <div class="row d-flex flex-column gap-2">
+                            <!-- Feature #1-1 -->
+                            <div class="col-12 py-3 px-2 o_cc o_cc2 card_wrapper" data-name="Feature Item">
+                                <a href="#" class="d-flex" style="text-decoration: none;">
+                                    <div class="col-3 px-0" style="width:5rem; height: 5rem;">
+                                        <div class="rounded-circle bg-o-color-1 ratio ratio-1x1 overflow-hidden">
+                                            <img src="/website/static/src/img/backgrounds/peak.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column ps-3">
+                                        <p class="h5 mb-0">Robust</p>
+                                        <p class="h6 text-muted" style="display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis;overflow:hidden;">
+                                            Experience reliable and efficient performance with our strong system.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Feature #1-2 -->
+                            <div class="col-12 py-3 px-2 o_cc o_cc2 card_wrapper" data-name="Feature Item">
+                                <a href="#" class="d-flex" style="text-decoration: none;">
+                                    <div class="col-3 px-0" style="width:5rem; height: 5rem;">
+                                        <div class="rounded-circle bg-o-color-1 ratio ratio-1x1 overflow-hidden">
+                                            <img src="/website/static/src/img/library/rocket.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column ps-3">
+                                        <p class="h5 mb-0">Innovative</p>
+                                        <p class="h6 text-muted" style="display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis;overflow:hidden;">
+                                        Stay ahead with our cutting-edge features tailored to your evolving needs.</p>
+                                    </div>
+                                </a>
+                            </div>   
+                            <!-- Feature #1-3 -->
+                            <div class="col-12 py-3 px-2  o_cc o_cc2 card_wrapper" data-name="Feature Item">
+                                <a href="#" class="d-flex" style="text-decoration: none;">
+                                    <div class="col-3 px-0" style="width:5rem; height: 5rem;">
+                                        <div class="rounded-circle bg-o-color-1 ratio ratio-1x1 overflow-hidden">
+                                            <img src="/website/static/src/img/library/sweet.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column ps-3">
+                                        <p class="h5 mb-0">Tasty</p>
+                                        <p class="h6 text-muted" style="display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis;overflow:hidden;">
+                                           Follow us in a wolrd where everyday is a journey of flavor.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    <!-- Feature  Column #2 -->
+                    <div 
+                        class="col-12 col-md-6 pe-4 ps-4 pt-2 o_anim_fade_in o_animate o_anim_from_bottom"
+                        style="--wanim-intensity: 20;animation-delay: 0.0s; animation-duration: 0.4s;" 
+                        data-name="Feature Box"
+                    >
+                        <div class="row d-flex flex-column gap-2">
+                            <!-- Feature #2-1 -->
+                            <div class="col-12 py-3 px-2  o_cc o_cc2 card_wrapper" data-name="Feature Item">
+                                <a href="#" class="d-flex" style="text-decoration: none;">
+                                    <div class="col-3 px-0" style="width:5rem; height: 5rem;">
+                                        <div class="rounded-circle bg-o-color-1 ratio ratio-1x1 overflow-hidden">
+                                            <img src="/website/static/src/img/library/ice_coffe.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column ps-3">
+                                        <p class="h5 mb-0">Refreshing</p>
+                                        <p class="h6 text-muted" style="display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis;overflow:hidden;">
+                                        Enjoy a renewing user experience with our vitalizing solution.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Feature #2-2 -->
+                            <div class="col-12 py-3 px-2  o_cc o_cc2 card_wrapper" data-name="Feature Item">
+                                <a href="#" class="d-flex" style="text-decoration: none;">
+                                    <div class="col-3 px-0" style="width:5rem; height: 5rem;">
+                                        <div class="rounded-circle bg-o-color-1 ratio ratio-1x1 overflow-hidden">
+                                            <img src="/website/static/src/img/backgrounds/panama-sky.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column ps-3">
+                                        <p class="h5 mb-0">Inspiring</p>
+                                        <p class="h6 text-muted" style="display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis;overflow:hidden;">
+                                        Draw inspiration from our trendy look and enhance your creative thinking</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Feature #2-3 -->
+                            <div class="col-12 py-3 px-2  o_cc o_cc2 card_wrapper" data-name="Feature Item">
+                                <a href="#" class="d-flex" style="text-decoration: none;">
+                                    <div class="col-3 px-0" style="width:5rem; height: 5rem;">
+                                        <div class="rounded-circle bg-o-color-1 ratio ratio-1x1 overflow-hidden">
+                                            <img src="/website/static/src/img/backgrounds/sails.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column ps-3">
+                                        <p class="h5 mb-0">Adventurous</p>
+                                        <p class="h6 text-muted" style="display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis;overflow:hidden;">
+                                            Embrace the thrill of the unknown with our adventurous spirit and explore new horizons</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_feature_grid_with_links">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.feature_grid_with_links"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_feature_grid_with_links.svg">
+                <keywords>grid, text, title, app, feature, card, link</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record model="ir.ui.menu" id="website_blog.menu_website_blog_root_global">
+        <field name="parent_id"></field>
+        <field name="sequence">3</field>
+        <field name="font_icon">ph ph-article</field>
+        <field name="category_id" ref="pyper_menu.menu_category_website"/>
+    </record>
+
+    <record model="ir.ui.menu" id="website_blog.menu_blog_post_pages">
+        <field name="parent_id" ref="website_blog.menu_website_blog_root_global"/>
+        <field name="sequence">0</field>
+    </record>
+</odoo>

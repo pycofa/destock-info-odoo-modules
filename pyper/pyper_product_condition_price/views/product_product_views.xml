@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_product_form" model="ir.ui.view">
+        <field name="name">product.product.form.inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_variant_count']" position="before">
+                <field name="sale_price" widget="monetary"/>
+            </xpath>
+
+            <xpath expr="//label[@for='lst_price']" position="attributes">
+                <attribute name="groups">pyper_product_condition.group_product_show_variant_list_price</attribute>
+            </xpath>
+
+            <xpath expr="//group[@name='pricing']/div[1]" position="attributes">
+                <attribute name="groups">pyper_product_condition.group_product_show_variant_list_price</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_product_tree_view" model="ir.ui.view">
+        <field name="name">product.product.form.inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='lst_price']" position="attributes">
+                <attribute name="groups">pyper_product_condition.group_product_show_variant_list_price</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='lst_price']" position="before">
+                <field name="sale_price" widget="monetary"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

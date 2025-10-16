@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme_mail.ActivityMenu" t-inherit="mail.ActivityMenu" t-inherit-mode="extension">
+        <xpath expr="//i[hasclass('fa-clock-o')]" position="attributes">
+            <attribute name="class" separator=" " remove="fa fa-lg fa-clock-o"
+                       add="ph ph-check-square nav-bar-icon"/>
+        </xpath>
+    </t>
+
+    <t t-name="pyper_web_theme_mail.MessagingMenu" t-inherit="mail.MessagingMenu" t-inherit-mode="extension">
+        <xpath expr="//i[hasclass('fa-comments')]" position="attributes">
+            <attribute name="class" separator=" " remove="fa fa-lg fa-comments"
+                       add="ph ph-chat-text nav-bar-icon"/>
+        </xpath>
+    </t>
+</templates>

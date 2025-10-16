@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_manufacturer_tree_view" model="ir.ui.view">
+        <field name="name">product.manufacturer.tree</field>
+        <field name="model">product.manufacturer</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Product manufacturers" multi_edit="1">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_manufacturer_form_view" model="ir.ui.view">
+        <field name="name">product.manufacturer.form</field>
+        <field name="model">product.manufacturer</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="name"/>
+                    <field name="image_1920" widget="image"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_manufacturer_action" model="ir.actions.act_window">
+        <field name="name">Product manufacturers</field>
+        <field name="res_model">product.manufacturer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('pyper_product_catalog.product_manufacturer_tree_view')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('pyper_product_catalog.product_manufacturer_form_view')}),
+        ]"/>
+    </record>
+</odoo>

@@ -1,0 +1,786 @@
+@media (max-width: 767.98px) {
+    html .o_web_client > .o_action_manager > .o_action:not(.o_action_delegate_scroll),
+    html .o_web_client > .o_action_manager > .o_action .o_form_view_container {
+        overflow-x: hidden!important;
+        overflow-y: auto!important;
+    }
+}
+
+.o_mass_mailing_mailing_form{
+  .o_form_renderer {
+    flex-direction: column;
+  }
+}
+
+.fw-bold > input, .fw-bold textarea {
+    font-weight: 600
+}
+
+.w-33 {
+    width: 33%;
+}
+
+.w-67 {
+    width: 67%;
+}
+
+hr {
+    background-color: $border-color;
+    opacity: 1;
+}
+
+small, .small {
+    font-size: 0.70rem;
+}
+
+.task_list [name="is_completed"] {
+    width: 1px;
+}
+
+.contact-card {
+    .o_inner_group {
+        gap: 4px 16px;
+        margin-bottom: 0px;
+    }
+}
+
+.o_cp_switch_buttons {
+    .o_switch_view.active {
+        background-color: $o-black;
+        color: #fff;
+        border-color: $o-black;
+    }
+}
+
+.o_menu_brand {
+    display: none !important;
+}
+
+.o_last_breadcrumb_item {
+    font-size: 28px !important;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeInLeftLight;
+}
+
+// Kanban
+.o_kanban_renderer .o_kanban_record {
+    border-radius: $border-radius !important;
+}
+
+.kanban-counter {
+    height: 28px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.825rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    background-color: $o-gray-100;
+    border-radius: $border-radius;
+}
+
+.o_kanban_record {
+    .o_field_progressbar {
+        width: 100%;
+
+        .o_progress {
+            width: 100%;
+            height: 6px;
+        }
+
+        .o_progressbar_value {
+            display: none !important;
+        }
+    }
+}
+
+
+.o_kanban_renderer .o_kanban_record > div:not(.o_dropdown_kanban),
+.o_kanban_renderer .o_kanban_quick_create {
+    background-color: $o-white !important;
+    border: 1px solid $o-gray-200;
+    border-radius: $border-radius !important;
+    padding: 1rem;
+
+    img {
+        border-radius: $border-radius !important;
+    }
+
+    &:hover {
+        background-color: $o-gray-50 !important;
+    }
+}
+
+.o_kanban_card_header_title {
+    margin-bottom: 5px !important;
+
+    .o_kanban_card_header_title_name {
+        font-size: 2.4rem !important;
+        font-weight: bold !important;
+    }
+}
+
+.oe_kanban_global_click, .o_calendar_renderer, .o_calendar_header, .oe_kanban_color_0 {
+    background-color: $o-white !important;
+}
+
+.full_width_kanban {
+    .o_kanban_record {
+        min-width: 100%;
+    }
+}
+
+.o_search_panel {
+    background-color: $o-white !important;
+
+    .o_search_panel_category_value {
+        background-color: $o-white !important;
+
+        .list-group-item {
+            background-color: $o-white !important;
+        }
+    }
+}
+
+.o_searchview {
+    background-color: $o-gray-50 !important;
+}
+
+.cp_btn {
+    width: 50px;
+}
+
+$t-label-font-size: 12px;
+
+// Form
+
+.flow-main-fields {
+    width: 100%;
+    border-radius: $border-radius;
+    border: 1px solid $o-gray-100;
+    padding: 0.75rem 1rem 0.25rem;
+
+    .o_field_widget {
+        max-width: 140px;
+    }
+
+    .main-field-selector {
+        overflow: visible;
+
+        .o_field_widget {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            .o_field_widget {
+                border-radius: $border-radius;
+                box-shadow: 0px 0px 0px 4px $o-gray-100;
+            }
+        }
+    }
+
+    .main-field-selector.ph-folder {
+        &:hover {
+            border-radius: $border-radius;
+            box-shadow: 0px 0px 0px 4px $o-gray-100;
+        }
+    }
+
+    i {
+        font-size: 20px;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: $border-radius;
+        color: $o-gray-800;
+        text-align: center;
+        background-color: $o-gray-50;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $o-gray-100;
+        }
+    }
+
+    img {
+        width: 40px;
+        min-width: 40px;
+        cursor: pointer;
+        height: 40px;
+        border-radius: $border-radius;
+    }
+
+    label {
+        font-size: 0.725rem !important;
+        font-weight: 400 !important;
+        color: $o-main-color-muted;
+    }
+}
+
+.main-field-selector-kendama {
+    .progress-circular--size-default {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+input[type=range] {
+    border-radius: 5px;
+}
+
+.o_form_sheet {
+    animation: fadeIn 0.4s;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    .o_notebook {
+        > .tab-content > .tab-pane {
+            padding: 32px 0px;
+        }
+
+        .o_notebook_headers {
+            margin: 0 !important;
+            border-radius: $border-radius;
+
+            .nav {
+                background-color: $o-gray-50;
+                padding: 0.5rem;
+            }
+        }
+
+        .o_notebook_content {
+            .tab-pane {
+                .row {
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    div:not(.form-check) {
+                        &:first-child {
+                            padding-left: 0;
+                        }
+
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-link.active, .nav-link {
+            border: medium none !important;
+        }
+
+        .nav-item {
+            position: relative;
+            font-size: 0.875rem;
+        }
+
+        .nav-link {
+            color: $o-gray-600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+
+        .nav-link.active {
+            color: $o-black;
+            font-weight: 600;
+            background-color: $o-white;
+        }
+    }
+}
+
+.btn-quick {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    border-radius: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 400;
+    position: relative;
+
+    i {
+        font-size: 1.4125rem;
+        margin-bottom: -1px;
+    }
+}
+
+.o-mail-Followers-counter, .btn-quick-counter {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 100%;
+    background-color: #374151;
+    color: #fff;
+}
+
+i.btn-quick-counter {
+    font-size: 0.5rem !important;
+}
+
+.text-bg-success {
+    color: $o-white !important;
+}
+
+.bg-danger {
+    background-color: #e06561 !important;
+}
+
+.o_form_sheet_bg.bg-white {
+    .o_form_sheet {
+        background-color: $o-white;
+    }
+}
+
+.modal-dialog {
+    .o_form_sheet {
+        background-color: $o-white;
+    }
+
+    .o_form_sheet_bg {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.bg-white {
+    .o_notebook {
+        .nav {
+            background-color: #fff;
+        }
+    }
+}
+
+.o_horizontal_separator {
+    box-shadow: none !important;
+    margin-top: 12px !important;
+    margin-bottom: 6px !important;
+    font-weight: normal !important;
+    letter-spacing: 1px;
+    color: $o-main-link-color;
+}
+
+.o_form_view {
+    .o_inner_group {
+        --columns: 1;
+        gap: map-get($spacers, 1) $o-horizontal-padding;
+        margin-bottom: map-get($spacers, 1);
+    }
+}
+
+.o_statusbar_status {
+    .btn {
+        line-height: 1.3;
+    }
+}
+
+.document_type_tree {
+    .o_list_record_selector {
+        max-width: 34px !important;
+    }
+
+    [data-name="sequence"] {
+        max-width: 34px !important;
+    }
+
+    [data-name="is_mandatory"] {
+        max-width: 100px !important;
+    }
+}
+
+.badge {
+
+    &.badge-count {
+        cursor: pointer;
+    }
+
+    > .o_field_widget {
+        margin-bottom: 0;
+    }
+
+    &.badge-sm {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .dropdown-menu {
+        line-height: var(--body-line-height) !important;
+    }
+}
+
+.o_field_many2one_badge {
+    span, a {
+        border-radius: $border-radius !important;
+        font-size: 0.875rem;
+    }
+}
+
+.o_field_many2one_selection {
+    border-radius: $border-radius !important;
+}
+
+.o_field_html {
+    a:not(.btn) {
+        color: $o-info !important;
+    }
+
+
+    ul.o_checklist {
+        > li {
+            line-height: 2;
+        }
+
+        > li.o_checked::before {
+            color: $o-brand-primary;
+        }
+
+        > li:not(.oe-nested)::before {
+            left: -32px;
+            height: 22px;
+            width: 22px;
+            top: 6px;
+            border: 1px solid $o-gray-100;
+            border-radius: 0.50rem;
+        }
+    }
+}
+
+.zone-kendama {
+    background-color: $o-gray-50;
+    border-radius: $border-radius;
+}
+
+.badge-sm {
+    max-width: 120px;
+
+    .o_field_many2one_selection {
+        cursor: pointer;
+        background-color: $o-gray-50;
+        border-radius: $border-radius !important;
+
+        .o-autocomplete--input {
+            padding: 0 !important;
+            cursor: pointer;
+        }
+
+        .o_dropdown_button {
+            visibility: visible !important;
+            color: $o-gray-700;
+            top: 0
+        }
+
+        &:hover {
+            background-color: $o-gray-100 !important;
+
+            .o_dropdown_button {
+                color: $o-gray-800;
+            }
+        }
+    }
+
+    .o_badge_icon, .o_input_dropdown {
+        font-size: 12px;
+    }
+
+    .o_external_button {
+        visibility: visible !important;
+        padding-right: 0;
+        font-size: 12px;
+    }
+}
+
+.bg-success-light {
+    background-color: #dff6eb !important;
+}
+
+div[name='flow_report_ids'] {
+    .o_x2m_control_panel {
+        display: none !important;
+    }
+
+    .o_kanban_record {
+        width: 100% !important;
+    }
+}
+
+.o-mail-Message-bubble {
+    &.o-mail-Message-bubble--self-authored {
+        background-color: $o-brand-primary;
+        height: calc(100% - 4px) !important;
+
+        + .o-mail-Message-body {
+            color: $o-white;
+        }
+    }
+}
+
+.o-mail-Message-bubble {
+    background-color: #FFF;
+    height: calc(100% - 4px) !important;
+}
+
+.desk_activities_kanban {
+    .o_kanban_record {
+        width: 100% !important;
+    }
+}
+
+.flow_global_list {
+    .o_priority_star {
+        color: inherit !important;
+    }
+
+    .o_priority_star.fa-star-o {
+        color: #ccc !important;
+    }
+}
+
+.o_form_sheet_full ul.o_checklist > li:not(.oe-nested)::before {
+    border-color: $o-gray-300;
+    border-radius: 0.5rem;
+}
+
+.o-mail-AttachmentImage {
+    overflow: hidden;
+    border-radius: $border-radius;
+}
+
+.o_form_sheet_full.mh-100, {
+    max-height: initial !important;
+}
+
+.o_form_renderer.h-100, {
+    height: auto !important;
+}
+
+.flow-info-zone {
+    background-color: $o-gray-50;
+    border-radius: $border-radius;
+    padding: 1rem;
+}
+
+.o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none):not(.o_first):before, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none):not(.o_first):before, .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none):not(.o_first):after, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none):not(.o_first):after, .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none):not(.o_last):before, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none):not(.o_last):before, .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none):not(.o_last):after, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none):not(.o_last):after {
+    right: -0.50em;
+    border-top: 17px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left-width: 0.50em;
+}
+
+
+// Drawer
+.o-drawer--user-menu-block {
+    border-radius: $border-radius;
+}
+
+.o-drawer-header-messages-block, .o-drawer-header-activities-block {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.o_drawer {
+    .o_drawer--menu {
+        .o_drawer--category:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .o_drawer--menu-item-children {
+        animation-duration: 0.2s;
+        animation-fill-mode: both;
+        animation-name: fadeInLeftLight;
+        padding-left: 1rem;
+    }
+}
+
+.o_data_row {
+    td:first-child {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+    }
+
+    td:last-child {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+}
+
+.note-editable {
+    min-height: 120px !important;
+
+    .alert {
+        line-height: inherit !important;
+    }
+
+    hr {
+        background-color: $o-gray-300;
+        height: 1px;
+    }
+
+    .table {
+        td {
+            border-width: 1px;
+            border-color: $o-gray-300;
+        }
+    }
+}
+
+.dropdown-menu {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+// Table
+.table {
+    > :not(caption) {
+        > * {
+            > .o_list_record_selector {
+                //padding-right: 0;
+
+                .form-check {
+                    padding-left: 1.3em;
+
+                    .form-check-input {
+                        margin-left: -1.3em;
+                    }
+                }
+            }
+
+            > .o_handle_cell {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.o_list_renderer {
+    overflow: unset!important;
+    thead {
+        z-index: 0!important;
+    }
+    .o_list_table {
+        tbody {
+            > tr {
+                > td.o_list_number:not(.o_list_record_selector).o_handle_cell {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.oe_grey {
+    opacity: 1!important;
+    color: grey!important;
+}
+
+.o_data_row.o_data_row_selected {
+    > .o_data_cell {
+        border-bottom-width: 0 !important;
+    }
+}
+
+.o_list_table {
+    .o_group_has_content {
+        th.o_group_name {
+            background-color: $o-gray-50;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+.o_progressbar {
+    .o_progress {
+        border-radius: 0.5rem;
+    }
+}
+
+.o_menu_systray {
+    > div:not(.o_debug_manager, .o_menu_systray_item, .o_edit_website_container, .o-command-search-SearchSystray-class, .o-command-UrlShareSystray-class, .o-command-NotificationSystray-class) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .o_navbar, .o_action_manager > *:not(.o-mail-Discuss,.o_website_preview) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1199px) {
+    .o_navbar, .o_action_manager > *:not(.o-mail-Discuss,.o_website_preview) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o_navbar, .o_action_manager > *:not(.o-mail-Discuss,.o_website_preview) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+.o_searchview {
+    .o_searchview_autocomplete {
+        top: 100%;
+
+        .o_menu_item.focus {
+            background-color: $o-gray-100 !important;
+        }
+    }
+}
+
+.o-mail-DiscussSidebar {
+    border-radius: 0 $border-radius 0 0;
+    background-color: $o-gray-50 !important;
+}
+
+.o-mail-Discuss-content {
+    > div {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    .o-mail-Composer-input {
+        background-color: $o-gray-50 !important;
+    }
+}
+
+.o_setting_container {
+    .settings_tab {
+        border-radius: $border-radius;
+        background-color: transparent !important;
+    }
+
+    .app_settings_block {
+        padding-left: 2rem;
+
+        h2 {
+            padding-left: 16px !important;
+            border-radius: $border-radius;
+            background-color: $o-gray-50 !important;
+        }
+
+        .o_input {
+            background-color: $o-gray-50;
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+
+.o_datetime_picker .o_current, .o_datetime_picker .o_selected {
+    color: $o-gray-700 !important;
+}
+

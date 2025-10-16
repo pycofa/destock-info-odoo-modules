@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="iap_account_view_form" model="ir.ui.view">
+        <field name="model">iap.account</field>
+        <field name="inherit_id" ref="pyper_iap.iap_account_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='provider_balance']//field[@name='provider_balance_enabled']" position="after">
+                <field name="provider_warn_me"
+                       string="Warn me"
+                       invisible="not provider_balance_enabled"
+                />
+                <field name="provider_warning_threshold"
+                       invisible="not provider_warn_me or not provider_balance_enabled"
+                       string="Threshold"
+                />
+                <field name="provider_warning_email"
+                       string="Email"
+                       invisible="not provider_warn_me or not provider_balance_enabled"
+                       required="provider_warn_me"
+                />
+                <field name="provider_warning_template_id"
+                       string="Template"
+                       invisible="not provider_warn_me or not provider_balance_enabled"
+                       required="provider_warn_me"
+                       context="{'default_model': 'iap.account'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

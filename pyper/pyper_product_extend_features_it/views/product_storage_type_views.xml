@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_product_storage_type_tree" model="ir.ui.view">
+        <field name="name">product.storage.type.tree</field>
+        <field name="model">product.storage.type</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1" editable="top">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_product_storage_type" model="ir.actions.act_window">
+        <field name="name">Storage type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.storage.type</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,157 @@
+// = Drawer Variables
+// ============================================================================
+$o-navbar-apps-menu-width: 50px !default;
+$o-drawer-width: 240px !default;
+$o-drawer-mini-width: 50px !default;
+$o-drawer-zindex: 999 !default;
+$o-drawer-zindex-locked: 50 !default;
+$o-drawer-border-width: 1px !default;
+$o-drawer-border-color: $o-border-color !default;
+$o-drawer-bg: $o-white !default;
+$o-drawer-shadow: 0 10px 14px rgba(0, 0, 0, 0.12) !default;
+
+$o-drawer-menu-padding-h: $o-horizontal-padding/2 !default;
+
+$o-drawer-closer-font-size: 1.2rem !default;
+$o-drawer-closer-color: $o-gray-300 !default;
+$o-drawer-closer-color-hover: $o-main-text-color !default;
+
+$o-drawer-icon-width: 24px !default;
+$o-drawer-icon-mini-width: 24px !default;
+
+$o-drawer-category-label-color: $o-main-color-muted !default;
+$o-drawer-category-label-size: $o-font-size-base-small !default;
+$o-drawer-category-label-padding-v: 0 !default;
+$o-drawer-category-label-padding-h: ($o-drawer-mini-width - $o-drawer-icon-width) / 2 !default;
+$o-drawer-category-label-margin-top: 24px !default;
+$o-drawer-category-label-margin-bottom: 8px !default;
+
+$o-drawer-item-icon-width: $o-drawer-icon-width !default;
+$o-drawer-item-icon-font-width: $o-drawer-item-icon-width !default;
+$o-drawer-item-icon-border-radius: $o-border-radius-lg !default;
+
+$o-drawer-item-icon-mini-width: $o-drawer-icon-mini-width !default;
+$o-drawer-item-icon-mini-font-width: $o-drawer-item-icon-mini-width !default;
+
+$o-drawer-item-padding-v: 4px !default;
+$o-drawer-item-padding-h: ($o-drawer-mini-width - $o-drawer-item-icon-width) / 2 !default;
+
+$o-drawer-item-icon-gap: $o-drawer-item-padding-h !default;
+
+$o-drawer-item-font-size: $o-font-size-base !default;
+$o-drawer-item-color: inherit !default;
+$o-drawer-item-bg: inherit !default;
+$o-drawer-item-icon-color: inherit !default;
+$o-drawer-item-caret-color: $o-gray-500 !default;
+$o-drawer-item-caret-size: $o-font-size-base !default;
+$o-drawer-item-caret-margin-end: -$o-drawer-item-padding-h / 2 !default;
+
+$o-drawer-item-counter-border-radius: $o-border-radius !default;
+$o-drawer-item-counter-padding-v: 1px !default;
+$o-drawer-item-counter-padding-h: 2px !default;
+$o-drawer-item-counter-font-size: $o-font-size-base-small !default;
+$o-drawer-item-counter-line-height: $o-drawer-item-font-size !default;
+$o-drawer-item-counter-color: $o-drawer-item-color !default;
+$o-drawer-item-counter-bg: transparent !default;
+$o-drawer-item-counter-opacity: 0.6 !default;
+
+$o-drawer-item-hover-color: $o-gray-900 !default;
+$o-drawer-item-hover-bg: rgba($o-black, 0.08) !default;
+$o-drawer-item-icon-hover-color: inherit !default;
+$o-drawer-item-caret-hover-color: inherit !default;
+$o-drawer-item-counter-hover-color: $o-drawer-item-hover-color !default;
+$o-drawer-item-counter-hover-bg: transparent !default;
+$o-drawer-item-counter-hover-opacity: 1 !default;
+
+$o-drawer-item-active-color: $o-component-active-color !default;
+$o-drawer-item-active-bg: $o-component-active-bg !default;
+$o-drawer-item-active-shadow: none !default;
+$o-drawer-sub-item-active-shadow: none !default;
+$o-drawer-item-icon-active-color: $o-drawer-item-active-color !default;
+$o-drawer-item-caret-active-color: $o-brand-primary !default;
+$o-drawer-item-counter-active-color: $o-drawer-item-active-color !default;
+$o-drawer-item-counter-active-bg: transparent !default;
+$o-drawer-item-counter-active-opacity: $o-drawer-item-counter-opacity !default;
+$o-drawer-item-active-hover-color: $o-drawer-item-active-color !default;
+$o-drawer-item-active-hover-bg: $o-drawer-item-active-bg !default;
+$o-drawer-item-icon-active-hover-color: $o-drawer-item-icon-active-color !default;
+$o-drawer-item-caret-active-hover-color: $o-drawer-item-icon-active-color !default;
+$o-drawer-item-counter-active-hover-color: $o-drawer-item-active-hover-color !default;
+$o-drawer-item-counter-active-hover-bg: transparent !default;
+$o-drawer-item-counter-active-hover-opacity: $o-drawer-item-counter-hover-opacity !default;
+
+$o-drawer-item-nav-margin-h: 5px !default;
+$o-drawer-item-nav-padding-h: $o-drawer-item-padding-h !default;
+$o-drawer-item-nav-margin-bottom: $o-drawer-item-nav-margin-h !default;
+$o-drawer-item-nav-caret-margin-end: -($o-drawer-item-nav-padding-h - ($o-drawer-item-nav-margin-h/2)) / 2 !default;
+
+$o-drawer-item-nav-mini-margin-h: 5px !default;
+
+$o-drawer-subitem-depth-base-with-icon: 20px !default;
+$o-drawer-subitem-depth-base: 0px !default;
+$o-drawer-subitem-depth-next: 10px !default;
+$o-drawer-subitem-margin-bottom: 15px !default;
+$o-drawer-subitem-padding-v: 2px !default;
+$o-drawer-subitem-block-padding-v: 0 !default;
+
+$o-drawer-subitem-active-color: $o-drawer-item-active-color !default;
+$o-drawer-subitem-active-bg: lighten($o-drawer-item-active-bg, 3%) !default;
+$o-drawer-subitem-active-hover-color: $o-drawer-subitem-active-color !default;
+$o-drawer-subitem-active-hover-bg: $o-drawer-subitem-active-bg !default;
+
+$o-drawer-subitem-nav-padding-v: $o-drawer-subitem-padding-v !default;
+$o-drawer-subitem-nav-margin-bottom: $o-drawer-item-nav-margin-bottom / 2 !default;
+
+$o-drawer-category-action-margin-right: ($o-drawer-item-padding-h - $o-drawer-category-label-padding-h) !default;
+$o-drawer-category-action-nav-margin-right: ($o-drawer-item-nav-padding-h + $o-drawer-item-nav-margin-h - $o-drawer-category-label-padding-h) !default;
+
+$o-drawer-popover-item-box-shadow: 12px 4px 12px rgba($o-black, 0.12) !default;
+$o-drawer-popover-item-color: $o-drawer-item-hover-color !default;
+$o-drawer-popover-item-bg: $o-drawer-item-hover-bg !default;
+$o-drawer-popover-item-hover-color: inherit !default;
+$o-drawer-popover-item-hover-bg: inherit !default;
+
+$o-drawer-popover-item-active-color: $o-drawer-item-active-color !default;
+$o-drawer-popover-item-active-bg: $o-drawer-item-active-bg !default;
+$o-drawer-popover-item-active-hover-color: $o-drawer-item-active-hover-color !default;
+$o-drawer-popover-item-active-hover-bg: $o-drawer-item-active-hover-bg !default;
+
+$o-drawer-popover-item-font-weight: normal !default;
+
+$o-drawer-sub-panel-responsive-side-position-width: ($o-drawer-width * 2 + ($o-drawer-width * 0.1)) !default;
+$o-drawer-sub-panel-responsive-zindex: $o-drawer-zindex + 1 !default;
+$o-drawer-sub-panel-header-height: $o-navbar-height !default;
+$o-drawer-sub-panel-title-font-weight: bold !default;
+$o-drawer-sub-panel-title-font-size: 1.1rem !default;
+
+$o-drawer-logo-badge-width: $o-drawer-mini-width - $o-drawer-border-width !default;
+$o-drawer-logo-badge-img-width: $o-drawer-item-icon-width*1.4 !default;
+$o-drawer-logo-badge-img-border-radius: $o-border-radius !default;
+$o-drawer-logo-name-font-weight: bold !default;
+$o-drawer-logo-name-font-size: 1rem !default;
+$o-drawer-logo-name-padding: 0 ($o-navbar-height*0.8) 0 2px !default;
+$o-drawer-logo-padding-h: ($o-drawer-item-padding-h) - (($o-drawer-mini-width - $o-drawer-border-width - $o-drawer-item-icon-width) / 2) !default;
+$o-drawer-logo-nav-padding-h: ($o-drawer-item-nav-padding-h + ($o-drawer-item-nav-margin-h/2)) - (($o-drawer-mini-width - $o-drawer-border-width - $o-drawer-item-icon-width) / 2) !default;
+
+$o-drawer-app-name-color: inherit !default;
+$o-drawer-app-border-bottom-color: transparent !default;
+
+$o-drawer-toggler-locked-width: $o-drawer-width !default;
+$o-drawer-toggler-locked-width-with-apps-menu: ($o-drawer-toggler-locked-width - $o-navbar-apps-menu-width) !default;
+
+$o-drawer-swiper-zindex: $o-drawer-zindex + 1 !default;
+$o-drawer-swiper-width: 8px !default;
+$o-drawer-swiper-bg: transparent !default;
+
+$o-drawer-obfuscator-zindex: $o-drawer-zindex - 1 !default;
+$o-drawer-obfuscator-duration: '0.3s' !default;
+$o-drawer-obfuscator-bg: rgba(0, 0, 0, 0.5) !default;
+
+$o-drawer-quick-action-bg: transparent !default;
+$o-drawer-quick-action-border: none !default;
+$o-drawer-quick-action-color:$o-gray-900 !default;
+$o-drawer-quick-action-color-subtitle: $o-main-color-muted !default;
+$o-drawer-quick-action-icon-padding-h: 14px !default;
+$o-drawer-quick-action-bg-hover:$o-gray-100 !default;
+$o-drawer-quick-action-dropdown-btn-width: 50px !default;
+$o-drawer-quick-action-zone-padding-h: 8px !default;

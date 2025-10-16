@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_inherit_view" model="ir.ui.view">
+        <field name="name">res.config.settings.inherit.view</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="Remove Background" name="remove_background" logo="remove_image_bg/static/src/img/removebg_logo.png">
+                     <block title="Remove Background" name="remove_background">
+                        <setting
+                            help="Enter your API key to remove images' background here."
+                            title="API KEY for remove background">
+                            <field name="rembg_api_key"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

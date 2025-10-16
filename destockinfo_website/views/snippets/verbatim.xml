@@ -1,0 +1,32 @@
+<odoo>
+    <template id="verbatim" name="Home hero">
+        <section
+            class="home_hero o_colored_level o_cc o_cc1 pt144 o_full_screen_height"
+        >
+            <div class="container container-top-home-hero">
+                <div class="o_cc1">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <h2>Depuis sa création en 2008, Destock Info accompagne les entreprise dans une gestion plus
+                                vertueuse de leur équipement informatique. Aujourd’hui, notre connaissance ne se limite
+                                pas seulement dans la vente d’un matériel de qualité, mais aussi et surtout dans la
+                                reprise et la désinstallation de l’équipement actuel de nos clients.</h2>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h3>Yann Limousin</h3>
+                            <p class="Fondateur Destock Info mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="home_hero_menu" inherit_id="website.snippets" name="Verbatim">
+        <xpath expr="//div[@id='snippet_destockinfo']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="destockinfo_website.verbatim"
+               t-thumbnail="/destockinfo_website/static/img/snippets/snippet_thumb/s_home_hero.svg"/>
+        </xpath>
+    </template>
+
+</odoo>

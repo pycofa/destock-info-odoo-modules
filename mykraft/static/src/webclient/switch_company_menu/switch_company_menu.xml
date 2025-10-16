@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="mykraft.SwitchCompanyMenu" t-inherit="web.SwitchCompanyMenu" t-inherit-mode="extension">
+        <xpath expr="//t[@t-set-slot='toggler']" position="replace">
+            <t t-set-slot="toggler">
+                <div class="btn btn-outline-secondary d-flex align-items-center px-2">
+                    <i class="ph-fill ph-play text-primary fs-3 me-2"/>
+                    <span class="oe_topbar_name d-none d-lg-block" t-esc="companyService.currentCompany.name"/>
+                </div>
+            </t>
+        </xpath>
+    </t>
+</templates>

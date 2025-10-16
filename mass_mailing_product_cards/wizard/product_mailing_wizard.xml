@@ -1,0 +1,19 @@
+<odoo>
+    <record id="view_product_mailing_form" model="ir.ui.view">
+        <field name="name">product.mailing.wizard.form</field>
+        <field name="model">product.mailing.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add Product">
+                <group>
+                    <field name="product_tmpl_id"/>
+                    <field name="column_size"/>
+                    <field name="mailing_id" invisible="True"/>
+                </group>
+                <footer>
+                    <button string="Add" type="object" name="action_add_product" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

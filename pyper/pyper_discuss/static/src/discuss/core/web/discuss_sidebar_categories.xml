@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+<t t-name="pyper_discuss.DiscussSidebarCategories" t-inherit="mail.DiscussSidebarCategories" t-inherit-mode="extension">
+    <xpath expr="//hr" position="attributes">
+        <attribute name="t-if">threadService?.displayMode === 'channels'</attribute>
+    </xpath>
+
+    <xpath expr="//input[hasclass('form-control')]" position="attributes">
+        <attribute name="t-if" separator=" and " add="threadService?.displayMode === 'channels'"/>
+    </xpath>
+
+    <xpath expr="//t[@t-foreach='categories']" position="attributes">
+        <attribute name="t-if">threadService?.displayMode === 'channels'</attribute>
+    </xpath>
+</t>
+
+</templates>

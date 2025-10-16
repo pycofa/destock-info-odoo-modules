@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_template_form" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='list_price']" position="attributes">
+                <attribute name="groups">pyper_product_condition.group_product_show_variant_list_price</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='pricing']" position="attributes">
+                <attribute name="groups">pyper_product_condition.group_product_show_variant_list_price</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='description_sale']" position="after">
+                <field name="count_child_ids" invisible="True"/>
+                <field name="child_ids" mode="kanban" invisible="count_child_ids in [0,1]">
+                    <kanban class="child_condition_kanban mt-4" create="False">
+                        <field name="name"/>
+                        <field name="standard_price"/>
+                        <field name="currency_id"/>
+                        <field name="qty_available"/>
+
+                        <kanban>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div
+                                        t-att-class="'oe_kanban_content oe_kanban_global_click' +  (record.qty_available.raw_value == 0.0 ? ' opacity-50' : '')">
+                                        <div class="o_kanban_record_body">
+                                            <strong class="d-block fw-bolder mb-0">
+                                                <field name="product_condition_id"/>
+                                            </strong>
+                                            <div
+                                                class="quantity_badge"
+                                                t-att-class="(record.qty_available.raw_value gt 0.0 ? ' bg-primary text-white' : 'bg-light text-muted')"
+                                            >
+                                                <field
+                                                    name="qty_available"
+                                                    widget="integer"
+                                                />
+                                            </div>
+
+                                            <div
+                                                class="d-flex align-items-center text-muted mt-1"
+                                                name="show_variant_standard_price"
+                                                groups="pyper_product_condition.group_product_show_variant_standard_price"
+                                            >
+                                                <i class="fa fa-line-chart me-1" title="Cost"/>
+                                                <field
+                                                    name="standard_price"
+                                                    class="variant_price"
+                                                    widget="monetary"
+                                                />
+                                            </div>
+
+                                            <field name="currency_id" invisible="True"/>
+                                        </div>
+                                    </div>
+
+                                </t>
+                            </templates>
+                        </kanban>
+                    </kanban>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_template_tree" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='list_price']" position="attributes">
+                <attribute name="groups">pyper_product_condition.group_product_show_variant_list_price</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

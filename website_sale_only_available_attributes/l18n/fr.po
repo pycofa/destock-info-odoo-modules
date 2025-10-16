@@ -1,0 +1,82 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_sale_disable_cart
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240703\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-27 15:16+0000\n"
+"PO-Revision-Date: 2024-08-27 15:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_sale_disable_cart
+#: model_terms:ir.ui.view,arch_db:website_sale_disable_cart.res_config_settings_inherit_view
+msgid "Add to cart management"
+msgstr "Gestion du panier"
+
+#. module: website_sale_disable_cart
+#: model_terms:ir.ui.view,arch_db:website_sale_disable_cart.res_config_settings_inherit_view
+msgid "Allow add to cart"
+msgstr "Permettre l'ajout au panier"
+
+#. module: website_sale_disable_cart
+#: model:ir.model.fields,field_description:website_sale_disable_cart.field_res_config_settings__ecommerce_show_add_to_cart
+msgid "Allow add to cart in ecommerce"
+msgstr "Permettre l'ajout au panier sur le site ecommerce"
+
+#. module: website_sale_disable_cart
+#: model_terms:ir.ui.view,arch_db:website_sale_disable_cart.product
+msgid "Ask quotation"
+msgstr "Demander un devis"
+
+#. module: website_sale_disable_cart
+#: model_terms:ir.ui.view,arch_db:website_sale_disable_cart.product
+msgid "Desired quantity"
+msgstr "Quantité voulue"
+
+#. module: website_sale_disable_cart
+#: model_terms:ir.ui.view,arch_db:website_sale_disable_cart.res_config_settings_inherit_view
+msgid "Cart management"
+msgstr "Gestion du panier"
+
+#. module: website_sale_disable_cart
+#: model:ir.model,name:website_sale_disable_cart.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: website_sale_disable_cart
+#: model:ir.model.fields,field_description:website_sale_disable_cart.field_res_config_settings__ecommerce_show_form_quotation
+msgid "Display form for quotation in ecommerce"
+msgstr "Afficher le formulaire de demande de devis"
+
+#. module: website_sale_disable_cart
+#: model_terms:ir.ui.view,arch_db:website_sale_disable_cart.res_config_settings_inherit_view
+msgid "Display quotation's form"
+msgstr "Afficher le formulaire de demande de devis"
+
+#. module: website_sale_disable_cart
+#: model:res.groups,name:website_sale_disable_cart.ecommerce_show_form_quotation
+msgid "Ecommerce display quotation's form"
+msgstr "Afficher le formulaire de demande de devis"
+
+#. module: website_sale_disable_cart
+#: model:res.groups,name:website_sale_disable_cart.ecommerce_show_add_to_cart
+msgid "Ecommerce show add to cart"
+msgstr "Afficher l'ajout au panier"
+
+#. module: website_sale_disable_cart
+#: model_terms:ir.ui.view,arch_db:website_sale_disable_cart.res_config_settings_inherit_view
+msgid ""
+"This parameter activates the e-commerce site's add-to-cart functionality."
+msgstr "Ce paramètre active la fonctionnalité « ajouter au panier » du site e-commerce."
+
+#. module: website_sale_disable_cart
+#: model_terms:ir.ui.view,arch_db:website_sale_disable_cart.res_config_settings_inherit_view
+msgid "This parameter activates the quotation's form in product page."
+msgstr "Ce paramètre active le formulaire de devis dans la page produit."

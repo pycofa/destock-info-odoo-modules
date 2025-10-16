@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_website_sale_quotation_tree" model="ir.ui.view">
+        <field name="name">website.sale.quotation.tree</field>
+        <field name="model">website.sale.quotation</field>
+        <field name="arch" type="xml">
+            <tree string="Website Sale Quotation" create="false" edit="false">
+                <field name="subject"/>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="email_from"/>
+                <field name="product_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_website_sale_quotation_form" model="ir.ui.view">
+        <field name="name">website.sale.quotation.form</field>
+        <field name="model">website.sale.quotation</field>
+        <field name="arch" type="xml">
+            <form string="Website Sale Quotation">
+                <group>
+                    <field name="subject" readonly="1"/>
+                </group>
+                <group>
+                    <group>
+                        <field name="name" readonly="1"/>
+                        <field name="phone" readonly="1"/>
+                        <field name="email_from" readonly="1"/>
+                        <field name="content" readonly="1"/>
+                        <field name="product_ids"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_website_sale_quotation" model="ir.actions.act_window">
+        <field name="name">Website Sale Quotation</field>
+        <field name="res_model">website.sale.quotation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_website_sale_quotation_root"
+            name="Website Sale Quotation"
+            parent="website.menu_website_configuration"
+            action="action_website_sale_quotation"
+            sequence="11"
+    />
+
+</odoo>

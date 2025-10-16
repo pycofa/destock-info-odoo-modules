@@ -1,0 +1,69 @@
+<odoo>
+    <template id="floating_blocks_with_text" name="Floating blocks with text">
+        <section
+            class="s_banner  pt56 pb56"
+            data-snippet="s_banner"
+            data-name="Floating blocks with text"
+            style="background-image: none;"
+        >
+            <div class="container">
+                <div
+                    class="row s_nb_column_fixed o_grid_mode"
+                    data-row-count="17"
+                >
+                    <div
+                        class="d-flex flex-column justify-content-center o_grid_item  g-col-lg-4 g-height-6 col-lg-4 o_animate o_anim_fade_in o_anim_from_bottom"
+                        data-name="Box"
+                        style="z-index: 1; grid-area: 6 / 9 / 12 / 13; --grid-item-padding-y: 20px; --grid-item-padding-x: 20px;animation-delay: 0.4s; --wanim-intensity: 20; animation-duration: 0.4s;">
+
+                        <p class="lead ">Discover innovative solutions that drive success and
+                            elevate your business to new heights.
+                        </p>
+                        <p class="lead ">Our people will help yours to achieve great results.</p>
+                    </div>
+
+                    <div
+                        class="o_grid_item o_grid_item_image  g-col-lg-8 g-height-11 col-lg-8 o_animate o_anim_fade_in o_anim_from_bottom"
+                        style="z-index: 2; grid-area: 4 / 1 / 15 / 9; --grid-item-padding-y: 0px; --grid-item-padding-x: 0px; animation-delay: 0.2s; --wanim-intensity: 20; animation-duration: 0.4s;">
+                        <img
+                            class="img img-fluid mx-auto"
+                            src="/website/static/src/img/snippets_demo/s_banner_2.jpg" alt=""
+                            loading="lazy"
+                            data-mimetype="image/jpeg"
+                            data-mimetype-before-conversion="image/jpeg"
+                        />
+                    </div>
+
+                    <div
+                        class="o_grid_item o_grid_item_image d-lg-block d-none o_snippet_mobile_invisible  g-col-lg-5 g-height-6 col-lg-5 o_animate o_anim_fade_in o_anim_from_bottom"
+                        style="z-index: 4; grid-area: 12 / 8 / 18 / 13; animation-delay: 0.6s; --wanim-intensity: 20; animation-duration: 0.4s;"
+                        data-invisible="1"
+                    >
+                        <img
+                            class="img img-fluid mx-auto"
+                            src="/web/image/website.s_banner_default_image" alt=""
+                            loading="lazy"
+                            data-mimetype="image/jpeg"
+                        />
+                    </div>
+                    <div
+                        class="d-flex flex-column justify-content-center o_grid_item  o_cc o_cc2 g-col-lg-5 o_animate o_anim_fade_in o_anim_from_bottom o_visible g-height-3 col-lg-5"
+                        style="z-index: 5; grid-area: 2 / 8 / 5 / 13; --grid-item-padding-y: 30px; --grid-item-padding-x: 30px; --wanim-intensity: 20; animation-duration: 0.4s;">
+                        <p>Unlock your potential with our modern services that will help your company to achieve full
+                            potential.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_floating_blocks">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.floating_blocks_with_text"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_floating_blocks.svg">
+                <keywords>kpi, text, title, number</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

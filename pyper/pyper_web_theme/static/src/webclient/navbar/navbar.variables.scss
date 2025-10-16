@@ -1,0 +1,45 @@
+// = Main Navbar Variables
+// ============================================================================
+$o-navbar-use-pills: true !default;
+
+$o-navbar-height: 50px !default;
+$o-navbar-background: $o-white !default;
+$o-navbar-padding-v: 9px !default;
+$o-navbar-border-bottom: 1px solid $o-navbar-background !default;
+$o-navbar-font-size: $o-font-size-base !default;
+$o-navbar-font-size-xxl: $o-navbar-font-size * 1.14 !default;
+
+$o-navbar-entry-icon-font-size: 20px !default;
+$o-navbar-entry-height: calc(var(--o-navbar-height) - #{$o-navbar-padding-v * 2}) !default;
+$o-navbar-entry-width: calc(var(--o-navbar-height) - #{$o-navbar-padding-v * 2}) !default;
+$o-navbar-entry-margin-h: 2px !default;
+$o-navbar-entry-border-radius: $o-border-radius !default;
+$o-navbar-entry-color: #18181b !default;
+
+$o-navbar-entry-bg--hover: $o-gray-200 !default;
+$o-navbar-entry-color--hover: inherit !default;
+
+$o-navbar-entry-bg--active: $o-gray-100 !default;
+$o-navbar-entry-color--active: $o-gray-800 !default;
+$o-navbar-entry-font-weight--active: inherit !default;
+
+$o-navbar-system-tray-entry-border-radius: $o-border-radius;
+$o-navbar-system-tray-entry-padding: calc((var(--o-navbar-height) - #{$o-navbar-padding-v * 2} - #{$o-navbar-entry-icon-font-size}) / 2) !default;
+$o-navbar-system-tray-entry-margin-h: 6px !default;
+$o-navbar-system-tray-entry-color--hover: $o-navbar-entry-color--hover !default;
+$o-navbar-system-tray-entry-bg--hover: $o-navbar-entry-bg--hover !default;
+$o-navbar-system-tray-entry-color--active: $o-navbar-entry-color--active !default;
+$o-navbar-system-tray-entry-bg--active: $o-navbar-entry-bg--active !default;
+
+$o-navbar-dropdown-menu-border-top: 1px solid $o-border-color !default;
+$o-navbar-dropdown-menu-border-radius: $o-border-radius !default;
+
+$o-navbar-brand-color: $o-gray-700 !default;
+
+$o-navbar-badge-size: .7em !default;
+$o-navbar-badge-top: 0 !default;
+$o-navbar-badge-padding: 6px !default;
+$o-navbar-badge-bg: $o-danger !default;
+$o-navbar-home-menu-badge-bg: $o-navbar-badge-bg !default;
+$o-navbar-badge-color: $o-white !default;
+$o-navbar-badge-text-shadow: none !default;

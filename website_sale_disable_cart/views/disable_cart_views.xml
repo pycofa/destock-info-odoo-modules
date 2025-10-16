@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="template_header_mobile" inherit_id="website_sale.template_header_mobile">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_default" inherit_id="website_sale.template_header_default">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_hamburger" inherit_id="website_sale.template_header_hamburger">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_stretch" inherit_id="website_sale.template_header_stretch">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_vertical" inherit_id="website_sale.template_header_vertical">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_search" inherit_id="website_sale.template_header_search">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_sales_one" inherit_id="website_sale.template_header_sales_one">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_sales_two" inherit_id="website_sale.template_header_sales_two">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_sales_three" inherit_id="website_sale.template_header_sales_three">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_sales_four" inherit_id="website_sale.template_header_sales_four">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_sidebar" inherit_id="website_sale.template_header_sidebar">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="template_header_boxed" inherit_id="website_sale.template_header_boxed">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="product_template_inherit" inherit_id="website_sale.product">
+        <xpath expr="//div[@id='product_details']//p[3]" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+        <xpath expr="//form[@action='/shop/cart/update']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="snippets" inherit_id="website.snippets" name="e-commerce snippets">
+        <xpath expr="//t[@t-snippet='website_sale.s_add_to_cart']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="s_add_to_cart" inherit_id="website_sale.s_add_to_cart">
+        <xpath expr="//div[hasclass('s_add_to_cart')]" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="snippet_options" inherit_id="website_sale.snippet_options">
+        <xpath expr="//we-row[@data-name='o_wsale_buy_now_opt']" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="snippet_options_inherit" inherit_id="website_sale.snippet_options">
+        <xpath expr="//we-button[hasclass('fa-shopping-cart')]/.." position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="dynamic_filter_template_product_product_add_to_cart" inherit_id="website_sale.dynamic_filter_template_product_product_add_to_cart">
+        <xpath expr="//div[hasclass('o_dynamic_snippet_btn_wrapper')]" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="dynamic_filter_template_product_product_horizontal_card" inherit_id="website_sale.dynamic_filter_template_product_product_horizontal_card">
+        <xpath expr="//div[hasclass('o_dynamic_snippet_btn_wrapper')]" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="dynamic_filter_template_product_product_horizontal_card_2" inherit_id="website_sale.dynamic_filter_template_product_product_horizontal_card_2">
+        <xpath expr="//div[hasclass('o_dynamic_snippet_btn_wrapper')]" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="dynamic_filter_template_product_product_borderless_2" inherit_id="website_sale.dynamic_filter_template_product_product_borderless_2">
+        <xpath expr="//div[hasclass('o_dynamic_snippet_btn_wrapper')]" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <template id="dynamic_filter_template_product_product_banner" inherit_id="website_sale.dynamic_filter_template_product_product_banner">
+        <xpath expr="//button[hasclass('js_add_cart')]" position="attributes">
+            <attribute name="t-if">request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.ecommerce_show_add_to_cart')</attribute>
+        </xpath>
+    </template>
+
+    <!--  Reactivate button wishlist display  -->
+    <template id="snippet_options" inherit_id="website_sale.snippet_options">
+        <xpath expr="//we-row[hasclass('o_we_full_row')]" position="attributes">
+            <attribute name="t-if">True</attribute>
+        </xpath>
+    </template>
+
+    <template id="products_add_to_cart" inherit_id="website_sale.products_item">
+        <xpath expr="//div[hasclass('o_wsale_product_btn')]" position="attributes">
+            <attribute name="t-if">True</attribute>
+        </xpath>
+    </template>
+
+</odoo>

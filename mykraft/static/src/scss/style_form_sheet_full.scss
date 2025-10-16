@@ -1,0 +1,143 @@
+.o_form_sheet_full {
+    .o_form_sheet {
+        padding: 0;
+
+        div[name='name']:not(.no_effect) {
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-name: fadeInLeftLight;
+        }
+
+        div[name='content'] {
+            font-size: 17px;
+        }
+    }
+
+    .doc-title {
+        margin-bottom: 0;
+
+        .o_field_widget {
+            margin-bottom: 0;
+        }
+    }
+
+    .o_form_statusbar {
+        padding-top: 16px !important;
+    }
+
+    .o-mail-DateSection {
+        display: block;
+        text-transform: uppercase;
+        color: $text-muted;
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-bottom: 3px;
+    }
+
+    .col-info {
+        label {
+            display: block;
+            text-transform: uppercase;
+            color: $text-muted;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+
+        .o_field_widget {
+            width: 100%;
+
+            .o_field_tags {
+                width: 100%;
+            }
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .o-mail-Chatter {
+        border-left: medium none !important;
+    }
+
+    .o_list_renderer, .o_notebook_headers {
+        margin: 0 !important;
+
+        .nav {
+            padding: 0 32px;
+        }
+    }
+
+    .o_list_renderer {
+        .o_list_table {
+            --table-bg: transparent;
+
+            thead {
+                background-color: transparent;
+            }
+
+            tbody tr td[colspan]:first-child:not(.o_field_x2many_list_row_add) {
+                display: none !important;
+            }
+        }
+    }
+
+    .o_notebook {
+        .tab-pane {
+            padding: 0 !important;
+        }
+    }
+
+    $form-full-font-size: 17px;
+
+    div.content_sheet {
+        p, ul, ol {
+            font-size: $form-full-font-size;
+        }
+    }
+
+    .o_field_many2many {
+        margin-bottom: 0 !important;
+    }
+
+    .full_width_kanban {
+        .o_kanban_record {
+            min-width: 100%;
+
+            p {
+                font-size: $form-full-font-size;
+            }
+        }
+    }
+
+    .o_kanban_ghost {
+        display: none !important;
+    }
+
+
+
+    .o-mail-ActivityList {
+        padding-top: 24px;
+
+        > div:not(.o-mail-Activity) {
+            display: none !important;
+        }
+
+        .o-mail-Activity{
+            background-color: #fff !important;
+            padding:24px 48px !important;
+        }
+    }
+
+    .o_field_progressbar {
+        &.progressbar-grow-1 {
+            .o_progress {
+                flex-grow: 1;
+                border-color: $border-color;
+            }
+        }
+    }
+}

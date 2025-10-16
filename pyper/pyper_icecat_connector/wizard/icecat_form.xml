@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="icecat_form" model="ir.ui.view">
+        <field name="name">icecat.form</field>
+        <field name="model">icecat.form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group string="Mandatory fields">
+                        <field name="ean_upc"/>
+                        <field name="detailed_type"/>
+                    </group>
+                    <group string="Optional fields">
+                        <field name="categ_id" options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <hr/>
+                <group>
+                    <group>
+                        <field name="language_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                    </group>
+                </group>
+
+                <footer>
+                    <button
+                        name="action_icecat_api_call"
+                        type="object"
+                        string="Get product sheet"
+                        class="btn btn-primary"
+                        data-hotkey="g"
+                    />
+
+                    <button
+                        string="Cancel"
+                        class="btn-secondary"
+                        data-hotkey="z"
+                        special="cancel"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,12 @@
+.row.wrapper-grid {
+    column-count: 2;
+    column-gap: 2rem;
+    display: block;
+
+    .col {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        margin-bottom: 2rem;
+        break-inside: avoid;
+    }
+}

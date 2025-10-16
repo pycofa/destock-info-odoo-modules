@@ -1,0 +1,39 @@
+$pyper-timeline-panel-left-min-width: 200px;
+$pyper-timeline-time-axis-even-bg: transparent;
+$pyper-timeline-time-axis-odd-bg: transparent;
+$pyper-timeline-item-past-opacity: 0.20;
+$pyper-timeline-item-content-padding: 0;
+$pyper-timeline-panel-border-color: $o-gray-200;
+$pyper-timeline-label-padding: 0;
+$pyper-timeline-item-border-radius: 0.75rem;
+
+.o_timeline_view .vis-timeline .vis-grid.vis-saturday,
+.o_timeline_view .vis-timeline .vis-grid.vis-sunday {
+    background-image: linear-gradient(135deg, $o-gray-50 6.25%, $o-white 6.25%, $o-white 50%, $o-gray-50 50%, $o-gray-50 56.25%, $o-white 56.25%, $o-white 100%) !important;
+    background-size: 11.31px 11.31px !important;
+}
+
+.o_timeline_view.milestone-timeline {
+    .vis-item {
+        .vis-item-overflow {
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+
+        .vis-item-content > div {
+            font-weight: 500;
+            font-size: 0.825rem;
+            padding: 5px 10px;
+            color: $o-gray-900;
+        }
+    }
+}
+
+.vis-inner {
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: $o-gray-900;
+}

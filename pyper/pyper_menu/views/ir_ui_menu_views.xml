@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="edit_menu_access" model="ir.ui.view">
+        <field name="name">edit_menu_access.inherit</field>
+        <field name="model">ir.ui.menu</field>
+        <field name="inherit_id" ref="base.edit_menu_access"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//field[@name='web_icon']" position="before">
+                <field name="font_icon"/>
+                <field name="font_icon_color" widget="color"/>
+                <field name="category_id"/>
+                <field name="position"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

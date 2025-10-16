@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7c0031;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        mix-blend-mode: overlay;
+      }
+
+      .cls-2 {
+        fill: #ff874f;
+      }
+
+      .cls-3 {
+        fill: #ff5100;
+      }
+
+      .cls-4 {
+        fill: #fed4c5;
+      }
+
+      .cls-7 {
+        isolation: isolate;
+      }
+
+      .cls-5 {
+        fill: #ef6d3a;
+      }
+    </style>
+  </defs>
+  <g class="cls-7">
+    <g id="Calque_1" data-name="Calque 1">
+      <g>
+        <g class="cls-7">
+          <polygon class="cls-2" points="250.6 250.7 250.6 499.5 34.3 374.5 34.3 125.6 250.6 250.7"/>
+          <polygon class="cls-5" points="466 125.7 466 374.5 250.6 499.5 250.6 250.7 466 125.7"/>
+          <g>
+            <polygon class="cls-2" points="329.2 46.2 113.5 171.4 140.2 186.8 355.8 61.7 329.2 46.2"/>
+            <polygon class="cls-4" points="250.6 .6 34.3 125.6 113.5 171.4 329.2 46.2 250.6 .6"/>
+            <polygon class="cls-2" points="355.8 61.7 140.2 186.8 164.6 201 380.2 75.9 355.8 61.7"/>
+            <polygon class="cls-4" points="466 125.7 380.2 75.9 164.6 201 250.6 250.7 466 125.7"/>
+          </g>
+          <g>
+            <polygon class="cls-1" points="278.3 439 278.4 457.2 365 407.8 364.9 389.6 278.3 439"/>
+            <polygon class="cls-1" points="288.9 415.4 305.1 406 305 363.1 313.7 358 296 338.3 278.3 378.5 288.8 372.5 288.9 415.4"/>
+            <polygon class="cls-1" points="338.5 389.6 354.7 380.2 354.6 337.3 363.3 332.3 345.6 312.6 327.9 352.7 338.4 346.7 338.5 389.6"/>
+          </g>
+          <polygon class="cls-3" points="113.6 171.3 113.6 263.5 164.9 293 164.9 200.8 113.6 171.3"/>
+        </g>
+        <g class="cls-6">
+          <polygon class="cls-2" points="229.6 163.3 127.6 163.3 161.6 143.9 263.1 143.9 229.6 163.3"/>
+        </g>
+        <g class="cls-6">
+          <polygon class="cls-2" points="284.6 131.3 182.5 131.3 199.4 121.5 301.5 121.5 284.6 131.3"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,137 @@
+<odoo>
+    <template id="hero_section_contact" name="Hero Section contact">
+        <section
+            class="hero_section_contact o_colored_level o_cc o_cc1 grid_background pt144 pb112 oe_img_bg o_bg_img_center"
+            data-snippet="hero_section_contact"
+            data-name="Hero Section Contact"
+            data-oe-shape-data='{"shape":"web_editor/Origins/04_001","colors":{"c3":"#FFFFFF"},"flip":["y"],"showOnMobile":false}'>
+            <div class="o_we_shape o_web_editor_Origins_04_001"
+                 style="background-image: url(&quot;/web_editor/shape/web_editor%2FOrigins%2F04_001.svg?c3=%23FFFFFF&amp;flip=y&quot;); background-position: 50% 100%;"/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-7 pt-5">
+                        <div class="o_anim_fade_in o_animate o_anim_from_bottom"
+                             style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                        >
+                            <p class="lead">Découvrez Bendr dès aujourd’hui</p>
+                            <h1 class="fs-1">Envie de voir ce que Bendr peut offrir pour votre entreprise ?</h1>
+                            <p class="p-big">Vous êtes prêts à découvrir comment Bendr peut simplifier la gestion de
+                                votre entreprise ?
+                            </p>
+                            <p class="p-big">Demandez une démonstration gratuite dès aujourd’hui et laissez-nous vous
+                                montrer comment nous
+                                pouvons vous aider à atteindre vos objectifs plus facilement.
+                            </p>
+                            <p class="p-big">Nos équipes vous recontactent sous 48H maximum pour convenir avec vous d'un
+                                rendez-vous de démonstration sous fome de visio qui dure 30 minutes
+                            </p>
+
+                        </div>
+                        <div class="card o_anim_fade_in o_animate o_anim_from_bottom"
+                             style="animation-delay: 0.2s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                        >
+                            <p class="p-big">J'ai fais confiance à Bendr car la solution me paraissait facile à
+                                comprendre. J'ai tout de suite pris en main l'outil et j'ai réussi à faire des actions
+                                simples sans me prendre la tête, tout ce que je voulais !
+                            </p>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="d-flex align-items-center flex-row">
+                                    <i class="ph-fill ph-star" style="color:#FCD018"/>
+                                    <i class="ph-fill ph-star" style="color:#FCD018"/>
+                                    <i class="ph-fill ph-star" style="color:#FCD018"/>
+                                    <i class="ph-fill ph-star" style="color:#FCD018"/>
+                                    <i class="ph-fill ph-star" style="color:#FCD018"/>
+                                </div>
+                                <span>Lionel, gérant d'entreprise de 3 personnes.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-5 o_colored_level o_cc o_cc3 form-card o_anim_fade_in o_animate o_anim_from_bottom"
+                             style="animation-delay: 0.1s; animation-duration: 0.4s; --wanim-intensity: 10;"
+                        >
+                        <h3>Demande de démonstration</h3>
+                        <p class="mb-2">Remplissez le formulaire ci-dessous pour être contacté par nos équipes qui vous
+                            feront une démonstration de Bendr.
+                        </p>
+                        <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data"
+                              class="o_mark_required" data-mark="*" data-model_name="mail.mail"
+                              data-success-mode="redirect" data-success-page="/contactus-thank-you"
+                              data-pre-fill="true">
+                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom"
+                                     data-type="char">
+                                    <label class="s_website_form_label d-none" style="width: 200px" for="oz6jstx2gdc9">
+                                        <span class="s_website_form_label_content">Company</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input" type="text" name="Company"
+                                           placeholder="Votre société" id="oz6jstx2gdc9"
+                                           data-fill-with="commercial_company_name"/>
+                                </div>
+                                <div data-name="Field"
+                                     class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                     data-type="char">
+                                    <label class="s_website_form_label d-none" style="width: 200px" for="ot09yug74xqp">
+                                        <span class="s_website_form_label_content">Name</span>
+                                        <span class="s_website_form_mark">*</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input" type="text" name="Name"
+                                           required="1" placeholder="Votre nom" id="ot09yug74xqp"
+                                           data-fill-with="name"/>
+                                </div>
+                                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom"
+                                     data-type="char">
+                                    <label class="s_website_form_label d-none" style="width: 200px" for="ou3rp4igmllh">
+                                        <span class="s_website_form_label_content">Phone Number</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input" type="text" name="Phone Number"
+                                           placeholder="Votre téléphone" id="ou3rp4igmllh" data-fill-with="phone"/>
+                                </div>
+                                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required"
+                                     data-type="email">
+                                    <label class="s_website_form_label d-none" style="width: 200px" for="odjqe3rjgeqm">
+                                        <span class="s_website_form_label_content">Email</span>
+                                        <span class="s_website_form_mark">*</span>
+                                    </label>
+                                    <input class="form-control s_website_form_input" type="email" name="email_from"
+                                           required="1" placeholder="Votre adresse e-mail" id="odjqe3rjgeqm"
+                                           data-fill-with="email"/>
+                                </div>
+
+
+                                <div data-name="Field"
+                                     class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                     data-type="text">
+                                    <label class="s_website_form_label d-none" style="width: 200px" for="ou2qne39z5ug">
+                                        <span class="s_website_form_label_content">Question</span>
+                                        <span class="s_website_form_mark">*</span>
+                                    </label>
+                                    <textarea class="form-control s_website_form_input" name="Question" required="1"
+                                              placeholder="Commentaires" id="ou2qne39z5ug" rows="5"/>
+                                </div>
+
+                                <div class="mb-0 py-2 col-12 s_website_form_submit" data-name="Submit Button">
+                                    <div style="width: 200px;" class="s_website_form_label"/>
+                                    <a href="#" role="button" class="s_website_form_send btn btn-secondary"
+                                       data-content="Submit" data-bs-original-title="" title="">Envoyer ma demande de
+                                        démonstration
+                                    </a>
+                                    <span id="s_website_form_result"/>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </template>
+
+    <template id="hero_section_contact_menu" inherit_id="website.snippets" name="Hero section">
+        <xpath expr="//div[@id='snippet_destockinfo']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="destockinfo_website.hero_section_contact"
+               t-thumbnail="/destockinfo_website/static/img/snippets/snippet_thumb/hero_section_contact.svg"/>
+        </xpath>
+    </template>
+
+</odoo>

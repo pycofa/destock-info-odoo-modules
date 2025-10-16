@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="mykraft.NavBar" t-inherit="web.NavBar" t-inherit-mode="extension">
+
+        <xpath expr="//t[@t-call='web.NavBar.AppsMenu']" position="after">
+             <img src="/mykraft/static/img/logo-destockinfo-black-120x15.svg" class="me-3" width="120"/>
+        </xpath>
+    </t>
+
+</templates>

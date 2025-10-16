@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_operating_system_tree" model="ir.ui.view">
+        <field name="name">product.operating.system.tree</field>
+        <field name="model">product.operating.system</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_product_operating_system_form" model="ir.ui.view">
+        <field name="name">product.operating.system.tree</field>
+        <field name="model">product.operating.system</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="name"/>
+                    <field name="logo" widget="image"/>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="action_product_operating_system" model="ir.actions.act_window">
+        <field name="name">Operating systems</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.operating.system</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

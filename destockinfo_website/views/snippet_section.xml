@@ -1,0 +1,12 @@
+<odoo>
+    <template id="custom_destockinfo_snippets" inherit_id="website.snippets" name="Destockinfo Snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="before">
+
+            <div id="snippet_destockinfo" class="o_panel">
+                <div class="o_panel_header">Destockinfo</div>
+                <div class="o_panel_body"/>
+            </div>
+
+        </xpath>
+    </template>
+</odoo>

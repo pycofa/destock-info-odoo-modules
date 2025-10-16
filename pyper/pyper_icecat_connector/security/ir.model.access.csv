@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_icecat_form_group_user,icecat_form group_user,model_icecat_form,base.group_user,1,1,1,1
+
+

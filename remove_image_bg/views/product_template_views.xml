@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="product_template_form_inherit_view" model="ir.ui.view">
+        <field name="name">product.template.pyper.common.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('text-center')]" position="after">
+                <field name="rembg_api_key" invisible="True"/>
+                <div invisible="not rembg_api_key" class="d-flex align-items-center justify-content-center">
+                    <button string="Remove background" name="action_remove_background" type="object"
+                        class="btn btn-outline-primary border py-1"
+                    />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

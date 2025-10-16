@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="web.RelativeDaysField">
+        <t t-if="props.readonly">
+            <t t-set="days" t-value="diffDays" />
+            <t t-set="formatted" t-value="formattedValue" />
+            <div
+                t-att-class="{
+                    'fw-bold': days !== null and days lte 0,
+                }"
+                t-att-title="formatted"
+            >
+                <t t-out="diffString"/>
+            </div>
+        </t>
+        <t t-else="">
+            <DateTimeField t-props="props" />
+        </t>
+    </t>
+</templates>

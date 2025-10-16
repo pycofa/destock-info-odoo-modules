@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper_contact
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-29 17:13+0000\n"
+"PO-Revision-Date: 2024-12-29 17:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pyper_contact
+#: model:ir.actions.act_window,name:pyper_contact.action_companies
+#: model:ir.ui.menu,name:pyper_contact.menu_companies
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: pyper_contact
+#: model:ir.model,name:pyper_contact.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: pyper_contact
+#: model_terms:ir.actions.act_window,help:pyper_contact.action_persons
+msgid "Create a Contact in your address book"
+msgstr "Créez un contact dans votre carnet d’adresse"
+
+#. module: pyper_contact
+#: model_terms:ir.actions.act_window,help:pyper_contact.action_companies
+msgid "Create a Person in your address book"
+msgstr "Créez un client dans votre carnet d’adresses"
+
+#. module: pyper_contact
+#: model:ir.ui.menu,name:pyper_contact.person_importer
+msgid "Import person"
+msgstr "Importer une personne"
+
+#. module: pyper_contact
+#: model:ir.ui.menu,name:pyper_contact.importer_root
+msgid "Importer"
+msgstr ""
+
+#. module: pyper_contact
+#: model:ir.ui.menu,name:pyper_contact.company_importer
+msgid "Importer company"
+msgstr "Importer une société"
+
+#. module: pyper_contact
+#: model:ir.model.fields,field_description:pyper_contact.field_res_partner__is_user
+#: model:ir.model.fields,field_description:pyper_contact.field_res_users__is_user
+msgid "Is user"
+msgstr "Est un utilisateur"
+
+#. module: pyper_contact
+#: model:ir.actions.act_window,name:pyper_contact.action_persons
+#: model:ir.ui.menu,name:pyper_contact.menu_persons
+msgid "Persons"
+msgstr "Personnes"

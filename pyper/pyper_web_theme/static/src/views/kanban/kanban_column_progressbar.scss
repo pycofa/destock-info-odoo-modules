@@ -1,0 +1,9 @@
+.o_kanban_renderer {
+    .o_kanban_counter {
+        transition: opacity 0.3s ease 0s;
+
+        > .o_column_progress {
+            height: 0.5rem;
+        }
+    }
+}

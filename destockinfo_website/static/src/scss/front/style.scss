@@ -1,0 +1,374 @@
+$front-primary: $o-gray-800;
+
+#top_menu {
+    > li.nav-item {
+        > a.nav-link {
+            position: relative;
+
+            > span {
+                z-index: 2;
+                position: relative;
+            }
+        }
+    }
+}
+
+#oe_neutralize_ribbon {
+    display: none !important;
+}
+
+.form-check-input:checked {
+    background-color: $front-primary !important;
+    border-color: $front-primary !important;
+}
+
+.hidden-account {
+    display: none !important;
+}
+
+.o_frontend_to_backend_apps_menu {
+    background-color: $o-gray-800;
+
+    .dropdown-item {
+        color: $o-gray-200;
+
+        &:hover {
+            color: $front-primary !important;
+        }
+    }
+}
+
+.login-page {
+    .o_footer, .o_header_standard {
+        display: none !important;
+    }
+
+    .block-login {
+        max-width: 400px;
+        margin: 0 auto;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeInLeftLight;
+        animation-name: fadeInLeftLight;
+
+        .form-control {
+            background-color: #151418;
+            color: #FFF !important;
+
+            &:active, &:focus {
+                background-color: #1A191D;
+            }
+        }
+    }
+
+
+    .oe_login_form, .oe_reset_password_form {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+.grid_background {
+    background-color: $light;
+    background-image: url('/bendr_website/static/img/grid.svg');
+    background-size: 200px 200px;
+    background-repeat: repeat;
+}
+
+#footer {
+    background-image: url('/bendr_website/static/img/grid_dark.svg');
+    background-size: 200px 200px;
+    background-repeat: repeat;
+}
+
+.saas-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.saas-image-left,
+.saas-image-middle,
+.saas-image-right {
+    position: relative;
+}
+
+.saas-image-left img,
+.saas-image-right img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.saas-image-middle img {
+    width: 80%;
+    object-fit: cover;
+}
+
+.saas-image-left {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    text-align: left;
+}
+
+.saas-image-right {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    text-align: right;
+}
+
+.saas-image-middle {
+    z-index: 2;
+}
+
+.saas-image-left img,
+.saas-image-right img,
+.saas-image-middle img {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(174, 174, 174, 0.20);
+}
+
+.hero_section_saas_form_1, .hero_section_saas_form_2 {
+    display: none;
+    position: absolute;
+    z-index: 0;
+}
+
+.hero_section_saas_form_1 {
+    left: -50px;
+}
+
+.hero_section_saas_form_2 {
+    right: -50px;
+}
+
+@media (min-width: 992px) {
+    .hero_section_saas_form_1, .hero_section_saas_form_2 {
+        display: block;
+        bottom: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero_section_saas_form_1, .hero_section_saas_form_2 {
+        bottom: 300px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero_section_saas_form_1, .hero_section_saas_form_2 {
+        bottom: 420px;
+    }
+}
+
+p.lead {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: $text-muted;
+}
+
+.card {
+    padding: 1.5rem;
+    display: block;
+    background-color: $o-white;
+    border-radius: 20px;
+    border: 1px solid $o-border-color;
+    box-shadow: 0 4px 4px 0 rgba(174, 174, 174, 0.25);
+}
+
+#footer {
+    .card {
+        background-color: $o-gray-700;
+        border-color: $o-gray-700;
+        box-shadow: none;
+
+        .form-control {
+            background-color: $o-gray-800;
+            color: $o-gray-100;
+        }
+    }
+
+    .btn-secondary {
+        background-color: $o-gray-700;
+        border-color: $o-gray-700;
+
+        &:hover {
+            background-color: $o-gray-900;
+            border-color: $o-gray-900;
+            color: $o-white;
+        }
+    }
+}
+
+.form-card {
+    padding: 3rem;
+    border-radius: 10px;
+
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid $o-border-color;
+        padding-left: 15px;
+    }
+}
+
+.p-big {
+    font-size: 1.25rem;
+}
+
+.card-body{
+    background-color: transparent !important;
+}
+
+.s_blog_posts_post {
+    .card {
+        padding: 0;
+        height: auto !important;
+
+        .s_blog_posts_post_cover {
+            display: block;
+        }
+
+        .card-body {
+            background-color: transparent !important;
+        }
+
+        .card-footer {
+            border-top: medium none !important;
+        }
+    }
+}
+
+$blog-width: 920px;
+
+.blog_header {
+    > div:nth-child(2) {
+        max-width: $blog-width;
+        margin: 20px auto 0;
+
+        h1#o_wblog_post_name {
+            font-size: 38px !important;
+            line-height: 1.25;
+        }
+    }
+
+    > .o_record_cover_container {
+        max-width: $blog-width;
+        margin: 30px auto;
+    }
+}
+
+.js_blog.website_blog {
+    > .navbar {
+        display: none !important;
+    }
+}
+
+#o_wblog_post_main {
+    .o_container_small {
+        max-width: $blog-width;
+    }
+
+    strong {
+        font-weight: 600 !important;
+    }
+
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 30px;
+    }
+
+    ul {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+#top_menu {
+    .nav-link {
+        border-radius: 20px;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1) !important;
+        }
+    }
+}
+
+.top_nav_container{
+    margin-bottom: 10px;
+
+    li{
+        list-style: none;
+    }
+
+    .o_nav-link_secondary{
+        color:inherit !important;
+    }
+
+    .o_editable_media{
+        color:inherit !important;
+    }
+}
+
+.container-top-home-hero{
+    flex-grow: 0;
+    padding-bottom: 5rem;
+}
+
+.bottom_image_hero{
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+    display: block;
+
+    .bottom_home_hero_actions{
+        margin-top: -23px;
+        position: relative;
+        z-index: 1;
+    }
+
+    img{
+        object-fit: cover !important;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .home_hero_kpi{
+        background-color: $o-white;
+        padding: 3rem;
+        border-radius: 100px 30px 0 0;
+    }
+}
+
+header.text-white:not(.o_header_affixed){
+    .logo-destock-info-dark{
+        display: none !important;
+    }
+}
+
+header.o_header_affixed{
+    .top_nav_container{
+        display: none !important;
+    }
+}
+
+header.o_header_affixed, header:not(.text-white){
+    img {
+      max-width: 150px;
+    }
+    .logo-destock-info-white{
+        display: none !important;
+    }
+}

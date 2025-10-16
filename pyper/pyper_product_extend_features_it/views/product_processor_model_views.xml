@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_processor_model_tree" model="ir.ui.view">
+        <field name="name">product.processor.model.tree</field>
+        <field name="model">product.processor.model</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1" editable="top">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_product_processor_model" model="ir.actions.act_window">
+        <field name="name">Processors model</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.processor.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

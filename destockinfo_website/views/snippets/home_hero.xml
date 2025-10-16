@@ -1,0 +1,60 @@
+<odoo>
+    <template id="home_hero" name="Home hero">
+        <section
+            class="home_hero o_colored_level o_cc o_cc1 pt144 o_full_screen_height"
+        >
+            <div class="container container-top-home-hero">
+                <div class="row mb-4">
+                    <div class="col-12 col-lg-7">
+                        <h1>Réinventons ensemble le <span>reconditionné</span></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <h2 class="text-primary">Destock Info vous accompagne sur vos projets impliquant la reprise et
+                            la revente
+                            d’équipement informatique</h2>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <p class="mb-0">Destock Info est une entreprise innovante qui s’est spécialisée dans le domaine
+                            du destockage
+                            d’équipement informatique, offrant ainsi une seconde vie à des appareils de haute
+                            technologie.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom_image_hero">
+                <div class="container bottom_home_hero_actions">
+                    <div class=" d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-primary">Faire reprendre mon équipement</a>
+                        <a href="#" class="btn btn-dark">Qui sommes-nous ?</a>
+                    </div>
+                </div>
+
+                <img
+                    class="img"
+                    src="/web/image/website.s_text_image_default_image"
+                    loading="lazy"
+                    data-mimetype="image/jpeg"
+                    data-mimetype-before-conversion="image/jpeg"
+                />
+
+                <div class="container position-absolute bottom-0">
+                    <div class="home_hero_kpi position-absolute bottom-0 end-0">
+                        <h3 class="text-primary">24 000</h3>
+                        <p>PC reconditionnés par an</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="home_hero_menu" inherit_id="website.snippets" name="Hero section">
+        <xpath expr="//div[@id='snippet_destockinfo']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="destockinfo_website.home_hero"
+               t-thumbnail="/destockinfo_website/static/img/snippets/snippet_thumb/s_home_hero.svg"/>
+        </xpath>
+    </template>
+
+</odoo>

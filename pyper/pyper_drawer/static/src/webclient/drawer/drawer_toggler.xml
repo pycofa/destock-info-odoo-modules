@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pyper_drawer.DrawerToggler">
+        <div t-if="display" t-att-class="classes">
+            <button class="dropdown-toggle"
+                    title="Toggle Drawer"
+                    data-hotkey="d"
+                    tabindex="0"
+                    aria-expanded="false"
+                    t-on-click="onClick"
+            >
+                <t t-slot="icon_menu" t-if="displayMenuIcon">
+                    <i class="fa fa-bars"/>
+                </t>
+
+                <t t-slot="icon_caret" t-if="displayCaretIcon">
+                    <i class="fa fa-caret-right"/>
+                </t>
+            </button>
+        </div>
+    </t>
+
+</templates>

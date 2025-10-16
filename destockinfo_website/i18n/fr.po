@@ -1,0 +1,531 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* destockinfo_website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-24 10:52+0000\n"
+"PO-Revision-Date: 2024-10-24 12:53+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.placeholder_header_text_element
+msgid "<i class=\"fa fa-1x fa-fw fa-phone me-1\"/>͏"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid ""
+"<i class=\"fa fa-envelope-o me-2\"/>\n"
+"                                        Contactez nous"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.user_dropdown
+msgid "<i class=\"fa fa-fw fa-sign-out me-1 small text-primary\"/> Logout"
+msgstr "<i class=\"fa fa-fw fa-sign-out me-1 small text-primary\"/> Se déconnecter"
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.user_dropdown
+msgid "<i class=\"fa fa-fw fa-th me-1 small text-primary\"/> Apps"
+msgstr "<i class=\"fa fa-fw fa-th me-1 small text-primary\"/> Back office"
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.user_dropdown
+msgid ""
+"<i class=\"fa fa-user-circle me-2\"/>\n"
+"                        Customer portal"
+msgstr ""
+"<i class=\"fa fa-user-circle me-2\"/>\n"
+"                        Portail client"
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.placeholder_header_text_element
+msgid ""
+"<small>\n"
+"                        <i class=\"fa fa-1x fa-fw fa-envelope me-1\"/>\n"
+"                        contact@destock-info.com\n"
+"                    </small>"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.placeholder_header_text_element
+msgid "<span class=\"o_force_ltr\">+ 33 (0) 4 76 95 94 61</span>"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "<span class=\"s_website_form_label_content\">Company</span>"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"<span class=\"s_website_form_label_content\">Email</span>\n"
+"                                        <span class=\"s_website_form_mark\">*</span>"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"<span class=\"s_website_form_label_content\">Name</span>\n"
+"                                        <span class=\"s_website_form_mark\">*</span>"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "<span class=\"s_website_form_label_content\">Phone Number</span>"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"<span class=\"s_website_form_label_content\">Question</span>\n"
+"                                        <span class=\"s_website_form_mark\">*</span>"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "<span>Lionel, gérant d'entreprise de 3 personnes.</span>"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Actualités"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid ""
+"Améliorez la gestion de vos équipements informatiques en entreprise avec les services\n"
+"                                    proposés par Destock Info, spécialiste depuis 2008."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid "Avec Bendr, accédez à des outils simples mais puissants pour booster votre activité"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.right_image_simple_text
+msgid "Bendr, ERP pour les TPE et PME"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.right_image_simple_text
+msgid "Bendr, un logiciel conçu en France"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid ""
+"Blendr propose des vues simples permettant de paramétrer ses produits et organiser ses ventes de manière simple. Des "
+"templates pré-conçus de PDF vous aideront à vite pouvoir envoyer votre premier document."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Blendr propose les modules principaux attendus par les entreprises"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "CRM"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Centralisez vos contacts, suivez vos opportunités et maximisez vos conversions."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid ""
+"Chez Bendr, nous croyons que la simplicité n’exclut pas l’efficacité. C’est\n"
+"                                pourquoi nous avons conçu une interface moderne et intuitive, accessible à tous, "
+"même\n"
+"                                sans compétences techniques. Vous prenez le contrôle, sans prise de tête.."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Combinez au module de vente, vous avez la possibilité de transformer vos devis directement en factures."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "Commentaires"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Conditions générales"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid "Conçu pour les petites structures"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid ""
+"Copyright © Krafter SAS 2024 - Toute reproduction\n"
+"                                même partielle de ce site est interdite"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.right_image_simple_text
+msgid "Demande de démonstration"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid "Demander une démonstration"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+msgid ""
+"Demandez une démonstration gratuite aujourd’hui et laissez-nous vous montrer comment nous pouvons faciliter la "
+"réalisation de vos objectifs en toute simplicité."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"Demandez une démonstration gratuite dès aujourd’hui et laissez-nous vous\n"
+"                                montrer comment nous\n"
+"                                pouvons vous aider à atteindre vos objectifs plus facilement."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.custom_destockinfo_snippets
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Destockinfo"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "Découvrez Bendr dès aujourd’hui"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Découvrir le module CRM"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Découvrir le module d'achats"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Découvrir le module de contacts"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Découvrir le module de vente"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Découvrir le module facturation"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.right_image_simple_text
+msgid ""
+"Développé en France, Bendr a une feuille de route de\n"
+"                            développement de proximité avec ses utilisateurs afin d’entendre et appliquer les retours "
+"en\n"
+"                            matière d’idée et de recommandation."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+msgid "Envie de découvrir comment Bendr peut optimiser la gestion de votre activité ?"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "Envie de voir ce que Bendr peut offrir pour votre entreprise ?"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"Envoyer ma demande de\n"
+"                                        démonstration"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Facturation"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.header_call_to_action
+msgid "Faire reprendre mon matériel"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Foire aux questions"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Fonctionnalités"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+msgid "Form star"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Gardez une vue d’ensemble sur vos clients et fournisseurs avec des fiches de contact complètes et centralisées."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Grâce au modèle d’achats, vous contrôlez mieux vos dépenses et vous pouvez les intégrer à votre comptabilité."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid "Gérez tout, en un seul endroit"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Gérez vos cycles de vente, des devis à la facturation."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Inscrivez-vous à notre newsletter et recevez nos offres et actualités"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"J'ai fais confiance à Bendr car la solution me paraissait facile à\n"
+"                                comprendre. J'ai tout de suite pris en main l'outil et j'ai réussi à faire des "
+"actions\n"
+"                                simples sans me prendre la tête, tout ce que je voulais !"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid ""
+"La plus grande force de Bendr réside dans sa personnalisation des vues qui vous permet de choisir ce que vous voulez "
+"voir pour l’avoir de manière accessible tout le temps.."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "La vente"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Les achats"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Les contacts"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid ""
+"Les grandes solutions d’ERP ne sont souvent pas adaptées aux réalités des petites entreprises. Bendr a été pensé pour "
+"les TPE et PME avec un seul objectif : vous permettre de vous concentrer sur l’essentiel, votre activité, sans vous "
+"perdre dans des fonctionnalités complexes et inutiles."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Les modules de gestion pour couvrir tous vos besoins"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.user_sign_in
+msgid "Login / Signup"
+msgstr "Connexion / Inscription"
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Mentions légales"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"Nos équipes vous recontactent sous 48H maximum pour convenir avec vous d'un\n"
+"                                rendez-vous de démonstration sous fome de visio qui dure 30 minutes"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid "Optimisez vos processus d’achat, de la demande à la réception des produits."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid ""
+"Organisez des activités auprès de vos différents contacts et crééz vous des vues afin de ne pas en oublier un seul. "
+"Connectez Blendr à votre boite mail pour maximiser le suivi et partager vos avancés automatiquement."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid "Personnalisez vos propres vues"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+msgid "Plongez dans l’univers de Bendr dès maintenant"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+msgid "Prêt à explorer ce que Bendr peut apporter à votre entreprise ?"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"Remplissez le formulaire ci-dessous pour être contacté par nos équipes qui vous\n"
+"                            feront une démonstration de Bendr."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "S'inscrire"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text
+msgid ""
+"Simplifiez la facturation avec des modèles prêts à l’emploi, un suivi précis des paiements et des rappels "
+"automatiques.Faites vos relances de paiement directement depuis Blendr."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid ""
+"Suivi des ventes, gestion des clients, facturation,… Bendr regroupe toutes\n"
+"                                vos opérations en un seul outil pour une vision claire et immédiate de votre "
+"entreprise.\n"
+"                                Vous n’avez plus besoin de jongler entre plusieurs logiciels."
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Tarif des licences"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid "Tarification"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.right_image_simple_text
+msgid "Un logiciel qui grandit en même temps que vos besoins pour ne pas s’écarter de l’essentiel"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid "Une interface simple, mais ultra-efficace"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text
+msgid "Une plateforme pensée pour les TPE et PME qui veulent garder l’agilité"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "Votre adresse e-mail"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "Votre nom"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "Votre société"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.cta_section
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid "Votre téléphone"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.right_image_simple_text
+msgid ""
+"Vous aussi, participez au programme de développement du logiciel\n"
+"                            en étant impliqué dans les tests, et profitez avant tout le monde de fonctionnalité Beta !"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "Vous êtes inscrit"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.hero_section_contact
+msgid ""
+"Vous êtes prêts à découvrir comment Bendr peut simplifier la gestion de\n"
+"                                votre entreprise ?"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.four_columns_title_text_menu
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.three_columns_card_title_text_destock_menu
+msgid "columns, title"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "contact@destock-info.com"
+msgstr ""
+
+#. module: destockinfo_website
+#: model_terms:ir.ui.view,arch_db:destockinfo_website.footer_custom
+msgid "votre adresse e-mail..."
+msgstr ""

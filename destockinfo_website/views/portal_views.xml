@@ -1,0 +1,50 @@
+<odoo>
+
+    <template id="portal_my_details_inherit" inherit_id="portal.portal_my_details_fields">
+        <xpath expr="//input[contains(@t-attf-class, 'form-control')]" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='company_name']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='email']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='phone']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='street']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='city']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='zipcode']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='vat']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+    </template>
+
+
+    <template id="mass_mailing_layout_inherit" inherit_id="mass_mailing.layout">
+        <xpath expr="//div[hasclass('text-center')]" position="attributes">
+            <attribute name="class" add="d-none" separator=" "/>
+        </xpath>
+    </template>
+
+    <template id="portal_my_security_inherit" inherit_id="portal.portal_my_security">
+        <xpath expr="//input[@name='old']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='new1']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+        <xpath expr="//input[@name='new2']" position="attributes">
+            <attribute name="t-attf-class" add="border-1" separator=" "/>
+        </xpath>
+    </template>
+
+
+</odoo>

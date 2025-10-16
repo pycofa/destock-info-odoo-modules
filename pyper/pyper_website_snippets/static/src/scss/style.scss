@@ -1,0 +1,111 @@
+.overflowed_image{
+    margin-top: -50px;
+}
+
+.fa.rounded-circle{
+    min-width: 3rem;
+}
+
+/* s_top_banner_overflow_image_variations */
+@media (max-width: 767px) {
+    .k-img-sm-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .k-img-left-fix { 
+        position: relative; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* s_tab_references */
+.s_tab_references .nav-item .nav-link.active {
+    background-color: transparent;
+    border-radius: 0%;
+    border-bottom: 0.25rem solid var(--primary);
+}
+
+/* s_top_banner_title_with_foreground_image */
+.s_top_banner_title_with_foreground_image .foreground_img {
+    object-fit:cover;
+    width:100%;
+    height:100%;
+    min-height:600px;
+}
+
+@media (min-width: 992px) {
+    .s_top_banner_title_with_foreground_image .foreground_img {
+        position:relative;
+        top:120px;
+        z-index:1;
+        box-shadow: 0 10px 20px 0 rgba(135, 135, 135, 0.5);
+    }
+
+    .s_top_banner_title_with_foreground_image .below_foreground_img {
+        padding-top:120px;
+    }
+}
+
+/* s_feature_grid_with_links */
+.s_feature_grid_with_links .card_wrapper:hover {
+    background-color: var(--o-color-2);
+}
+
+
+/* s_section_with_card_link_items */
+.s_section_with_card_link_items .card_wrapper:hover {
+    background-color: var(--o-color-2);
+}
+
+.s_section_with_card_link_items .card_wrapper h5:hover {
+    color: var(--primary);
+}
+
+
+/* s_heading_masonry */
+.s_heading_masonry .s_heading_masonry_wrapper {
+    position: relative;
+    left: 50%;
+    height: 540px;
+    margin-left: -992px;
+    width: 1984px;
+  }
+  
+@media (max-width: 767px) {
+    .s_heading_masonry .s_heading_masonry_wrapper {
+        margin-left: -496px;
+        width: 992px;
+        height: 245px;
+    }
+
+    /* Needed otherwise a 'height:auto;' is added for sm sizes */
+    .s_heading_masonry .s_heading_masonry_wrapper .row {
+        height: 100% !important;
+    }
+}
+
+@media (min-width: 1800px) {
+    .s_heading_masonry .s_heading_masonry_wrapper {
+        margin-left: -1200px;
+        width: 2400px;
+        height: 652px;
+    }
+}
+
+.s_faq_with_title .card-header {
+    border-bottom:0 ;
+}
+
+@media (min-width: 767px) {
+    .s_customer_review_blocks .review-container {
+        max-height: 680px;
+    }
+    
+    .s_customer_review_blocks .review-column {
+        transform: translateY(-5%);
+    }
+}

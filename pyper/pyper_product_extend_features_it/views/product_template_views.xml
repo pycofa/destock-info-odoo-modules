@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_template_features_form" model="ir.ui.view">
+        <field name="name">product.template.features.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="pyper_product_extend_features.view_product_template_features_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='page_product_features']" position="inside">
+                <group class="pt-3 px-5 pb-5">
+                    <group>
+                        <field name="product_pattern" invisible="True"/>
+                        <field name="operating_system_id"
+                               invisible="product_pattern not in ['smartphone', 'tablet', 'laptop_computer',
+                               'desktop_computer', 'all_in_one', 'server', 'projector']"/>
+                        <field name="hard_drive_type_id"
+                               invisible="product_pattern not in ['laptop_computer', 'desktop_computer', 'all_in_one',
+                               'server', 'tablet']"/>
+                        <field name="hard_drive_capacity_id"
+                               invisible="product_pattern not in ['laptop_computer', 'desktop_computer', 'all_in_one',
+                               'server', 'tablet']"/>
+                        <field name="ram_capacity_id"
+                               invisible="product_pattern not in ['laptop_computer', 'desktop_computer', 'all_in_one',
+                               'tablet', 'server']"/>
+
+                        <field name="is_printer_color"
+                               invisible="product_pattern not in ['printer']"/>
+                        <field name="is_printer_multifunction"
+                               invisible="product_pattern not in ['printer']"/>
+                        <field name="is_videopro_interactive"
+                               invisible="product_pattern not in ['projector']"/>
+                        <field name="flow"
+                               invisible="product_pattern not in ['switch']"/>
+                        <field name="is_poe"
+                               invisible="product_pattern not in ['switch']"/>
+
+                        <field name="has_adjustable_stand"
+                               invisible="product_pattern not in ['screen', 'all_in_one']"/>
+                        <field name="screen_format"
+                               invisible="product_pattern not in ['screen', 'all_in_one']"/>
+                        <field name="format"
+                               invisible="product_pattern not in ['sever', 'desktop_computer']"/>
+                        <field name="screen_size_id"
+                               invisible="product_pattern not in ['laptop_computer', 'smartphone', 'tablet', 'screen',
+                                'all_in_one']"/>
+                        <field name="screen_quality_id"
+                               invisible="product_pattern not in ['laptop_computer', 'smartphone', 'tablet', 'screen',
+                               'all_in_one', 'projector']"/>
+                        <field name="number_of_displays"
+                               invisible="product_pattern not in ['docking_station']"/>
+                        <field name="focal"
+                               invisible="product_pattern not in ['projector']"/>
+                        <field name="is_tactile"
+                               invisible="product_pattern not in ['laptop_computer', 'all_in_one', 'screen']"/>
+                        <field name="is_usb_c"
+                               invisible="product_pattern not in ['laptop_computer', 'all_in_one', 'screen',
+                               'desktop_computer', 'tablet', 'projector', 'smartphone']"/>
+                        <field name="is_dual_sim"
+                               invisible="product_pattern not in ['smartphone']"/>
+                        <field name="number_of_ports"
+                               invisible="product_pattern not in ['switch']"/>
+                        <field name="video_output_ids"
+                               invisible="product_pattern not in ['laptop_computer', 'desktop_computer', 'all_in_one',
+                               'server', 'docking_station', 'tablet']"/>
+                        <field name="video_input_ids"
+                               invisible="product_pattern not in ['screen', 'projector']"/>
+                        <field name="network_ids"
+                               invisible="product_pattern not in ['screen', 'laptop_computer', 'desktop_computer',
+                               'all_in_one', 'server', 'switch', 'projector', 'smartphone', 'docking_station', 'tablet',
+                               'printer']"/>
+
+                        <field name="specific_informations"/>
+
+                    </group>
+                    <group>
+                        <field name="processor_id"
+                               invisible="product_pattern not in ['laptop_computer', 'desktop_computer', 'all_in_one',
+                               'server', ]"/>
+                        <field name="graphic_card_id"
+                               invisible="product_pattern not in ['laptop_computer', 'desktop_computer', 'all_in_one',
+                               'tablet']"/>
+                        <field name="has_optical_drive"
+                               invisible="product_pattern not in ['laptop_computer', 'desktop_computer', 'all_in_one']"/>
+                        <field name="has_webcam" invisible="product_pattern not in ['laptop_computer', 'all_in_one',
+                        'screen', 'tablet', ]"/>
+                        <field name="has_bluetooth"
+                               invisible="product_pattern not in ['laptop_computer', 'desktop_computer']"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="product_template_IT_kanban">
+        <field name="name">product.template.it.kanban</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <kanban sample="1" class="o_kanban_full_width">
+                <field name="id"/>
+                <field name="product_variant_count"/>
+                <field name="product_manufacturer_id"/>
+                <field name="activity_state"/>
+                <field name="categ_id"/>
+                <field name="hard_drive_type_id"/>
+                <field name="hard_drive_capacity_id"/>
+                <field name="processor_id"/>
+                <field name="screen_size_id"/>
+                <field name="ram_capacity_id"/>
+                <field name="operating_system_id"/>
+                <field name="product_pattern"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click">
+                            <div class="row d-flex flex-column">
+                                <div class="text-center col-xs-12 col-md-3">
+                                    <div class="text-center p-3 d-flex align-items-center">
+                                        <img
+                                                t-att-src="kanban_image('product.template', 'image_256', record.id.raw_value)"
+                                                alt="Product" class="" style="max-height: 150px"/>
+
+                                        <img
+                                                t-att-src="kanban_image('product.manufacturer', 'image_128', record.product_manufacturer_id.raw_value)"
+                                                class="o_image_64_contain mt-3"
+                                                alt="Manfuacturer"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-12 my-4">
+                                    <h2>
+                                        <field name="name"/>
+                                    </h2>
+                                    <div class="d-flex mb-3">
+                                        <field name="part_number_code" class="badge bg-secondary"/>
+                                    </div>
+                                    <div class="d-flex flex-column" name="block_description">
+                                        <field name="description_sale"/>
+
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-wrap justify-content-between border-bottom py-1"
+                                                     invisible="product_pattern not in ['laptop_computer', 'desktop_computer']">
+                                                    <dt class="fw-normal text-muted">Hard drive type</dt>
+                                                    <dd class="fw-bolder" t-out="record.hard_drive_type_id.value"/>
+                                                </div>
+                                                <div class="d-flex flex-wrap justify-content-between border-bottom py-1">
+                                                    <dt class="fw-normal text-muted">Storage capacity</dt>
+                                                    <dd class="fw-bolder" t-out="record.hard_drive_capacity_id.value"/>
+                                                </div>
+                                                <div class="d-flex flex-wrap justify-content-between border-bottom py-1"
+                                                     invisible="product_pattern not in ['laptop_computer', 'desktop_computer']">
+                                                    <dt class="fw-normal text-muted">RAM capacity</dt>
+                                                    <dd class="fw-bolder" t-out="record.ram_capacity_id.value"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-wrap justify-content-between border-bottom py-1">
+                                                    <dt class="fw-normal text-muted">Screen size</dt>
+                                                    <dd class="fw-bolder" t-out="record.screen_size_id.value"/>
+                                                </div>
+                                                <div class="d-flex flex-wrap justify-content-between border-bottom py-1">
+                                                    <dt class="fw-normal text-muted">Processor</dt>
+                                                    <dd class="fw-bolder" t-out="record.processor_id.value"/>
+                                                </div>
+                                                <div class="d-flex flex-wrap justify-content-between border-bottom py-1">
+                                                    <dt class="fw-normal text-muted">Operating system</dt>
+                                                    <dd class="fw-bolder" t-out="record.operating_system_id.value"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_it_product_search" model="ir.ui.view">
+        <field name="name">product.template.it.search</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="product_manufacturer_id" multi_select="True"/>
+                    <field name="ram_capacity_id"/>
+                    <field name="hard_drive_capacity_id"/>
+                    <field name="hard_drive_type_id"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="product_laptop_kanban" model="ir.actions.act_window">
+        <field name="name">Laptops</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="domain">[('categ_id.product_pattern', '=', 'laptop_computer')]</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'kanban', 'view_id': ref('pyper_product_extend_features_it.product_template_IT_kanban')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('product.product_template_only_form_view')})]"
+        />
+        <field name="search_view_id" ref="pyper_product_extend_features_it.view_it_product_search"/>
+    </record>
+
+    <record id="product_smartphone_kanban" model="ir.actions.act_window">
+        <field name="name">Smartphones</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="domain">[('categ_id.product_pattern', '=', 'smartphone')]</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'kanban', 'view_id': ref('pyper_product_extend_features_it.product_template_IT_kanban')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('product.product_template_only_form_view')})]"
+        />
+        <field name="search_view_id" ref="pyper_product_extend_features_it.view_it_product_search"/>
+    </record>
+
+</odoo>

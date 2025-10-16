@@ -1,0 +1,18 @@
+.o-command-NotificationSystray-class {
+    margin-top: - $o-navbar-padding-v; // cancel navbar padding
+    margin-bottom: - $o-navbar-padding-v; // cancel navbar padding
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus,
+    &.show {
+        color: $o-navbar-entry-color--hover;
+        background-color: $o-navbar-entry-bg--hover;
+    }
+
+    &:active {
+        color: $o-navbar-entry-color--active;
+        background-color: $o-navbar-entry-bg--active;
+    }
+}

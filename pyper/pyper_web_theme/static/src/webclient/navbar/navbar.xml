@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme.NavBar" t-inherit="web.NavBar" t-inherit-mode="extension">
+        <xpath expr="//header[hasclass('o_navbar')]//DropdownItem[@t-if='currentApp']" position="attributes">
+            <attribute name="class">'o_menu_brand d-none d-md-flex fw-bolder'</attribute>
+        </xpath>
+    </t>
+
+    <t t-name="pyper_web_theme.DebugMenu" t-inherit="web.DebugMenu" t-inherit-mode="extension">
+         <xpath expr="//i[hasclass('fa-bug')]" position="attributes">
+            <attribute name="class" add="ph ph-bug nav-bar-icon" separator=" " remove="fa fa-bug"/>
+        </xpath>
+    </t>
+
+    <t t-name="pyper_web_theme.Breadcrumbs" t-inherit="web.Breadcrumbs" t-inherit-mode="extension">
+        <xpath expr="//button[hasclass('o_back_button')]" position="attributes">
+            <attribute name="class" separator=" " add="btn-primary me-2"/>
+        </xpath>
+    </t>
+
+    <t t-name="pyper_web_theme.FormStatusIndicator" t-inherit="web.FormStatusIndicator" t-inherit-mode="extension">
+        <xpath expr="//button[hasclass('o_form_button_save')]" position="attributes">
+            <attribute name="class" add="btn-primary me-2" separator=" "
+                       remove="btn-light o_form_button_save px-1 py-0 lh-sm rounded-0"/>
+        </xpath>
+
+        <xpath expr="//button[hasclass('o_form_button_cancel')]" position="attributes">
+            <attribute name="class" add="btn-light" separator=" "
+                       remove="btn-light o_form_button_cancel px-1 py-0 lh-sm rounded-0"/>
+        </xpath>
+    </t>
+</templates>

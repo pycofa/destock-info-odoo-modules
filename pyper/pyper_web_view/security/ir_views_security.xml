@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="rule_ir_views" model="ir.rule">
+        <field name="name">Saved views rule</field>
+        <field name="model_id" ref="model_ir_views"/>
+        <field name="domain_force">[('user_id','in', [False, user.id])]</field>
+    </record>
+
+    <record id="rule_ir_views_security_groups" model="ir.rule">
+        <field name="name">Security groups of saved views rule</field>
+        <field name="model_id" ref="model_ir_views" />
+        <field name="groups" eval="[(4, ref('base.group_user'))]" />
+        <field name="domain_force">['|', ('group_ids', '=', False), ('group_ids', 'in', user.groups_id.ids)]</field>
+    </record>
+
+    <record id="rule_ir_views_field" model="ir.rule">
+        <field name="name">Saved views fields rule</field>
+        <field name="model_id" ref="model_ir_views_field"/>
+        <field name="domain_force">[('user_id','in', [False, user.id])]</field>
+    </record>
+
+    <record id="rule_ir_views_group_by" model="ir.rule">
+        <field name="name">Saved views groups by rule</field>
+        <field name="model_id" ref="model_ir_views_group_by"/>
+        <field name="domain_force">[('user_id','in', [False, user.id])]</field>
+    </record>
+
+    <record id="rule_ir_views_order_by" model="ir.rule">
+        <field name="name">Saved views orders by rule</field>
+        <field name="model_id" ref="model_ir_views_order_by"/>
+        <field name="domain_force">[('user_id','in', [False, user.id])]</field>
+    </record>
+</odoo>

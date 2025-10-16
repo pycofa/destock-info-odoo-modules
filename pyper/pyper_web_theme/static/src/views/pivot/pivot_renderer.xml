@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme.PivotRenderer" t-inherit="web.PivotRenderer" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_pivot')]" position="attributes">
+            <attribute name="t-ref">root</attribute>
+        </xpath>
+
+        <xpath expr="//*[hasclass('bg-100')]" position="attributes">
+            <attribute name="class" remove="bg-100" separator=" "/>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_public_category_form_view_custom" model="ir.ui.view">
+        <field name="name">product.public.category.form.inherit</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                <field name="categ_filter_visible_in_shop"/>
+                <field name="shared_category_in_shop"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

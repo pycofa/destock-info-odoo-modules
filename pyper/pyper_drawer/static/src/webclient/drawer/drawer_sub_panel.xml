@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pyper_drawer.DrawerSubPanel">
+        <div t-att-class="classes" t-att-style="styles">
+            <t t-call="pyper_drawer.DrawerSubPanel.Header"/>
+
+            <t t-call="pyper_drawer.DrawerSubPanel.Content"/>
+
+            <t t-call="pyper_drawer.DrawerSubPanel.Footer"/>
+        </div>
+    </t>
+
+    <t t-name="pyper_drawer.DrawerSubPanel.Header">
+        <div class="o_drawer--sub-panel--header">
+            <button class="btn btn-sm px-0" t-on-click="() => drawerService.closeSubPanel()">
+                <t t-slot="previous_caret_icon">
+                    <i class="fa fa-arrow-left"/>
+                </t>
+            </button>
+
+            <div class="o_drawer--sub-panel--header-title">
+                <t t-if="title" t-out="title"/>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="pyper_drawer.DrawerSubPanel.Content">
+        <div class="o_drawer--sub-panel--content o_drawer--menu-item-children">
+            <t t-foreach="menuChildren" t-as="submenu" t-key="submenu.id">
+                <DrawerMenuItem
+                    menuXmlid="submenu.xmlid"
+                    menuId="submenu.id"
+                    menuAction="submenu.actionID || undefined"
+                    childrenDepth="-1"
+                    children="submenu.childrenTree"
+                    label="submenu.name"
+                    depth="0"
+                    disablePopover="true"
+                />
+            </t>
+        </div>
+    </t>
+
+    <t t-name="pyper_drawer.DrawerSubPanel.Footer">
+    </t>
+
+</templates>

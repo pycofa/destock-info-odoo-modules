@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="submenu" inherit_id="website.submenu">
+    <xpath expr="//li[1]" position="after">
+        <li t-elif="show_dropdown and submenu.is_structured_menu" t-attf-class="#{item_class or ''} dropdown #{submenu.is_structured_menu and 'position-static'}">
+            <a t-attf-class="#{link_class or ''} dropdown-toggle #{submenu._is_active() and 'active'} #{dropdown_toggler_classes}"
+               data-bs-toggle="dropdown"
+               data-bs-display="static"
+               href="#"
+            >
+                <span t-field="submenu.name"/>
+            </a>
+            <ul t-attf-class="dropdown-menu o_structured_menu #{dropdown_menu_classes}" role="menu">
+                <t t-call="pyper_website_menu.pyper_structured_menu">
+                    <t t-set="submenu" t-value="submenu"/>
+                </t>
+            </ul>
+            <div class="o_structured_menu--obfuscator" t-if="submenu.structured_menu_obfuscator"></div>
+        </li>
+    </xpath>
+</template>
+
+<template id="pyper_structured_menu" name="Pyper Structured Menu">
+    <section class="o_structured_menu--content container" t-att-style="'--o-structured-menu-columns: ' + str(submenu.structured_menu_columns) + ';' if submenu.structured_menu_columns != 0 else ''">
+        <t t-foreach="submenu.child_id" t-as="submenu">
+            <a t-att-href="submenu._clean_url()"
+                t-attf-class="o_structured_menu--item #{submenu._is_active() and 'active'}"
+                role="menuitem"
+                t-ignore="true"
+                t-att-target="'_blank' if submenu.new_window else None"
+            >
+                <div class="o_structured_menu--item-icon" t-if="submenu.font_icon">
+                    <i t-att-class="submenu.font_icon" t-att-style="'color: ' + (submenu.font_icon_color or 'inherit') + ';'"/>
+                </div>
+
+                <div class="o_structured_menu--item-text">
+                    <span class="o_structured_menu--item-name" t-field="submenu.name"/>
+                    <span class="o_structured_menu--item-desc" t-field="submenu.description" t-if="submenu.description"/>
+                </div>
+            </a>
+        </t>
+    </section>
+</template>
+
+</odoo>

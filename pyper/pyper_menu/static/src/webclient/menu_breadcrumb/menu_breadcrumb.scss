@@ -1,0 +1,20 @@
+.o-menu-breadcrumb {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    background-color: $o-menu-breadcrumb-bg;
+}
+
+.o-menu-breadcrumb-item {
+    &:first-child {
+        &::before {
+            float: left;
+            padding-right: $breadcrumb-item-padding-x;
+            color: $breadcrumb-divider-color;
+            content: var(--#{$variable-prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$variable-prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
+        }
+    }
+}

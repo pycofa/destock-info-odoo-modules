@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Cog Menu -->
+    <t t-name="pyper_control_panel.CogMenu" t-inherit="web.CogMenu" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_cp_action_menus')]" position="attributes">
+            <attribute name="class" separator=" " remove="pe-2"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_cp_action_menus')]/Dropdown[1]" position="attributes">
+            <attribute name="togglerClass">'btn btn-secondary px-2'</attribute>
+        </xpath>
+
+        <xpath expr="//t[@t-set-slot='toggler']/i" position="attributes">
+            <attribute name="class" separator=" " remove="fa fa-cog" add="fa fa-ellipsis-v fa-fw"/>
+        </xpath>
+    </t>
+
+    <!-- Action Menus -->
+    <t t-name="pyper_control_panel.ActionMenus" t-inherit="web.ActionMenus" t-inherit-mode="extension">
+        <xpath expr="div[hasclass('o_cp_action_menus')]/Dropdown[2]/t[@t-set-slot='toggler']/i" position="attributes">
+            <attribute name="class" separator=" " remove="fa fa-cog me-1" add="fa fa-ellipsis-v fa-fw"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_cp_action_menus')]/Dropdown[2]/t[@t-set-slot='toggler']/span" position="attributes">
+            <attribute name="class" separator=" " add="d-none"/>
+        </xpath>
+    </t>
+
+</templates>

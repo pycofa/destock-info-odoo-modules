@@ -1,0 +1,12 @@
+// Fix navbar apps menu color
+.o_main_navbar {
+    .o_menu_systray {
+        .o-mail-DiscussSystray-class {
+            > .dropdown-toggle {
+                width: $o-navbar-entry-width;
+                height: $o-navbar-entry-height;
+                justify-content: center;
+            }
+        }
+    }
+}

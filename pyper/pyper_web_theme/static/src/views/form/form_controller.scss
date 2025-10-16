@@ -1,0 +1,51 @@
+// Override @web/views/form/form_controller.scss
+//----------------------------------------------
+
+.o_form_view {
+    .oe_left {
+        @extend .oe_inline;
+        float: left!important;
+    }
+    .oe_right {
+        @extend .oe_inline;
+        float: right!important;
+    }
+
+    .o_form_sheet {
+        border-color: transparent;
+        border-radius: 0;
+    }
+
+    .o_form_statusbar {
+        margin-top: map-get($spacers, 2);
+    }
+
+    .o_inner_group {
+        gap: map-get($spacers, 3) $o-horizontal-padding;
+        margin-bottom: map-get($spacers, 3);
+    }
+
+    .o_field_DynamicModelFieldSelectorChar {
+        &.oe_inline {
+            min-width: auto;
+        }
+    }
+
+    .o_form_editable {
+        .o_field_x2many .o_list_table .o_handle_cell .o_row_handle {
+            padding: 0;
+        }
+    }
+}
+
+.oe_title {
+    h1 {
+        .o_input {
+            font-weight: bold !important;
+        }
+
+        .o_field_widget {
+            font-weight: bold !important;
+        }
+    }
+}

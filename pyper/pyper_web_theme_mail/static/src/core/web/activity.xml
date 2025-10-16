@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme_mail.Activity" t-inherit="mail.Activity" t-inherit-mode="extension">
+        <!-- Change style of user avatar -->
+        <xpath expr="//div[hasclass('o-mail-Activity-sidebar')]/img" position="attributes">
+            <attribute name="class" separator=" " remove="rounded" add="rounded-pill"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-iconContainer')]" position="attributes">
+            <attribute name="t-if">false</attribute>
+        </xpath>
+
+        <!-- Change style of activity -->
+        <xpath expr="//div[hasclass('o-mail-Activity')]" position="attributes">
+            <attribute name="class" separator=" " remove="mb-2" add="pb-3 border-bottom"/>
+        </xpath>
+
+        <!-- Change style of activity Info titles -->
+        <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-success')][1]" position="attributes">
+            <attribute name="class" separator=" " remove="fw-bolder" add="fw-bold"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-success')][2]" position="attributes">
+            <attribute name="class" separator=" " remove="fw-bolder" add="fw-bold"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-danger')][1]" position="attributes">
+            <attribute name="class" separator=" " remove="fw-bolder" add="fw-bold"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-danger')][2]" position="attributes">
+            <attribute name="class" separator=" " remove="fw-bolder" add="fw-bold"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-warning')]" position="attributes">
+            <attribute name="class" separator=" " remove="fw-bolder" add="fw-bold"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-break')]" position="attributes">
+            <attribute name="class" separator=" " remove="fw-bolder px-2" add="fw-bold"/>
+        </xpath>
+
+        <!-- Change style of activity note -->
+        <xpath expr="//div[hasclass('o-mail-Activity-note')]" position="attributes">
+            <attribute name="class" separator=" " add="mt-2 text-muted"/>
+        </xpath>
+
+        <!-- Change style of activity actions -->
+        <xpath expr="//div[hasclass('lh-lg')]" position="attributes">
+            <attribute name="class" separator=" " add="mt-2"/>
+        </xpath>
+
+        <!-- Wrap activity content -->
+        <xpath expr="//div[hasclass('o-mail-Activity')]" position="inside">
+            <div class="o-mail-Activity-header"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity')]/div[hasclass('flex-grow')]" position="attributes">
+            <attribute name="class" separator=" " remove="px-3" add="o-mail-Activity-content"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity')]/div[hasclass('o-mail-Activity-header')]" position="inside">
+            <xpath expr="//div[hasclass('o-mail-Activity')]/div[hasclass('flex-grow')]" position="move"/>
+        </xpath>
+
+        <!-- Add activity type in start -->
+        <xpath expr="//div[hasclass('o-mail-Activity-content')]" position="before">
+            <div class="d-flex justify-content-between mb-2">
+                <div class="o-mail-Activity-type badge bg-secondary">
+                    <span class="o-mail-Activity-type-icon me-2" t-if="activity.icon">
+                        <i class="fa" t-attf-class="{{ activity.icon }}"/>
+                    </span>
+
+                    <span class="o-mail-Activity-type-name" t-out="activity.activity_type_id[1]"></span>
+                </div>
+
+                <div class="o-mail-Activity-date"/>
+            </div>
+        </xpath>
+
+        <!-- Move activity user in activity header -->
+        <xpath expr="//div[hasclass('o-mail-Activity-type')]" position="after">
+            <xpath expr="//span[hasclass('o-mail-Activity-user')]" position="move"/>
+        </xpath>
+
+        <xpath expr="//span[hasclass('o-mail-Activity-user')]" position="attributes">
+            <attribute name="class" separator=" " add="flex-grow-1"/>
+        </xpath>
+
+        <!-- Move activity date in activity header -->
+        <xpath expr="//div[hasclass('o-mail-Activity-date')]" position="inside">
+            <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-success')]" position="move"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-date')]" position="inside">
+            <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-success')]" position="move"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-date')]" position="inside">
+            <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-danger')]" position="move"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-date')]" position="inside">
+            <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-danger')]" position="move"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Activity-date')]" position="inside">
+            <xpath expr="//div[hasclass('o-mail-Activity-info')]/span[hasclass('text-warning')]" position="move"/>
+        </xpath>
+    </t>
+</templates>

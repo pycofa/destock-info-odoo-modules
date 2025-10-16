@@ -1,0 +1,959 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper_web_view
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20241015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-17 18:57+0000\n"
+"PO-Revision-Date: 2024-11-17 18:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__ir_action_id
+msgid "Action"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model,name:pyper_web_view.model_ir_actions_act_window
+msgid "Action Window"
+msgstr "Fenêtre d'action"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__multi_edit
+msgid "Allow inline editing when selecting one or more records"
+msgstr ""
+"Autoriser l’édition en ligne lors de la sélection d’un ou plusieurs "
+"enregistrements"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__expand
+msgid "Allow to expand all groups by when list is grouped by fields"
+msgstr ""
+"Autoriser l’ouverture de tous les groupes lorsque la liste est groupée par "
+"champs"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Always show"
+msgstr "Toujours affiché"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__arch
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_form
+msgid "Architecture"
+msgstr ""
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#, python-format
+msgid "Are you sure that you want to remove this view?"
+msgstr "Etes-vous sûr de vouloir supprimer cette vue ?"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_order_by__sort__asc
+msgid "Ascending"
+msgstr "Ascendant"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__attachment_image
+msgid "Attachment Image"
+msgstr "Image jointe"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__available_grouping_type
+msgid "Available grouping type"
+msgstr "Type de regroupement disponible"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__badge
+msgid "Badge"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__binary
+msgid "Binary"
+msgstr "Binaire"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__boolean
+msgid "Boolean"
+msgstr "Booléen"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__boolean_favorite
+msgid "Boolean Favorite"
+msgstr "Booléen favoris"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__boolean_icon
+msgid "Boolean Icon"
+msgstr "Booléen icône"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__boolean_toggle
+msgid "Boolean Toggle"
+msgstr "Booléen toggle"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views__editable__bottom
+msgid "Bottom"
+msgstr "En bas"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__classes
+msgid "CSS Class"
+msgstr "Classe CSS"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__category
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__color_picker
+msgid "Color Picker"
+msgstr "Sélecteur de couleurs"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Columns"
+msgstr "Colonnes"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Common settings"
+msgstr "Paramètres communs"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Configuration"
+msgstr ""
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.xml:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.xml:0
+#, python-format
+msgid "Configure views"
+msgstr "Configurer les vues"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__context
+msgid "Context Value"
+msgstr "Valeur de contexte"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__context
+msgid "Context dictionary as Python expression"
+msgstr "Dictionnaire de contexte comme expression Python"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#, python-format
+msgid "Create a new view"
+msgstr "Créer une nouvelle vue"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__create_uid
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__create_uid
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__create_uid
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__create_date
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__create_date
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__create_date
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__label
+msgid "Custom label"
+msgstr "Étiquette personnalisée"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__date
+msgid "Date"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__datetime
+msgid "Datetime"
+msgstr "Date et heure"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_group_by__grouping_type__day
+msgid "Day"
+msgstr "Jour"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__limit
+msgid "Default limit for the list view"
+msgstr "Limite par défaut pour la vue Liste"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__classes
+msgid "Define custom CSS classes"
+msgstr "Définir des classes CSS personnalisées"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__js_class
+msgid "Define the CSS class to extend the Form Controller"
+msgstr "Définir la classe CSS pour étendre le contrôleur de formulaire"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.xml:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.xml:0
+#, python-format
+msgid "Delete view"
+msgstr "Supprimer la vue"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_order_by__sort__desc
+msgid "Descending"
+msgstr "Descendant"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_group_create
+msgid "Disable creation of groups"
+msgstr "Désactiver la création de groupes"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_create
+msgid "Disable creation of records"
+msgstr "Désactiver la création des enregistrements"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_delete
+msgid "Disable deletion of records"
+msgstr "Désactiver la suppression des enregistrements"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_records_draggable
+msgid "Disable dragging of cards"
+msgstr "Désactiver le déplacement des cartes"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_duplicate
+msgid "Disable duplication of records"
+msgstr "Désactiver la duplication des enregistrements"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_edit
+msgid "Disable edition of records"
+msgstr "Désactiver l’édition des enregistrements"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_export
+msgid "Disable exportation of records"
+msgstr "Désactiver l’exportation des enregistrements"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_import
+msgid "Disable importation of records"
+msgstr "Désactiver l’importation des enregistrements"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_open_form_view
+msgid "Disable open form view"
+msgstr "Désactiver l’ouverture de la vue formulaire"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__no_quick_create
+msgid "Disable quick creation in card"
+msgstr "Désactiver la création rapide dans la carte"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__display_name
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__display_name
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__display_name
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__display_page_fields
+msgid "Display fields?"
+msgstr "Afficher les champs ?"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__expert_mode
+msgid "Display more options to configure the view"
+msgstr "Afficher plus d’options pour configurer la vue"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__sample
+msgid "Display sample data when view is empty"
+msgstr "Afficher des exemples de données lorsque la vue est vide"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__domain
+msgid "Domain"
+msgstr "Domaine"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.xml:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.xml:0
+#, python-format
+msgid "Edit view"
+msgstr "Modifier la vue"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__email
+msgid "Email"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__expand
+msgid "Expand groups"
+msgstr "Ouvrir les groupes"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__expert_mode
+msgid "Expert mode"
+msgstr "Mode expert"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__field_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__field_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__field_id
+msgid "Field"
+msgstr "Champ"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__name
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__name
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__name
+msgid "Field Name"
+msgstr "Nom du champ"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__field_type
+msgid "Field Type"
+msgstr "Type de champ"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__field_id_domain
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__field_id_domain
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__field_id_domain
+msgid "Field domain"
+msgstr "Domaine du champ"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__field_name
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__field_name
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__field_name
+msgid "Field name"
+msgstr "Nom du champ"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__res_field_ids
+msgid "Fields"
+msgstr "Champs"
+
+#. module: pyper_web_view
+#: model:ir.model,name:pyper_web_view.model_ir_views_field
+msgid "Fields of views"
+msgstr "Champs des vues"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Filters"
+msgstr "Filtres"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__float
+msgid "Float"
+msgstr "Nombre flottant"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__float_time
+msgid "Float Time"
+msgstr "Nombre flottant Heure"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__grouping_type
+msgid "Grouping type"
+msgstr "Type de regroupement"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__group_ids
+msgid "Groups"
+msgstr "Groupes"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__res_group_by_ids
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Groups by"
+msgstr "Groupés par"
+
+#. module: pyper_web_view
+#: model:ir.model,name:pyper_web_view.model_ir_views_group_by
+msgid "Groups by of views"
+msgstr "Groupés par des vues"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__html
+msgid "HTML"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__handle
+msgid "Handle"
+msgstr "Poignée"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__optional__hide
+msgid "Hide"
+msgstr "Masquer"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__id
+msgid "ID"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__group_ids
+msgid ""
+"If this field is empty, the view applies to all users. Otherwise, the view "
+"applies to the users of those groups only."
+msgstr ""
+"Si ce champ est vide, la vue s’applique à tous les utilisateurs. Sinon, la "
+"vue s’applique uniquement aux utilisateurs de ces groupes."
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__image
+msgid "Image"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__image_url
+msgid "Image URL"
+msgstr "URL de l’image"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__integer
+msgid "Integer"
+msgstr "Nombre entier"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__optional__invisible
+msgid "Invisible"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__system
+msgid "Is system?"
+msgstr "Est une vue système ?"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__js_class
+msgid "JS Class"
+msgstr "Classe JS"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__jsonb
+msgid "JSON"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views__view_mode__kanban
+msgid "Kanban"
+msgstr ""
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Kanban settings"
+msgstr "Paramètres Kanban"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__write_uid
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__write_uid
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__write_uid
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__write_date
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__write_date
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__write_date
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__limit
+msgid "Limit"
+msgstr "Limite"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views__view_mode__tree
+msgid "List"
+msgstr "Liste"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "List settings"
+msgstr "Paramètre Liste"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__main_ir_action_id
+msgid "Main Action"
+msgstr "Action principale"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2many
+msgid "Many Relations"
+msgstr "Plusieurs relations"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2many_tags_avatar
+msgid "Many Relations Avatar"
+msgstr "Plusieurs relations Avatar"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2many_tags_avatar_popover
+msgid "Many Relations Avatar Popover"
+msgstr "Plusieurs relations Avatar Popover"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2many_binary
+msgid "Many Relations Binary"
+msgstr "Plusieurs relations Binaire"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2many_checkboxes
+msgid "Many Relations Checkboxes"
+msgstr "Plusieurs relations Cases à cocher"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2many_tags
+msgid "Many Relations Tags"
+msgstr "Plusieurs relations Tags"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__res_model_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__model_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__model_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__model_id
+msgid "Model"
+msgstr "Modèle"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__res_model_name
+msgid "Model name"
+msgstr "Nom du modèle"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__monetary
+msgid "Monetary"
+msgstr "Monétaire"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_group_by__grouping_type__month
+msgid "Month"
+msgstr "Mois"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__multi_edit
+msgid "Multi edition"
+msgstr "Edition multiple"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#, python-format
+msgid "My views"
+msgstr "Mes vues"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Name of your saved view"
+msgstr "Nom de votre vue enregistrée"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_create
+msgid "No create"
+msgstr "Pas de création"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_delete
+msgid "No delete"
+msgstr "Pas de suppression"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_duplicate
+msgid "No duplicate"
+msgstr "Pas de duplication"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_edit
+msgid "No edit"
+msgstr "Pad d’édition"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_export
+msgid "No export"
+msgstr "Pas d’exportation"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_group_create
+msgid "No group creation"
+msgstr "Pas de création de groupe"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_import
+msgid "No import"
+msgstr "Pas d’importation"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_open_form_view
+msgid "No open form view"
+msgstr "Pad d’ouverture de vue formulaire"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_quick_create
+msgid "No quick creation"
+msgstr "Pas de création rapide"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__no_records_draggable
+msgid "No records draggable"
+msgstr "Pas de déplacement d’enregistrements"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__optional
+msgid "Optional"
+msgstr "Optionnel"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__domain
+msgid ""
+"Optional domain filtering of the destination data, as a Python expression"
+msgstr ""
+"Filtrage de domaine facultatif des données de destination, sous forme "
+"d’expression Python"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__options
+msgid "Options"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__res_order_by_ids
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Orders by"
+msgstr "Triés par"
+
+#. module: pyper_web_view
+#: model:ir.model,name:pyper_web_view.model_ir_views_order_by
+msgid "Orders by of views"
+msgstr "Triés par de la vue"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__percentage
+msgid "Percentage"
+msgstr "Pourcentage"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views__category__personal
+msgid "Personal"
+msgstr "Personnelle"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,help:pyper_web_view.field_ir_views__editable
+msgid "Placing of the new record creation"
+msgstr "Placement de la création du nouvel enregistrement"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__editable
+msgid "Position of edition"
+msgstr "Position de l’édition"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__priority
+msgid "Priority"
+msgstr "Priorité"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__progress_circular
+msgid "Progress Circular"
+msgstr "Progression circulaire"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__progressbar
+msgid "Progressbar"
+msgstr "Barre de progression"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_group_by__grouping_type__quarter
+msgid "Quarter"
+msgstr "Trimestre"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2one
+msgid "Relation"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2one_avatar
+msgid "Relation Avatar"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2one_badge
+msgid "Relation Badge"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2one_image
+msgid "Relation Image"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__one2many
+msgid "Relation List"
+msgstr "Relation Liste"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__many2one_reference
+msgid "Relation Reference"
+msgstr "Relation Référence"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__relative_days
+msgid "Relative Days"
+msgstr "Jours relatifs"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__sample
+msgid "Sample"
+msgstr "Exemple"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.xml:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.xml:0
+#: model:ir.actions.act_window,name:pyper_web_view.action_ir_views
+#: model:ir.model,name:pyper_web_view.model_ir_views
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_actions_act_window__ir_views_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_ui_view__ir_views_id
+#: model:ir.ui.menu,name:pyper_web_view.menu_settings_views
+#, python-format
+msgid "Saved views"
+msgstr "Vues enregistrées"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_form
+msgid "Security"
+msgstr "Sécurité"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#, python-format
+msgid "Select a view"
+msgstr "Sélectionner une vue"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__selection
+msgid "Selection"
+msgstr "Sélection"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__selection_badge
+msgid "Selection Badge"
+msgstr "Sélection Badge"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__sequence
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__sequence
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__sequence
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "Share"
+msgstr "Partage"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views__category__shared
+msgid "Shared"
+msgstr "Partagée"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#, python-format
+msgid "Shared views"
+msgstr "Vues partagées"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__optional__show
+msgid "Show"
+msgstr "Afficher"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__slider
+msgid "Slider"
+msgstr "Curseur"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__sort
+msgid "Sort"
+msgstr "Tri"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__state_selection
+msgid "State Selection"
+msgstr "Sélection d’état"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views__category__system
+msgid "System"
+msgstr "Système"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_form
+msgid "Technical"
+msgstr "Technique"
+
+#. module: pyper_web_view
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_form
+msgid "Technical information"
+msgstr "Informations techniques"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__char
+msgid "Text"
+msgstr "Texte"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__char_image
+msgid "Text Image"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__text
+msgid "Textarea"
+msgstr "Zone de texte"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#, python-format
+msgid "This view is shared and will be removed for everyone."
+msgstr "Cette vue est partagée et sera supprimée pour tout le monde."
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views__editable__top
+msgid "Top"
+msgstr "En haut"
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_field__widget__url
+msgid "URL"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__user_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__user_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__user_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__user_id
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: pyper_web_view
+#: model:ir.model,name:pyper_web_view.model_ir_ui_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__ir_view_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__view_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_group_by__view_id
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_order_by__view_id
+#: model_terms:ir.ui.view,arch_db:pyper_web_view.view_ir_views_simple_form
+msgid "View"
+msgstr "Vue"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__view_mode
+msgid "View Mode"
+msgstr "Mode de vue"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views__shared
+msgid "View shared"
+msgstr "Vue partagée"
+
+#. module: pyper_web_view
+#. odoo-javascript
+#: code:addons/pyper/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#: code:addons/pyper_web_view/static/src/search/control_panel/views_switcher.js:0
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_group_by__grouping_type__week
+msgid "Week"
+msgstr "Semaine"
+
+#. module: pyper_web_view
+#: model:ir.model.fields,field_description:pyper_web_view.field_ir_views_field__widget
+msgid "Widget"
+msgstr ""
+
+#. module: pyper_web_view
+#: model:ir.model.fields.selection,name:pyper_web_view.selection__ir_views_group_by__grouping_type__year
+msgid "Year"
+msgstr "Année"

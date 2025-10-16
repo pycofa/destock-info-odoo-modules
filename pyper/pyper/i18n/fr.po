@@ -1,0 +1,91 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-21 14:56+0000\n"
+"PO-Revision-Date: 2024-01-21 14:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pyper
+#. odoo-javascript
+#: code:addons/pyper/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#: code:addons/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#, python-format
+msgid "%s days ago"
+msgstr "il y a %s jours"
+
+#. module: pyper
+#: model_terms:ir.ui.view,arch_db:pyper.webclient_offline
+msgid ""
+".card img {\n"
+"                filter: none;\n"
+"            }\n"
+"            .card button {\n"
+"                background-color:"
+msgstr ""
+
+#. module: pyper
+#: model_terms:ir.ui.view,arch_db:pyper.webclient_offline
+msgid ""
+";\n"
+"                border: 1px solid"
+msgstr ""
+
+#. module: pyper
+#: model_terms:ir.ui.view,arch_db:pyper.webclient_offline
+msgid "Check your network connection and come back here."
+msgstr "Vérifiez votre connexion réseau et revenez ici."
+
+#. module: pyper
+#. odoo-javascript
+#: code:addons/pyper/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#: code:addons/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#, python-format
+msgid "In %s days"
+msgstr "Dans %s jours"
+
+#. module: pyper
+#. odoo-javascript
+#: code:addons/pyper/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#: code:addons/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#, python-format
+msgid "Relative Days"
+msgstr "Jours relatifs"
+
+#. module: pyper
+#. odoo-javascript
+#: code:addons/pyper/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#: code:addons/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#, python-format
+msgid "Today"
+msgstr "Aujourd’hui"
+
+#. module: pyper
+#. odoo-javascript
+#: code:addons/pyper/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#: code:addons/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#, python-format
+msgid "Tomorrow"
+msgstr "Demain"
+
+#. module: pyper
+#. odoo-javascript
+#: code:addons/pyper/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#: code:addons/pyper/static/src/views/fields/relative_days/relative_days_field.js:0
+#, python-format
+msgid "Yesterday"
+msgstr "Hier"
+
+#. module: pyper
+#: model_terms:ir.ui.view,arch_db:pyper.webclient_offline
+msgid "will load as soon as you're back online."
+msgstr "se chargera dès que vous serez de nouveau en ligne."

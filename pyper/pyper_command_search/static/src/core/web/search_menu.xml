@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+<t t-name="pyper_command_search.SearchMenu">
+    <div class="o-dropdown dropdown o-dropdown--no-caret o-command-search-SearchSystray-class">
+        <button
+            type="button"
+            class="dropdown-toggle"
+            tabindex="0"
+            aria-expanded="false"
+            t-on-click="() => this.onClick()"
+        >
+            <i class="fa fa-lg fa-search" role="img" aria-label="Search"/>
+        </button>
+    </div>
+</t>
+
+</templates>

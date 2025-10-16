@@ -1,0 +1,17 @@
+// Tracking Value Common
+$o-mail-message-tracking-list-style: circle !default;
+$o-mail-message-tracking-font-weight: normal !default;
+
+// Tracking Value Old
+$o-mail-message-tracking-old-font-weight: $o-mail-message-tracking-font-weight !default;
+
+// Tracking Value New
+$o-mail-message-tracking-new-font-weight: $o-mail-message-tracking-font-weight !default;
+
+// Message bubble
+$o-mail-message-bubble-not-self-authored-border-color: #cbd5e1 !default;
+$o-mail-message-bubble-not-self-authored-bg: rgba($o-mail-message-bubble-not-self-authored-border-color, 0.5) !default;
+$o-mail-message-bubble-self-authored-border-color: #93c5fd !default;
+$o-mail-message-bubble-self-authored-bg: rgba($o-mail-message-bubble-self-authored-border-color, 0.5) !default;
+$o-mail-message-bubble-highlighted-from-mention-border-color: #fde047 !default;
+$o-mail-message-bubble-highlighted-from-mention-bg: rgba($o-mail-message-bubble-highlighted-from-mention-border-color, 0.5) !default;

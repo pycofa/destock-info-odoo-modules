@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_category_global" model="ir.ui.menu.category">
+        <field name="name">Global</field>
+    </record>
+
+    <record id="menu_category_website" model="ir.ui.menu.category">
+        <field name="name">Website</field>
+    </record>
+
+    <record id="menu_category_manager" model="ir.ui.menu.category">
+        <field name="name">Manager</field>
+        <field name="sequence">10000</field>
+    </record>
+</odoo>

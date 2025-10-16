@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_processor_generation_tree" model="ir.ui.view">
+        <field name="name">product.processor.generation.tree</field>
+        <field name="model">product.processor.generation</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="model_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_product_processor_generation_form" model="ir.ui.view">
+        <field name="name">product.processor.generation.form</field>
+        <field name="model">product.processor.generation</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="model_id"/>
+                            <field name="logo" widget="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_product_processor_generation" model="ir.actions.act_window">
+        <field name="name">Processors generation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.processor.generation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

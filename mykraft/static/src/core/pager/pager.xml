@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="Pager" t-inherit="web.Pager" t-inherit-mode="extension">
+        <xpath expr="//button[hasclass('o_pager_previous')]" position="attributes">
+            <attribute name="class" separator=" " remove="rounded-start" add="cp_btn"/>
+        </xpath>
+
+        <xpath expr="//button[hasclass('o_pager_next')]" position="attributes">
+            <attribute name="class" separator=" " remove="rounded-end" add="cp_btn"/>
+        </xpath>
+    </t>
+
+</templates>

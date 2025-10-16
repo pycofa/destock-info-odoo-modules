@@ -1,0 +1,175 @@
+<odoo>
+    <template id="customer_review_blocks" name="Customer review blocks">
+        <section
+            class="pt48 pb48 s_customer_review_blocks o_cc o_cc2"
+            data-snippet="s_customer_review_blocks"
+            data-name="Customer review blocks"
+        >
+        <t t-set="reviews_left" 
+            t-value="[
+                {
+                    'name': 'Sacha Grasskeeper',
+                    'text': 'I am so glad I discovered this product. It has transformed the way I manage my business. The customization options are amazing, and the support team is always helpful. Thank you!',
+                    'rating': 5,
+                    'time': '9h56 PM',
+                    'date': 'April 18, 2024',
+                    'img_url' : '/web/image/website.s_company_team_image_1'
+                },
+                {
+                    'name': 'Lily Rosemary',
+                    'text': 'I have been using this product for a few months now, and I am absolutely thrilled with the results. It has made my working days so much easier and more enjoyable. Highly recommend, you can trust them!',
+                    'rating': 5,
+                    'time': '13h02 PM',
+                    'date': 'June 22, 2024',
+                    'img_url' : '/web/image/website.s_company_team_image_3'
+                },
+                {
+                    'name': 'Alicia Bloom',
+                    'text': 'I was skeptical at first, but this tool has exceeded my expectations. It\'s user-friendly and has significantly improved my productivity. A must-have!',
+                    'rating': 4,
+                    'time': '9h20 AM',
+                    'date': 'June 30, 2024',
+                    'img_url' : '/web/image/website.s_company_team_image_4'
+                },
+                {
+                    'name': 'John Leaf',
+                    'text': 'This feature is a game-changer! It has saved me so much time and effort. The customer support is also fantastic. Five stars from me!',
+                    'rating': 5,
+                    'time': '11h52 AM',
+                    'date': 'August 3, 2024',
+                    'img_url' : '/web/image/website.s_company_team_image_2'
+                }
+            ]" 
+        />
+        <t t-set="reviews_right" 
+            t-value="[
+                {
+                    'name': 'Olivia Thyme',
+                    'text': 'his tool has been a lifesaver for my business. It has streamlined our processes and improved our efficiency. The customer support is top-notch. Five stars!',
+                    'rating': 5,
+                    'time': '19h23 PM',
+                    'date': 'May 6, 2024',
+                    'img_url' : '/web/image/website.s_company_team_image_4'
+                },
+                {
+                    'name': 'Fern Wood',
+                    'text': 'This is hands down a nice tool. It\'s intuitive, efficient, and has made my life so much easier',
+                    'rating': 3,
+                    'time': '13h21 PM',
+                    'date': 'June 17, 2024',
+                    'img_url' : '/web/image/website.s_company_team_image_2'
+                },
+                {
+                    'name': 'Hanna Ivy',
+                    'text': 'I really enjoy using this product, and I\'m really pleased with the results. Things are made easier and smoother, thank you.',
+                    'rating': 4,
+                    'time': '18h02 PM',
+                    'date': 'June 24, 2024',
+                    'img_url' : '/web/image/website.s_company_team_image_3'
+                },
+                {
+                    'name': 'John Leaf',
+                    'text': 'This feature is a game-changer! It has saved me so much time and effort. The customer support is also fantastic. Five stars from me!',
+                    'rating': 5,
+                    'time': '11h52 AM',
+                    'date': 'August 3, 2024',
+                    'img_url' : '/web/image/website.s_company_team_image_2'
+                }
+            
+            ]" 
+        />
+
+            <div class="container s_allow_columns text-center">
+                <div class="row -flex align-items-center">
+                    <!-- block reviews -->
+                    <div class="review-container container p-2 col-12 col-lg-8 order-2 order-lg-1 overflow-hidden">
+                        <div class="row  gx-0 d-flex flex-column  align-items-center flex-md-row">
+                            <!-- Col-left reviews -->
+                            <div class="col ms-sm-0 ms-md-4 me-sm-0 me-md-2 mt-4 mb-sm-0 mb-md-4">
+                                <div class="review-column row d-flex flex-column gap-3 " style="--gutter-x: 0px;">
+                                    <t t-foreach="reviews_left" t-as="review">
+                                        <t t-call="pyper_website_snippets.customer_review_block" t-options="{'review': review}"/>
+                                    </t>
+                                </div>
+                            </div>
+                            <!-- Col-right reviews -->
+                            <div class="col  ms-sm-0 ms-md-2 me-md-0 me-md-4 mt-4 mb-sm-0 mb-md-4">
+                                <div class="review-column row d-flex flex-column gap-3" style="--gutter-x: 0px;">
+                                    <t t-foreach="reviews_right" t-as="review">
+                                        <t t-call="pyper_website_snippets.customer_review_block" t-options="{'review': review}"/>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- block text -->
+                    <div class="col-12 col-lg-4 order-1 order-lg-2 text-sm-center text-lg-start py-3 ps-sm-0 ps-md-5">
+                        <div class="o_animate o_anim_fade_in o_anim_from_top mb-3" style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;">
+                            <p class="h6 text-primary  ">Customers reviews</p>
+                            <div class="row justify-content-center">
+                                <h2 class="">Show how much your services are loved</h2>
+                            </div>
+                        </div>
+                        <div class="o_animate o_anim_fade_in o_anim_from_bottom" style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;">
+                            <p class="h5 text-muted">The relationship with your customers is the cornerstone of any successful business. By nurturing your customers with love and care, you lay the groundwork for a thriving enterprise and a devoted community. </p>
+                            <div class="d-flex justify-content-center justify-content-lg-start  gap-2  py-5">
+                                <a class="btn btn-primary " href="#">Growing together</a>
+                                <a class="btn btn-secondary " href="#">More info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="customer_review_block" name="Customer review block">
+        <div 
+            class="d-flex flex-column gap-2 p-3 o_cc o_cc1 o_animate o_anim_fade_in o_anim_from_right"
+            style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s; border-radius: 20px!important;"
+        >
+            <!-- review header -->
+            <div class="d-flex flex-column flex-md-row align-items-center">
+                <div class="col-2">
+                    <div class="rounded-circle ratio ratio-1x1 overflow-hidden o_cc3">
+                        <img class="img-fluid" t-att-src="review['img_url']"/>
+                    </div>
+                </div>
+                <div class="col-10 ps-2">
+                    <div class="d-flex flex-column align-items-sm-center align-items-md-start ps-2">
+                        <p class="my-0 py-0 "><t t-out="review['name']"/></p>
+                        <p class="my-0 py-0 ">
+                            <span class="star" style="color: var(--primary)">
+                                <t t-foreach="range(review['rating'])" t-as="star">
+                                    <i class="fa fa-star me-1"/>
+                                </t>️
+                                <t t-foreach="range(5 - review['rating'])" t-as="star">
+                                    <i class="fa fa-star-o me-1"/>
+                                </t>️
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- review body -->
+             <div class="p-2 px-3 mt-2">
+                 <p class="text-sm-center text-md-start text-secondary"><t t-out="review['text']"/></p>
+             </div>
+            <!-- review footer -->
+            <div class="d-inline-flex justify-content-evenly px-2 text-muted">
+                <p class="mb-0"><t t-out="review['time']"/></p>
+                <p class="mb-0"><t t-out="review['date']"/></p>
+            </div>
+        </div>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_customer_review_blocks">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.customer_review_blocks"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_customer_review_blocks.svg">
+                <keywords>text, title, review, customer</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

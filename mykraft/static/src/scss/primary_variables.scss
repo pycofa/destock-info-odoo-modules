@@ -1,0 +1,278 @@
+// Color
+$o-white: #FFF;
+$o-black: #000;
+
+$o-gray-50: #fafafa;
+$o-gray-100: #f5f5f5;
+$o-gray-200: #e5e5e5;
+$o-gray-300: #d4d4d4;
+$o-gray-400: #a3a3a3;
+$o-gray-500: #737373;
+$o-gray-600: #525252;
+$o-gray-700: #404040;
+$o-gray-800: #262626;
+$o-gray-900: #171717;
+$o-gray-950: #0a0a0a;
+
+$o-extra-color: $o-gray-800;
+$o-extra-action-color: $o-extra-color;
+$link-color: $o-extra-color;
+
+$o-opacity-disabled: .5;
+$o-opacity-muted: .65;
+
+$o-brand-odoo: $o-extra-color;
+$o-brand-primary: $o-brand-odoo;
+$o-brand-secondary: $o-gray-700;
+$o-brand-lightsecondary: $o-gray-100;
+
+// Background
+$o-view-background-color: $o-white;
+$o-webclient-background-color: $o-view-background-color;
+
+// Text color
+$body-color: $o-gray-800;
+$headings-color: $body-color;
+$o-main-color-muted: $o-gray-500;
+$o-action: $o-gray-400;
+$o-main-text-color: $body-color;
+$o-main-link-color: $body-color;
+$code-color: $o-brand-primary;
+
+$list-group-color: $o-gray-600;
+$list-group-active-color: $o-gray-800;
+$list-group-active-bg: transparent;
+
+// Border
+$border-width: 0;
+$border-radius: 0rem;
+$border-color: transparent;
+
+$o-success: #5B9356;
+$o-info: #0b84fe;
+$o-warning: #ffac00;
+$o-danger: #e06561;
+$light: $o-gray-50;
+
+$o-theme-text-colors: (
+    "success": $o-success,
+    "info": $o-info,
+    "warning": $o-warning,
+    "danger": $o-danger,
+);
+
+// Typography
+$o-system-fonts: ('Archivo', Arial, sans-serif, "Apple Color Emoji");
+$font-size-base: 1rem;
+
+$o-headings-font-family: o-add-unicode-support-font(('Archivo', $o-system-fonts));
+
+// Component
+$o-component-active-color: $o-gray-100;
+$o-component-active-bg: rgba(255, 255, 255, 0);
+$o-component-bg: transparent;
+$o-component-active-border: $o-gray-700;
+
+// Container
+$container-size: 1320px;
+
+// List group
+$o-list-group-header-color: $o-gray-100;
+$o-list-footer-color: $o-gray-100;
+$o-list-footer-bg-color: transparent;
+$o-list-footer-font-weight: 500;
+
+// Control Panel
+$o-control-panel-background-color: $o-view-background-color;
+$o-control-panel-border-bottom: 1px solid $border-color;
+
+// Form
+$input-focus-bg: $o-gray-100;
+$o-input-padding-y: 1px;
+$o-input-padding-x: 0;
+$o-input-border-required: $o-white;
+$form-check-input-border: 1px solid $o-gray-500;
+$o-form-view-sheet-max-width: 100%;
+$slider-bg-color:$o-gray-700;
+$slider-track-height: 4px;
+$slider-thumb-height:16px;
+$progress-circular-underlay-color: $o-gray-100;
+$o-statusbar-height: 42px;
+
+// Badge
+$badge-border-radius: $border-radius;
+$o-badge-min-width: 2.7ch;
+
+// Button
+$btn-border-radius:  $badge-border-radius;
+$btn-border-radius-sm: $btn-border-radius;
+$btn-border-radius-lg: $btn-border-radius;
+
+$input-btn-padding-y: 0.4rem;
+$input-btn-padding-x: 0.4rem;
+
+$o-btns-bs-override: (
+    "primary": (
+        background: $o-brand-primary,
+        border: $o-brand-primary,
+        color: $o-white,
+        hover-background: darken($o-brand-primary, 5%),
+        hover-border: darken($o-brand-primary, 10%),
+        hover-color: $o-white,
+        active-background: mix($o-brand-primary, $o-white, 10%),
+        active-border: $o-brand-primary,
+        active-color:$o-brand-primary,
+    ),
+    "secondary": (
+        background: $o-gray-50,
+        border: $o-gray-50,
+        color: $o-gray-700,
+        hover-background: $o-gray-100,
+        hover-border: $o-gray-100,
+        hover-color: $o-gray-800,
+        active-background: $o-brand-primary,
+        active-border: $o-brand-primary,
+        active-color: $o-white,
+    ),
+    "light": (
+        background: $o-gray-100,
+        border: $o-gray-100,
+        color: $o-gray-800,
+        hover-background: $o-gray-200,
+        hover-border: $o-gray-200,
+        hover-color: $o-gray-900,
+        active-background: $o-component-active-bg,
+        active-border: $o-component-active-border,
+        active-color: $o-component-active-color,
+    ),
+);
+
+$o-btns-bs-outline-override: (
+    "secondary": (
+        background: transparent,
+        border: $o-gray-200,
+        color: $o-gray-700,
+        hover-background: $o-gray-200,
+        hover-border: $o-gray-300,
+        hover-color: $o-gray-800,
+        active-background: mix($o-extra-action-color, $o-white, 10%),
+        active-border: $o-extra-action-color,
+        active-color: $o-gray-900,
+    ),
+);
+$btn-padding-y-sm: 0.1rem;
+$btn-padding-x-sm:0.5rem;
+
+// Kanban
+// Kanban
+$o-kanban-background : $o-white;
+$o-kanban-background-hover: $o-gray-200;
+$kanban-card-background: $o-gray-50;
+$kanban-card-background-hover: $o-gray-100;
+$o-kanban-inside-hgutter: 12px;
+$o-kanban-group-padding: 12px;
+$o-kanban-progressbar-height: 0.5rem;
+
+
+// Fields
+$o-main-favorite-color: $o-brand-primary;
+
+// Cards
+$card-bg: $o-gray-200;
+$card-border-color: $border-color;
+$card-inner-border-radius: 0;
+
+// Dropdown
+$dropdown-bg: $o-white;
+$dropdown-border-width: 0;
+$dropdown-link-hover-color: $o-brand-primary;
+$dropdown-link-hover-bg: $o-gray-100;
+$dropdown-color: $o-gray-800 !important;
+$dropdown-header-color: $dropdown-color;
+$dropdown-border-color: transparent;
+$dropdown-border-radius: $border-radius;
+$o-navbar-dropdown-menu-border-radius: $dropdown-border-radius;
+$o-navbar-dropdown-menu-border-top: 0;
+
+// Navbar
+$o-navbar-height: 80px;
+$o-navbar-padding-v: 24px;
+$o-navbar-font-size: 0.925rem;
+$o-navbar-background: $o-view-background-color;
+
+$o-navbar-entry-color: $o-gray-400;
+$o-navbar-entry-color--hover: $o-brand-primary;
+$o-navbar-entry-bg--hover: $o-gray-300 !important;
+$o-navbar-entry-color--active: $o-brand-primary;
+$o-navbar-entry-bg--active: transparent !important;
+
+$o-navbar-root-menu-entry-color: $o-navbar-entry-color;
+
+// Drawer
+$o-drawer-width: 280px;
+$o-drawer-item-font-size:0.9375rem;
+$o-drawer-item-icon-width: 24px;
+$o-drawer-item-color: #818793;
+$o-drawer-item-hover-color: $o-gray-200;
+$o-drawer-item-icon-color: $o-drawer-item-color;
+$o-drawer-item-padding-v: 8px;
+$o-drawer-item-nav-margin-h: 20px;
+$o-drawer-item-padding-h: 20px;
+$o-drawer-item-icon-gap: 10px;
+$o-drawer-mini-width: 90px;
+$o-drawer-item-nav-margin-bottom:0px;
+$o-drawer-bg: #1C1F26;
+$o-drawer-border-color: transparent;
+$o-drawer-item-active-color: $o-white;
+$o-drawer-item-active-bg: #2a3042;
+$o-drawer-item-hover-bg: #2a3042;
+$o-drawer-item-icon-border-radius: 0;
+$o-drawer-item-icon-border-radius:$border-radius;
+
+$o-drawer-subitem-margin-bottom: 0;
+$o-drawer-subitem-block-padding-v: 4px;
+$o-drawer-subitem-active-color:$o-white;
+$o-drawer-subitem-active-bg:$o-drawer-item-active-bg;
+$o-drawer-subitem-padding-v: $o-drawer-item-padding-v;
+
+$o-drawer-category-label-color: $o-gray-500;
+$o-drawer-category-label-padding-h: $o-drawer-item-padding-h + 6px;
+$o-drawer-category-label-margin-top: 12px;
+
+$o-drawer-header-padding-x: 1rem;
+$o-drawer-header-user-block-bg: transparent;
+$o-drawer-header-user-block-bg-hover: #2a3042;
+$o-drawer-header-user-avatar-size: 30px;
+$o-drawer-header-user-font-size: 1rem;
+$o-drawer-header-user-block-color: $o-gray-100;
+$o-drawer-header-user-avatar-radius: 100%;
+$o-drawer-header-action-btn-color: $o-drawer-item-icon-color;
+$o-drawer-header-action-btn-hover-color: $o-black;
+$o-drawer-header-action-btn-font-size: 1.25rem;
+
+$o-drawer-messages-block-bg: $o-drawer-bg;
+$o-drawer-activity-title-color: $o-gray-800;
+$o-drawer-header-activity-btn-border: none;
+$o-drawer-header-activity-btn-border-hover: none;
+
+// Chatter
+$p-mail-message-bubble-self-authored-color: $o-white!important;
+$p-mail-message-bubble-self-authored-bg: $o-brand-primary;
+$o-mail-Chatter-minWidth: 400px;
+$o-mail-Avatar-size: 20px;
+$o-mail-Message-sidebarWidth: 28px;
+$p-mail-message-bubble-bg: $o-gray-100;
+$p-mail-message-bubble-color: $o-gray-800;
+
+// Accordion
+$accordion-button-padding-y: 1.5rem;
+$accordion-button-color: $o-black;
+$accordion-button-active-color: $accordion-button-color;
+$accordion-button-bg: $o-white;
+$accordion-button-active-bg:$accordion-button-bg;
+
+// Table
+$table-hover-bg: $o-gray-50;
+$table-cell-padding-y: 0.50rem;
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xml:space="preserve">
+
+    <t t-name="pyper.ProgressCircular">
+        <div
+            t-if="!isEmpty"
+            t-att-class="classes"
+            role="progressbar"
+            t-att-aria-valuemin="props.min"
+            t-att-aria-valuemax="props.max"
+            t-att-aria-valuenow="props.indeterminate ? undefined : normalizedValue.value"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                t-att-viewBox="`0 0 ${diameter} ${diameter}`"
+                t-att-style="svgStyles"
+            >
+                <circle
+                    class="progress-circular--underlay"
+                    fill="transparent"
+                    cx="50%"
+                    cy="50%"
+                    t-att-r="magicRadiusConstant"
+                    t-att-stroke-width="strokeWidth"
+                    t-att-stroke-dasharray="strokeDashArray"
+                    t-att-stroke-dashoffset="0"
+                  />
+
+                <circle
+                    class="progress-circular--overlay"
+                    fill="transparent"
+                    cx="50%"
+                    cy="50%"
+                    t-att-r="magicRadiusConstant"
+                    t-att-stroke-width="strokeWidth"
+                    t-att-stroke-dasharray="strokeDashArray"
+                    t-att-stroke-dashoffset="strokeDashOffset"
+                />
+            </svg>
+
+            <t t-slot="default" value="value" normalizedValue="normalizedValue">
+                <div class="progress-circular--content">
+                    <t t-if="props.displayValue" t-out="formattedValue"/>
+                </div>
+            </t>
+        </div>
+    </t>
+
+</template>

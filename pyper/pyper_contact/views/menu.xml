@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_companies"
+        name="Companies"
+        sequence="1"
+        parent="contacts.menu_contacts"
+        action="pyper_contact.action_companies"
+    />
+
+    <menuitem
+        id="menu_persons"
+        name="Persons"
+        sequence="1"
+        parent="contacts.menu_contacts"
+        action="pyper_contact.action_persons"
+    />
+
+    <menuitem
+        id="importer_root"
+        name="Importer"
+        sequence="5"
+        parent="contacts.menu_contacts"
+    />
+
+    <menuitem
+        id="company_importer"
+        name="Importer company"
+        sequence="1"
+        parent="pyper_contact.importer_root"
+    />
+
+    <menuitem
+        id="person_importer"
+        name="Import person"
+        sequence="2"
+        parent="pyper_contact.importer_root"
+    />
+</odoo>

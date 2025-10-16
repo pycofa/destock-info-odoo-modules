@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_promo_carousel_group_user,promo_carousel group_user,model_promo_carousel,base.group_user,1,1,1,1
+access_promo_carousel_group_portal,promo_carousel group_portal,model_promo_carousel,base.group_portal,1,0,0,0

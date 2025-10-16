@@ -1,0 +1,72 @@
+<odoo>
+    <template id="four_columns_title_text" name="4 columns with icon">
+        <section
+            class="s_text_image o_colored_level pt104 pb112 o_cc o_cc1"
+            data-snippet="s_text_image"
+            data-name="Texte - Image"
+        >
+            <div class="container">
+                <div class="text-start mb-4">
+                    <p class="text-muted fs-3 mb-1">Une plateforme pensée pour les TPE et PME qui veulent garder l’agilité</p>
+                    <h2>Avec Bendr, accédez à des outils simples mais puissants pour booster votre activité</h2>
+                </div>
+
+                <div class="row align-items-stretch">
+                    <div class="col-12 col-md-6 col-lg-3 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class="o_colored_level h-100">
+                            <span class="ph ph-user-focus fa-3x mb-3"/>
+                            <h3 class="fs-3 o_default_snippet_text">Une interface simple, mais ultra-efficace</h3>
+                            <p class="mb-0">Chez Bendr, nous croyons que la simplicité n’exclut pas l’efficacité. C’est
+                                pourquoi nous avons conçu une interface moderne et intuitive, accessible à tous, même
+                                sans compétences techniques. Vous prenez le contrôle, sans prise de tête..
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.2s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class="o_colored_level h-100">
+                            <span class="ph ph-chart-bar-horizontal fa-3x mb-3"/>
+                            <h3 class="fs-3 o_default_snippet_text">Gérez tout, en un seul endroit</h3>
+                            <p class="mb-0">Suivi des ventes, gestion des clients, facturation,… Bendr regroupe toutes
+                                vos opérations en un seul outil pour une vision claire et immédiate de votre entreprise.
+                                Vous n’avez plus besoin de jongler entre plusieurs logiciels.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.4s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class="o_colored_level h-100">
+                            <span class="ph ph-binoculars fa-3x mb-3"/>
+                            <h3 class="fs-3 o_default_snippet_text">Conçu pour les petites structures</h3>
+                            <p class="mb-0">Les grandes solutions d’ERP ne sont souvent pas adaptées aux réalités des petites entreprises. Bendr a été pensé pour les TPE et PME avec un seul objectif : vous permettre de vous concentrer sur l’essentiel, votre activité, sans vous perdre dans des fonctionnalités complexes et inutiles.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 p-3 o_anim_fade_in o_animate o_anim_from_bottom"
+                         style="animation-delay: 0.6s; animation-duration: 0.4s; --wanim-intensity: 20;">
+                        <div class="o_colored_level h-100">
+                            <span class="ph ph-sliders fa-3x mb-3"/>
+                            <h3 class="fs-3 o_default_snippet_text">Personnalisez vos propres vues</h3>
+                            <p class="mb-0">La plus grande force de Bendr réside dans sa personnalisation des vues qui vous permet de choisir ce que vous voulez voir pour l’avoir de manière accessible tout le temps..</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="container d-flex align-items-center justify-content-start mt-4 gap-2">
+                    <a href="/contactus" class="btn btn-primary">Demander une démonstration</a>
+                    <a href="/contactus" class="btn btn-secondary">Tarification</a>
+                </p>
+            </div>
+        </section>
+    </template>
+
+     <template id="four_columns_title_text_menu" inherit_id="website.snippets" name="CTA section">
+        <xpath expr="//div[@id='snippet_destockinfo']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="destockinfo_website.four_columns_title_text"
+               t-thumbnail="/destockinfo_website/static/img/snippets/snippet_thumb/s_four_columns_grid.svg">
+                <keywords>columns, title</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- My views -->
+    <record id="action_settings_menu_category_my_views" model="ir.actions.act_window">
+        <field name="name">Settings my views</field>
+        <field name="res_model">ir.ui.menu</field>
+        <field name="view_id" ref="base.edit_menu"/>
+        <field name="view_mode">tree</field>
+        <field name="mobile_view_mode">tree</field>
+        <field name="search_view_id" ref="base.edit_menu_access_search"/>
+        <field name="domain">[('user_id', '=', uid), ('category_id', '=', active_id)]</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'ir.ui.menu.full_list': True,
+            'create': False,
+            'delete': False,
+        }</field>
+    </record>
+
+    <record id="menu_category_my_views" model="ir.ui.menu.category">
+        <field name="name">My views</field>
+        <field name="sequence">900</field>
+        <field name="ir_action_id" ref="action_settings_menu_category_my_views"/>
+    </record>
+
+    <!-- Shared views -->
+    <record id="action_settings_menu_category_shared_views" model="ir.actions.act_window">
+        <field name="name">Settings shared views</field>
+        <field name="res_model">ir.ui.menu</field>
+        <field name="view_id" ref="base.edit_menu"/>
+        <field name="view_mode">tree</field>
+        <field name="mobile_view_mode">tree</field>
+        <field name="search_view_id" ref="base.edit_menu_access_search"/>
+        <field name="domain">[('user_id', '=', uid), ('category_id', '=', active_id)]</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'ir.ui.menu.full_list': True,
+            'create': False,
+            'delete': False,
+        }</field>
+    </record>
+
+    <record id="menu_category_shared_views" model="ir.ui.menu.category">
+        <field name="name">Shared views</field>
+        <field name="sequence">910</field>
+        <field name="ir_action_id" ref="action_settings_menu_category_shared_views"/>
+    </record>
+</odoo>

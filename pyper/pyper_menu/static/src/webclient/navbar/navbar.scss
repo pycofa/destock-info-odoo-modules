@@ -1,0 +1,13 @@
+// = Navbar
+// ============================================================================
+
+.o_menu_systray--root-menu {
+    .dropdown-item {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: -$o-menu-icon-navbar-systray-padding-v;
+        margin-bottom: -$o-menu-icon-navbar-systray-padding-v;
+        display: flex;
+        align-items: center;
+    }
+}

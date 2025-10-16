@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website_buyback_request.model_buyback_request" model="ir.model">
+        <field name="website_form_key">buyback_request</field>
+        <field name="website_form_access">True</field>
+        <field name="website_form_label">Create Buyback Request</field>
+    </record>
+
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>buyback.request</value>
+        <value eval="[
+        'attached_file',
+        'name',
+        'subject',
+        'phone',
+        'email',
+        'content',
+        ]"/>
+    </function>
+
+</odoo>

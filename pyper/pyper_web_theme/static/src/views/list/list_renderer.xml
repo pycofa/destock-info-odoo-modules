@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme.ListRenderer" t-inherit="web.ListRenderer" t-inherit-mode="extension">
+        <!-- Override table default css class -->
+        <xpath expr="//table[contains(@t-attf-class, 'o_list_table')]" position="attributes">
+            <attribute name="t-attf-class">o_list_table table table-hover position-relative mb-0</attribute>
+        </xpath>
+    </t>
+
+    <t t-name="pyper_web_theme.ListRenderer.RecordRow" t-inherit="web.ListRenderer.RecordRow" t-inherit-mode="extension">
+        <!-- Override table default css class -->
+        <xpath expr="//ViewButton" position="attributes">
+            <attribute name="onClick"/>
+        </xpath>
+    </t>
+</templates>

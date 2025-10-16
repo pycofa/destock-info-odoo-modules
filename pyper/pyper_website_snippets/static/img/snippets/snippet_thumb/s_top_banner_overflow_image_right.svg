@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 82 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #79d1f2;
+      }
+
+      .cls-2 {
+        fill-opacity: .3;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #f3ec60;
+      }
+
+      .cls-7 {
+        fill: url(#Dégradé_sans_nom_4);
+      }
+
+      .cls-8 {
+        fill: url(#Dégradé_sans_nom_5);
+      }
+
+      .cls-9 {
+        fill: url(#Dégradé_sans_nom_2);
+      }
+
+      .cls-10 {
+        fill: url(#Dégradé_sans_nom_3);
+      }
+
+      .cls-5 {
+        fill-opacity: .8;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_2" data-name="Dégradé sans nom 2" x1="-4874.2" y1="-122.3" x2="-4874.7" y2="-122.4" gradientTransform="translate(105835.1 1665.7) scale(21.7 13.3)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#008374"/>
+      <stop offset="1" stop-color="#006a59"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_3" data-name="Dégradé sans nom 3" x1="-4961.8" y1="-208.7" x2="-4962.5" y2="-208.5" gradientTransform="translate(171784 4373.4) scale(34.6 20.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00aa89"/>
+      <stop offset="1" stop-color="#009989"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_4" data-name="Dégradé sans nom 4" x1="-4874.2" y1="-122.1" x2="-4874.8" y2="-122.2" gradientTransform="translate(105835.1 1665.7) scale(21.7 13.3)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#008374"/>
+      <stop offset="1" stop-color="#006a59"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_5" data-name="Dégradé sans nom 5" x1="-4961.7" y1="-208.4" x2="-4962.3" y2="-208.2" gradientTransform="translate(171784 4373.4) scale(34.6 20.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00aa89"/>
+      <stop offset="1" stop-color="#009989"/>
+    </linearGradient>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Calque_1">
+      <g>
+        <path class="cls-1" d="M75.4,41.5c3.4-2.1,7.8-3.4,12.9-3.6V14.4h-40.5v16.9c12,0,22.3,4.2,27.7,10.2ZM79.5,15.8c3.5,0,6.4,2.8,6.4,6.1s-2.9,6.1-6.4,6.1-6.4-2.8-6.4-6.1,2.9-6.1,6.4-6.1Z"/>
+        <ellipse class="cls-6" cx="79.5" cy="21.9" rx="6.4" ry="6.1"/>
+        <path class="cls-1" d="M78.1,45.7h10.2v-7.8c-5,.3-9.5,1.5-12.9,3.6,1.1,1.3,2.1,2.7,2.7,4.2Z"/>
+        <path class="cls-9" d="M78.1,45.7h10.2v-7.8c-5,.3-9.5,1.5-12.9,3.6,1.1,1.3,2.1,2.7,2.7,4.2Z"/>
+        <path class="cls-1" d="M75.4,41.5c-5.3-6-15.6-10.1-27.7-10.2v14.4h23.3c1-1.5,2.5-2.9,4.3-4.2Z"/>
+        <path class="cls-10" d="M75.4,41.5c-5.3-6-15.6-10.1-27.7-10.2v14.4h23.3c1-1.5,2.5-2.9,4.3-4.2Z"/>
+        <path class="cls-1" d="M75.4,41.5c-2,1.1-3.4,2.7-4.3,4.2h7c-.6-1.4-1.5-2.8-2.7-4.2Z"/>
+        <path class="cls-7" d="M75.4,41.5c-2,1.1-3.4,2.7-4.3,4.2h7c-.6-1.4-1.5-2.8-2.7-4.2Z"/>
+        <path class="cls-8" d="M75.4,41.5c-2,1.1-3.4,2.7-4.3,4.2h7c-.6-1.4-1.5-2.8-2.7-4.2Z"/>
+        <path class="cls-4" d="M46,12.6v18.7h.8V13.4h42.5v24.4h.8V12.6h-44.1Z"/>
+        <path class="cls-4" d="M47.8,31.3V14.4h40.5v23.5h1V13.4h-42.5v17.9h.4c.1,0,.4,0,.6,0Z"/>
+        <path class="cls-4" d="M89.3,37.9v8.9h-10.8c0,.3.1.4.1.7h11.5v-9.6h-.8Z"/>
+        <path class="cls-4" d="M88.3,45.7h-10.2c.1.4.3.7.4,1.1h10.8v-8.9h-1v7.8Z"/>
+        <path class="cls-4" d="M70.1,47.5c0-.3.1-.4.3-.7h-23.6v-15.5h-.8v16.2s24.2,0,24.2,0Z"/>
+        <path class="cls-4" d="M70.4,46.8c.1-.4.4-.7.6-1.1h-23.3v-14.4h-1v15.5h23.7Z"/>
+        <path class="cls-4" d="M70.4,46.8c0,.3-.3.4-.3.7h8.5c0-.3,0-.4-.1-.7h-8.1Z"/>
+        <path class="cls-4" d="M71.1,45.7c-.3.4-.4.7-.6,1.1h8.1c0-.4-.3-.7-.4-1.1h-7.1Z"/>
+      </g>
+      <g>
+        <rect id="path-5" x="7" y="23" width="25" height="2"/>
+        <rect id="path-5-2" class="cls-5" x="7" y="23" width="25" height="2"/>
+      </g>
+      <g>
+        <path id="path-7" class="cls-3" d="M30,35v1H7v-1h23ZM26,32v1H7v-1h19ZM30,29v1H7v-1h23Z"/>
+        <path id="path-7-2" class="cls-2" d="M30,35v1H7v-1h23ZM26,32v1H7v-1h19ZM30,29v1H7v-1h23Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

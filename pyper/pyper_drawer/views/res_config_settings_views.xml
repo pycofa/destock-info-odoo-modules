@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="1024"/>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='pyper_settings']" position="inside">
+                <block title="Drawer" name="pyper_drawer_settings" groups="base.group_erp_manager">
+                    <setting help="Display only the root menu items in Drawer as applications with icons">
+                        <field name="drawer_show_root_app"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_nav"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_fixed_top"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_always_header"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_always_footer"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_always_mini"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_minifiable"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_init_minified"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_popover_minified"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_close_action"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_close_on_click"/>
+                    </setting>
+
+                    <setting help="Allow to close all opened menu items in drawer with children on menu item is selected">
+                        <field name="drawer_close_all_unactivated_items_on_select"/>
+                    </setting>
+
+                    <setting help="Hide the menu items if the category is not defined or is in global category">
+                        <field name="drawer_hide_empty_category"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_hide_category_label_full"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_hide_category_label_minified"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_show_category_section_minified"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_disabled_on_small_screen"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_hide_navbar_apps_menu"/>
+                    </setting>
+
+                    <setting help="Number of levels that can be displayed for submenus. Set to -1 for no limit">
+                        <field name="drawer_sub_items_depth"/>
+                    </setting>
+
+                     <setting help="Display the next items in sub panel">
+                        <field name="drawer_next_items_sub_panel"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_drag_end_ratio"/>
+                    </setting>
+                </block>
+
+                <block title="Drawer Toggler" name="pyper_drawer_toggler_settings" groups="base.group_erp_manager">
+                    <setting>
+                        <field name="drawer_toggler_auto_hide"/>
+                    </setting>
+
+                    <setting>
+                        <field name="drawer_toggler_use_caret_icon"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

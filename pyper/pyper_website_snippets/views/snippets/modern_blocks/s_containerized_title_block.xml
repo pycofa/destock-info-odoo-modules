@@ -1,0 +1,58 @@
+<odoo>
+    <template id="containerized_title_block" name="Containerized title block">
+        <section
+            class="pt48 pb48 o_cc o_cc1"
+            data-snippet="s_containerized_title_block"
+            data-name="Containerized title block"
+        >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 p-5 o_cc o_cc5" data-name="Title block">
+                        <div class="row">
+                            <div class="col-12 col-md-8 p-5">
+                                <div class="col-12 text-center text-md-start mb-3">
+                                    <p 
+                                        class="h6 text-primary o_animate o_anim_fade_in o_anim_from_right"
+                                        style="--wanim-intensity: 20;animation-delay: 0.0s;animation-duration: 0.4s;"
+                                    >
+                                        Ready to fill up container
+                                    </p>
+                                    <div 
+                                        class="row justify-content-start o_animate o_anim_fade_in o_anim_from_right"
+                                        style="--wanim-intensity: 20;animation-delay: 0.2s;animation-duration: 0.4s;"
+                                    >
+                                        <h2 class="">Explore our software solutions to unleash your potential now!</h2>
+                                    </div>
+                                    <div class="row">
+                                        <p 
+                                            class="h5 text-muted o_animate o_anim_fade_in o_anim_from_right"
+                                            style="--wanim-intensity: 20;animation-delay: 0.4s;animation-duration: 0.4s;"
+                                        >
+                                            Our advanced analytics tools are the backbone of our business. A devoted staff of data-driven decision-makers. We are proud offering cutting-edge features and unparalleled quality.
+                                        </p>
+                                        <div 
+                                            class="d-flex justify-content-center justify-content-md-start gap-2 mt-5 o_animate o_anim_fade_in o_anim_from_right"
+                                            style="--wanim-intensity: 20;animation-delay: 0.6s;animation-duration: 0.4s;"    
+                                        >
+                                            <a class="btn btn-primary" href="#">Getting started</a>
+                                            <a class="btn btn-secondary" href="#">Ask for a demo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_containerized_title_block">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.containerized_title_block"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_containerized_title_block.svg">
+                <keywords>title, text, banner, image</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

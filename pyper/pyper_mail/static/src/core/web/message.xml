@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_mail.Message" t-inherit="mail.Message" t-inherit-mode="extension">
+        <!-- Activity to Message -->
+        <xpath expr="//t[@name='hasTrackingValue']//div[hasclass('o-mail-Message-body')]/t" position="before">
+            <em t-if="message.subject and !message.isSubjectSimilarToOriginThreadName and !message.isSubjectDefault" class="d-block mb-2 me-2">Summary: <t t-out="props.messageSearch?.highlight(message.subject) ?? message.subject"/></em>
+        </xpath>
+
+        <xpath expr="//t[@name='hasTrackingValue']//div[hasclass('o-mail-Message-body')]/t" position="after">
+            <em t-if="message.feedback" class="d-block mt-2 me-2">Feedback:</em>
+            <t t-if="message.feedback" t-out="props.messageSearch?.highlight(message.feedback) ?? message.feedback"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Message-textContent')]/t" position="before">
+            <div t-if="message.type === 'notification' and message.mail_activity_type_name and !message.body">
+                <em t-if="message.subject and !message.isSubjectSimilarToOriginThreadName and !message.isSubjectDefault" class="d-block mb-2 me-2">Summary: <t t-out="props.messageSearch?.highlight(message.subject) ?? message.subject"/></em>
+
+                <em t-if="message.feedback" class="d-block mt-2 me-2">Feedback:</em>
+                <t t-if="message.feedback" t-out="props.messageSearch?.highlight(message.feedback) ?? message.feedback"/>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o-mail-Message-body')]//div[@t-ref='shadowBody']" position="attributes">
+            <attribute name="t-if" separator=" " add="and message.body"/>
+        </xpath>
+    </t>
+</templates>

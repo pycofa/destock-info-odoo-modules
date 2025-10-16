@@ -1,0 +1,231 @@
+<odoo>
+    <template id="tab_references" name="Tab references">
+        <section
+            class="s_tabs s_tab_references py-5 o_cc o_cc1"
+            data-snippet="s_tab_references"
+            data-name="Tab references"
+        >
+            <t t-set="references_data" 
+                t-value="[
+                    {
+                        'id': 0,
+                        'name': 'Blank Hill',
+                        'logo_url':'/web/image/website.s_reference_demo_image_1',
+                        'img_url': '/website/static/src/img/library/team.jpg',
+                        'text': 'YourCompany has been an exceptional partner for Blank Hill. Their expertise and professionalism have greatly contributed to our success. They truly make the hill more blank!',
+                        'signature': 'Hillary Blacky, CEO of Blank Hill',
+                    },
+                    {
+                        'id': 1,
+                        'name': 'Sea Time Clothing',
+                        'logo_url':'/web/image/website.s_reference_demo_image_2',
+                        'img_url': '/website/static/src/img/library/shop.jpg',
+                        'text': 'YourCompany brings Sea Time at the forefront of fashion. Their commitment to quality and innovation is unmatched. They make every moment feel like a sea of time!',
+                        'signature': 'Marina Seanatra, Director of Sea Time',
+                    },
+                    {
+                        'id': 2,
+                        'name': 'Eshley Jud',
+                        'logo_url':'/web/image/website.s_reference_demo_image_3',
+                        'img_url': '/website/static/src/img/library/business_conference.jpg',
+                        'text': 'YourCompany has transformed our vision into reality. Their talented team and creative approach have made all the difference. They truly judge the best!',
+                        'signature': 'Judith Eshley, Founder of Eshley Jud',
+                    },
+                    {
+                        'id': 3,
+                        'name': 'Black Forest Style',
+                        'logo_url':'/web/image/website.s_reference_demo_image_4',
+                        'img_url': '/website/static/src/img/library/marketing.jpg',
+                        'text': 'YourCompany has brought a unique touch to Black Forest projects. Their attention to detail and commitment to excellence have made our work stand out in the forest of competition.',
+                        'signature': 'White Woody, CEO of Black Forest Style',
+                    },
+                    {
+                        'id': 4,
+                        'name': 'Montreal',
+                        'logo_url':'/web/image/website.s_reference_demo_image_5',
+                        'img_url': '/website/static/src/img/backgrounds/peak.jpg',
+                        'text': 'YourCompany has been a fantastic partner for Montreal team. Their innovative solutions and dedication to customer satisfaction have truly elevated our business to new heights.',
+                        'signature': 'Monty Real, Founder of Montreal',
+                    }
+                ]" 
+            />
+            <div class="container s_tab_references_wrapper">
+                <div class="s_tabs_main s_tab_references_main">
+                    <div class="s_tabs_nav mb-3">
+                        <ul class="nav nav-pills" role="tablist">
+                            <!-- nav-item #1 -->
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="nav_tabs_link_1" data-bs-toggle="tab" href="#nav_tabs_content_1" role="tab" aria-controls="nav_tabs_content_1" aria-selected="true">
+                                    <t t-set="ref_data" t-value="references_data[0]" />
+                                    <t t-call="pyper_website_snippets.tab_references_nav_item"/>
+                                </a>
+                            </li>
+                            <!-- nav-item #2 -->
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="nav_tabs_link_2" data-bs-toggle="tab" href="#nav_tabs_content_2" role="tab" aria-controls="nav_tabs_content_2" aria-selected="false">
+                                    <t t-set="ref_data" t-value="references_data[1]" />
+                                    <t t-call="pyper_website_snippets.tab_references_nav_item"/>
+                                </a>
+                            </li>
+                            <!-- nav-item #3 -->
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="nav_tabs_link_3" data-bs-toggle="tab" href="#nav_tabs_content_3" role="tab" aria-controls="nav_tabs_content_3" aria-selected="false">
+                                    <t t-set="ref_data" t-value="references_data[2]" />
+                                    <t t-call="pyper_website_snippets.tab_references_nav_item"/>
+                                </a>
+                            </li>
+                            <!-- nav-item #4 -->
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="nav_tabs_link_3" data-bs-toggle="tab" href="#nav_tabs_content_3" role="tab" aria-controls="nav_tabs_content_3" aria-selected="false">
+                                    <t t-set="ref_data" t-value="references_data[3]" />
+                                    <t t-call="pyper_website_snippets.tab_references_nav_item"/>
+                                </a>
+                            </li>
+                            <!-- nav-item #5 -->
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="nav_tabs_link_3" data-bs-toggle="tab" href="#nav_tabs_content_3" role="tab" aria-controls="nav_tabs_content_3" aria-selected="false">
+                                    <t t-set="ref_data" t-value="references_data[4]" />
+                                    <t t-call="pyper_website_snippets.tab_references_nav_item"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- s_tabs_content -->
+                    <div class="s_tabs_content tab-content">
+                        <!-- panel #1 -->
+                        <div class="tab-pane fade show active" id="nav_tabs_content_1" role="tabpanel" aria-labelledby="nav_tabs_link_1">
+                            <div class="oe_structure oe_empty">
+                                <t t-set="ref_data" t-value="references_data[0]" />
+                                <t t-call="pyper_website_snippets.tab_references_pannel_item"/>
+                            </div>
+                        </div>
+                        <!-- panel #2 -->
+                        <div class="tab-pane fade" id="nav_tabs_content_2" role="tabpanel" aria-labelledby="nav_tabs_link_2">
+                            <div class="oe_structure oe_empty">
+                                <t t-set="ref_data" t-value="references_data[1]" />
+                                <t t-call="pyper_website_snippets.tab_references_pannel_item"/>
+                            </div>
+                        </div>
+                        <!-- panel #3 -->
+                        <div class="tab-pane fade" id="nav_tabs_content_3" role="tabpanel" aria-labelledby="nav_tabs_link_3">
+                            <div class="oe_structure oe_empty">
+                                <t t-set="ref_data" t-value="references_data[2]" />
+                                <t t-call="pyper_website_snippets.tab_references_pannel_item"/>
+                            </div>
+                        </div>
+                        <!-- panel #4 -->
+                        <div class="tab-pane fade" id="nav_tabs_content_4" role="tabpanel" aria-labelledby="nav_tabs_link_4">
+                            <div class="oe_structure oe_empty">
+                                <t t-set="ref_data" t-value="references_data[3]" />
+                                <t t-call="pyper_website_snippets.tab_references_pannel_item"/>
+                            </div>
+                        </div>
+                        <!-- panel #5 -->
+                        <div class="tab-pane fade" id="nav_tabs_content_5" role="tabpanel" aria-labelledby="nav_tabs_link_5">
+                            <div class="oe_structure oe_empty">
+                                <t t-set="ref_data" t-value="references_data[4]" />
+                                <t t-call="pyper_website_snippets.tab_references_pannel_item"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Nav item sub-template -->
+    <template id="tab_references_nav_item" name="Tab references nav item">
+        <div class="pannel_wrapper" style="height:80px;"  data-name="Nav Image Box">
+            <img t-att-src="ref_data['logo_url']" style="width:100%; height:100%; object-fit:cover;"/>
+        </div>
+    </template>
+
+    <!-- Nav pannel sub-template -->
+    <template id="tab_references_pannel_item" name="Tab references pannel item">
+        <section class="s_tab_references_content" data-name="Content section">
+            <div class="container s_allow_columns">
+                <div class="row">
+                    <div class="col p-3 o_cc o_cc2" data-name="Content box">
+                        <div class="row">
+                            <div class="col-12 col-lg-5"  data-name="Content Image">
+                                <img t-att-src="ref_data['img_url']" style="width:100%; height:100%; object-fit:cover;"/>
+                            </div>
+                            <div class="col-12 col-lg-7"  data-name="Content Text">
+                                <div class="d-flex flex-column h-100 justify-content-between" style="">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex flex-column position-relative">
+                                            <p 
+                                                class="h1 display-1 text-primary position-absolute o_anim_fade_in o_animate o_animate_both_scroll o_anim_from_left"
+                                                style="animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                                            >“</p>
+                                            <p class="p-5 h4"><t t-out="ref_data['text']" /></p>
+                                            <p 
+                                                class="h1 display-1 text-primary position-absolute end-0 o_anim_fade_in o_animate o_animate_both_scroll o_anim_from_right"
+                                                style="bottom:-3rem; animation-delay: 0.0s; animation-duration: 0.4s; --wanim-intensity: 20;"
+                                            >”</p>
+                                        </div>
+                                        <p 
+                                            class="h4 text-end text-primary pe-3 o_anim_fade_in o_animate o_animate_both_scroll o_anim_from_bottom"
+                                            style="animation-delay: 0.2s; animation-duration: 0.4s; --wanim-intensity: 5;" >
+                                            <em><t t-out="ref_data['signature']"/></em>
+                                        </p>
+                                    </div>
+                                    <div class="d-flex gap-2 ms-5 mt-5 mb-2">
+                                        <a class="btn btn-primary" href="#">See full project story</a>
+                                        <a class="btn btn-secondary" href="#">More about <t t-out="ref_data['name']" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="s_tabs_options_customize" inherit_id="website.s_tabs_options">
+        
+        <!-- 
+            Removing > in all s_tabs snippet option
+            [Direction][Fill And Justify] [Slide]
+        -->
+        <xpath expr="//div[@data-js='NavTabsStyle']/we-select[position()=2]" position="replace" />
+        <xpath expr="//div[@data-js='NavTabsStyle']/we-select[position()=3]" position="replace" />
+        <xpath expr="//div[@data-js='NavTabsStyle']/we-button-group" position="replace" />
+
+        <!-- 
+            Adding > in all s_tabs snippet option
+            Excluding > s_tab_references
+            [Direction][Fill And Justify] [Slide]
+        -->
+        <xpath expr="." position="inside">
+            <div data-js="NavTabsStyle" data-selector="section" data-target=".s_tabs_main" data-exclude=".s_tab_references" >
+                <we-select string="Direction" data-dependencies="pills_opt">
+                    <we-button data-set-direction="horizontal" data-name="horizontal_opt">Horizontal</we-button>
+                    <we-button data-set-direction="vertical" data-trigger="left_alignment_opt">Vertical</we-button>
+                </we-select>
+                <we-select string="Fill and justify" data-apply-to=".s_tabs_nav:first .nav" data-dependencies="horizontal_opt">
+                    <we-button data-select-class="">Regular</we-button>
+                    <we-button data-select-class="nav-fill">Full Width</we-button>
+                    <we-button data-select-class="nav-justified">Equal Widths</we-button>
+                </we-select>
+                <we-button-group string="Slide" data-apply-to=".s_tabs_content:first">
+                    <we-button class="fa fa-fw fa-long-arrow-left" title="Slide Left" data-select-class="s_tabs_slide_left"/>
+                    <we-button class="fa fa-fw fa-long-arrow-up" title="Slide Up" data-select-class="s_tabs_slide_up"/>
+                    <we-button class="fa fa-fw fa-long-arrow-down" title="Slide Down" data-select-class="s_tabs_slide_down"/>
+                    <we-button class="fa fa-fw fa-long-arrow-right" title="Slide Right" data-select-class="s_tabs_slide_right"/>
+                    <we-button class="fa fa-fw fa-ban" title="No Slide Effect" data-select-class=""/>
+                </we-button-group>
+            </div>
+        </xpath>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_tab_references">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.tab_references"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_tab_references.svg">
+                <keywords>tab, reference, customer, quote, image, testimonials</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,39 @@
+<odoo>
+    <template id="video_banner" name="Video banner snippet">
+        <section
+            class="s_cover bg-black-50 pt96 pb96  o_background_video s_parallax_no_overflow_hidden oe_img_bg o_bg_img_center"
+            data-scroll-background-ratio="0"
+            data-snippet="s_cover"
+            data-name="Video banner snippet"
+            style="background-image: url('/web/image/website.s_cover_default_image');"
+            data-bg-video-src="http://player.vimeo.com/video/392935303?autoplay=1&amp;muted=1&amp;autopause=0&amp;controls=0&amp;loop=1"
+            data-mimetype="image/webp"
+            data-mimetype-before-conversion="image/jpeg"
+            data-resize-width="1920"
+        >
+            <div class="o_we_bg_filter bg-black-50"/>
+
+            <div class="text-center o_container_small">
+                <h2 class=" text-o-color-4">This is a cool snippet showing an embed video on the
+                    back
+                </h2>
+                <p class="lead ">This banner allow you to write a small text in a visually
+                    attractive
+                    condition. Change this text to
+                    fit your needs and attract your user attention.
+                </p>
+
+                <a href="#" class="btn btn-primary ">Action button</a>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_video_banner">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.video_banner"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_video_banner.svg">
+                <keywords>video, banner</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

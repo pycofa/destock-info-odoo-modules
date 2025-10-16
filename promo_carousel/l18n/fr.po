@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* promo_carousel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240703\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-27 14:50+0000\n"
+"PO-Revision-Date: 2024-08-27 14:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: promo_carousel
+#: model:ir.model.fields,field_description:promo_carousel.field_promo_carousel__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: promo_carousel
+#: model:ir.model,name:promo_carousel.model_product_template
+msgid "Product"
+msgstr "Produit"
+
+#. module: promo_carousel
+#: model:ir.model,name:promo_carousel.model_promo_carousel
+msgid "Promo displayed on shop's carousel"
+msgstr "Promotion affichée sur le carrousel du site e-commerce"

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 82 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-opacity: .3;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill-opacity: .8;
+      }
+
+      .cls-4 {
+        fill: #333;
+      }
+
+      .cls-5 {
+        fill: url(#Dégradé_sans_nom);
+        isolation: isolate;
+        opacity: .4;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom" data-name="Dégradé sans nom" x1="-4942.2" y1="-175.3" x2="-4939.9" y2="-174.6" gradientTransform="translate(148272 3019) scale(30 17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00e2ff"/>
+      <stop offset="1" stop-color="#00a09d"/>
+    </linearGradient>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Calque_1">
+      <rect class="cls-5" x="6.8" y="23.7" width="68.5" height="42.2"/>
+      <g>
+        <rect id="path-5" x="28.5" y="4.5" width="25" height="2"/>
+        <rect id="path-5-2" class="cls-3" x="28.5" y="4.5" width="25" height="2"/>
+      </g>
+      <g>
+        <path id="path-7" class="cls-2" d="M62.9,16.7v1.2H19.1v-1.2h43.7ZM58.1,13v1.2H22.1v-1.2h36ZM62.9,9.3v1.2H19.1v-1.2h43.7Z"/>
+        <path id="path-7-2" class="cls-1" d="M62.9,16.7v1.2H19.1v-1.2h43.7ZM58.1,13v1.2H22.1v-1.2h36ZM62.9,9.3v1.2H19.1v-1.2h43.7Z"/>
+      </g>
+      <rect class="cls-4" x="13.3" y="28.2" width="9.3" height="9.3"/>
+      <circle class="cls-4" cx="32.7" cy="33" r="5.2"/>
+      <polygon class="cls-4" points="47.8 28.1 49 31.7 52.8 31.7 49.7 34 50.9 37.6 47.8 35.3 44.7 37.6 45.9 34 42.8 31.7 46.6 31.7 47.8 28.1"/>
+      <polygon class="cls-4" points="66 28.2 60.5 28.2 57.7 33.2 60.5 38.2 66 38.2 68.7 33.2 66 28.2"/>
+      <rect class="cls-4" x="59.4" y="47" width="9.3" height="9.3" transform="translate(128.1 103.4) rotate(180)"/>
+      <circle class="cls-4" cx="49.3" cy="51.5" r="5.2"/>
+      <polygon class="cls-4" points="37.3 55.4 34.2 53.2 31.1 55.4 32.3 51.8 29.2 49.6 33 49.6 34.2 45.9 35.4 49.6 39.2 49.6 36.1 51.8 37.3 55.4"/>
+      <polygon class="cls-4" points="16 56.3 21.5 56.3 24.3 51.3 21.5 46.3 16 46.3 13.3 51.3 16 56.3"/>
+    </g>
+  </g>
+</svg>

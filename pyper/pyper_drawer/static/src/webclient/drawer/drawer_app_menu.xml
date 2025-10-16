@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pyper_drawer.DrawerAppMenu">
+        <div t-att-class="{
+                'o_navbar_apps_menu': true,
+                'o_navbar_apps_menu--minified': displayMinified,
+                'd-flex': true,
+                'justify-content-center': true,
+                'align-items-center': true,
+            }"
+        >
+            <t t-if="displayMinified" t-slot="minified"></t>
+
+            <t t-if="displayLocked" t-slot="locked"></t>
+
+            <t t-slot="default"/>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 82 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom_3);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #000;
+      }
+
+      .cls-3 {
+        fill-opacity: .8;
+      }
+
+      .cls-3, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-4, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-5 {
+        fill-opacity: .3;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_3" data-name="Dégradé sans nom 3" x1="-1286.7" y1="1061.5" x2="-1285.7" y2="1061.6" gradientTransform="translate(21880 -5266) scale(17 5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00a09d"/>
+      <stop offset="1" stop-color="#00e2ff"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect id="path-5" class="cls-2" x="6.8" y="32" width="22.2" height="1.9"/>
+    <rect id="path-5-2" data-name="path-5" class="cls-3" x="6.8" y="32" width="22.2" height="1.9"/>
+  </g>
+  <g>
+    <path id="path-7" class="cls-4" d="M50.5,24.8v1.2H6.8v-1.2h43.7ZM42.8,21.1v1.2H6.8v-1.2h36ZM50.5,17.4v1.2H6.8v-1.2h43.7Z"/>
+    <path id="path-7-2" data-name="path-7" class="cls-5" d="M50.5,24.8v1.2H6.8v-1.2h43.7ZM42.8,21.1v1.2H6.8v-1.2h36ZM50.5,17.4v1.2H6.8v-1.2h43.7Z"/>
+  </g>
+  <rect class="cls-1" x="6.8" y="39.2" width="17" height="5"/>
+</svg>

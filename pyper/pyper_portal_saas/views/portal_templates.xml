@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="pyper_portal_saas.portal_record_sidebar" inherit_id="portal.portal_record_sidebar">
+        <xpath expr="//div[@id='sidebar_content']/div//img[@src='/web/static/img/logo.png']/../.." position="replace"/>
+    </template>
+</odoo>

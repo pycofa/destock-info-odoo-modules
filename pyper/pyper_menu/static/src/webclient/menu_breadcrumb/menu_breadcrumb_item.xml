@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pyper_menu.MenuBreadcrumbItem">
+        <li t-att-class="{
+            'o-menu-breadcrumb-item': true,
+            'breadcrumb-item': true,
+            'active': props.active
+        }">
+            <span>
+                <t t-out="props.label"/>
+            </span>
+        </li>
+    </t>
+</templates>

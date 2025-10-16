@@ -1,0 +1,358 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper_website_snippets
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-18 04:06+0000\n"
+"PO-Revision-Date: 2024-07-18 06:07+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+msgid "150"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+msgid "24/7"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "24/7 Support"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+msgid "5,000+"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid ""
+"Access your data from anywhere. Our mobile-friendly platform keeps you\n"
+"                                connected"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.video_banner
+msgid "Action button"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_1
+msgid ""
+"At our company, we specialize in providing cutting-edge\n"
+"                            solutions that are tailored to meet the unique needs of your business. "
+"Our team of experts\n"
+"                            works tirelessly to stay ahead of industry trends, ensuring that you "
+"have access to the\n"
+"                            latest and most effective tools available. We believe in building "
+"strong, lasting\n"
+"                            relationships with our clients, which is why we offer 24/7 customer "
+"support to assist you\n"
+"                            whenever you need it."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+msgid "Awards Won"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Cloud Integration"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Cloud services"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_1
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_2
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.two_columns_image_overflow
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.two_columns_image_overflow_right
+msgid "Contact us"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Custom Solutions"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+msgid "Customer Support"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Customization"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Customize now"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid ""
+"Customize solutions to fit your needs. Tailored features to match your\n"
+"                                workflow."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Discover our full range of services"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Discover what we offer."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_2
+msgid "Empowering your success every step of the way"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.two_columns_image_overflow
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.two_columns_image_overflow_right
+msgid "Enhance Your Business Efficiency"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid ""
+"Enhance team collaboration with our tools. Improve communication and\n"
+"                                efficiency."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Explore"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Find out more"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Get started"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Innovation for all your process"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Learn more"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Mobile access"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.custom_krafter_snippets
+msgid "Modern blocks"
+msgstr "Blocks modernes"
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_1
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_2
+msgid "More information"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+msgid ""
+"Our commitment to\n"
+"                        excellence is reflected in the numerous awards we’ve won and the thousands "
+"of satisfied clients\n"
+"                        we’ve served. We are available 24/7 to ensure that your needs are met, "
+"providing unparalleled\n"
+"                        customer support and service."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+msgid ""
+"Our company is dedicated to delivering top-notch\n"
+"                        solutions that drive your business forward. With a team of experienced "
+"professionals, we pride\n"
+"                        ourselves on our ability to innovate and adapt to the ever-changing market."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.two_columns_image_overflow
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.two_columns_image_overflow_right
+msgid ""
+"Our comprehensive suite of tools is designed to streamline\n"
+"                            your business operations and\n"
+"                            increase productivity."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Our features"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Out team is expert to offer you a premium service based on your specific needs."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Performance Tracking"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Round-the-clock support to keep your business running smoothly."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.containerized_kpis
+msgid "Satisfied clients"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Seamless integration with cloud services"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Security"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid ""
+"TLeverage the power of the cloud. Reliable and scalable solutions for your\n"
+"                                business."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Tailored software solutions for your business needs."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "Team Collaboration"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.video_banner
+msgid ""
+"This banner allow you to write a small text in a visually\n"
+"                    attractive\n"
+"                    condition. Change this text to\n"
+"                    fit your needs and attract your user attention."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.video_banner
+msgid ""
+"This is a cool snippet showing an embed video on the\n"
+"                    back"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.four_columns_title_text
+msgid "Top-notch security to protect your data."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid ""
+"Track your performance in real-time. Get detailed analytics to make informed\n"
+"                                decisions."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_1
+msgid "Transform Your Business with Innovative Solutions"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_2
+msgid "Transform your business with innovative solutions"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid "View details"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.grid_block_title_text
+msgid ""
+"We bring innovative solutions to the table. Our approach helps you stay\n"
+"                                ahead of the competition.."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_1
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.top_banner_2
+msgid "Welcome to our world"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.two_columns_image_overflow
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.two_columns_image_overflow_right
+msgid ""
+"With intuitive interfaces and robust features, our solutions\n"
+"                            cater to businesses of all\n"
+"                            sizes."
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.custom_krafter_snippets
+msgid "columns, title"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.custom_krafter_snippets
+msgid "grid, text, title"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.custom_krafter_snippets
+msgid "image, overflow, title"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.custom_krafter_snippets
+msgid "kpi, text, title, number"
+msgstr ""
+
+#. module: pyper_website_snippets
+#: model_terms:ir.ui.view,arch_db:pyper_website_snippets.custom_krafter_snippets
+msgid "video, banner"
+msgstr ""

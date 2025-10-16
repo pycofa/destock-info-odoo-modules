@@ -1,0 +1,43 @@
+<odoo>
+    <template id="top_banner_2" name="Top banner 2">
+        <section
+            class="pb0  pt72 pb72 oe_img_bg o_bg_img_center o_cc o_cc2"
+            data-scroll-background-ratio="1"
+            data-snippet="s_cover"
+            style="background-image: url('/web/image/website.s_cover_default_image');"
+            data-name="Top banner 2"
+            data-mimetype="image/webp"
+            data-resize-width="1920"
+        >
+            <div class="o_we_bg_filter bg-black-50"/>
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-12 col-lg-10 o_anim_fade_in o_animate o_anim_from_top "
+                        style="--wanim-intensity: 10; animation-duration: 0.4s;">
+                        <p class="fs-3  text-o-color-1">Welcome to our world</p>
+                        <h1 class="">Transform your business with innovative solutions</h1>
+                        <h2 class=" text-o-color-1">Empowering your success every step of the
+                            way
+                        </h2>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <a href="/contactus" class="btn btn-primary mt-4">Contact us</a>
+                            <a href="/" class="btn btn-primary mt-4">More information</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections"  id="custom_krafter_snippet_sections_top_banner_2">
+        <xpath expr="//div[@id='snippet_top_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.top_banner_2"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_top_banner_2.svg">
+                <keywords>kpi, text, title, number</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

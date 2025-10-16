@@ -1,0 +1,75 @@
+<odoo>
+    <template id="section_with_card_link_items" name="Section with card link items">
+        <section
+            class="s_section_with_card_link_items py-5 o_cc o_cc1"
+            data-snippet="s_section_with_card_link_items"
+            data-name="Section with card link items"
+        >
+            <div class="container-fluid border-top border-2 border-light" style="max-width:1296px;">
+                <div class="row d-flex align-items-start  pt-xs-3 pt-sm-3 pt-md-5">
+                    <div class="col-12 col-md-12 col-lg-12 col-xl-2 flex-grow-1 p-3 ">
+                        <div class="d-flex flex-column">
+                            <p class="h5 mb-0">Poster Collection</p>
+                            <p class="h6 text-muted">Browse Our Poster Categories</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-12 col-xl-9" data-name="Card Box">
+                        <div class="row d-flex">
+                            <!-- item #1 -->
+                            <div class="col-xs-12 col-sm-6 col-md-4 mb-3" data-name="Card item">
+                                <div class="p-3 card_wrapper o_cc o_cc2">
+                                    <div class="d-flex flex-column py-3">
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="ratio ratio-4x3">
+                                                <img src="/website/static/src/img/backgrounds/panama-sky.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                            </div>
+                                            <p class="h5 mb-0 mt-2">Nature &amp; Landscapes</p>
+                                            <p class="h6 text-muted">13 elements</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item #2 -->
+                            <div class="col-xs-12 col-sm-6 col-md-4 mb-3" data-name="Card item" >
+                                <div class="p-3 card_wrapper o_cc o_cc2">
+                                    <div class="d-flex flex-column py-3">
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="ratio ratio-4x3">
+                                                <img src="/website/static/src/img/library/ice_coffe.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                            </div>
+                                            <p class="h5 mb-0 mt-2">Food &amp; Drinks</p>
+                                            <p class="h6 text-muted">22 elements</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item #3 -->
+                            <div class="col-xs-12 col-sm-6 col-md-4 mb-3" data-name="Card item" >
+                                <div class="p-3 card_wrapper o_cc o_cc2">
+                                    <div class="d-flex flex-column py-3">
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="ratio ratio-4x3">
+                                                <img src="/website/static/src/img/library/mobile_device.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+                                            </div>
+                                            <p class="h5 mb-0 mt-2">Technology</p>
+                                            <p class="h6 text-muted">16 elements</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_section_with_card_link_items">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.section_with_card_link_items"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_section_with_card_link_items.svg">
+                <keywords>app, banner</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="ControlPanel" t-inherit="web.ControlPanel" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_control_panel')]" position="attributes">
+            <attribute name="class" remove="px-3 py-3" separator=" " add="pb-3"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_control_panel_main')]" position="after">
+            <xpath expr="//div[hasclass('o_control_panel_actions')]" position="move"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('o_control_panel_actions')]" position="attributes">
+            <attribute name="class" add="pt-2" separator=" "/>
+        </xpath>
+    </t>
+
+</templates>

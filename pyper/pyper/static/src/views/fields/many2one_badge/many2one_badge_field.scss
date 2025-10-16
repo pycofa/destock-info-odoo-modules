@@ -1,0 +1,70 @@
+.o_field_many2one_badge {
+    > span, // Readonly and cannot open
+    > .o_form_uri, // Readonly and can open
+    > .o_field_many2one_selection { // Editable
+        --pyper-many2one-badge-bg-opacity: #{$pyper-many2one-badge-bg-opacity};
+        display: flex;
+        border: $pyper-many2one-badge-border-width solid $pyper-many2one-badge-border-color;
+        border-radius: $pyper-many2one-badge-border-radius;
+        background-color: color-mix(in srgb, currentColor var(--pyper-many2one-badge-bg-opacity), transparent);
+
+        @for $size from 2 through length($o-colors) {
+            &.o_colorlist_badge_color_#{$size - 1} {
+                $-bg: adjust-color(nth($o-colors, $size), $lightness: 25%, $saturation: 15%);
+                $-color: adjust-color(nth($o-colors, $size), $lightness: -40%, $saturation: -15%);
+
+                &, &::after {
+                    @include o-print-color($-bg, background-color, bg-opacity);
+                    @include o-print-color($-color, color, text-opacity);
+                }
+
+
+            }
+        }
+    }
+
+    > span {
+        cursor: default;
+    }
+
+    > .o_field_many2one_selection input {
+        border-bottom-color: transparent;
+    }
+
+    > span,
+    > a.o_form_uri > span,
+    > .o_field_many2one_selection input {
+        color: currentColor;
+
+        &::selection {
+            color: currentColor;
+            background-color: color-mix(in srgb, currentColor var(--pyper-many2one-badge-bg-opacity), transparent);
+        }
+    }
+
+    > .o_field_many2one_selection .o_input_dropdown .o_dropdown_button:after {
+        border-top-color: currentColor;
+    }
+
+    .o_badge_icon {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid transparent;
+        margin-right: $pyper-many2one-badge-margin-icon;
+    }
+}
+
+.o_form_view {
+    .o_field_many2one_badge {
+        .o_form_uri {
+            > span {
+                &:first-child,
+                &:hover,
+                &:focus,
+                &.focus {
+                    color: currentColor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme_command_search.SearchMenu" t-inherit="pyper_command_search.SearchMenu" t-inherit-mode="extension">
+        <xpath expr="//i[hasclass('fa-search')]" position="attributes">
+            <attribute name="class" separator=" " remove="fa fa-lg fa-search" add="ph ph-magnifying-glass nav-bar-icon"/>
+        </xpath>
+    </t>
+</templates>

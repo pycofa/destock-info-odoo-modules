@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="pyper.Field" t-inherit="web.Field" t-inherit-mode="extension">
+        <xpath expr="//t[@t-component='field.component']" position="attributes">
+            <attribute name="t-on-click">onJsEvent</attribute>
+            <attribute name="t-on-keyup">onJsEvent</attribute>
+            <attribute name="t-on-keydown">onJsEvent</attribute>
+        </xpath>
+    </t>
+
+</templates>

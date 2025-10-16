@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="product_condition_menu"
+        name="Product conditions"
+        sequence="10"
+        parent="pyper_product_catalog.product_settings_menu"
+        action="pyper_product_condition.action_product_condition"
+    />
+</odoo>

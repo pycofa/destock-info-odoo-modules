@@ -1,0 +1,13 @@
+<odoo>
+    <data noupdate="0">
+        <record id="group_product_show_variant_standard_price" model="res.groups">
+            <field name="name">Show product variant standard price</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+
+        <record id="group_product_show_variant_list_price" model="res.groups">
+            <field name="name">Show product variant list price</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+    </data>
+</odoo>

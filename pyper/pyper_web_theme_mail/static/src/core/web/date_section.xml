@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme_mail.DateSection" t-inherit="mail.DateSection" t-inherit-mode="extension">
+        <xpath expr="//hr[1]" position="attributes">
+            <attribute name="class" separator=" " remove="ms-3 flex-grow-1"/>
+        </xpath>
+
+        <xpath expr="//hr[2]" position="attributes">
+            <attribute name="class" separator=" " remove="me-3"/>
+        </xpath>
+    </t>
+</templates>

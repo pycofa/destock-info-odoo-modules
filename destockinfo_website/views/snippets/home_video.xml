@@ -1,0 +1,46 @@
+<odoo>
+    <template id="home_video" name="Home Video">
+        <section
+            class="s_cover bg-black-50 pt96 pb96 o_background_video s_parallax_no_overflow_hidden o_colored_level o_full_screen_height oe_img_bg o_bg_img_center"
+            data-scroll-background-ratio="0" data-snippet="s_cover" data-name="Video banner snippet"
+            data-bg-video-src="http://player.vimeo.com/video/509869821?autoplay=1&amp;muted=1&amp;autopause=0&amp;controls=0&amp;loop=1"
+            data-mimetype="image/webp"
+            data-mimetype-before-conversion="image/jpeg"
+            data-resize-width="1920"
+        >
+            <div class="o_we_bg_filter bg-black-50"/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-9">
+                        <p class="fw-bold">Destock Info, spécialiste de la reprise et du reconditionnement d'équipement
+                            informatique</p>
+                        <h1 class="mb-3 o_default_snippet_text lh-1">Nous traitons votre parc informatique en France depuis 2008</h1>
+                        <p class="p-big">Destock Info, situé près de Grenoble, s’engage à traiter l’ensemble
+                            de vos équipements électroniques en France. Nous valorisons une approche locale qui
+                            privilégie la qualité et l’impact positif sur notre territoire. Chaque étape de
+                            reconditionnement est réalisée par nos équipes spécialisées, garantissant un service
+                            responsable et de haute qualité.</p>
+
+                        <div class="d-flex align-items-center gap-2 mt-5">
+                            <a href="#"
+                               class="btn btn-primary"
+                               data-content="Faire reprendre mon matériel">Faire reprendre mon matériel</a>
+
+                            <a href="#"
+                               class="btn text-white bg-white-25"
+                               data-content="Faire reprendre mon matériel">Qui sommes-nous ?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="home_video_menu" inherit_id="website.snippets" name="Home video">
+        <xpath expr="//div[@id='snippet_destockinfo']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="destockinfo_website.home_video"
+               t-thumbnail="/destockinfo_website/static/img/snippets/snippet_thumb/s_home_hero.svg"/>
+        </xpath>
+    </template>
+
+</odoo>

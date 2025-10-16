@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pyper_drawer.DrawerMenuItem">
+        <DropdownItem
+            class="classes"
+            styles="styles"
+            href="menuItemHref"
+            hotkey="props.hotkey"
+            dataset="{depth: props.depth, menuXmlid: props.menuXmlid, menu: props.menuId, tooltip: drawerService.isMinified and !drawerService.isPopoverMinified ? props.label : undefined, tooltipPosition: 'right'}"
+            onSelected="() => this.onItemSelection()"
+        >
+            <t t-call="pyper_drawer.DrawerMenuItem.Content">
+                <t t-set="menuId" t-value="props.menuId"/>
+                <t t-set="menuAction" t-value="props.menuAction"/>
+                <t t-set="hotkey" t-value="props.hotkey"/>
+                <t t-set="withChildren" t-value="isPopoverEnabled ? false : displayChildren"/>
+                <t t-set="childrenOpened" t-value="isOpened"/>
+                <t t-set="withNextChildren" t-value="isNextChildrenEnabled"/>
+                <t t-set="withIcon" t-value="displayIcon"/>
+                <t t-set="iconData" t-value="props.iconData"/>
+                <t t-set="fontIcon" t-value="props.fontIcon"/>
+                <t t-set="fontIconColor" t-value="props.fontIconColor"/>
+                <t t-set="preferWebIcon" t-value="props.preferWebIcon"/>
+                <t t-set="emojiIcon" t-value="props.emojiIcon"/>
+                <t t-set="label" t-value="props.label"/>
+                <t t-set="showLabel" t-value="isPopoverEnabled ? false : !drawerService.isMinified || props.disablePopover"/>
+                <t t-set="onItemMouseEnterFct" t-value="isPopoverEnabled ? this.onItemMouseEnter.bind(this) : undefined"/>
+                <t t-set="onItemMouseLeaveFct" t-value="isPopoverEnabled ? this.onItemMouseLeave.bind(this) : undefined"/>
+            </t>
+        </DropdownItem>
+
+        <div
+            t-if="displayChildren and isOpened"
+            t-att-class="{'o_drawer--menu-item-children': true}"
+        >
+            <t t-foreach="children" t-as="submenu" t-key="submenu.id">
+                <DrawerMenuItem
+                    menuXmlid="submenu.xmlid"
+                    menuId="submenu.id"
+                    menuAction="submenu.actionID || undefined"
+                    childrenDepth="childrenDepth"
+                    children="submenu.childrenTree"
+                    label="submenu.name"
+                    depth="props.depth + 1"
+                    disablePopover="props.disablePopover"
+                />
+            </t>
+        </div>
+    </t>
+
+    <t t-name="pyper_drawer.DrawerMenuItem.Content">
+        <div
+            t-ref="content"
+            t-att-class="{'o_drawer--menu-item-content': true}"
+            t-on-mouseenter="onItemMouseEnterFct ? onItemMouseEnterFct : () => {}"
+            t-on-mouseleave="onItemMouseLeaveFct ? onItemMouseLeaveFct : () => {}"
+        >
+            <div t-if="withIcon and emojiIcon" class="o_drawer--item-icon o_drawer--item-icon-emoji">
+                <t t-out="emojiIcon"/>
+            </div>
+
+            <div t-elif="withIcon and fontIcon and !preferWebIcon" class="o_drawer--item-icon-empty" t-att-style="'color: ' + (fontIconColor || 'inherit') + ';'">
+                <i t-att-class="fontIcon"/>
+            </div>
+
+            <img t-elif="withIcon and iconData"
+                class="o_drawer--item-icon"
+                t-attf-src="data:image/jpeg;base64, {{iconData}}"
+            />
+
+            <div t-elif="withIcon" class="o_drawer--item-icon-empty">
+                <t t-slot="empty_icon">
+                    <i class="fa fa-cube"/>
+                </t>
+            </div>
+
+            <div t-else="" class="o_drawer--item-icon-empty">
+            </div>
+
+            <div t-if="label" t-att-class="{'o_drawer--item-label': true, 'hidden': !showLabel}">
+                <t t-out="label"/>
+            </div>
+
+            <div t-if="showLabel and withChildren" class="o_drawer--item-icon-caret">
+                <t t-slot="closed_caret_icon" t-if="!childrenOpened">
+                    <i class="fa fa-caret-right"/>
+                </t>
+
+                <t t-slot="opened_caret_icon" t-else="">
+                    <i class="fa fa-caret-down"/>
+                </t>
+            </div>
+
+            <div t-if="showLabel and withNextChildren" class="o_drawer--item-icon-caret">
+                <t t-slot="next_caret_icon" t-if="!isNextChildrenOpened">
+                    <i class="fa fa-caret-down"/>
+                </t>
+
+                <t t-slot="next_caret_icon_opened" t-else="">
+                    <i class="fa fa-align-right"/>
+                </t>
+            </div>
+
+            <div t-if="showLabel and formattedCounter" class="o_drawer--item-icon-counter">
+                <t t-slot="counter_badge">
+                    <span class="counter-badge" t-out="formattedCounter"/>
+                </t>
+            </div>
+        </div>
+    </t>
+
+</templates>

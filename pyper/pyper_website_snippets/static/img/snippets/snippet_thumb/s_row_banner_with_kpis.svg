@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 82 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-opacity: .3;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: url(#Dégradé_sans_nom_9);
+      }
+
+      .cls-5 {
+        fill: url(#Dégradé_sans_nom_9-2);
+      }
+
+      .cls-3 {
+        fill-opacity: .8;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_9" data-name="Dégradé sans nom 9" x1="-2149.3" y1="-592.5" x2="-2148.7" y2="-592.6" gradientTransform="translate(36568 -2920) scale(17 -5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00a09d"/>
+      <stop offset="1" stop-color="#00e2ff"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_9-2" data-name="Dégradé sans nom 9" x1="-2148.6" x2="-2148.1" y2="-592.6" xlink:href="#Dégradé_sans_nom_9"/>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Calque_1">
+      <g>
+        <rect id="path-5" x="2.4" y="23.9" width="11.2" height="2.2"/>
+        <rect id="path-5-2" class="cls-3" x="2.4" y="23.9" width="11.2" height="2.2"/>
+      </g>
+      <g>
+        <path id="path-7" class="cls-2" d="M62.6,33.5v1.2H18.9v-1.2h43.7ZM57.9,29.8v1.2H21.9v-1.2h36ZM62.6,26.1v1.2H18.9v-1.2h43.7Z"/>
+        <path id="path-7-2" class="cls-1" d="M62.6,33.5v1.2H18.9v-1.2h43.7ZM57.9,29.8v1.2H21.9v-1.2h36ZM62.6,26.1v1.2H18.9v-1.2h43.7Z"/>
+      </g>
+      <rect class="cls-4" x="31" y="41.6" width="8.8" height="2.5"/>
+      <g>
+        <rect id="path-5-2" data-name="path-5" x="2.4" y="35.3" width="11.2" height="2.2"/>
+        <rect id="path-5-2-2" data-name="path-5-2" class="cls-3" x="2.4" y="35.3" width="11.2" height="2.2"/>
+      </g>
+      <g>
+        <rect id="path-5-3" data-name="path-5" x="67.9" y="23.6" width="11.2" height="2.2"/>
+        <rect id="path-5-2-3" data-name="path-5-2" class="cls-3" x="67.9" y="23.6" width="11.2" height="2.2"/>
+      </g>
+      <g>
+        <rect id="path-5-4" data-name="path-5" x="67.9" y="35" width="11.2" height="2.2"/>
+        <rect id="path-5-2-4" data-name="path-5-2" class="cls-3" x="67.9" y="35" width="11.2" height="2.2"/>
+      </g>
+      <rect class="cls-5" x="42.2" y="41.6" width="8.8" height="2.5"/>
+    </g>
+  </g>
+</svg>

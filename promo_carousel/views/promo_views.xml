@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_promo_carousel_form" model="ir.ui.view">
+        <field name="name">promo.carousel.form</field>
+        <field name="model">promo.carousel</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="True"/>
+                            <field name="image" widget="image" required="True"/>
+                            <field name="activate"/>
+                            <field name="product_tmpl_id" domain="[('is_published', '=', True)]" required="True"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_promo_carousel_tree" model="ir.ui.view">
+        <field name="name">promo.carousel.tree</field>
+        <field name="model">promo.carousel</field>
+        <field name="arch" type="xml">
+            <tree string="Promos">
+                <field name="name"/>
+                <field name="activate"/>
+                <field name="product_tmpl_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="promo_action_form" model="ir.actions.act_window">
+        <field name="name">Promo</field>
+        <field name="res_model">promo.carousel</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="promo_action_menu"
+        parent="pyper_product_catalog.product_settings_menu"
+        name="Promos"
+        action="promo_carousel.promo_action_form"
+        sequence="10"
+    />
+</odoo>

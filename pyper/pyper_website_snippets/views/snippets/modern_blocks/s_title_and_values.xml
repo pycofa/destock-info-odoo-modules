@@ -1,0 +1,63 @@
+<odoo>
+    <template id="title_and_values" name="Title and values">
+        <section
+            class="pb0  pt112 pb112 o_cc o_cc3"
+            data-name="Top banner 2"
+            data-mimetype="image/webp"
+            data-resize-width="1920"
+        >
+            <div class="container">
+                <p class="fs-3  text-o-color-1 text-center mb-5 o_anim_fade_in o_animate o_anim_from_top "
+                   style="--wanim-intensity: 20;animation-delay: 0.0s; animation-duration: 0.4s;"
+                >For over 10 years, we
+                    help companies to achieve great goals trough modern tools and ideas. Today, our aim is to understand
+                    yours and give you ways to reach it.
+                </p>
+                <h1 class=" text-center mb-5 o_anim_fade_in o_animate o_anim_from_top "
+                    style="--wanim-intensity: 20;animation-delay: 0.0s; animation-duration: 0.4s;"
+                >We focus on you.
+                </h1>
+
+                <div class="row">
+                    <div
+                        class="col-12 col-md-6 col-lg-3 pb-4 o_anim_fade_in o_animate o_anim_from_top "
+                        style="--wanim-intensity: 20;animation-delay: 0.0s; animation-duration: 0.4s;"
+                    >
+                        <h2 class="text-center">Creativity</h2>
+                    </div>
+                    <div
+                        class="col-12 col-md-6 col-lg-3 pb-4 o_anim_fade_in o_animate o_anim_from_top "
+                        style="--wanim-intensity: 20;animation-delay: 0.2s; animation-duration: 0.4s;"
+                    >
+                        <h2 class="text-center">Quality</h2>
+                    </div>
+                    <div
+                        class="col-12 col-md-6 col-lg-3 pb-4 o_anim_fade_in o_animate o_anim_from_top "
+                        style="--wanim-intensity: 20;animation-delay: 0.4s; animation-duration: 0.4s;"
+                    >
+                        <h2 class="text-center">Consistency</h2>
+                    </div>
+                    <div
+                        class="col-12 col-md-6 col-lg-3 pb-4 o_anim_fade_in o_animate o_anim_from_top "
+                        style="--wanim-intensity: 20;animation-delay: 0.6s; animation-duration: 0.4s;"
+                    >
+                        <h2 class="text-center">Efficiency</h2>
+                    </div>
+                </div>
+
+                <p class="container text-center mt-4">
+                    <a href="/contactus" class="btn btn-primary">Contact us</a>
+                </p>
+            </div>
+        </section>
+    </template>
+
+    <template inherit_id="pyper_website_snippets.custom_krafter_snippet_sections" id="custom_krafter_snippet_sections_title_and_values">
+        <xpath expr="//div[@id='snippet_modern_blocks']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="pyper_website_snippets.title_and_values"
+                t-thumbnail="/pyper_website_snippets/static/img/snippets/snippet_thumb/s_title_value.svg">
+                <keywords>kpi, text, title, number</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,28 @@
+.o_mail_snippet_general .s_mail_product_container [class^="col-lg"]{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.s_mail_product_container {
+    .s_product_container {
+        margin: auto;
+        p, ul, ol {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .s_product_container_sm {
+    }
+    .s_product_container_md {
+    }
+    .s_product_container_lg {
+    }
+    .s_product_container_icon {
+        float: left;
+        margin-right: 10px;
+    }
+    .s_product_container_content {
+        overflow: hidden;
+    }
+}

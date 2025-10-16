@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pyper_web_theme.FormView" t-inherit="web.FormView" t-inherit-mode="extension">
+        <xpath expr="//t[@t-set-slot='control-panel-create-button'][2]//button[hasclass('o_form_button_create')]" position="replace">
+            <button type="button" class="btn btn-primary text-nowrap o_form_button_create" data-hotkey="c" t-on-click.stop="create">
+                <i class="fa fa-plus"/>
+            </button>
+        </xpath>
+    </t>
+</templates>

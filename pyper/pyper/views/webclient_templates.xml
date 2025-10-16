@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="pyper.layout" inherit_id="web.layout">
+        <xpath expr="//head/title" position="attributes">
+            <attribute name="t-out">title</attribute>
+        </xpath>
+
+        <xpath expr="//head/title" position="after">
+            <meta name="web-app-name" t-att-content="_web_app_name"/>
+        </xpath>
+
+        <xpath expr="//head/link[@type='image/x-icon']" position="attributes">
+            <attribute name="t-att-href">x_icon or env['ir.config_parameter']._get_web_xicon_path()</attribute>
+        </xpath>
+    </template>
+
+    <template id="pyper.webclient_bootstrap" inherit_id="web.webclient_bootstrap">
+        <xpath expr="//meta[@name='theme-color']" position="attributes">
+            <attribute name="t-att-content">env['ir.config_parameter']._get_web_theme_color()</attribute>
+        </xpath>
+
+        <xpath expr="//link[@rel='apple-touch-icon']" position="attributes">
+            <attribute name="t-att-href">env['ir.config_parameter']._get_web_badge_ios_path()</attribute>
+        </xpath>
+    </template>
+
+    <template id="pyper.webclient_offline" inherit_id="web.webclient_offline">
+        <xpath expr="//t[@t-set='head']/style" position="inside">
+            body {
+                flex-direction: column-reverse;
+            }
+            .card img {
+                filter: none;
+            }
+            .card button {
+                background-color: <t t-out="bg_color"/>;
+                border: 1px solid <t t-out="bg_color"/>;
+            }
+        </xpath>
+
+        <xpath expr="//div[hasclass('card')]/img" position="attributes">
+            <attribute name="t-attf-src">data:{{app_icon_type}};base64,{{app_icon}}</attribute>
+            <attribute name="alt"/>
+            <attribute name="t-att-alt">app_name</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('card')]/p" position="replace">
+            <p>Check your network connection and come back here. <t t-out="app_name"/> will load as soon as you're back online.</p>
+        </xpath>
+    </template>
+</odoo>

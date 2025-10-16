@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_add_product_mailing" model="ir.actions.act_window">
+        <field name="name">Add Product</field>
+        <field name="res_model">product.mailing.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record model="ir.ui.view" id="view_mail_mass_mailing_form_inherit">
+        <field name="name">mailing.mailing.form</field>
+        <field name="model">mailing.mailing</field>
+        <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='mail_body']/.." position="before">
+                <button class="btn btn-primary col-6 col-md-2" name="%(action_add_product_mailing)d"
+                        context="{'mailing_id': id}" type="action">Add a product</button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

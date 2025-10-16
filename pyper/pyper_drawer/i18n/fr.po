@@ -1,0 +1,243 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pyper_drawer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20241109\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 05:27+0000\n"
+"PO-Revision-Date: 2024-11-12 05:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pyper_drawer
+#: model_terms:ir.ui.view,arch_db:pyper_drawer.res_config_settings_view_form
+msgid ""
+"Allow to close all opened menu items in drawer with children on menu item is"
+" selected"
+msgstr ""
+"Autoriser la fermeture de tous les menus ouverts dans le drawer ayant des "
+"enfants quand un menu est sélectionné"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_always_footer
+msgid "Always display footer?"
+msgstr "Toujours afficher le footer ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_always_header
+msgid "Always display header?"
+msgstr "Toujours afficher le header ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_always_mini
+msgid "Always mini drawer?"
+msgstr "Toujours utiliser le mini drawer ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_toggler_auto_hide
+msgid "Auto hide the toggler?"
+msgstr "Masquer automatiquement le toggler ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_close_all_unactivated_items_on_select
+msgid "Close all unactivated items on select?"
+msgstr "Fermer tous les menus non activés lors de la sélection ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_close_on_click
+msgid "Close drawer on click?"
+msgstr "Fermer le drawer au click ?"
+
+#. module: pyper_drawer
+#: model:ir.model,name:pyper_drawer.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_drag_end_ratio
+msgid "Custom width ratio of drag end"
+msgstr "Ratio sur la largeur personnalisée à la fin du drag"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_disabled_on_small_screen
+msgid "Disable drawer on small screen?"
+msgstr "Désactiver le drawer pour les petits écrans ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_close_action
+msgid "Display close button on drawer?"
+msgstr "Afficher le bouton de fermeture sur le drawer ?"
+
+#. module: pyper_drawer
+#: model_terms:ir.ui.view,arch_db:pyper_drawer.res_config_settings_view_form
+msgid "Display only the root menu items in Drawer as applications with icons"
+msgstr ""
+"Afficher uniquement les menu items racines dans le Drawer en tant "
+"qu’applications avec des icones"
+
+#. module: pyper_drawer
+#: model_terms:ir.ui.view,arch_db:pyper_drawer.res_config_settings_view_form
+msgid "Display the next items in sub panel"
+msgstr "Afficher les items suivants dans le sous-panel"
+
+#. module: pyper_drawer
+#: model_terms:ir.ui.view,arch_db:pyper_drawer.res_config_settings_view_form
+msgid "Drawer"
+msgstr ""
+
+#. module: pyper_drawer
+#: model:ir.model.fields.selection,name:pyper_drawer.selection__ir_ui_menu__position__drawer_footer
+msgid "Drawer Footer"
+msgstr ""
+
+#. module: pyper_drawer
+#: model:ir.model.fields.selection,name:pyper_drawer.selection__ir_ui_menu__position__drawer_quick_actions
+msgid "Drawer Quick Actions"
+msgstr "Actions rapides du Drawer"
+
+#. module: pyper_drawer
+#: model_terms:ir.ui.view,arch_db:pyper_drawer.res_config_settings_view_form
+msgid "Drawer Toggler"
+msgstr ""
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_hide_navbar_apps_menu
+msgid "Hide apps menu in navbar?"
+msgstr "Masquer le menu des applications dans la barre de navigation ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_hide_category_label_full
+msgid "Hide category label in full?"
+msgstr "Masquer complètement l’étiquette de catégorie ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_hide_category_label_minified
+msgid "Hide category label in mini?"
+msgstr "Masquer le libellé de la catégorie en mini ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_hide_empty_category
+msgid "Hide empty categories?"
+msgstr "Masquer les items sans catégories ?"
+
+#. module: pyper_drawer
+#: model_terms:ir.ui.view,arch_db:pyper_drawer.res_config_settings_view_form
+msgid ""
+"Hide the menu items if the category is not defined or is in global category"
+msgstr ""
+"Masquer les menu items si la catégorie n’est pas définie ou s’elle est "
+"global"
+
+#. module: pyper_drawer
+#. odoo-javascript
+#: code:addons/pyper/pyper_drawer/static/src/webclient/drawer/drawer_menu_items.js:0
+#: code:addons/pyper_drawer/static/src/webclient/drawer/drawer_menu_items.js:0
+#, python-format
+msgid "Lockable Drawer"
+msgstr "Drawer verrouillable"
+
+#. module: pyper_drawer
+#: model:ir.model,name:pyper_drawer.model_ir_ui_menu
+msgid "Menu"
+msgstr ""
+
+#. module: pyper_drawer
+#. odoo-javascript
+#: code:addons/pyper/pyper_drawer/static/src/webclient/drawer/drawer_menu_items.js:0
+#: code:addons/pyper_drawer/static/src/webclient/drawer/drawer_menu_items.js:0
+#, python-format
+msgid "Mini Drawer"
+msgstr ""
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_minifiable
+msgid "Minifiable?"
+msgstr "Minifiable ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_init_minified
+msgid "Minified on initialisation?"
+msgstr "Minifié à l’initialisation ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_next_items_sub_panel
+msgid "Next items in sub panel"
+msgstr "Items suivants dans le sous-panel"
+
+#. module: pyper_drawer
+#: model_terms:ir.ui.view,arch_db:pyper_drawer.res_config_settings_view_form
+msgid ""
+"Number of levels that can be displayed for submenus. Set to -1 for no limit"
+msgstr ""
+"Nombre de niveaux pouvant être affichés pour les sous-menus. Réglez sur -1 "
+"pour aucune limite"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_popover_minified
+msgid "Popover title for mini drawer?"
+msgstr "Titre en popover en mini ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_ir_ui_menu__position
+msgid "Position"
+msgstr ""
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_fixed_top
+msgid "Position fixed on top?"
+msgstr "Position fixed top ?"
+
+#. module: pyper_drawer
+#. odoo-javascript
+#: code:addons/pyper/pyper_drawer/static/src/webclient/drawer/drawer.xml:0
+#: code:addons/pyper_drawer/static/src/webclient/drawer/drawer.xml:0
+#, python-format
+msgid "Quick action"
+msgstr "Action rapide"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_show_category_section_minified
+msgid "Show category section in mini?"
+msgstr "Afficher la section de catégorie en mini ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_show_root_app
+msgid "Show only root menu items in Drawer?"
+msgstr "Afficher uniquement les menu racines ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_sub_items_depth
+msgid "Sub item depth"
+msgstr "Profondeur du sous-élément"
+
+#. module: pyper_drawer
+#. odoo-javascript
+#: code:addons/pyper/pyper_drawer/static/src/webclient/drawer/drawer_toggler.xml:0
+#: code:addons/pyper_drawer/static/src/webclient/drawer/drawer_toggler.xml:0
+#, python-format
+msgid "Toggle Drawer"
+msgstr ""
+
+#. module: pyper_drawer
+#. odoo-javascript
+#: code:addons/pyper/pyper_drawer/static/src/webclient/drawer/drawer.xml:0
+#: code:addons/pyper_drawer/static/src/webclient/drawer/drawer.xml:0
+#, python-format
+msgid "Toggle Dropdown"
+msgstr ""
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_toggler_use_caret_icon
+msgid "Use caret icon in toggler?"
+msgstr "Utiliser l’icône flèche sur le Toggler ?"
+
+#. module: pyper_drawer
+#: model:ir.model.fields,field_description:pyper_drawer.field_res_config_settings__drawer_nav
+msgid "Use nav style?"
+msgstr "Utiliser le style nav ?"

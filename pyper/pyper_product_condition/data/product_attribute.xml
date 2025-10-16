@@ -1,0 +1,7 @@
+<odoo>
+    <record id="product_attribute_condition" model="product.attribute">
+        <field name="name">Condition</field>
+        <field name="display_type">pills</field>
+        <field name="create_variant">always</field>
+    </record>
+</odoo>

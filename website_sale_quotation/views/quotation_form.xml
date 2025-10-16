@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--      FORM      -->
+    <template id="product" inherit_id="website_sale.product">
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="before">
+            <t t-if="request.env['ir.config_parameter'].sudo().get_param('website_sale_quotation.ecommerce_show_form_quotation')">
+                <div class="rounded-top-3 border-primary bg-body mb-3 mt-4 accordion-item">
+                    <button class="rounded-top-3 fw-bold btn-outline-primary accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-form" aria-expanded="false" aria-controls="collapse-form">
+                        Contact us : ͏ + 33 (0) 4 76 95 94 61
+                    </button>
+                    <div id="collapse-form" class="s_website_form p-3 border-0 p-2 accordion-collapse collapse"
+                         aria-labelledby="quotation-form"
+                         data-bs-parent="#accordion-quotation-form">
+                        <div class="container">
+                            <form action="/website/form/" method="post" enctype="multipart/form-data"
+                                  class="o_mark_required" data-mark="*" data-pre-fill="true"
+                                  data-model_name="website.sale.quotation"
+                                  data-success-mode="redirect" data-success-page="/contactus-thank-you">
+                                <div class="s_website_form_rows row s_col_no_bgcolor">
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_dnone">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input hidden="True" class="form-control s_website_form_input"
+                                                       name="email_to"
+                                                       t-att-value="request.env['ir.config_parameter'].sudo().get_param('website_sale_disable_cart.config_parameter')"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                         data-type="char">
+                                        <div class="row s_col_no_resize">
+                                            <div class="col-sm">
+                                                <input class="bg-light form-control s_website_form_input" type="text"
+                                                       name="name"
+                                                       placeholder="Name" required="1" data-fill-with="name"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="tel">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input class="bg-light form-control s_website_form_input" type="tel"
+                                                       name="phone"
+                                                       placeholder="Phone" data-fill-with="phone"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_model_required"
+                                         data-type="email">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input class="bg-light form-control s_website_form_input" type="email"
+                                                       placeholder="E-mail" name="email_from" required="1"
+                                                       data-fill-with="email"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_model_required"
+                                         data-type="char">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <input class="bg-light form-control s_website_form_input" type="text"
+                                                       placeholder="Subject" name="subject" required="1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-name="Field"
+                                         class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                         data-type="text">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <div class="col-sm">
+                                                <textarea class="bg-light form-control s_website_form_input"
+                                                          name="content"
+                                                          placeholder="Content" required="1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-0 py-2 col-12 s_website_form_submit" data-name="Submit Button">
+                                        <div style="width: 200px;" class="s_website_form_label"/>
+                                        <a href="#" role="button" class="btn btn-primary s_website_form_send">Submit</a>
+                                        <span id="s_website_form_result"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
