@@ -1,4 +1,4 @@
-# Affichage du numéro SIRET sur la page Mon Compte
+# Affichage du numéro SIRET sur la page "Mon Compte"
 
 ## Question
 Comment afficher le numéro de SIRET sur la page `/my/account` ?
