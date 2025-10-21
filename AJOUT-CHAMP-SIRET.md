@@ -140,6 +140,113 @@ Si vous souhaitez afficher le SIRET en lecture seule :
 
 ---
 
+## 📊 Analyse : Impact Submodule sur CHANGELOG.md
+
+### Contexte
+
+Ce fichier `AJOUT-CHAMP-SIRET.md` est situé dans le répertoire `addons/` qui est configuré comme **submodule Git** du projet principal.
+
+### Repositories Concernés
+
+1. **Repo principal** : [`devpycofa/destockinfo-docker`](https://github.com/devpycofa/destockinfo-docker)
+   - Branch : `master`
+   - Contient : Infrastructure Docker + configuration Odoo
+   - CHANGELOG.md : ✅ Présent
+
+2. **Repo submodule** : [`devpycofa/destock-info-odoo-modules`](https://github.com/devpycofa/destock-info-odoo-modules)
+   - Branch : `main`
+   - Contient : Modules Odoo custom (dont ce fichier)
+   - CHANGELOG.md : ❌ Absent
+
+### Vérification Effectuée (2025-10-21)
+
+```bash
+# État du CHANGELOG.md principal
+✅ Local  : 49 lignes, 1 section [Unreleased] (propre)
+⚠️  GitHub : 80+ lignes, 2 sections [Unreleased] (duplications)
+
+# Raison du décalage
+Commits locaux 54901b6..bc7d9a4 non encore synchronisés avec GitHub
+```
+
+### Comportement Confirmé : Submodule + CHANGELOG.md
+
+#### ❌ Ce qui N'APPARAÎT PAS dans le CHANGELOG.md
+
+Les commits **internes** au submodule `addons/` ne sont PAS trackés par git-cliff du repo principal :
+
+```bash
+# Exemple : Si vous commitez dans addons/
+cd addons/
+git add AJOUT-CHAMP-SIRET.md
+git commit -m "docs: ajouter guide champ SIRET"
+git push origin main
+```
+
+**Résultat** : Ce commit reste invisible pour le CHANGELOG.md du repo principal ❌
+
+#### ✅ Ce qui APPARAÎT dans le CHANGELOG.md
+
+Seul le commit de **mise à jour du pointeur de submodule** est visible :
+
+```bash
+# Dans le repo principal
+git add addons
+git commit -m "feat(modules): mettre à jour modules Odoo avec guide SIRET"
+git push origin master
+```
+
+**Résultat dans CHANGELOG.md** :
+```markdown
+### Fonctionnalités
+- Mettre à jour modules Odoo avec guide SIRET
+```
+
+### Solutions Recommandées
+
+#### Option 1 : Messages de Commit Descriptifs (✅ Recommandé)
+
+Quand vous mettez à jour le submodule, détaillez les changements :
+
+```bash
+git commit -m "feat(modules): ajouter champ SIRET sur page Mon Compte
+
+Détails du submodule addons/ :
+- Ajout de AJOUT-CHAMP-SIRET.md (guide technique)
+- Modification de portal_my_details_fields.xml
+- Nouveau champ company_registry affiché après VAT"
+```
+
+#### Option 2 : CHANGELOG.md Séparé dans Submodule
+
+Créer un `addons/CHANGELOG.md` indépendant pour tracker les modifications du submodule.
+
+#### Option 3 : Script Custom de Fusion
+
+Script qui fusionne les changelogs des 2 repos (complexe, non recommandé).
+
+### État Actuel du Projet
+
+```
+Repo principal (destockinfo-docker)
+├── CHANGELOG.md          ← Trackage automatique via git-cliff ✅
+├── .github/workflows/
+│   └── changelog.yml     ← Workflow automatique ✅
+├── scripts/
+│   └── generate-changelog.sh ← Script de génération ✅
+└── addons/               ← Submodule (modifications invisibles) ⚠️
+    └── AJOUT-CHAMP-SIRET.md (ce fichier)
+```
+
+### Recommandation Finale
+
+Pour ce projet, **utiliser l'Option 1** :
+- Commits descriptifs lors de la mise à jour du submodule
+- Mentionner explicitement les fichiers modifiés dans addons/
+- Le CHANGELOG.md du repo principal restera la source unique de vérité
+
+---
+
 _Documentation créée le 2025-10-20_
+_Analyse submodule ajoutée le 2025-10-21_
 _Projet : Destock Info - Odoo 17.0_
-_Online edit_
