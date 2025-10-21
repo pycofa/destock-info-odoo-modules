@@ -238,15 +238,49 @@ Repo principal (destockinfo-docker)
     └── AJOUT-CHAMP-SIRET.md (ce fichier)
 ```
 
-### Recommandation Finale
+### ✅ Solution Implémentée (2025-10-21)
 
-Pour ce projet, **utiliser l'Option 1** :
-- Commits descriptifs lors de la mise à jour du submodule
-- Mentionner explicitement les fichiers modifiés dans addons/
-- Le CHANGELOG.md du repo principal restera la source unique de vérité
+**État** : Le tracking automatique des commits du submodule est maintenant **ACTIVÉ** ✅
+
+**Technologie** : git-cliff avec `recurse_submodules = true`
+
+**Ce qui a été fait** :
+1. ✅ Activation de `recurse_submodules` dans [cliff.toml](../cliff.toml#L39)
+2. ✅ Modification du template pour afficher la variable `submodule_commits`
+3. ✅ Ajout de `submodules: recursive` dans le workflow GitHub Actions
+4. ✅ Test validé : les commits du submodule apparaissent automatiquement
+
+**Résultat dans CHANGELOG.md** :
+```markdown
+## [Unreleased]
+
+### Fonctionnalités
+- Mettre à jour modules Odoo
+
+### Modifications dans les modules (addons/)
+
+#### Documentation
+- [addons] Ajouter analyse impact submodule sur CHANGELOG.md
+- [addons] Tidy AJOUT-CHAMP-SIRET.md formatting
+
+#### Maintenance
+- [addons] Exclude venv from git
+```
+
+**Fonctionnement** :
+- Quand le pointeur du submodule est mis à jour dans le repo parent
+- git-cliff **détecte automatiquement** tous les commits entre l'ancienne et la nouvelle révision
+- Ces commits apparaissent dans une section dédiée **"Modifications dans les modules (addons/)"**
+- Chaque commit est préfixé `[addons]` pour identification claire
+
+**Documentation complète** :
+- [CLAUDE.md](../CLAUDE.md#L200-L247) - Section "Tracking des Commits du Submodule"
+- [CHANGELOG-AUTOMATION.md](../CHANGELOG-AUTOMATION.md#L153-L227) - Guide complet
+- [cliff.toml](../cliff.toml) - Configuration technique
 
 ---
 
 _Documentation créée le 2025-10-20_
 _Analyse submodule ajoutée le 2025-10-21_
+_Solution implémentée le 2025-10-21_
 _Projet : Destock Info - Odoo 17.0_
