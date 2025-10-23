@@ -7,7 +7,7 @@
     'license': 'Other proprietary',
     'description': 'This addon adds necessary elements for Destockinfo website',
     'summary': 'This addon adds necessary elements for Destockinfo website',
-    'version': '1.0',
+    'version': '1.1.0',  # MINOR: New feature - password toggle button
     'author': 'Krafter SAS',
     'maintainer': [
         'Krafter SAS',
@@ -20,11 +20,14 @@
         'mass_mailing',
         'web',
         'pyper_website_menu',
+        'auth_signup',  # For signup template inheritance
+        'portal',  # For account security page inheritance
     ],
     'data': [
         # Views
         'views/portal_views.xml',
-        
+        'views/auth_templates.xml',  # Password toggle for login/signup
+
         'views/website_templates.xml',
         'views/snippet_section.xml',
         'views/snippets/home_hero.xml',
@@ -55,7 +58,9 @@
         'web.assets_frontend': [
             ('prepend', 'destockinfo_website/static/src/font/PlusJakartaSans.scss'),
             '/destockinfo_website/static/src/scss/front/style.scss',
+            '/destockinfo_website/static/src/scss/password_toggle.scss',  # Password toggle styles
             '/destockinfo_website/static/src/js/front.js',
+            '/destockinfo_website/static/src/js/password_toggle.js',  # Password toggle logic
         ],
 
         'web.assets_frontend_lazy': [

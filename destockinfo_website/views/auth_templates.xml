@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Password Toggle Button - Authentication Templates
+
+    This file adds password visibility toggle buttons to authentication forms:
+    - Login page (/web/login)
+    - Signup page (/web/signup)
+
+    Features:
+    - XPath position="after" for upgrade-safe inheritance
+    - Unique aria-labels for each field
+    - Accessibility: keyboard navigation, ARIA attributes, 44x44px touch targets
+    - Password manager compatible (preserves all field attributes)
+
+    Constitution compliance:
+    - Principle II: Template inheritance (no core modification)
+    - Principle XII: WCAG 2.1 Level AA accessibility
+-->
+<odoo>
+    <!-- User Story 2 (P2): Password Toggle on Login Page -->
+    <template id="password_toggle_login" name="Password Toggle - Login" inherit_id="web.login">
+        <!--
+            Make password field container position-relative for absolute button positioning
+        -->
+        <xpath expr="//input[@name='password']/.." position="attributes">
+            <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <!--
+            Add password toggle button after password input
+        -->
+        <xpath expr="//input[@name='password']" position="after">
+            <button type="button" class="password-toggle-btn"
+                    aria-label="Afficher ou masquer le mot de passe"
+                    aria-pressed="false" tabindex="0">
+                <i class="fa fa-eye password-toggle-btn__icon"></i>
+            </button>
+        </xpath>
+    </template>
+
+    <!-- User Story 3 (P3): Password Toggle on Signup Page -->
+    <template id="password_toggle_signup" name="Password Toggle - Signup" inherit_id="auth_signup.fields">
+        <!--
+            Make password field container position-relative
+        -->
+        <xpath expr="//div[contains(@class, 'field-password')]" position="attributes">
+            <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <!--
+            Add password toggle button to signup password field
+        -->
+        <xpath expr="//input[@name='password']" position="after">
+            <button type="button" class="password-toggle-btn"
+                    aria-label="Afficher ou masquer le mot de passe"
+                    aria-pressed="false" tabindex="0">
+                <i class="fa fa-eye password-toggle-btn__icon"></i>
+            </button>
+        </xpath>
+
+        <!--
+            Make confirm_password field container position-relative
+        -->
+        <xpath expr="//div[contains(@class, 'field-confirm_password')]" position="attributes">
+            <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <!--
+            Add password toggle button to signup confirm_password field
+        -->
+        <xpath expr="//input[@name='confirm_password']" position="after">
+            <button type="button" class="password-toggle-btn"
+                    aria-label="Afficher ou masquer la confirmation du mot de passe"
+                    aria-pressed="false" tabindex="0">
+                <i class="fa fa-eye password-toggle-btn__icon"></i>
+            </button>
+        </xpath>
+    </template>
+</odoo>
