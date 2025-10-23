@@ -1,0 +1,6 @@
+# This directory contains Jest unit tests for JavaScript/OWL components
+#
+# Test files should follow the pattern: *.test.js
+# Example: myComponent.test.js
+#
+# Run tests with: npm test
