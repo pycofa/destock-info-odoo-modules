@@ -148,12 +148,12 @@ Ce fichier `AJOUT-CHAMP-SIRET.md` est situé dans le répertoire `addons/` qui e
 
 ### Repositories Concernés
 
-1. **Repo principal** : [`devpycofa/destockinfo-docker`](https://github.com/devpycofa/destockinfo-docker)
+1. **Repo principal** : [`pycofa/destockinfo-docker`](https://github.com/pycofa/destockinfo-docker)
    - Branch : `master`
    - Contient : Infrastructure Docker + configuration Odoo
    - CHANGELOG.md : ✅ Présent
 
-2. **Repo submodule** : [`devpycofa/destock-info-odoo-modules`](https://github.com/devpycofa/destock-info-odoo-modules)
+2. **Repo submodule** : [`pycofa/destock-info-odoo-modules`](https://github.com/pycofa/destock-info-odoo-modules)
    - Branch : `main`
    - Contient : Modules Odoo custom (dont ce fichier)
    - CHANGELOG.md : ❌ Absent
