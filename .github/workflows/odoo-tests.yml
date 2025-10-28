@@ -66,7 +66,7 @@ jobs:
             -e PASSWORD=odoo_test \
             odoo:17.0 \
             odoo --test-enable --stop-after-init \
-            --addons-path=/mnt/extra-addons \
+            --addons-path=/mnt/extra-addons,/mnt/extra-addons/pyper \
             --database=test_db \
             --db_host=localhost \
             --db_port=5432 \
