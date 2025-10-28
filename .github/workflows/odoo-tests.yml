@@ -50,7 +50,8 @@ jobs:
         id: modules
         run: |
           # Trouver tous les modules custom (ceux avec __manifest__.py)
-          MODULES=$(find . -maxdepth 2 -name "__manifest__.py" -exec dirname {} \; | sed 's|^\./||' | tr '\n' ',' | sed 's/,$//')
+          # Exclure modules avec dépendances Python externes (ex: openai)
+          MODULES=$(find . -maxdepth 2 -name "__manifest__.py" -exec dirname {} \; | sed 's|^\./||' | grep -v "mykraft_blog_ai" | tr '\n' ',' | sed 's/,$//')
           echo "Modules found: $MODULES"
           echo "modules=$MODULES" >> $GITHUB_OUTPUT
 
