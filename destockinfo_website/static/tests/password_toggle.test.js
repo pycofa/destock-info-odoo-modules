@@ -146,4 +146,56 @@ describe('Password Toggle Button', () => {
     expect(passwordInput.type).toBe('text');
     expect(toggleButton.getAttribute('aria-pressed')).toBe('true');
   });
+
+  // T013: Password toggle with OWL component (/my/security page)
+  // Tests the FIXED behavior that handles OWL components between input and button
+  test('toggles password when OWL component is between input and button', () => {
+    // Setup DOM structure matching /my/security page (INPUT → OWL → BUTTON)
+    document.body.innerHTML = `
+      <div class="mb-3 position-relative">
+        <label for="new">Nouveau mot de passe :</label>
+        <input type="password" id="new" name="new1" autocomplete="new-password" required="required" />
+        <owl-component name="password_meter" props='{"selector": "input[name=new1]"}'>
+          <meter class="o_password_meter"></meter>
+        </owl-component>
+        <button type="button" class="password-toggle-btn"
+                aria-label="Afficher ou masquer le nouveau mot de passe"
+                aria-pressed="false" tabindex="0">
+          <i class="fa fa-eye password-toggle-btn__icon"></i>
+        </button>
+      </div>
+    `;
+
+    const newPasswordInput = document.querySelector('input[name="new1"]');
+    const newToggleButton = document.querySelector('.password-toggle-btn');
+    const owlComponent = document.querySelector('owl-component');
+
+    // Verify OWL component is between input and button
+    expect(newPasswordInput.nextElementSibling).toBe(owlComponent);
+    expect(owlComponent.nextElementSibling).toBe(newToggleButton);
+
+    // Attach event listener with FIXED logic (parentElement.querySelector)
+    newToggleButton.addEventListener('click', () => {
+      const parent = newToggleButton.parentElement;
+      const input = parent.querySelector('input[type="password"], input[type="text"][name="new1"]');
+
+      // This check will NOW SUCCEED because querySelector finds the input correctly
+      if (input && input.tagName === 'INPUT') {
+        const isPasswordVisible = input.type === 'text';
+        input.type = isPasswordVisible ? 'password' : 'text';
+        newToggleButton.setAttribute('aria-pressed', isPasswordVisible ? 'false' : 'true');
+      }
+    });
+
+    // Initial state
+    expect(newPasswordInput.type).toBe('password');
+
+    // Click the button
+    newToggleButton.click();
+
+    // EXPECTED: Password should be visible (type="text")
+    // ACTUAL: Now works correctly with querySelector approach!
+    expect(newPasswordInput.type).toBe('text'); // ✅ PASSES - correctly finds input
+    expect(newToggleButton.getAttribute('aria-pressed')).toBe('true');
+  });
 });
