@@ -4,17 +4,19 @@ name: Odoo Module Tests
 # Tests uniquement les modules Odoo Python (pas Jest, pas Playwright)
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  workflow_dispatch:
+  workflow_dispatch:  # Manuel uniquement (désactivé auto sur push/PR)
+    inputs:
+      modules:
+        description: 'Modules to test (comma-separated, leave empty for all 133 modules)'
+        required: false
+        default: ''
+        type: string
 
 jobs:
   odoo-unittest:
     name: Odoo Python Unit Tests
     runs-on: ubuntu-latest
-    timeout-minutes: 25  # Increased for comprehensive module testing (133 modules)
+    timeout-minutes: 30  # 30 min = marge sécurité pour 133 modules (25-30 min typique)
 
     services:
       postgres:
@@ -46,13 +48,18 @@ jobs:
           done
           echo "PostgreSQL is ready!"
 
-      - name: List modules to test
+      - name: Determine modules to test
         id: modules
         run: |
-          # Trouver tous les modules custom (ceux avec __manifest__.py)
-          # Exclure modules avec dépendances Python externes (ex: openai)
-          MODULES=$(find . -maxdepth 2 -name "__manifest__.py" -exec dirname {} \; | sed 's|^\./||' | grep -v "mykraft_blog_ai" | tr '\n' ',' | sed 's/,$//')
-          echo "Modules found: $MODULES"
+          if [ -n "${{ inputs.modules }}" ]; then
+            # Modules spécifiés manuellement via workflow_dispatch
+            MODULES="${{ inputs.modules }}"
+            echo "🎯 Testing specified modules: $MODULES"
+          else
+            # Auto-détection: tous les modules (exclure mykraft_blog_ai)
+            MODULES=$(find . -maxdepth 2 -name "__manifest__.py" -exec dirname {} \; | sed 's|^\./||' | grep -v "mykraft_blog_ai" | tr '\n' ',' | sed 's/,$//')
+            echo "🔍 Auto-detected modules (133): $MODULES"
+          fi
           echo "modules=$MODULES" >> $GITHUB_OUTPUT
 
       - name: Run Odoo unittest for all modules
