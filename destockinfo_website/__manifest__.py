@@ -59,6 +59,7 @@
             ('prepend', 'destockinfo_website/static/src/font/PlusJakartaSans.scss'),
             '/destockinfo_website/static/src/scss/front/style.scss',
             '/destockinfo_website/static/src/scss/password_toggle.scss',  # Password toggle styles
+            '/destockinfo_website/static/src/scss/password_meter_override.scss',  # Fix meter overlap on /my/security
             '/destockinfo_website/static/src/js/front.js',
             '/destockinfo_website/static/src/js/password_toggle.js',  # Password toggle logic
         ],
