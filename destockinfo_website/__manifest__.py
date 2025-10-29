@@ -7,7 +7,7 @@
     'license': 'Other proprietary',
     'description': 'This addon adds necessary elements for Destockinfo website',
     'summary': 'This addon adds necessary elements for Destockinfo website',
-    'version': '1.1.0',  # MINOR: New feature - password toggle button
+    'version': '1.1.0',  # Added password toggle button
     'author': 'Krafter SAS',
     'maintainer': [
         'Krafter SAS',

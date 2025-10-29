@@ -142,11 +142,11 @@ class TestPasswordToggleTemplates(HttpCase):
                         f"Security page should have 3 toggle buttons, found {toggle_count}")
 
         # Verify unique ARIA labels for each of the 3 fields
-        self.assertIn('aria-label="Afficher ou masquer l\'ancien mot de passe"', html,
+        self.assertIn("aria-label=\"Afficher ou masquer l'ancien mot de passe\"", html,
                      "Old password toggle should have unique ARIA label")
-        self.assertIn('aria-label="Afficher ou masquer le nouveau mot de passe"', html,
+        self.assertIn("aria-label=\"Afficher ou masquer le nouveau mot de passe\"", html,
                      "New password toggle should have unique ARIA label")
-        self.assertIn('aria-label="Afficher ou masquer la confirmation du mot de passe"', html,
+        self.assertIn("aria-label=\"Afficher ou masquer la confirmation du mot de passe\"", html,
                      "Confirm new password toggle should have unique ARIA label")
 
         # Verify all 3 have fa-eye icons

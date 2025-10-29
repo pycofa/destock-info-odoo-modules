@@ -57,6 +57,7 @@ jobs:
             echo "🎯 Testing specified modules: $MODULES"
           else
             # Auto-détection: tous les modules (exclure mykraft_blog_ai)
+            # Excluded: mykraft_blog_ai requires external 'openai' Python package not in odoo:17.0 image
             MODULES=$(find . -maxdepth 2 -name "__manifest__.py" -exec dirname {} \; | sed 's|^\./||' | grep -v "mykraft_blog_ai" | tr '\n' ',' | sed 's/,$//')
             echo "🔍 Auto-detected modules (133): $MODULES"
           fi

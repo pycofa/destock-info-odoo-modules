@@ -179,7 +179,7 @@ describe('Password Toggle Button', () => {
       const parent = newToggleButton.parentElement;
       const input = parent.querySelector('[data-password-input]');
 
-      // This check will NOW SUCCEED because querySelector finds the input correctly
+      // This check succeeds because querySelector correctly finds the input regardless of intervening elements
       if (input && input.tagName === 'INPUT') {
         const isPasswordVisible = input.type === 'text';
         input.type = isPasswordVisible ? 'password' : 'text';

@@ -49,8 +49,9 @@
     <template id="password_toggle_signup" name="Password Toggle - Signup" inherit_id="auth_signup.fields">
         <!--
             Make password field container position-relative
+            Using parent selector (..) for specificity instead of class-based selector
         -->
-        <xpath expr="//div[contains(@class, 'field-password')]" position="attributes">
+        <xpath expr="//input[@name='password']/.." position="attributes">
             <attribute name="class" add="position-relative" separator=" "/>
         </xpath>
 
