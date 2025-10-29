@@ -40,7 +40,10 @@
 
         // Defensive check: ensure input exists and is an INPUT element
         if (!input || input.tagName !== 'INPUT') {
-          console.warn('Password toggle: Input element not found or invalid');
+          console.warn(
+            'Password toggle: Input element not found or invalid for button with aria-label: ' +
+            (this.getAttribute('aria-label') || '[no aria-label]')
+          );
           return;
         }
 

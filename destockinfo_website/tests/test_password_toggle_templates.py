@@ -122,37 +122,38 @@ class TestPasswordToggleTemplates(HttpCase):
             'password': 'TestPassword123',
         })
 
-        # Authenticate as test user
-        self.authenticate('test_password_toggle@example.com', 'TestPassword123')
+        try:
+            # Authenticate as test user
+            self.authenticate('test_password_toggle@example.com', 'TestPassword123')
 
-        # Request security page (requires authentication)
-        response = self.url_open('/my/security')
-        self.assertEqual(response.status_code, 200, "Security page should return 200 for authenticated user")
+            # Request security page (requires authentication)
+            response = self.url_open('/my/security')
+            self.assertEqual(response.status_code, 200, "Security page should return 200 for authenticated user")
 
-        html = response.content.decode('utf-8')
+            html = response.content.decode('utf-8')
 
-        # Verify all 3 password inputs exist
-        self.assertIn('name="old"', html, "Old password input should exist")
-        self.assertIn('name="new1"', html, "New password input should exist")
-        self.assertIn('name="new2"', html, "Confirm new password input should exist")
+            # Verify all 3 password inputs exist
+            self.assertIn('name="old"', html, "Old password input should exist")
+            self.assertIn('name="new1"', html, "New password input should exist")
+            self.assertIn('name="new2"', html, "Confirm new password input should exist")
 
-        # Count toggle button occurrences (should be 3)
-        toggle_count = html.count('password-toggle-btn')
-        self.assertEqual(toggle_count, 3,
-                        f"Security page should have 3 toggle buttons, found {toggle_count}")
+            # Count toggle button occurrences (should be 3)
+            toggle_count = html.count('password-toggle-btn')
+            self.assertEqual(toggle_count, 3,
+                            f"Security page should have 3 toggle buttons, found {toggle_count}")
 
-        # Verify unique ARIA labels for each of the 3 fields
-        self.assertIn("aria-label=\"Afficher ou masquer l'ancien mot de passe\"", html,
-                     "Old password toggle should have unique ARIA label")
-        self.assertIn("aria-label=\"Afficher ou masquer le nouveau mot de passe\"", html,
-                     "New password toggle should have unique ARIA label")
-        self.assertIn("aria-label=\"Afficher ou masquer la confirmation du mot de passe\"", html,
-                     "Confirm new password toggle should have unique ARIA label")
+            # Verify unique ARIA labels for each of the 3 fields
+            self.assertIn("aria-label=\"Afficher ou masquer l'ancien mot de passe\"", html,
+                         "Old password toggle should have unique ARIA label")
+            self.assertIn("aria-label=\"Afficher ou masquer le nouveau mot de passe\"", html,
+                         "New password toggle should have unique ARIA label")
+            self.assertIn("aria-label=\"Afficher ou masquer la confirmation du mot de passe\"", html,
+                         "Confirm new password toggle should have unique ARIA label")
 
-        # Verify all 3 have fa-eye icons
-        icon_count = html.count('fa-eye')
-        self.assertGreaterEqual(icon_count, 3,
-                               f"Should have at least 3 fa-eye icons, found {icon_count}")
-
-        # Cleanup: Delete test user
-        test_user.unlink()
+            # Verify all 3 have fa-eye icons
+            icon_count = html.count('fa-eye')
+            self.assertGreaterEqual(icon_count, 3,
+                                   f"Should have at least 3 fa-eye icons, found {icon_count}")
+        finally:
+            # Cleanup: Delete test user (guaranteed execution even if assertions fail)
+            test_user.unlink()

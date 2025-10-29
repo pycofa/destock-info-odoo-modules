@@ -38,9 +38,9 @@ describe('Password Toggle Button', () => {
     toggleButton = document.querySelector('.password-toggle-btn');
     icon = toggleButton.querySelector('.password-toggle-btn__icon');
 
-    // Mock the toggle function (implementation will be in password_toggle.js)
+    // Mock the toggle function using SAME logic as production code (password_toggle.js)
     toggleButton.addEventListener('click', () => {
-      const input = toggleButton.previousElementSibling;
+      const input = toggleButton.parentElement.querySelector('[data-password-input]');
       if (input && input.tagName === 'INPUT') {
         // Toggle type attribute
         const isPasswordVisible = input.type === 'text';
