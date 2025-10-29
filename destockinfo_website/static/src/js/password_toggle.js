@@ -33,11 +33,10 @@
 
     toggleButtons.forEach((button) => {
       button.addEventListener('click', function () {
-        // Get the password input from parent container
-        // Uses parentElement.querySelector to handle cases where OWL components
-        // or other elements are between the input and the button
+        // Get the password input from parent container using data-attribute selector
+        // This is cleaner and more maintainable than complex type/name selectors
         const parent = this.parentElement;
-        const input = parent.querySelector('input[type="password"], input[type="text"][name="password"], input[type="text"][name="confirm_password"], input[type="text"][name="old"], input[type="text"][name="new1"], input[type="text"][name="new2"]');
+        const input = parent.querySelector('[data-password-input]');
 
         // Defensive check: ensure input exists and is an INPUT element
         if (!input || input.tagName !== 'INPUT') {

@@ -27,6 +27,13 @@
         </xpath>
 
         <!--
+            Add data-password-input attribute for cleaner JS selector
+        -->
+        <xpath expr="//input[@name='password']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
+        <!--
             Add password toggle button after password input
         -->
         <xpath expr="//input[@name='password']" position="after">
@@ -48,6 +55,13 @@
         </xpath>
 
         <!--
+            Add data-password-input attribute for cleaner JS selector
+        -->
+        <xpath expr="//input[@name='password']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
+        <!--
             Add password toggle button to signup password field
         -->
         <xpath expr="//input[@name='password']" position="after">
@@ -63,6 +77,13 @@
         -->
         <xpath expr="//div[contains(@class, 'field-confirm_password')]" position="attributes">
             <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <!--
+            Add data-password-input attribute for cleaner JS selector
+        -->
+        <xpath expr="//input[@name='confirm_password']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
         </xpath>
 
         <!--

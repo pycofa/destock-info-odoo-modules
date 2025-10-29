@@ -60,6 +60,19 @@
             <attribute name="class" add="position-relative" separator=" "/>
         </xpath>
 
+        <!-- Add data-password-input attributes for cleaner JS selectors -->
+        <xpath expr="//input[@name='old']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
+        <xpath expr="//input[@name='new1']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
+        <xpath expr="//input[@name='new2']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
         <!-- Add toggle button after "old password" field -->
         <xpath expr="//input[@name='old']" position="after">
             <button type="button" class="password-toggle-btn"

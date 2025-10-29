@@ -25,7 +25,7 @@ describe('Password Toggle Button', () => {
     // Setup DOM structure matching QWeb templates
     document.body.innerHTML = `
       <div class="position-relative">
-        <input type="password" name="password" class="form-control" />
+        <input type="password" name="password" class="form-control" data-password-input="true" />
         <button type="button" class="btn btn-link position-absolute password-toggle-btn"
                 aria-label="Afficher ou masquer le mot de passe"
                 aria-pressed="false" tabindex="0">
@@ -154,7 +154,7 @@ describe('Password Toggle Button', () => {
     document.body.innerHTML = `
       <div class="mb-3 position-relative">
         <label for="new">Nouveau mot de passe :</label>
-        <input type="password" id="new" name="new1" autocomplete="new-password" required="required" />
+        <input type="password" id="new" name="new1" autocomplete="new-password" required="required" data-password-input="true" />
         <owl-component name="password_meter" props='{"selector": "input[name=new1]"}'>
           <meter class="o_password_meter"></meter>
         </owl-component>
@@ -174,10 +174,10 @@ describe('Password Toggle Button', () => {
     expect(newPasswordInput.nextElementSibling).toBe(owlComponent);
     expect(owlComponent.nextElementSibling).toBe(newToggleButton);
 
-    // Attach event listener with FIXED logic (parentElement.querySelector)
+    // Attach event listener with FIXED logic (parentElement.querySelector using data-attribute)
     newToggleButton.addEventListener('click', () => {
       const parent = newToggleButton.parentElement;
-      const input = parent.querySelector('input[type="password"], input[type="text"][name="new1"]');
+      const input = parent.querySelector('[data-password-input]');
 
       // This check will NOW SUCCEED because querySelector finds the input correctly
       if (input && input.tagName === 'INPUT') {

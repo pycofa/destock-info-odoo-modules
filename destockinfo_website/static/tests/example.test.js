@@ -217,7 +217,6 @@ describe('Product Card Toggle Logic', () => {
     const icon = button.querySelector('i');
 
     function toggleWishlist() {
-      const isInWishlist = icon.classList.contains('fa-heart');
       icon.classList.toggle('fa-heart-o');
       icon.classList.toggle('fa-heart');
     }
