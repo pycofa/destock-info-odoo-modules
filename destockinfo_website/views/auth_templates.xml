@@ -20,7 +20,35 @@
     <!-- User Story 2 (P2): Password Toggle on Login Page -->
     <template id="password_toggle_login" name="Password Toggle - Login" inherit_id="web.login">
         <!--
-            Make password field container position-relative for absolute button positioning
+            Make password field container position-relative for button positioning
+        -->
+        <xpath expr="//input[@name='password']/.." position="attributes">
+            <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <!--
+            Add data-password-input attribute for cleaner JS selector
+        -->
+        <xpath expr="//input[@name='password']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
+        <!--
+            Add password toggle button after input
+        -->
+        <xpath expr="//input[@name='password']" position="after">
+            <button type="button" class="password-toggle-btn"
+                    aria-label="Afficher ou masquer le mot de passe"
+                    aria-pressed="false" tabindex="0">
+                <i class="fa fa-eye password-toggle-btn__icon"></i>
+            </button>
+        </xpath>
+    </template>
+
+    <!-- User Story 3 (P3): Password Toggle on Signup Page -->
+    <template id="password_toggle_signup" name="Password Toggle - Signup" inherit_id="auth_signup.fields">
+        <!--
+            Make password field container position-relative for button positioning
         -->
         <xpath expr="//input[@name='password']/.." position="attributes">
             <attribute name="class" add="position-relative" separator=" "/>
@@ -43,40 +71,11 @@
                 <i class="fa fa-eye password-toggle-btn__icon"></i>
             </button>
         </xpath>
-    </template>
-
-    <!-- User Story 3 (P3): Password Toggle on Signup Page -->
-    <template id="password_toggle_signup" name="Password Toggle - Signup" inherit_id="auth_signup.fields">
-        <!--
-            Make password field container position-relative
-            Using parent selector (..) for specificity instead of class-based selector
-        -->
-        <xpath expr="//input[@name='password']/.." position="attributes">
-            <attribute name="class" add="position-relative" separator=" "/>
-        </xpath>
 
         <!--
-            Add data-password-input attribute for cleaner JS selector
+            Make confirm_password field container position-relative for button positioning
         -->
-        <xpath expr="//input[@name='password']" position="attributes">
-            <attribute name="data-password-input">true</attribute>
-        </xpath>
-
-        <!--
-            Add password toggle button to signup password field
-        -->
-        <xpath expr="//input[@name='password']" position="after">
-            <button type="button" class="password-toggle-btn"
-                    aria-label="Afficher ou masquer le mot de passe"
-                    aria-pressed="false" tabindex="0">
-                <i class="fa fa-eye password-toggle-btn__icon"></i>
-            </button>
-        </xpath>
-
-        <!--
-            Make confirm_password field container position-relative
-        -->
-        <xpath expr="//div[contains(@class, 'field-confirm_password')]" position="attributes">
+        <xpath expr="//input[@name='confirm_password']/.." position="attributes">
             <attribute name="class" add="position-relative" separator=" "/>
         </xpath>
 
@@ -88,7 +87,7 @@
         </xpath>
 
         <!--
-            Add password toggle button to signup confirm_password field
+            Add password toggle button after confirm_password input
         -->
         <xpath expr="//input[@name='confirm_password']" position="after">
             <button type="button" class="password-toggle-btn"
