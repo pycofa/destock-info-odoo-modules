@@ -17,7 +17,7 @@ This module adds support for:
 - Login page (/web/login)
     ''',
     'summary': 'Add Google reCAPTCHA v3 on login page',
-    'version': '1.0.6',
+    'version': '1.0.7',
     'author': 'Krafter SAS',
     'maintainer': ['Krafter SAS'],
     'website': 'https://krafter.io',

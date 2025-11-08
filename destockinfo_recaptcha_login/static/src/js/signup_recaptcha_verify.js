@@ -6,6 +6,9 @@ import publicWidget from "@web/legacy/js/public/public_widget";
 if (window.location.pathname.includes('/web/signup')) {
     console.log('[Destock reCAPTCHA] 🚀 Verifying reCAPTCHA on signup page...');
 
+    let retryCount = 0;
+    const maxRetries = 10; // 10 attempts = 5 seconds max
+
     const verifySignupCaptcha = () => {
         // Check if SignupCaptcha widget is registered
         if (publicWidget.registry.SignupCaptcha) {
@@ -16,7 +19,7 @@ if (window.location.pathname.includes('/web/signup')) {
             if (badge) {
                 console.log('[Destock reCAPTCHA] ✅ reCAPTCHA badge found (invisible v3)');
             } else {
-                console.warn('[Destock reCAPTCHA] ⚠️ reCAPTCHA badge not found');
+                console.warn('[Destock reCAPTCHA] ⚠️ reCAPTCHA badge not found yet');
             }
 
             // Check if signup form is present
@@ -39,14 +42,21 @@ if (window.location.pathname.includes('/web/signup')) {
                 console.warn('[Destock reCAPTCHA] ⚠️ Signup form not found on this page');
             }
         } else {
-            console.error('[Destock reCAPTCHA] ❌ SignupCaptcha widget NOT registered - check google_recaptcha module');
+            retryCount++;
+            if (retryCount < maxRetries) {
+                // Retry after 500ms
+                setTimeout(verifySignupCaptcha, 500);
+            } else {
+                console.error('[Destock reCAPTCHA] ❌ SignupCaptcha widget NOT registered after ' + maxRetries + ' attempts');
+                console.error('[Destock reCAPTCHA] ❌ Check that google_recaptcha module is installed and reCAPTCHA keys are configured');
+            }
         }
     };
 
     // Wait for DOM and widgets to be ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(verifySignupCaptcha, 500); // Wait for widgets to register
+            setTimeout(verifySignupCaptcha, 500);
         });
     } else {
         setTimeout(verifySignupCaptcha, 500);
