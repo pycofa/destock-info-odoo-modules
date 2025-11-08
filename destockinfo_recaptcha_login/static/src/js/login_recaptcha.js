@@ -27,13 +27,17 @@ publicWidget.registry.LoginCaptcha = publicWidget.Widget.extend({
     init() {
         this._super(...arguments);
         this._recaptcha = new ReCaptcha();
+        console.log('[Destock reCAPTCHA] LoginCaptcha widget initialized');
     },
 
     /**
      * Load Google reCAPTCHA libraries before the widget starts
      */
     async willStart() {
-        return this._recaptcha.loadLibs();
+        console.log('[Destock reCAPTCHA] Loading Google reCAPTCHA libraries...');
+        const result = await this._recaptcha.loadLibs();
+        console.log('[Destock reCAPTCHA] Google reCAPTCHA libraries loaded successfully');
+        return result;
     },
 
     /**
@@ -46,10 +50,12 @@ publicWidget.registry.LoginCaptcha = publicWidget.Widget.extend({
         // 1. A public key is configured
         // 2. Token hasn't been added yet
         if (this._recaptcha._publicKey && !this.$el.find("input[name='recaptcha_token_response']").length) {
+            console.log('[Destock reCAPTCHA] Form submission intercepted, requesting reCAPTCHA token...');
             ev.preventDefault();
 
             // Get token from Google with action name "login"
             this._recaptcha.getToken("login").then((tokenCaptcha) => {
+                console.log('[Destock reCAPTCHA] Token received successfully, submitting form');
                 // Inject token as hidden field
                 this.$el.append(
                     `<input name="recaptcha_token_response" type="hidden" value="${tokenCaptcha.token}"/>`,
@@ -57,6 +63,8 @@ publicWidget.registry.LoginCaptcha = publicWidget.Widget.extend({
                 // Submit the form
                 this.$el.submit();
             });
+        } else {
+            console.log('[Destock reCAPTCHA] Token already present or no public key, form submitted normally');
         }
     },
 });
