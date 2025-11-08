@@ -17,7 +17,7 @@ This module adds support for:
 - Login page (/web/login)
     ''',
     'summary': 'Add Google reCAPTCHA v3 on login page',
-    'version': '1.0.3',
+    'version': '1.0.6',
     'author': 'Krafter SAS',
     'maintainer': ['Krafter SAS'],
     'website': 'https://krafter.io',
@@ -30,6 +30,7 @@ This module adds support for:
         'web.assets_frontend': [
             'destockinfo_recaptcha_login/static/src/js/login_recaptcha.js',
             'destockinfo_recaptcha_login/static/src/js/login_recaptcha_start.js',
+            'destockinfo_recaptcha_login/static/src/js/signup_recaptcha_verify.js',
         ],
     },
     'installable': True,
