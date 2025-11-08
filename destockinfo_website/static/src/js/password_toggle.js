@@ -42,7 +42,7 @@
         if (!input || input.tagName !== 'INPUT') {
           console.warn(
             'Password toggle: Input element not found or invalid for button with aria-label: ' +
-            (this.getAttribute('aria-label') || '[no aria-label]')
+            (this.getAttribute('aria-label') || '[no aria-label]'),
           );
           return;
         }
