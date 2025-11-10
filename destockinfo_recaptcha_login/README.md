@@ -1,15 +1,15 @@
-# Destockinfo reCAPTCHA Login
+# Destockinfo reCAPTCHA Login & Signup
 
 ## Description
 
-Ce module étend le module natif `google_recaptcha` d'Odoo pour ajouter le support de Google reCAPTCHA v3 sur la page de connexion (`/web/login`).
+Ce module étend le module natif `google_recaptcha` d'Odoo pour ajouter le support de Google reCAPTCHA v3 sur les pages de connexion et d'inscription.
 
 **Par défaut, le module `google_recaptcha` d'Odoo supporte uniquement :**
-- Page d'inscription (`/web/signup`)
 - Page de réinitialisation de mot de passe (`/web/reset_password`)
 
 **Ce module ajoute le support pour :**
 - Page de connexion (`/web/login`) ✅
+- Page d'inscription (`/web/signup`) ✅
 
 ## Prérequis
 
@@ -43,15 +43,22 @@ Si ce n'est pas déjà fait :
 
 ### Architecture
 
-Le module ajoute un widget JavaScript `LoginCaptcha` qui :
+Le module ajoute deux widgets JavaScript :
 
-1. S'attache au formulaire `.oe_login_form`
-2. Intercepte l'événement `submit`
-3. Appelle l'API Google reCAPTCHA pour obtenir un token
-4. Injecte le token comme champ caché dans le formulaire
-5. Soumet le formulaire avec le token
+**1. LoginCaptcha** pour la page `/web/login` :
+- S'attache au formulaire `.oe_login_form`
+- Intercepte l'événement `submit`
+- Appelle l'API Google reCAPTCHA pour obtenir un token (action: "login")
+- Injecte le token comme champ caché dans le formulaire
+- Soumet le formulaire avec le token
 
-### Workflow
+**2. SignupCaptcha** pour la page `/web/signup` :
+- S'attache au formulaire `.oe_signup_form`
+- Même logique que LoginCaptcha
+- Utilise l'action "signup" pour Google reCAPTCHA
+- Validation backend via controller personnalisé
+
+### Workflow Login
 
 ```
 User submits login form
@@ -72,26 +79,73 @@ If score >= threshold (default 0.5) → allow login
 If score < threshold → deny login (bot detected)
 ```
 
+### Workflow Signup
+
+```
+User submits signup form
+         ↓
+SignupCaptcha intercept submit event
+         ↓
+Call Google reCAPTCHA API (action: "signup")
+         ↓
+Get token (score 0.0-1.0)
+         ↓
+Inject <input name="recaptcha_token_response" value="token"/>
+         ↓
+Submit form to /web/signup (POST)
+         ↓
+DestockinfoAuthSignupHome controller validates token
+         ↓
+If valid → proceed with normal signup
+If invalid → show error message and reject signup
+```
+
 ### Fichiers
 
 ```
 destockinfo_recaptcha_login/
-├── __init__.py                              # Module Python vide
-├── __manifest__.py                          # Manifest Odoo
+├── __init__.py                              # Import controllers
+├── __manifest__.py                          # Manifest Odoo (version 1.0.8)
 ├── README.md                                # Cette documentation
+├── controllers/
+│   ├── __init__.py                          # Import main
+│   └── main.py                              # Controller signup avec validation reCAPTCHA
 └── static/src/js/
-    └── login_recaptcha.js                   # Widget JavaScript
+    ├── login_recaptcha.js                   # Widget LoginCaptcha
+    ├── login_recaptcha_start.js             # Démarrage widget login
+    ├── signup_recaptcha.js                  # Widget SignupCaptcha
+    └── signup_recaptcha_start.js            # Démarrage widget signup
 ```
 
 ## Validation
 
-### Test Fonctionnel
+### Test Fonctionnel Login
 
 1. Ouvrir `/web/login` dans le navigateur
 2. Ouvrir DevTools (F12) > Console
-3. Vérifier qu'aucune erreur JavaScript n'apparaît
+3. Vérifier les logs `[Destock reCAPTCHA]` :
+   ```
+   🚀 Module login_recaptcha_start.js loaded on login page
+   🔄 Attempting to start LoginCaptcha widget...
+   ✅ Login form found, attaching LoginCaptcha widget...
+   ✅ Widget successfully attached to login form
+   ```
 4. Essayer de se connecter avec identifiants valides
 5. La connexion doit fonctionner normalement
+
+### Test Fonctionnel Signup
+
+1. Ouvrir `/web/signup` dans le navigateur
+2. Ouvrir DevTools (F12) > Console
+3. Vérifier les logs `[Destock reCAPTCHA]` :
+   ```
+   🚀 Module signup_recaptcha_start.js loaded on signup page
+   🔄 Attempting to start SignupCaptcha widget...
+   ✅ Signup form found, attaching SignupCaptcha widget...
+   ✅ Widget successfully attached to signup form
+   ```
+4. Essayer de créer un compte
+5. La création de compte doit fonctionner normalement
 
 ### Test Anti-Bot
 
