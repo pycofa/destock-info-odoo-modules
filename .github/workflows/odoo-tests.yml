@@ -1,0 +1,96 @@
+name: Odoo Module Tests
+
+# Workflow CI pour le repo submodule destock-info-odoo-modules
+# Tests uniquement les modules Odoo Python (pas Jest, pas Playwright)
+
+on:
+  workflow_dispatch:  # Manuel uniquement (désactivé auto sur push/PR)
+    inputs:
+      modules:
+        description: 'Modules to test (comma-separated, leave empty for all 133 modules)'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  odoo-unittest:
+    name: Odoo Python Unit Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30  # 30 min = marge sécurité pour 133 modules (25-30 min typique)
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: odoo
+          POSTGRES_PASSWORD: odoo_test
+          POSTGRES_DB: test_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U odoo"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout modules
+        uses: actions/checkout@v4
+
+      - name: Pull Odoo 17 Docker image
+        run: docker pull odoo:17.0
+
+      - name: Wait for PostgreSQL
+        run: |
+          until pg_isready -h localhost -p 5432 -U odoo; do
+            echo "Waiting for PostgreSQL..."
+            sleep 2
+          done
+          echo "PostgreSQL is ready!"
+
+      - name: Determine modules to test
+        id: modules
+        run: |
+          if [ -n "${{ inputs.modules }}" ]; then
+            # Modules spécifiés manuellement via workflow_dispatch
+            MODULES="${{ inputs.modules }}"
+            echo "🎯 Testing specified modules: $MODULES"
+          else
+            # Auto-détection: tous les modules (exclure mykraft_blog_ai)
+            # Excluded: mykraft_blog_ai requires external 'openai' Python package not in odoo:17.0 image
+            MODULES=$(find . -maxdepth 2 -name "__manifest__.py" -exec dirname {} \; | sed 's|^\./||' | grep -v "mykraft_blog_ai" | tr '\n' ',' | sed 's/,$//')
+            echo "🔍 Auto-detected modules (133): $MODULES"
+          fi
+          echo "modules=$MODULES" >> $GITHUB_OUTPUT
+
+      - name: Run Odoo unittest for all modules
+        if: steps.modules.outputs.modules != ''
+        run: |
+          docker run --rm \
+            --network host \
+            -v $(pwd):/mnt/extra-addons \
+            -e HOST=localhost \
+            -e PORT=5432 \
+            -e USER=odoo \
+            -e PASSWORD=odoo_test \
+            odoo:17.0 \
+            odoo --test-enable --stop-after-init \
+            --addons-path=/mnt/extra-addons,/mnt/extra-addons/pyper \
+            --database=test_db \
+            --db_host=localhost \
+            --db_port=5432 \
+            --db_user=odoo \
+            --db_password=odoo_test \
+            --init=${{ steps.modules.outputs.modules }} \
+            --log-level=test
+
+      - name: Test Summary
+        if: always()
+        run: |
+          echo "## Odoo Module Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.modules.outputs.modules }}" == "" ]; then
+            echo "⚠️ No modules found to test" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ Modules tested: ${{ steps.modules.outputs.modules }}" >> $GITHUB_STEP_SUMMARY
+          fi

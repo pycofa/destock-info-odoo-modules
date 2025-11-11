@@ -44,6 +44,61 @@
         <xpath expr="//input[@name='new2']" position="attributes">
             <attribute name="t-attf-class" add="border-1" separator=" "/>
         </xpath>
+
+        <!-- User Story 1 (P1 - MVP): Password Toggle on Account Security Page -->
+
+        <!-- Make password field containers position-relative for absolute button positioning -->
+        <xpath expr="//input[@name='old']/.." position="attributes">
+            <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <xpath expr="//input[@name='new1']/.." position="attributes">
+            <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <xpath expr="//input[@name='new2']/.." position="attributes">
+            <attribute name="class" add="position-relative" separator=" "/>
+        </xpath>
+
+        <!-- Add data-password-input attributes for cleaner JS selectors -->
+        <xpath expr="//input[@name='old']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
+        <xpath expr="//input[@name='new1']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
+        <xpath expr="//input[@name='new2']" position="attributes">
+            <attribute name="data-password-input">true</attribute>
+        </xpath>
+
+        <!-- Add toggle button after "old password" field -->
+        <xpath expr="//input[@name='old']" position="after">
+            <button type="button" class="password-toggle-btn"
+                    aria-label="Afficher ou masquer l'ancien mot de passe"
+                    aria-pressed="false" tabindex="0">
+                <i class="fa fa-eye password-toggle-btn__icon"></i>
+            </button>
+        </xpath>
+
+        <!-- Add toggle button after "new password" field -->
+        <xpath expr="//input[@name='new1']" position="after">
+            <button type="button" class="password-toggle-btn"
+                    aria-label="Afficher ou masquer le nouveau mot de passe"
+                    aria-pressed="false" tabindex="0">
+                <i class="fa fa-eye password-toggle-btn__icon"></i>
+            </button>
+        </xpath>
+
+        <!-- Add toggle button after "password confirmation" field -->
+        <xpath expr="//input[@name='new2']" position="after">
+            <button type="button" class="password-toggle-btn"
+                    aria-label="Afficher ou masquer la confirmation du mot de passe"
+                    aria-pressed="false" tabindex="0">
+                <i class="fa fa-eye password-toggle-btn__icon"></i>
+            </button>
+        </xpath>
     </template>
 
 

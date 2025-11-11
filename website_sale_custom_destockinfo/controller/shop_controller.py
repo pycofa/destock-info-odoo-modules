@@ -53,8 +53,8 @@ class WebsiteSaleCustom(WebsiteSale):
                            ppg=ppg, **post)
 
         user = request.env.user.partner_id
-        if not user.company_name or not user.street or not user.city or not user.country_id or not user.phone or not user.zip:
-            return request.redirect(f'/my/account?infos_missing=1')
+        # if not user.company_name or not user.street or not user.city or not user.country_id or not user.phone or not user.zip:
+        #     return request.redirect(f'/my/account?infos_missing=1')
 
         categories = request.env['product.category'].search([('parent_id.name', '=', 'All')]).mapped('name')
         public_categories = request.env['product.public.category'].search(
