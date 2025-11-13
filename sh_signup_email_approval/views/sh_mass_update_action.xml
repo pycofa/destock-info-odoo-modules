@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="action_model_ras_users_update_all_allowed_signup" model="ir.actions.server">
+        <field name="name">Mass Update Approve/Reject</field>
+        <field name="model_id" ref="sh_signup_email_approval.model_res_users" />
+        <field name="binding_model_id" ref="base.model_res_users" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = model.action_ras_users_update_all_allowed_signup()</field>
+    </record>
+</odoo>

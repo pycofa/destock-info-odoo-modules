@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="auth_signup.signup" name="Sign up login">
+        <t t-call="web.login_layout">
+            <form id="signup_form" class="oe_signup_form" role="form" method="post" t-if="not message">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+
+                <t t-call="auth_signup.fields">
+                    <t t-set="only_passwords" t-value="bool(token and not invalid_token)" />
+                </t>
+
+                <p class="alert alert-danger" t-if="error" role="alert">
+                    <t t-esc="error" />
+                </p>
+                <input type="hidden" name="redirect" t-att-value="redirect" />
+                <input type="hidden" name="token" t-att-value="token" />
+
+                <div id="otp_section" class="mt-3" t-attf-style="display:#{ 'block' if show_otp_section else 'none' };">
+                    <div class="form-group">
+                        <label for="otp_input">Enter OTP</label>
+                        <input type="text" id="otp_input" class="form-control" name="otp" placeholder="Enter OTP" />
+                    </div>
+                    <div id="otp_error" style="color: red; display: none;margin-top:5px;">Invalid OTP please try again.</div>
+                </div>
+
+                <div class="text-center oe_login_buttons pt-3">
+                    <button type="submit" id="signup_btn" class="btn btn-primary btn-block" disabled="disabled">Sign up</button>
+                    <button type="button" id="send_otp_btn" class="btn btn-primary">SEND OTP</button>
+                    <a t-attf-href="/web/login?{{ keep_query() }}" class="btn btn-link btn-sm" role="button">Already have an account?</a>
+                    <div class="o_login_auth" />
+                </div>
+            </form>
+        </t>
+    </template>
+</odoo>

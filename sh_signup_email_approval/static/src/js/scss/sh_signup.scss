@@ -1,0 +1,30 @@
+.sh_cls_invalid_code{
+    h2{
+        font-size: 14px;font-weight: 400;margin-bottom: 5px;
+    }
+    .row{
+        .col-md-6{
+            width:100%; text-align: center;
+            input.form-group{
+                width:100%;border: 1px solid #CED4DA; border-radius:5px;min-height: calc(1.5em + 0.5rem + 2px);padding: 0.25rem 0.5rem;font-size: 0.75rem; margin-bottom:10px;
+                &:focus{
+                    color: #212529;background-color: white;border-color: #b8a5b3;outline: 0;box-shadow: 0 0 0 0.25rem rgba(113, 75, 103, 0.25);
+                }
+                &:focus-within{
+                    color: #212529;background-color: white;border-color: #b8a5b3;outline: 0;box-shadow: 0 0 0 0.25rem rgba(113, 75, 103, 0.25);
+                }
+            }
+            #button_verify{
+                text-align: center;
+            }
+        }
+    }
+   
+}
+body{
+    &:not(.bg-100){
+        .sh_cls_invalid_code{
+            max-width: 300px;position: relative;margin: 50px auto;      
+        }
+    }
+}

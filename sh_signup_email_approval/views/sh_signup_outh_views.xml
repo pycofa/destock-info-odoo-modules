@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='sh_signup_auth_otp_form_views' model="ir.ui.view">
+        <field name="name">sh.signup.auth.otp.form.view</field>
+        <field name="model">sh.signup.outh</field>
+        <field name="arch" type="xml">
+            <form name="auth_set_otp">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="email" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='sh_signup_auth_otp_tree_views' model="ir.ui.view">
+        <field name="name">sh.signup.auth.otp.tree.view</field>
+        <field name="model">sh.signup.outh</field>
+        <field name="arch" type="xml">
+            <tree name="auth_set_otp">
+                <field name="name" />
+                <field name="email" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_sign_outh_otp" model="ir.actions.act_window">
+        <field name="name">Otp Verifaction</field>
+        <field name="res_model">sh.signup.outh</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="sign_outh_otp" name="Otp Verifaction" action="action_sign_outh_otp" />
+</odoo>
