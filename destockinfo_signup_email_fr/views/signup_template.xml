@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit the signup template to add French UX improvements -->
+    <template id="signup_template_fr" inherit_id="auth_signup.signup">
+        
+        <!-- Add explanatory message before the OTP section -->
+        <xpath expr="//input[@name='token']" position="after">
+            <div class="alert alert-info mt-3 mb-3" role="alert" style="font-size: 0.9em;">
+                <strong>Comment ça marche ?</strong><br/>
+                Cliquez sur le bouton "S'inscrire" ci-dessous. Vous recevrez immédiatement un code de vérification par e-mail.
+                Saisissez ce code pour confirmer votre identité et finaliser votre inscription.
+            </div>
+        </xpath>
+
+        <!-- Update OTP section labels to French -->
+        <xpath expr="//div[@id='otp_section']//label[@for='otp_input']" position="replace">
+            <label for="otp_input">Code de vérification reçu par e-mail</label>
+        </xpath>
+
+        <xpath expr="//div[@id='otp_section']//input[@id='otp_input']" position="attributes">
+            <attribute name="placeholder">Entrez le code à 6 chiffres</attribute>
+        </xpath>
+
+        <xpath expr="//div[@id='otp_error']" position="replace">
+            <div id="otp_error" style="color: red; display: none; margin-top: 5px;">
+                Code incorrect. Veuillez vérifier votre e-mail et réessayer.
+            </div>
+        </xpath>
+
+        <!-- Hide the original signup button (keep for post-OTP submission) -->
+        <xpath expr="//button[@id='signup_btn']" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+
+        <!-- Rename Send OTP button to "S'inscrire" -->
+        <xpath expr="//button[@id='send_otp_btn']" position="replace">
+            <button type="button" id="send_otp_btn" class="btn btn-primary btn-block">
+                S'inscrire
+            </button>
+        </xpath>
+
+    </template>
+</odoo>

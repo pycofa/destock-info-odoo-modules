@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * destockinfo_signup_email_fr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/controllers/signup_fr.py:0
+msgid "Un code de vérification vient de vous être envoyé par e-mail. Consultez votre messagerie (pensez à vérifier vos courriers indésirables) et saisissez le code ci-dessous pour finaliser votre inscription."
+msgstr "Un code de vérification vient de vous être envoyé par e-mail. Consultez votre messagerie (pensez à vérifier vos courriers indésirables) et saisissez le code ci-dessous pour finaliser votre inscription."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Veuillez saisir votre adresse e-mail."
+msgstr "Veuillez saisir votre adresse e-mail."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Envoi en cours..."
+msgstr "Envoi en cours..."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Valider mon inscription"
+msgstr "Valider mon inscription"
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Une erreur est survenue. Veuillez réessayer."
+msgstr "Une erreur est survenue. Veuillez réessayer."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "S'inscrire"
+msgstr "S'inscrire"
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Erreur de connexion. Veuillez vérifier votre connexion internet et réessayer."
+msgstr "Erreur de connexion. Veuillez vérifier votre connexion internet et réessayer."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Veuillez saisir un code de vérification à 6 chiffres."
+msgstr "Veuillez saisir un code de vérification à 6 chiffres."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Vérification en cours..."
+msgstr "Vérification en cours..."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Inscription en cours..."
+msgstr "Inscription en cours..."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Code de vérification incorrect. Veuillez vérifier votre e-mail et réessayer."
+msgstr "Code de vérification incorrect. Veuillez vérifier votre e-mail et réessayer."
+
+#. module: destockinfo_signup_email_fr
+#: code:addons/destockinfo_signup_email_fr/static/src/js/signup_fr_patch.js:0
+msgid "Une erreur est survenue lors de la vérification. Veuillez réessayer."
+msgstr "Une erreur est survenue lors de la vérification. Veuillez réessayer."

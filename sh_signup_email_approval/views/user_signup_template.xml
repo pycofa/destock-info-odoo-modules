@@ -25,7 +25,7 @@
 
                 <div class="text-center oe_login_buttons pt-3">
                     <button type="submit" id="signup_btn" class="btn btn-primary btn-block" disabled="disabled">Sign up</button>
-                    <button type="button" id="send_otp_btn" class="btn btn-primary">SEND OTP</button>
+                    <button type="button" id="send_otp_btn" class="btn btn-primary btn-block">SEND OTP</button>
                     <a t-attf-href="/web/login?{{ keep_query() }}" class="btn btn-link btn-sm" role="button">Already have an account?</a>
                     <div class="o_login_auth" />
                 </div>

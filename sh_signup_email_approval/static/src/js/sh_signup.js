@@ -22,12 +22,12 @@ publicWidget.registry.SignUpForm = publicWidget.Widget.extend({
             return;
         }
 
-        document.getElementById('otp_section').style.display = 'block';
-        document.getElementById('signup_btn').disabled = true;
-
         const response = await this.rpc('/auth/send_otp', { email });
 
-        if (response.status != 'success') {
+        if (response.success) {
+            alert(response.message);
+            document.getElementById('otp_section').style.display = 'block';
+        } else {
             alert(response.message);
         }
     },
@@ -57,7 +57,6 @@ publicWidget.registry.SignUpForm = publicWidget.Widget.extend({
         const signupBtn = $('#signup_btn');
 
         try {
-            // Perform OTP verification using await to handle async call
             const response = await jsonrpc('/auth/verify_otp', { email: email, otp: otpValue });
 
             if (response.success) {
