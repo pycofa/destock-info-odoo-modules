@@ -28,3 +28,6 @@ build/
 .DS_Store
 Thumbs.db
 website_sale_custom_destockinfo/venv/
+
+# Modules tiers à exclure
+sh_signup_email_approval/
